@@ -1,79 +1,48 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
-    <style>
-		h1,h2,h3,h4{
-			font-family: montserrat, sans-serif;
-			font-style: normal;
-			font-weight: 500;
-                        font-size:2.8em;
-
-
-		}		
-		p,li{
-			font-family: navigo, sans-serif;
-			font-style: normal;
-			font-weight: 400;
-			font-size:2em;
-		}
-		
-		div > p {
-			color:#404040;
-		}
-.spacer{height: 30px;
-}
-a{text-decoration:underline;
-}
-	</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Link Text Changer</title>
 </head>
-
 <body>
+  <p id="link-container">
+    This is the first paragraph. There are links below that will change the text in the second paragraph.
+    <a href="#" id="link1">Link 1</a>
+    <a href="#" id="link2">Link 2</a>
+    <a href="#" id="link3">Link 3</a>
+  </p>
 
-    
-    
-    
-    <!-- –– If you're here, chances are you want to see how i developed this. Please consider this website was built in less than 2 hours, as a design exercise.
-        The page you watched is my answer to the minimalistic websites demand. I decided to focus on contents and information architecture. 
-        Who knows, mybe one day this won't be a wordpress landing page anymore ––-->
-        <div class="spacer"> </div>
-        <div class="wrap">
-            <div class="intro">
-                <h1>
-                    HELLO, THANK YOU FOR VISITING.
-                </h1>	
-                <p>My name is Giorgio Messina.
-                </p>
-                <p>
-                    I am a User Experience Researcher and designer at <a href="https://www.siemens.com" target="_blank"> Siemens</a>.<br>
-                </p>
-            </div>
-            <div class="spacer">
-            </div>
-            <h2>CV</h2>
-			<p>
-                I am involved in the design world since six years now, with the focus on User Experience and digital products for the past five years.<br>
-                Please, be my guest and take a look at my <a href="CV-Giorgio_Messina-2302 (1).pdf" download="">resume</a> or  <a href="TBD">ask me</a> my portfolio.
-            </p>
-            <p>
-                Of course, I work constantly in enriching my portfolio, so feedbacks and comments are welcome!  
-            </p>
-            <div class="spacer">
-            </div>
-            <h2>APPROACH</h2>
-            <p>
-                I like bullet points listings, bar charts, actual and future rituals and floating stuff in general.
-                I try not to use <i>beautiful</i> and <i>ugly</i> as adjectives, as I find those limitating, and I usually start my sentences with the<i> in my opinion</i> formula.</p><p>
-                    I particularly enjoy working on topics that have an impact.
-                </p>	<div class="spacer">
-                </div>
-                <h2>CONTACTS</h2>
-                <p>
-                    If you wish to connect, you can reach out to me via <a href="https://www.linkedin.com/in/giorgio-messina/">LinkedIn</a> or <a href="https://web.archive.org/web/20220105123858/https://www.instagram.com/giom.essina/">Instagram</a> since <a href="https://web.archive.org/web/20220105123858/https://www.facebook.com/LOLHERO.giorgio">facebook</a> and Tik Tok are too personal.
-                </p>
-                <p>Of course, you can also E-Mail at <a href="mailto:giorgiomessina@hotmail.com">this address</a>.</p>
-            </div>
-            
-            
-            
-        </body>
-            
-            
+  <p id="target-paragraph">This is the text that will be changed by the links.</p>
+
+  <script>
+    // Get references to the elements
+    const linkContainer = document.getElementById("link-container");
+    const targetParagraph = document.getElementById("target-paragraph");
+
+    // Function to update the target paragraph text
+    function updateTargetText(linkId, newText) {
+      if (linkId === this.id) {
+        targetParagraph.textContent = newText;
+      }
+    }
+
+    // Add click event listeners to each link
+    linkContainer.querySelectorAll("a").forEach(link => {
+      const linkText = link.textContent;
+      link.addEventListener("click", function(event) {
+        event.preventDefault(); // Prevent default link behavior (page change)
+
+        // Define new text for each link (replace with your desired text)
+        const newText = {
+          "Link 1": "This is the content displayed when Link 1 is clicked.",
+          "Link 2": "This is the content displayed when Link 2 is clicked.",
+          "Link 3": "This is the content displayed when Link 3 is clicked."
+        }[linkText];
+
+        updateTargetText.call(link, linkText, newText);
+      });
+    });
+  </script>
+</body>
+</html>
