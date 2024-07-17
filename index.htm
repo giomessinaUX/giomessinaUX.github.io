@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamic Paragraph Visibility</title>
+    <title>Dynamic Paragraph Visibility with Menu</title>
     <style>
-        
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
@@ -17,44 +16,68 @@
     </style>
 </head>
 <body>
-    <p id="firstParagraph">
-        Hi, I’m Giorgio,
-        let me welcome you to my personal space.
-        
-        If you are here, you may be interested in
-        
-        
-        <a href="#" onclick="showParagraph('content1'); return false;">my career</a>, in 
-        <a href="#" onclick="showParagraph('content2'); return false;">my contacts</a>, or in 
-        <a href="#" onclick="showParagraph('content3'); return false;">my thoughts</a>.
-    </p>
+    <div id="menu">
+        <p>
+            Hi, I’m Giorgio,
+            let me welcome you to my personal space.
 
-    <p id="content1" class="hidden">
-        You clicked the first link. This is the content for the first option. 
-        You can include more complex HTML here, like <strong>bold text</strong>, 
-        <em>italic text</em>, or even nested elements.
-    </p>
+            If you are here, you may be interested in 
 
-    <p id="content2" class="hidden">
-        The second link was clicked. 
-    </p>
+ 
+            <a href="#" onclick="showParagraph('content1'); return false;">my career</a>, in
+            <a href="#" onclick="showParagraph('content2'); return false;"> my contacts</a>, or in 
+            <a href="#" onclick="showParagraph('content3'); return false;">my thoughts</a>.
+        </p>
+    </div>
 
-    <p id="content3" class="hidden">
-        Third link activated. This paragraph shows the third option.
-        
-    </p>
+    <div id="content">
+        <p id="content0">
+            To get into the nitty-gritty, just choose one topic from the highlighted words above.(Yes, it's a menu from now on.)
+            Or maybe you just wanted to 
+            <br><a href="mailto:address@mail.com?subject=coming%20from%20your%20website">drop me a line?</a>
+        </p>
 
-    <script>
-        function showParagraph(contentId) {
-            // Hide all paragraphs
-            document.querySelectorAll('p[id^="content"]').forEach(p => p.classList.add('hidden'));
+        <p id="content1" class="hidden">
+            I've spent the last two and a half years at Siemens as a User Experience Designer and Researcher, focusing on smart cities and sustainability. <br><br>
+
+            After my first experience at the startup Cubbit, I've been a consultant for seven wonderful years now!<br><br>
+
+            To download my resume, just click here.<br><br>
+
+            I've also put together a quick table with the most significant projects I've been involved in recently.<br><br>
+
+            The ever-changing client and project landscape has allowed me to keep a highly adaptive approach and learn some valuable lessons along the way.<br><br>
+            <br>
+
+            To undo, click
+            <a href="#" onclick="resetPage(); return false;">here</a>
+        </p>
+
+        <p id="content2" class="hidden">
+            I have put together a list for me, and I just had to share it with you. I love lists!
+
+            giorgiomessina@hotmail.com
+            telegram.me/dinuovo
             
-            // Show the selected paragraph
-            document.getElementById(contentId).classList.remove('hidden');
-        }
+            instagram.com/gio.essina,
+            linkedin.com/in/giomessina
+            strava.com/athletes/giomessina
+            
+            Right now, I’m based in Milan, but I work remotely, so I might be somewhere else temporarily.
+            
+            However, if you’d like to get in touch, you can just fill in the form and send me an email!
+            
+            To undo, click
 
-        // Show the first content by default
-        showParagraph('content1');
-    </script>
+            <br><a href="#" onclick="resetPage(); return false;">here</a>
+        </p>
+
+        <p id="content3" class="hidden">
+            LETS LEARN FUCKING ACCORDIONS
+            <br><a href="#" onclick="resetPage(); return false;">Reset</a>
+        </p>
+    </div>
+
+    <script src="myscript.js"></script>
 </body>
 </html>
