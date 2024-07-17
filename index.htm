@@ -3,43 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamic Paragraph Change</title>
+    <title>Dynamic Paragraph Visibility</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
             margin: 20px;
         }
+        .hidden {
+            display: none;
+        }
     </style>
 </head>
 <body>
     <p id="firstParagraph">
         This is the first paragraph with three links:
-        <a href="#" onclick="changeParagraph('content1'); return false;">Link 1</a>,
-        <a href="#" onclick="changeParagraph('content2'); return false;">Link 2</a>, and
-        <a href="#" onclick="changeParagraph('content3'); return false;">Link 3</a>.
+        <a href="#" onclick="showParagraph('content1'); return false;">Link 1</a>,
+        <a href="#" onclick="showParagraph('content2'); return false;">Link 2</a>, and
+        <a href="#" onclick="showParagraph('content3'); return false;">Link 3</a>.
     </p>
 
-    <p id="secondParagraph">
-        This is the second paragraph. Click on the links above to change this text.
+    <p id="content1" class="hidden">
+        You clicked the first link. This is the content for the first option. 
+        You can include more complex HTML here, like <strong>bold text</strong>, 
+        <em>italic text</em>, or even nested elements.
+    </p>
+
+    <p id="content2" class="hidden">
+        The second link was clicked. 
+    </p>
+
+    <p id="content3" class="hidden">
+        Third link activated. This paragraph shows the third option.
+        
     </p>
 
     <script>
-        function changeParagraph(content) {
-            const paragraph = document.getElementById('secondParagraph');
+        function showParagraph(contentId) {
+            // Hide all paragraphs
+            document.querySelectorAll('p[id^="content"]').forEach(p => p.classList.add('hidden'));
             
-            switch(content) {
-                case 'content1':
-                    paragraph.textContent = "You clicked the first link. This is the new content for the second paragraph.";
-                    break;
-                case 'content2':
-                    paragraph.textContent = "The second link was clicked. Here's some different text for the second paragraph.";
-                    break;
-                case 'content3':
-                    paragraph.textContent = "Third link activated. The second paragraph now shows this new text.";
-                    break;
-            }
+            // Show the selected paragraph
+            document.getElementById(contentId).classList.remove('hidden');
         }
+
+        // Show the first content by default
+        showParagraph('content1');
     </script>
 </body>
 </html>
