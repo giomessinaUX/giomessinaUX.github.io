@@ -1,48 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Link Text Changer</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Paragraph Change</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+    </style>
 </head>
 <body>
-  <p id="link-container">
-    This is the first paragraph. There are links below that will change the text in the second paragraph.
-    <a href="#" id="link1">Link 1</a>
-    <a href="#" id="link2">Link 2</a>
-    <a href="#" id="link3">Link 3</a>
-  </p>
+    <p id="firstParagraph">
+        This is the first paragraph with three links:
+        <a href="#" onclick="changeParagraph('content1'); return false;">Link 1</a>,
+        <a href="#" onclick="changeParagraph('content2'); return false;">Link 2</a>, and
+        <a href="#" onclick="changeParagraph('content3'); return false;">Link 3</a>.
+    </p>
 
-  <p id="target-paragraph">This is the text that will be changed by the links.</p>
+    <p id="secondParagraph">
+        This is the second paragraph. Click on the links above to change this text.
+    </p>
 
-  <script>
-    // Get references to the elements
-    const linkContainer = document.getElementById("link-container");
-    const targetParagraph = document.getElementById("target-paragraph");
-
-    // Function to update the target paragraph text
-    function updateTargetText(linkId, newText) {
-      if (linkId === this.id) {
-        targetParagraph.textContent = newText;
-      }
-    }
-
-    // Add click event listeners to each link
-    linkContainer.querySelectorAll("a").forEach(link => {
-      const linkText = link.textContent;
-      link.addEventListener("click", function(event) {
-        event.preventDefault(); // Prevent default link behavior (page change)
-
-        // Define new text for each link (replace with your desired text)
-        const newText = {
-          "Link 1": "This is the content displayed when Link 1 is clicked.",
-          "Link 2": "This is the content displayed when Link 2 is clicked.",
-          "Link 3": "This is the content displayed when Link 3 is clicked."
-        }[linkText];
-
-        updateTargetText.call(link, linkText, newText);
-      });
-    });
-  </script>
+    <script>
+        function changeParagraph(content) {
+            const paragraph = document.getElementById('secondParagraph');
+            
+            switch(content) {
+                case 'content1':
+                    paragraph.textContent = "You clicked the first link. This is the new content for the second paragraph.";
+                    break;
+                case 'content2':
+                    paragraph.textContent = "The second link was clicked. Here's some different text for the second paragraph.";
+                    break;
+                case 'content3':
+                    paragraph.textContent = "Third link activated. The second paragraph now shows this new text.";
+                    break;
+            }
+        }
+    </script>
 </body>
 </html>
