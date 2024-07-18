@@ -1,14 +1,119 @@
-body {
-    font-family: 'Sora', sans-serif;
-    text-align: center;
-    background-color: #f0f0f0;
-    margin: 0;
-    padding: 20px;
+:root {
+    /* Colors */
+    --color-background: #ffffff;
+    --color-text: #000000;
+    --color-link: #0000ff;
+  
+    /* Typography */
+    --font-family: Arial, sans-serif;
+    --font-size-base: 16px;
+    --line-height-base: 1.5;
+  
+    /* Spacing */
+    --spacing-small: 10px;
+    --spacing-medium: 20px;
+    --spacing-large: 30px;
 }
-a{
-    color: purple;
+
+body {
+    font-family: var(--font-family);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
+    color: var(--color-text);
+    background-color: var(--color-background);
+    margin: 0;
+    padding: var(--spacing-medium);
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-medium);
+}
+
+div {
+    margin-bottom: var(--spacing-medium);
+}
+
+a {
+    color: var(--color-link);
+    text-decoration: none;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Styles for smaller screens (iPhone 13 mini) */
+@media (max-width: 375px) {
+    body {
+        padding: var(--spacing-small);
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Styles for larger screens (MacBook Pro 14") */
+@media (min-width: 1024px) {
+    body {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+}
+.accordion {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.accordion-item {
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+}
+
+.accordion-toggle {
+    display: none;
+}
+
+.accordion-title {
+    display: block;
+    padding: 15px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    position: relative;
     text-decoration: underline;
 }
-h1 {
-    color: #333;
+
+.accordion-title::after {
+    content: '\25BC';
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease;
+}
+
+.accordion-toggle:checked + .accordion-title::after {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background-color: #fff;
+}
+
+.accordion-toggle:checked + .accordion-title + .accordion-content {
+    max-height: 100px; /* Adjust this value based on your content */
+}
+
+.accordion-content p {
+    padding: 15px;
+    margin: 0;
 }

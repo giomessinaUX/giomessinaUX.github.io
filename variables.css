@@ -1,0 +1,16 @@
+:root {
+    /* Colors */
+    --color-background: #ffffff;
+    --color-text: #000000;
+    --color-link: #00ffff;
+  
+    /* Typography */
+    --font-family: Sora, sans-serif;
+    --font-size-base: 16px;
+    --line-height-base: 1.5;
+  
+    /* Spacing */
+    --spacing-small: 10px;
+    --spacing-medium: 20px;
+    --spacing-large: 30px;
+  }

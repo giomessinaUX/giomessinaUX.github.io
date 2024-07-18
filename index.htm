@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamic Paragraph Visibility with Menu</title>
+    <title>personal website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600&display=swap" rel="stylesheet">
+
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Sora', sans-serif;
             line-height: 1.6;
             margin: 20px;
         }
@@ -17,65 +19,84 @@
 </head>
 <body>
     <div id="menu">
-        <p>
-            Hi, I’m Giorgio,
-            let me welcome you to my personal space.
+        <div>
+            <h1>Hi, I'm <a href="#" onclick="resetPage(); return false;">Giorgio</a>,</h1><br>
+            hope this website finds you fine.<br><br>
+
+            Thanks you for visiting, let me welcome you to my personal space.
 
             If you are here, you may be interested in 
 
  
-            <a href="#" onclick="showParagraph('content1'); return false;">my career</a>, in
-            <a href="#" onclick="showParagraph('content2'); return false;"> my contacts</a>, or in 
-            <a href="#" onclick="showParagraph('content3'); return false;">my thoughts</a>.
-        </p>
+            <a href="#" onclick="showParagraph('content1'); return false;">my background</a>, or in
+            <a href="#" onclick="showParagraph('content2'); return false;"> my contacts</a>.  
+            <br><br>
+        
+        </div>
     </div>
 
     <div id="content">
-        <p id="content0">
+        <div id="content0">
             To get into the nitty-gritty, just choose one topic from the highlighted words above.(Yes, it's a menu from now on.)
             Or maybe you just wanted to 
-            <br><a href="mailto:address@mail.com?subject=coming%20from%20your%20website">drop me a line?</a>
-        </p>
+            <br><a href="mailto:giorgiomessina@hotmail.com?subject=coming%20from%20your%20website">drop me a line?</a>
+        </div>
 
-        <p id="content1" class="hidden">
-            I've spent the last two and a half years at Siemens as a User Experience Designer and Researcher, focusing on smart cities and sustainability. <br><br>
+        <div id="content1" class="hidden">
+            I've spent the last two and a half years at Siemens as a <strong>User Experience Designer and Researcher</strong>, focusing on <strong>smart cities and sustainability.</strong> <br><br>
 
-            After my first experience at the startup Cubbit, I've been a consultant for seven wonderful years now!<br><br>
+            After my first experience at the startup <a href="https://cubbit.io" target="_blank" rel="noopener noreferrer">Cubbit</a>
 
-            To download my resume, just click here.<br><br>
+            , I've been a consultant for seven wonderful years now!<br><br>
 
-            I've also put together a quick table with the most significant projects I've been involved in recently.<br><br>
+            To download my resume, <a href="CV-Giorgio_Messina.pdf" download="CV-Giorgio_Messina.pdf" target="_blank" rel="noopener noreferrer">
+            just click here.</a><br><br>
+
+            I've also put together <a href="portfolio.htm" target="_blank">a quick table with the most significant projects </a>I've been involved in recently.<br><br>
 
             The ever-changing client and project landscape has allowed me to keep a highly adaptive approach and learn some valuable lessons along the way.<br><br>
             <br>
+        </div>
 
-            To undo, click
-            <a href="#" onclick="resetPage(); return false;">here</a>
-        </p>
-
-        <p id="content2" class="hidden">
+        <div id="content2" class="hidden">
             I have put together a list for me, and I just had to share it with you. I love lists!
+            <br><br>
 
-            giorgiomessina@hotmail.com
-            telegram.me/dinuovo
+            giorgiomessina@hotmail.com<br>
+            telegram.me/dinuovo<br><br>
             
-            instagram.com/gio.essina,
-            linkedin.com/in/giomessina
-            strava.com/athletes/giomessina
-            
-            Right now, I’m based in Milan, but I work remotely, so I might be somewhere else temporarily.
-            
-            However, if you’d like to get in touch, you can just fill in the form and send me an email!
-            
+            instagram.com/gio.essina,<br>
+            linkedin.com/in/giomessina<br>
+            strava.com/athletes/giomessina<br>
+            <br><br>
+            Right now, I'm based in Milan, but I work remotely, so I might be somewhere else temporarily.
+            <br>
+            However, if you'd like to get in touch, you can just fill in the form and send me an email!
+            <br>
             To undo, click
 
             <br><a href="#" onclick="resetPage(); return false;">here</a>
-        </p>
+        </div>
 
-        <p id="content3" class="hidden">
-            LETS LEARN FUCKING ACCORDIONS
+        <div id="content3" class="hidden">
+            <div class="accordion">
+                <div class="accordion-item">
+                    <input type="radio" name="accordion" id="accordion1" class="accordion-toggle">
+                    <label for="accordion1" class="accordion-title">How are you?</label>
+                    <div class="accordion-content">
+                        <p>Don't worry</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <input type="accordion" name="accordion" id="accordion2" class="accordion-toggle">
+                    <label for="accordion2" class="accordion-title">Where do you live?</label>
+                    <div class="accordion-content">
+                        <p>I'm not telling</p>
+                    </div>
+                </div>
+            </div>
             <br><a href="#" onclick="resetPage(); return false;">Reset</a>
-        </p>
+        </div>
     </div>
 
     <script src="myscript.js"></script>
