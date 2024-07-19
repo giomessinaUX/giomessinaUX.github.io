@@ -1,31 +1,28 @@
 :root {
-    /* Colors */
-    --color-background: #ffffff;
-    --color-text: #000000;
-    --color-link: #0000ff;
-  
-    /* Typography */
-    --font-family: Arial, sans-serif;
+    --color-background: #fff;
+    --color-text: #000;
+    --color-link: #00f;
+    --font-family: 'Sora', sans-serif;
     --font-size-base: 16px;
     --line-height-base: 1.5;
-  
-    /* Spacing */
-    --spacing-small: 10px;
-    --spacing-medium: 20px;
-    --spacing-large: 30px;
+    --spacing-small: 16px;
+    --spacing-medium: 32px;
+    --spacing-large: 48px;
 }
 
 body {
-    font-family: var(--font-family);
-    font-size: var(--font-size-base);
-    line-height: var(--line-height-base);
+    font: var(--font-size-base)/var(--line-height-base) var(--font-family);
     color: var(--color-text);
     background-color: var(--color-background);
     margin: 0;
     padding: var(--spacing-medium);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    
 }
 
-h1 {
+h1, h2 {
     font-size: 2rem;
     margin-bottom: var(--spacing-medium);
 }
@@ -36,84 +33,77 @@ div {
 
 a {
     color: var(--color-link);
-    text-decoration: none;
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 .hidden {
     display: none;
 }
 
-/* Styles for smaller screens (iPhone 13 mini) */
+.fixed-paragraph {
+    position: relative;
+    z-index: 1;
+    background-color: var(--color-background);
+}
+
+#chance2 {
+    position: relative;
+    z-index: 0;
+}
+
+@media (max-width: 1024px) {
+    body {
+        padding: var(--spacing-medium) calc(var(--spacing-medium) * 2);
+        max-width: 100%;
+    }
+}
+
 @media (max-width: 375px) {
     body {
-        padding: var(--spacing-small);
+        padding: var(--spacing-small) calc(var(--spacing-medium) * 2);
     }
-
-    h1 {
+    h1, h2 {
         font-size: 1.5rem;
     }
 }
 
-/* Styles for larger screens (MacBook Pro 14") */
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
     body {
-        max-width: 800px;
-        margin: 0 auto;
+        padding: var(--spacing-medium);
     }
-
-    h1 {
+    h1, h2 {
         font-size: 2.5rem;
     }
 }
-.accordion {
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
+.disclaimer {
+    position: fixed;
+    bottom: 1rem;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.6rem;
+    border-top: 1px solid #ccc;
+}
+.contact-links ul {
+    list-style-type: none;
+    padding-left: 0;
 }
 
-.accordion-item {
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
-}
-
-.accordion-toggle {
-    display: none;
-}
-
-.accordion-title {
-    display: block;
-    padding: 15px;
-    background-color: #f9f9f9;
-    cursor: pointer;
+.contact-links li {
     position: relative;
-    text-decoration: underline;
+    padding-left: 1.5em;
+    margin-bottom: 0.5em;
 }
 
-.accordion-title::after {
-    content: '\25BC';
+.contact-links li::before {
+    content: "\26A1";  /* Black small square */
     position: absolute;
-    right: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    transition: transform 0.3s ease;
-}
-
-.accordion-toggle:checked + .accordion-title::after {
-    transform: translateY(-50%) rotate(180deg);
-}
-
-.accordion-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-    background-color: #fff;
-}
-
-.accordion-toggle:checked + .accordion-title + .accordion-content {
-    max-height: 100px; /* Adjust this value based on your content */
-}
-
-.accordion-content p {
-    padding: 15px;
-    margin: 0;
+    left: 0;
+    top: 0;
+    color: #0000FF;  /* Blue color */
+    font-size: 1.2em;
+    line-height: 1;
 }

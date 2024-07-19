@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>personal website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>personal website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+  
+</head>
+<body>
+    
+    <div>
+        <h1>Hi, you should be interested in <a href="#" onclick="showParagraph('content1'); return false;">my background</a>
+    </div>
+
+    <hr class="primario">
+
+    <div id="content">
+        <div id="content1" class="hidden">
+            this is some text, with the reset <a href="#" onclick="resetPage(); return false;">reset</a>,
+        </div>
+    </div>
+    
+    <hr class="secondario">
+
+    <div>
+        <h2>paragrafo fisso</h2>
+        <p>anyway, you might only want <a href="#" onclick="showParagraph('chance2'); return false;">to learn more</a></p>        
+    
+    </div>
+
+    <hr class="primario">
+
+    <div id="chance"></div>
+        <div id="chance2" class="hidden">
+            is it working? <a href="#" onclick="resetPage1(); return false;">reset</a>,
+        </div>
+    </div>
+    
+    <hr class="secondario">
+
+    <script src="myscript.js"></script>
+</body>
+</html>

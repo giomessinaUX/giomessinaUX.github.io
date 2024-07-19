@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>personal website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+  
+</head>
+<body>
+    <div>
+        <h1>Hi, you should be interested in <a onclick="toggleParagraph('content1')">my background</a></h1>
+    </div>
+    <hr class="primario">
+    <div id="content1" class="hidden">
+        <p>This is some text about my background.</p>
+    </div>
+    <hr class="secondario">
+    <div class="fixed-paragraph">
+        <h2>Paragrafo fisso</h2>
+        <p>Anyway, you might only want <a onclick="toggleParagraph('chance2')">to learn more</a></p>
+    </div>
+    <hr class="primario">
+    <div id="chance2" class="hidden">
+        <p>Here's more information you wanted to learn about.</p>
+    </div>
+    <hr class="secondario">
+    
+    <script src="myscript.js"></script>
+</body>
+</html>

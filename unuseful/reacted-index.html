@@ -1,0 +1,117 @@
+import React, { useState } from 'react';
+
+const PersonalWebsite = () => {
+  const [showBackground, setShowBackground] = useState(false);
+  const [showMoreInfo, setShowMoreInfo] = useState(false);
+
+  const toggleParagraph = (setter) => {
+    setter(prev => !prev);
+  };
+
+  return (
+    <div className="personal-website">
+      <style jsx>{`
+        :root {
+          --color-background: #fff;
+          --color-text: #000;
+          --color-link: #00f;
+          --font-family: 'Sora', sans-serif;
+          --font-size-base: 16px;
+          --line-height-base: 1.5;
+          --spacing-small: 10px;
+          --spacing-medium: 20px;
+          --spacing-large: 30px;
+        }
+        
+        .personal-website {
+          font: var(--font-size-base)/var(--line-height-base) var(--font-family);
+          color: var(--color-text);
+          background-color: var(--color-background);
+          margin: 0;
+          padding: var(--spacing-medium);
+          max-width: 800px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        
+        h1, h2 {
+          font-size: 2rem;
+          margin-bottom: var(--spacing-medium);
+        }
+        
+        div {
+          margin-bottom: var(--spacing-medium);
+        }
+        
+        a {
+          color: var(--color-link);
+          text-decoration: underline;
+          cursor: pointer;
+        }
+        
+        .fixed-paragraph {
+          position: relative;
+          z-index: 1;
+          background-color: var(--color-background);
+        }
+        
+        .more-info {
+          position: relative;
+          z-index: 0;
+        }
+        
+        .primario {
+          border: solid #00f;
+        }
+        
+        @media (max-width: 1024px) {
+          .personal-website {
+            padding: var(--spacing-medium) calc(var(--spacing-medium) * 2);
+            max-width: 100%;
+          }
+        }
+        
+        @media (max-width: 375px) {
+          .personal-website {
+            padding: var(--spacing-small) calc(var(--spacing-medium) * 2);
+          }
+          h1, h2 {
+            font-size: 1.5rem;
+          }
+        }
+        
+        @media (min-width: 1025px) {
+          .personal-website {
+            padding: var(--spacing-medium);
+          }
+          h1, h2 {
+            font-size: 2.5rem;
+          }
+        }
+      `}</style>
+      <div>
+        <h1>Hi, you should be interested in <a onClick={() => toggleParagraph(setShowBackground)}>my background</a></h1>
+      </div>
+      <hr className="primario" />
+      {showBackground && (
+        <div>
+          <p>This is some text about my background.</p>
+        </div>
+      )}
+      <hr className="secondario" />
+      <div className="fixed-paragraph">
+        <h2>Paragrafo fisso</h2>
+        <p>Anyway, you might only want <a onClick={() => toggleParagraph(setShowMoreInfo)}>to learn more</a></p>
+      </div>
+      <hr className="primario" />
+      {showMoreInfo && (
+        <div className="more-info">
+          <p>Here's more information you wanted to learn about.</p>
+        </div>
+      )}
+      <hr className="secondario" />
+    </div>
+  );
+};
+
+export default PersonalWebsite;
