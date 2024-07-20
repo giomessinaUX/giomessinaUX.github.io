@@ -11,15 +11,16 @@
   
 </head>
 <body>
-    <div>
+    <!-- 
+        <div>
         <h1>Hi, I'm Giorgio</h1><br>
         welcome, I hope this website finds you fine.<br><br>
         I am a <strong>User Experience Designer</strong>, currently working for <strong> Siemens </strong>.<br>
         I'm in love with complexity and it's decodification. <br>
         If you want to learn more about my background, <a onclick="toggleParagraph('content1')">be my guest</a></h1>.
-
+        -->
   <!--    Unless I know some data support what I'm saying, I start my sentences with the "<a href="https://www.youtube.com/watch?v=r_fOu7RcsQ4" target="_blank" rel="noopener noreferrer">in my opinion formula.</a>" <br>   -->
-                 
+  <!--               
     </div>
     
     <div id="content1" class="hidden">
@@ -32,7 +33,7 @@
             To download my resume, <a href="CV-Giorgio_Messina.pdf" download="CV-Giorgio_Messina.pdf" target="_blank" rel="noopener noreferrer">
             just click here.</a><br><br>
 
-            I've also put together <a href="portfolio.htm" target="_blank">a quick table with the most significant projects </a>I've been involved in recently.<br><br>
+            <br><br>
 
             The ever-changing client and project landscape has allowed me to keep a highly adaptive approach and learn some valuable lessons along the way.<br><br></p>
     </div>
@@ -49,14 +50,14 @@
                 <li>
                     <a href="mailto:giorgiomessina@hotmail.com" target="_blank">giorgiomessina@hotmail.com</a></li>
                 <li>
-                    <a href="https://telegram.me/dinuovo" target="_blank">telegram.me/dinuovo</a</li>
+                    <a href="https://telegram.me/dinuovo" target="_blank noopener">telegram.me/dinuovo</a</li>
                 <li></li>
                 <li>
-                    <a href="https://www.instagram.com/gio.essina" target="_blank">Instagram.com/gio.essina</a></li>
+                    <a href="https://www.instagram.com/gio.essina" target="_blank noopener">Instagram.com/gio.essina</a></li>
                 <li>
-                    <a href="https://www.linkedin.com/in/giomessina" target="_blank">linkedin.com</a></li>
+                    <a href="https://www.linkedin.com/in/giomessina" target="_blank noopener">linkedin.com</a></li>
                 <li>
-                    <a href="https://www.strava.com/athletes/giomessina" target="_blank">Strava/giomessina</a></li>
+                    <a href="https://www.strava.com/athletes/giomessina" target="_blank noopener">Strava/giomessina</a></li>
             </ul>
         </div>
     
@@ -65,10 +66,67 @@
         <h3>In conclusion</h3>
         <p>i hope you like this presentation. In a future, it will present more. Fancy a spoiler?   <a href="mailto:giorgiomessina@hotmail.com" target="_blank">ask me</a></p>
     </div>
-    <div class="disclaimer">
+-->
+
+    <div class="clientlist">
+        <p id="firstone">
+            I have been working on multiple projects. At the moment my client is Siemens, for which I'm a UX designer and researcher. 
+            <a href="#" id="more-details">I can annoy you with some more details</a>
+            <span id="or-not" > or not.</span>
+        </p>
+        <div id="hidden-sentences" >
+            <p>In VMLYR, I was assigned as a UX designer on projects for GSK, Lavazza, Amadori and other minor ones.</p>
+            <p>In Connexia I have been a UX Designer for Sisal, Fastweb and achieved some tasks as Innovation designer and scouter.</p>
+            <p>In Engineering i was focused on the public administration services for the citizens. And thats' quite it.</p>
+        </div>
+    </div>
+
+
+<script>
+    const newSentence = document.createTextNode(sentences[currentSentence].textContent + ' ');
+firstone.insertBefore(newSentence, document.getElementById('more-details'));
+    const content = document.getElementById('clientlist');
+    const moreDetails = document.getElementById('more-details');
+    const orNot = document.getElementById('or-not');
+    const hiddenSentences = document.getElementById('hidden-sentences');
+    const sentences = Array.from(hiddenSentences.getElementsByTagName('p'));
+    
+    let currentSentence = 0;
+
+    moreDetails.addEventListener('click', function(e) {
+        e.preventDefault();
+        if (currentSentence < sentences.length) {
+            const newSentence = document.createTextNode(sentences[currentSentence].textContent + ' ');
+            content.insertBefore(newSentence, moreDetails);
+            currentSentence++;
+
+            if (currentSentence === sentences.length) {
+                moreDetails.removeAttribute('href');
+                moreDetails.style.textDecoration = 'none';
+                moreDetails.style.color = 'inherit';
+                moreDetails.style.cursor = 'text';
+                orNot.style.display = 'inline';
+            }
+        }
+    });
+
+    function toggleParagraph(contentId) {
+    const content = document.getElementById(contentId);
+    if (content.classList.contains('hidden')) {
+        content.classList.remove('hidden');
+    } else {
+        content.classList.add('hidden');
+    }
+}
+
+</script>
+  
+  
+  <!--   <div class="disclaimer">
       you have no clue how surprised i was when i could build this whole fucking thing only relying on myself, a figma file, and an AI to translate my vision into html, css and javascript lines. Want to know more about the process? <a>here is the figma file</a>
     </div>
     <script src="myscript.js"></script>
+-->
 </body>
 </html>
 

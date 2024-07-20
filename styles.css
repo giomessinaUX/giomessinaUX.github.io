@@ -20,7 +20,6 @@ body {
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
-    
 }
 
 h1, h2 {
@@ -40,6 +39,12 @@ a {
 }
 
 .hidden {
+    display: none;
+}
+.hidden-sentences{
+    display: none;
+}
+.or-not{
     display: none;
 }
 
