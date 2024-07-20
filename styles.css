@@ -88,6 +88,8 @@ a {
     text-align: center;
     font-size: 0.6rem;
     z-index: 2;
+    margin-bottom: 0rem;
+
 }
 .contact-links ul {
     list-style-type: none;
