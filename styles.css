@@ -20,7 +20,7 @@ body {
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
-    
+
 }
 
 h1, h2 {
@@ -41,6 +41,8 @@ a {
 
 .hidden {
     display: none;
+    margin: 0 ;
+    padding: 0;
 }
 
 .fixed-paragraph {
