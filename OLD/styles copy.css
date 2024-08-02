@@ -1,0 +1,116 @@
+:root {
+    --color-background: #fff;
+    --color-background-2:#ddd;
+    --color-text: #000;
+    --color-link: #00f;
+    --font-family: 'Sora', sans-serif;
+    --font-size-base: 3rem;
+    --font-size-h:8rem;
+    --line-height-base: 1.5;
+    --spacing-small: 16px;
+    --spacing-medium: 32px;
+    --spacing-large: 48px;
+}
+
+body {
+    font: var(--font-size-base)/var(--line-height-base) var(--font-family);
+    color: var(--color-text);
+    background-color: var(--color-background);
+    margin: 0;
+    padding: var(--spacing-medium);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+h1, h2 {
+    font-size: var(--font-size-h);
+    margin-bottom: var(--spacing-medium);
+}
+
+div {
+    margin-bottom: var(--spacing-medium);
+    border: #00f;
+}
+
+a {
+    color: var(--color-link);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+    margin: 0 ;
+    padding: 0;
+}
+
+.fixed-paragraph {
+    position: relative;
+    z-index: 2;
+    background-color: var(--color-background);
+}
+
+#chance2 {
+    position: relative;
+    z-index: 2;
+}
+
+@media (max-width: 1024px) {
+    body {
+        padding: var(--spacing-medium) var(--spacing-medium) ;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 375px) {
+    body {
+        padding: var(--spacing-small) var(--spacing-medium)
+    }
+    h1, h2 {
+        font-size: calc(var(--font-size-h)*1,5);
+    }
+}
+
+@media (min-width: 1025px) {
+    body {
+        padding: var(--spacing-medium);
+    }
+    h1, h2 {
+        font-size:  calc(var(--font-size-h)*3,5)2.5rem;
+    }
+}
+.disclaimer {
+    position: fixed;
+    bottom: 0rem;
+    left: 0;
+    right: 0;
+    background-color:var( --color-background-2);
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.6rem;
+    z-index: 2;
+    margin-bottom: 0rem;
+
+}
+.contact-links ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.contact-links li {
+    position: relative;
+    padding-left: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+.contact-links li::before {
+    content: "\26A1";  /* Black small square */
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--color-link);  /* Blue color */
+    font-size: 1.2em;
+    line-height: 1;
+}
