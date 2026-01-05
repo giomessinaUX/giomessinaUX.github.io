@@ -4,6 +4,10 @@
 *::after {
   box-sizing: border-box;
 }
+.primalinea
+{
+  font-size: 3rem;
+}
 
 body {
   margin: 0;
