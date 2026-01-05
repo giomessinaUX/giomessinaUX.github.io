@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About me – bullet points</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page">
+    <section class="intro">
+      <p>This bullet point list comprehends stuff about me.</p>
+    </section>
+
+    <!-- Barra filtri -->
+    <section class="filters" aria-label="Filters">
+      <!-- stato iniziale: tutti abilitati (aria-pressed="true" e icona ×) -->
+      <button class="filter-button is-on"
+              type="button"
+              data-tag="technology"
+              aria-pressed="true">
+        <span class="filter-symbol">×</span>Technology
+      </button>
+
+      <button class="filter-button is-on"
+              type="button"
+              data-tag="outdoor"
+              aria-pressed="true">
+        <span class="filter-symbol">×</span>Outdoor
+      </button>
+
+      <button class="filter-button is-on"
+              type="button"
+              data-tag="work"
+              aria-pressed="true">
+        <span class="filter-symbol">×</span>Work
+      </button>
+
+      <button class="filter-button is-on"
+              type="button"
+              data-tag="mottos"
+              aria-pressed="true">
+        <span class="filter-symbol">×</span>Mottos
+      </button>
+    </section>
+
+    <!-- Elenco puntato; ogni li ha uno o più tag nei data-attribute -->
+    <section class="bullets">
+      <ul>
+        <li data-tags="mottos">Di necessità virtù.</li>
+        <li data-tags="work">In 2025, I spent 3 months with a sms/calls only telephone.</li>
+        <li data-tags="work technology">In 2025, I spent 2 months only paying cash.</li>
+        <li data-tags="outdoor mottos">Climbing long routes, it’s crucial to only focus on controllable variables.</li>
+        <li data-tags="mottos work">I believe necessity is not the innovation driver anymore.</li>
+        <li data-tags="outdoor mottos">When hiking, you only start with the first step.</li>
+        <li data-tags="work mottos">My grandpa asked me if I only learned the school lesson or if I understood it.</li>
+        <li data-tags="technology work">In 2008, I created the class forum to gather multiple sources of information.</li>
+        <li data-tags="technology work">My phone, from 9:00pm to 8:00am, is black and white only.</li>
+        <li data-tags="technology work">I can’t access social media except for 8:00pm to 8:30pm from my phone.</li>
+        <li data-tags="work">I don’t have any subscription, prime included.</li>
+        <li data-tags="work mottos">In the evening, sometimes, I watch the TV and comment it with my partner.</li>
+        <li data-tags="work">I am working mostly remotely since covid happened. Yet, I don’t love it.</li>
+      </ul>
+    </section>
+  </main>
+
+  <script src="filters.js"></script>
+</body>
+</html>

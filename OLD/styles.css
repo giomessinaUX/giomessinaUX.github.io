@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h1, h2, h3 {
+    margin: 0;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #e5ff00;
+    padding: 10px;
+    text-align: center;
+}
+
+#contact-links {
+    display: none;
+}
+
+#contact-links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Light theme (default) */
+body {
+    background-color: white;
+    color: black;
+}
+
+/* Dark theme */
+body.dark-theme {
+    background-color: #0000ff;
+    color: white;
+}
+
+body.dark-theme footer {
+    background-color: #333333;
+}
+
+@media (max-width: 900px) {
+    #contacts-toggle {
+        cursor: pointer;
+    }
+}
