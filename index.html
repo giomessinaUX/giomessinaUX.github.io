@@ -11,51 +11,107 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <meta charset="UTF-8">
   <title>Giorgio – Product Designer</title>
   <link rel="stylesheet" href="styles.css">
+  
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T4GHNQB"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
+
+  <button class="language-toggle" onclick="toggleLanguage()">Versione in italiano</button>
+
   <main class="page">
     <section class="intro">
-      <p class="primalinea">Hello, I’m Giorgio.<br></p>
-      <p>pleased to meet you!</p>
-
-      <p>I am a curious, enthusiastic, and committed problem fixer.<br>
-        I support companies and products as a Product Designer.</p>
-
-      <p>
-        With a background that stretches across startups, corporates,
-        and small businesses, mostly in consulting, I’ve learned to design for
-        diverse industries, fast‑changing contexts, and complex challenges.
+      <p class="primalinea">
+        <span data-lang="en" class="active">Hello, I'm Giorgio.<br></span>
+        <span data-lang="it">Ciao, sono Giorgio.<br></span>
       </p>
       <p>
-        I started designing in the early 2010s, in the university, as industrial product designer. Since then, I then worked as a <i>UX designer, interaction designer, innovation and transormation consultant, then service designer</i> and <strong>here I am, back product design.</strong>
+        <span data-lang="en" class="active">pleased to meet you!</span>
+        <span data-lang="it">piacere di conoscerti!</span>
+      </p>
+
+      <p>
+        <span data-lang="en" class="active">I am a curious, enthusiastic, and committed problem fixer.<br>
+        I support companies and products as a Product Designer.</span>
+        <span data-lang="it">Sono un risolutore di problemi curioso, entusiasta e impegnato.<br>
+        Supporto aziende e prodotti come Product Designer.</span>
+      </p>
+
+      <h3>
+        <span data-lang="en" class="active">My background</span>
+        <span data-lang="it">Il mio background</span>
+      </h3>
+      
+      <p>
+        <span data-lang="en" class="active">With a background that stretches across startups, corporates,
+        and small businesses, mostly in consulting, I've learned to design for
+        diverse industries, fast‑changing contexts, and complex challenges.</span>
+        <span data-lang="it">Con un background che spazia tra startup, grandi aziende
+        e piccole imprese, principalmente nella consulenza, ho imparato a progettare per
+        industrie diverse, contesti in rapido cambiamento e sfide complesse.</span>
+      </p>
+      
+      <p>
+        <span data-lang="en" class="active">I started designing in the early 2010s, in the university, as industrial product designer. Since then, I worked as a <i>UX designer, interaction designer, innovation and transformation consultant, then service designer</i> and <strong>here I am, back to product design.</strong></span>
+        <span data-lang="it">Ho iniziato a progettare nei primi anni 2010, all'università, come designer di prodotti industriali. Da allora, ho lavorato come <i>UX designer, interaction designer, consulente di innovazione e trasformazione, poi service designer</i> e <strong>eccomi qui, di nuovo nel product design.</strong></span>
       </p>
     </section>
 
     <hr>
 
     <section class="links">
-      <!-- download file -->
-      <p>You can easily download my <a class="text-link" href="GiorgioMessina-onepage.pdf" download>resume clicking here</a>, or you can also download my <a class="text-link" href="GiorgioMessina-Portfolio.pdf" download>portfolio clicking here</a><br>
+      <p>
+        <span data-lang="en" class="active">You can easily download my <a class="text-link" href="GiorgioMessina-onepage.pdf" download>resume clicking here</a>, or you can also download my <a class="text-link" href="GiorgioMessina-Portfolio.pdf" download>portfolio clicking here</a></span>
+        <span data-lang="it">Puoi facilmente scaricare il mio <a class="text-link" href="GiorgioMessina-onepage.pdf" download>curriculum cliccando qui</a>, oppure puoi scaricare il mio <a class="text-link" href="GiorgioMessina-Portfolio.pdf" download>portfolio cliccando qui</a></span>
+        <br>
       </p>
     </section>
+    
     <hr>
-    <section class="contacts">
-      <!-- external links -->
-      <p>If you want to connect, the best way is probably on <a class="text-link" href="tel:+393384569770">my mobile phone</a> or via <a class="text-link" href="mailto:giomessina.work@gmail.com">email</a></p>
-      <p>However, also <a class="text-link" href="https://www.linkedin.com/in/giomessina/" target="_blank" rel="noreferrer">linkedin</a> or <a class="text-link" href="https://www.instagram.com/giom.essina/" target="_blank" rel="noreferrer">instagram</a> should work.</p>
-    </section>
-    <!--<hr>
-    <section class="extra">
+    <h3>
+      <span data-lang="en" class="active">Get in touch</span>
+      <span data-lang="it">Contattami</span>
+    </h3>
+    
 
-       link alla seconda pagina 
-      <p>By the way, I also wrote <a class="text-link" href="bullet-points.html">some bullet points</a> to introduce myself.</p>
-    </section>-->
+    <section class="contacts">
+      <p>
+        <span data-lang="en" class="active">If you want to connect, the best way is probably on <a class="text-link" href="tel:+393384569770">my mobile phone</a> or via <a class="text-link" href="mailto:giomessina.work@gmail.com">email</a></span>
+        <span data-lang="it">Se vuoi metterti in contatto, il modo migliore è probabilmente tramite <a class="text-link" href="tel:+393384569770">il mio cellulare</a> o via <a class="text-link" href="mailto:giomessina.work@gmail.com">email</a></span>
+      </p>
+      <p>
+        <span data-lang="en" class="active">However, also <a class="text-link" href="https://www.linkedin.com/in/giomessina/" target="_blank" rel="noreferrer">linkedin</a> or <a class="text-link" href="https://www.instagram.com/giom.essina/" target="_blank" rel="noreferrer">instagram</a> should work.</span>
+        <span data-lang="it">Tuttavia, anche <a class="text-link" href="https://www.linkedin.com/in/giomessina/" target="_blank" rel="noreferrer">linkedin</a> o <a class="text-link" href="https://www.instagram.com/giom.essina/" target="_blank" rel="noreferrer">instagram</a> dovrebbero funzionare.</span>
+      </p>
+    </section>
   </main>
+
+  <script>
+    let currentLang = 'en';
+
+    function toggleLanguage() {
+      const button = document.querySelector('.language-toggle');
+      const enElements = document.querySelectorAll('[data-lang="en"]');
+      const itElements = document.querySelectorAll('[data-lang="it"]');
+      
+      if (currentLang === 'en') {
+        currentLang = 'it';
+        button.textContent = 'English version';
+        document.documentElement.lang = 'it';
+        
+        enElements.forEach(el => el.classList.remove('active'));
+        itElements.forEach(el => el.classList.add('active'));
+      } else {
+        currentLang = 'en';
+        button.textContent = 'Versione in italiano';
+        document.documentElement.lang = 'en';
+        
+        itElements.forEach(el => el.classList.remove('active'));
+        enElements.forEach(el => el.classList.add('active'));
+      }
+    }
+  </script>
 </body>
 </html>
-
-
