@@ -21,11 +21,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
  <div class="language-bar"></div>
   <div class="top-links">
-    <a href="#contacts" class="contact-link">
+    <a href="#contacts" class="contact-link" id="contlink">
       <span data-lang="en" class="active">Contacts</span>
-      <span data-lang="it">Contatti</span>
+      <span data-lang="it" >Contatti</span>
     </a>
-    <button class="language-toggle" onclick="toggleLanguage()">English version</button>
+    <button class="language-toggle" onclick="toggleLanguage()">Versione Italiana</button>
   </div>
 
   <main class="page">
@@ -58,12 +58,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </p>
 
       <p>
-        <span data-lang="en" class="active"> In recent years, I've focused on data-intensive B2B platforms, particularly at Siemens and Telereading. Working on complex enterprise products has sharpened my ability to decode complexity, balance technical feasibility with strict requirements, and ensure strong alignment between product and engineering teams. I've led end-to-end design initiatives across the full product lifecycle, tackling strategic challenges like prioritizing high-impact work and creating useful data visualizations that drive real decisions.
+        <span data-lang="en" class="active"> In recent years, I've focused on data-intensive B2B platforms, particularly at Siemens and Telereading. Working on complex enterprise products has sharpened my ability to decode complexity, balance technical feasibility with strict requirements, and ensure strong alignment between product and engineering teams. I've led end-to-end design initiatives across the full product lifecycle, tackling strategic challenges like prioritizing high-impact work and creating useful data visualizations that drive real decisions.</span>
         <span data-lang="it">Negli ultimi anni mi sono concentrato su piattaforme B2B ad alta intensità di dati, in particolare nel settore smart-building presso Siemens e Telereading. Lavorare su questi prodotti enterprise complessi ha affinato la mia capacità di decodificare la complessità, bilanciare la fattibilità tecnica con requisiti rigorosi e garantire un forte allineamento tra team di prodotto e ingegneria. Ho guidato iniziative di design end-to-end attraverso l'intero ciclo di vita del prodotto, affrontando sfide strategiche come dare priorità al lavoro ad alto impatto, destrutturare l'ambiguità e creare visualizzazioni di dati utili che guidano decisioni concrete.</span>
       </p>
       <p>
         <span data-lang="en" class="active"> 
-        I'm also committed to cultivating strong design culture, mentoring teams in user-centered methodologies, documenting design frameworks, and helping organizations scale shared design languages.
+        I'm also committed to cultivating strong design culture, mentoring teams in user-centered methodologies, documenting design frameworks, and helping organizations scale shared design languages.</span>
         <span data-lang="it">
         Sono anche impegnato a coltivare la cultura del design—facendo attivamente mentoring ai team nelle metodologie user-centered, documentando framework di design e aiutando le organizzazioni a scalare linguaggi di design condivisi.</span>
       </p>
@@ -112,7 +112,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         itElements.forEach(el => el.classList.add('active'));
       } else {
         currentLang = 'en';
-        button.textContent = 'Versione in italiano';
+        button.textContent = 'Versione italiana';
         document.documentElement.lang = 'en';
         
         itElements.forEach(el => el.classList.remove('active'));

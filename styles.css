@@ -61,12 +61,7 @@ i, em {
   font-weight: 300;
 }
 
-.page {
-  max-width: 80%;
-  margin: 0 auto;
-}
-
-/* Responsive: sotto i 750px usa il 100% con margini di 24px */
+/* Responsive: mobile 100% della larghezza */
 @media (max-width: 750px) {
   body {
     padding: 24px;
@@ -74,12 +69,20 @@ i, em {
   }
   
   .page {
+    width: 100%;
     max-width: 100%;
   }
   
   .top-links {
     right: 24px;
   }
+}
+
+/* Desktop: 80% della larghezza, centrato */
+.page {
+  width: 80%;
+  max-width: 80%;
+  margin: 0 auto;
 }
 
 .intro p {
@@ -103,11 +106,11 @@ hr {
   z-index: 999;
 }
 
-/* Container per i link in alto a destra */
+/* Container per i link in alto a destra - Desktop */
 .top-links {
   position: fixed;
   top: 30px;
-  right: 10%;
+  right: calc(10% + 36px);
   z-index: 1000;
   display: flex;
   gap: 18px;
@@ -227,3 +230,4 @@ hr {
 .bullets li.is-hidden {
   display: none;
 }
+
