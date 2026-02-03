@@ -64,7 +64,7 @@ i, em {
 /* Responsive: mobile 100% della larghezza */
 @media (max-width: 750px) {
   body {
-    padding: 24px;
+    padding: 6px;
     padding-top: 120px;
   }
   
