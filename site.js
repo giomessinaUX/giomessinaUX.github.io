@@ -47,13 +47,8 @@
   function initNav() {
     var nav = document.querySelector('.site-nav');
     if (!nav) return;
-    var lastY = window.scrollY;
     window.addEventListener('scroll', function () {
-      var y = window.scrollY;
-      nav.classList.toggle('is-scrolled', y > 12);
-      if (y > lastY && y > 240) nav.classList.add('is-hidden');
-      else nav.classList.remove('is-hidden');
-      lastY = y;
+      nav.classList.toggle('is-scrolled', window.scrollY > 12);
     }, { passive: true });
   }
 
