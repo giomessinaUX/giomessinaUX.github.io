@@ -1,0 +1,108 @@
+<!-- @dsCard group="Components" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Buttons & Controls</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Inter', sans-serif; background: #fdfdfd; padding: 40px; color: #111; }
+  h1 { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #8a8a8a; font-family: ui-monospace, monospace; margin-bottom: 32px; }
+  .group { margin-bottom: 40px; }
+  .group-label { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #8a8a8a; font-family: ui-monospace, monospace; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 1px solid #e4e4e4; }
+  .row { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; margin-bottom: 12px; }
+  .spec { font-family: ui-monospace, monospace; font-size: 11px; color: #8a8a8a; line-height: 1.8; }
+  .spec span { color: #2b4ee6; }
+
+  /* Lang toggle */
+  .lang-toggle { background: none; border: 1.5px solid #e4e4e4; border-radius: 999px; padding: 5px 13px; font-family: ui-monospace, monospace; font-size: 12px; letter-spacing: 0.12em; cursor: pointer; color: #4a4a4a; }
+  .lang-toggle.hover { border-color: #2b4ee6; color: #16308f; }
+
+  /* Filter buttons */
+  .filter-btn { border-radius: 999px; padding: 11px 20px; font-size: 16px; font-family: 'Inter', sans-serif; border: 1.5px solid #d2d2d2; background: #fff; color: #111; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; }
+  .filter-btn.on { background: #111; color: #fff; border-color: #111; font-weight: 500; }
+  .filter-symbol { font-size: 1.2rem; line-height: 1; }
+
+  /* Text link */
+  .text-link { color: #111; font-weight: 400; text-decoration: underline; text-decoration-color: #2b4ee6; text-underline-offset: 0.22em; text-decoration-thickness: 1.5px; }
+
+  /* View-all CTA */
+  .view-all { font-family: ui-monospace, monospace; font-size: 13.5px; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; color: #16308f; display: inline-flex; align-items: center; gap: 0.55em; font-weight: 500; }
+  .view-all.hover { gap: 0.85em; }
+
+  /* Contact mail */
+  .contact-mail { display: inline-block; text-decoration: none; color: #111; border-bottom: 2px solid #2b4ee6; font-family: 'Inter Tight', sans-serif; font-weight: 500; font-size: 48px; letter-spacing: -0.035em; }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+<h1>Buttons &amp; Controls</h1>
+
+<div class="group">
+  <div class="group-label">Language toggle</div>
+  <div class="row">
+    <button class="lang-toggle">IT</button>
+    <button class="lang-toggle hover">EN</button>
+  </div>
+  <div class="spec">
+    Default: border <span>#e4e4e4</span> · color <span>--ink-soft</span><br>
+    Hover: border <span>--accent</span> · color <span>--accent-ink</span><br>
+    Font: <span>mono 12px · ls 0.12em</span> · padding <span>5px 13px</span> · radius <span>999px</span>
+  </div>
+</div>
+
+<div class="group">
+  <div class="group-label">Filter buttons (bullet-points page)</div>
+  <div class="row">
+    <button class="filter-btn on"><span class="filter-symbol">×</span>Technology</button>
+    <button class="filter-btn on"><span class="filter-symbol">×</span>Outdoor</button>
+    <button class="filter-btn"><span class="filter-symbol">+</span>Work</button>
+    <button class="filter-btn"><span class="filter-symbol">+</span>Mottos</button>
+  </div>
+  <div class="spec">
+    Active (.is-on): bg <span>#111</span> · color <span>#fff</span> · font-weight <span>500</span><br>
+    Inactive: bg <span>#fff</span> · border <span>#d2d2d2</span><br>
+    Font: <span>Inter 16px</span> · padding <span>11px 20px</span> · radius <span>999px</span><br>
+    Symbol: <span>×</span> when on · <span>+</span> when off (toggled by JS)
+  </div>
+</div>
+
+<div class="group">
+  <div class="group-label">Text links (inline)</div>
+  <div class="row">
+    <span>The best way to reach me is by <a class="text-link" href="#">email</a> or <a class="text-link" href="#">phone</a>.</span>
+  </div>
+  <div class="spec">
+    color: <span>inherit</span> · underline-color: <span>--accent</span> · offset: <span>0.22em</span> · thickness: <span>1.5px</span><br>
+    Hover: color → <span>--accent-ink</span>
+  </div>
+</div>
+
+<div class="group">
+  <div class="group-label">See all work CTA</div>
+  <div class="row">
+    <a class="view-all" href="#">See all work <span>→</span></a>
+    <a class="view-all hover" href="#">Tutti i lavori <span>→</span></a>
+  </div>
+  <div class="spec">
+    Default / hover: gap animates <span>0.55em → 0.85em</span> · arrow <span>translateX(4px)</span><br>
+    Font: <span>mono 13.5px · ls 0.1em · uppercase · weight 500</span>
+  </div>
+</div>
+
+<div class="group">
+  <div class="group-label">Contact headline link</div>
+  <div class="row">
+    <a class="contact-mail" href="#">talk.</a>
+  </div>
+  <div class="spec">
+    Font: <span>Inter Tight 500 · clamp(40→104px)</span><br>
+    Decoration: <span>border-bottom 2px --accent</span><br>
+    Hover: color → <span>--accent</span>
+  </div>
+</div>
+
+</body>
+</html>

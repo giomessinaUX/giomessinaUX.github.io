@@ -1,0 +1,140 @@
+{
+  "plugins": [
+    "react",
+    "import"
+  ],
+  "rules": {
+    "react/forbid-elements": [
+      "warn",
+      {
+        "forbid": []
+      }
+    ],
+    "no-restricted-imports": [
+      "warn",
+      {
+        "patterns": []
+      }
+    ],
+    "no-restricted-syntax": [
+      "warn",
+      {
+        "selector": "Literal[value=/#[0-9a-fA-F]{3,8}\\b/]",
+        "message": "Raw hex color — use a design-system color token via var()."
+      },
+      {
+        "selector": "Literal[value=/\\b\\d+px\\b/]",
+        "message": "Raw px value — use a design-system spacing token via var()."
+      },
+      {
+        "selector": "Literal[value=/font-family\\s*:\\s*(?!['\\\"]?(?:Inter|Inter Tight))/i]",
+        "message": "Font not provided by the design system. Available: Inter, Inter Tight."
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/index.js"
+      ],
+      "rules": {
+        "no-restricted-imports": "off"
+      }
+    }
+  ],
+  "x-omelette": {
+    "components": {},
+    "tokens": [
+      "--accent",
+      "--accent-ink",
+      "--base",
+      "--bg",
+      "--bg-warm",
+      "--card-bg",
+      "--dur-fast",
+      "--dur-slow",
+      "--ease",
+      "--font-body",
+      "--font-display",
+      "--font-mono",
+      "--gutter",
+      "--ink",
+      "--ink-faint",
+      "--ink-soft",
+      "--line",
+      "--line-card",
+      "--line-strong",
+      "--line-tag",
+      "--maxw",
+      "--measure",
+      "--nav-h",
+      "--ok",
+      "--radius",
+      "--radius-md",
+      "--radius-pill",
+      "--radius-sm",
+      "--radius-xs",
+      "--text-body",
+      "--text-card",
+      "--text-display",
+      "--text-hero",
+      "--text-lead",
+      "--text-mark",
+      "--text-sub",
+      "--text-title",
+      "--w-light",
+      "--w-medium",
+      "--w-regular",
+      "--w-semibold",
+      "--works-bg"
+    ],
+    "tokenKinds": {
+      "--ink": "color",
+      "--ink-soft": "color",
+      "--ink-faint": "color",
+      "--line-strong": "color",
+      "--bg": "color",
+      "--bg-warm": "color",
+      "--card-bg": "color",
+      "--works-bg": "color",
+      "--accent": "color",
+      "--accent-ink": "color",
+      "--ok": "color",
+      "--line": "color",
+      "--line-card": "color",
+      "--line-tag": "color",
+      "--font-display": "font",
+      "--font-body": "font",
+      "--font-mono": "font",
+      "--text-hero": "font",
+      "--text-display": "font",
+      "--text-title": "font",
+      "--text-lead": "font",
+      "--text-sub": "font",
+      "--text-card": "font",
+      "--text-body": "font",
+      "--text-mark": "font",
+      "--w-light": "font",
+      "--w-regular": "font",
+      "--w-medium": "font",
+      "--w-semibold": "font",
+      "--maxw": "spacing",
+      "--measure": "spacing",
+      "--nav-h": "spacing",
+      "--gutter": "spacing",
+      "--base": "spacing",
+      "--radius": "radius",
+      "--radius-md": "radius",
+      "--radius-sm": "radius",
+      "--radius-xs": "radius",
+      "--radius-pill": "radius",
+      "--ease": "other",
+      "--dur-fast": "other",
+      "--dur-slow": "other"
+    },
+    "fontFamilies": [
+      "Inter",
+      "Inter Tight"
+    ]
+  }
+}

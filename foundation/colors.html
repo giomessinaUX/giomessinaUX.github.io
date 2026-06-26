@@ -1,0 +1,118 @@
+<!-- @dsCard group="Foundation" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Colors</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Inter', sans-serif; background: #fdfdfd; padding: 40px; color: #111; }
+  h1 { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #8a8a8a; font-family: ui-monospace, monospace; margin-bottom: 32px; }
+  .group { margin-bottom: 40px; }
+  .group-label { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #8a8a8a; font-family: ui-monospace, monospace; margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1px solid #e4e4e4; }
+  .row { display: flex; flex-wrap: wrap; gap: 16px; }
+  .swatch { display: flex; flex-direction: column; gap: 8px; min-width: 120px; }
+  .chip { height: 72px; border-radius: 10px; border: 1px solid rgba(0,0,0,0.07); }
+  .chip.outlined { border: 1.5px solid #e4e4e4; }
+  .token { font-family: ui-monospace, monospace; font-size: 11px; color: #2b4ee6; }
+  .hex  { font-family: ui-monospace, monospace; font-size: 11px; color: #8a8a8a; margin-top: 2px; }
+  .role { font-size: 12px; color: #4a4a4a; margin-top: 2px; }
+</style>
+</head>
+<body>
+<h1>Color Tokens</h1>
+
+<div class="group">
+  <div class="group-label">Ink</div>
+  <div class="row">
+    <div class="swatch">
+      <div class="chip" style="background:#111;"></div>
+      <div class="token">--ink</div>
+      <div class="hex">#111</div>
+      <div class="role">Primary text</div>
+    </div>
+    <div class="swatch">
+      <div class="chip" style="background:#4a4a4a;"></div>
+      <div class="token">--ink-soft</div>
+      <div class="hex">#4a4a4a</div>
+      <div class="role">Secondary text</div>
+    </div>
+    <div class="swatch">
+      <div class="chip" style="background:#8a8a8a;"></div>
+      <div class="token">--ink-faint</div>
+      <div class="hex">#8a8a8a</div>
+      <div class="role">Labels, captions</div>
+    </div>
+    <div class="swatch">
+      <div class="chip" style="background:#101010;"></div>
+      <div class="token">--line-strong</div>
+      <div class="hex">#101010</div>
+      <div class="role">Strong dividers</div>
+    </div>
+  </div>
+</div>
+
+<div class="group">
+  <div class="group-label">Background</div>
+  <div class="row">
+    <div class="swatch">
+      <div class="chip outlined" style="background:#fdfdfd;"></div>
+      <div class="token">--bg</div>
+      <div class="hex">#fdfdfd</div>
+      <div class="role">Page background</div>
+    </div>
+    <div class="swatch">
+      <div class="chip outlined" style="background:#f6f6f4;"></div>
+      <div class="token">--bg-warm</div>
+      <div class="hex">#f6f6f4</div>
+      <div class="role">Warm surface</div>
+    </div>
+    <div class="swatch">
+      <div class="chip outlined" style="background:#ffffff;"></div>
+      <div class="token">--card-bg</div>
+      <div class="hex">#ffffff</div>
+      <div class="role">Card surface</div>
+    </div>
+    <div class="swatch">
+      <div class="chip" style="background:#dde9fc;"></div>
+      <div class="token">--works-bg</div>
+      <div class="hex">#dde9fc</div>
+      <div class="role">Works band</div>
+    </div>
+  </div>
+</div>
+
+<div class="group">
+  <div class="group-label">Accent</div>
+  <div class="row">
+    <div class="swatch">
+      <div class="chip" style="background:#2b4ee6;"></div>
+      <div class="token">--accent</div>
+      <div class="hex">#2b4ee6</div>
+      <div class="role">Primary accent</div>
+    </div>
+    <div class="swatch">
+      <div class="chip" style="background:#16308f;"></div>
+      <div class="token">--accent-ink</div>
+      <div class="hex">#16308f</div>
+      <div class="role">Accent on hover</div>
+    </div>
+  </div>
+</div>
+
+<div class="group">
+  <div class="group-label">Lines</div>
+  <div class="row">
+    <div class="swatch">
+      <div class="chip" style="background:#e4e4e4;"></div>
+      <div class="token">--line</div>
+      <div class="hex">#e4e4e4</div>
+      <div class="role">Subtle dividers</div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

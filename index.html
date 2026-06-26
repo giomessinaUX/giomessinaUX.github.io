@@ -11,8 +11,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Giorgio Messina — Product Designer</title>
-  <meta name="description" content="Giorgio Messina — Product Designer working on data-intensive B2B platforms. Selected work for Compunet and Siemens.">
+  <meta name="description" content="Giorgio Messina — Product Designer working on data-intensive B2B products. Selected work for Compunet, Siemens, VMLYR and Connexia.">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="site.css">
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
@@ -20,283 +21,177 @@
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-  <nav class="site-nav">
-    <div class="nav-inner">
-      <a href="index.html" class="home-mark"><span class="dot"></span>Giorgio Messina</a>
-      <div class="nav-links">
-        <a href="#work" data-i18n="nav.work">Work</a>
-        <a href="#about" data-i18n="nav.about">About</a>
-        <a href="bullet-points.html" data-i18n="nav.more">More</a>
-        <a href="#contact" data-i18n="nav.contact">Contact</a>
+  <div class="nav-shell">
+    <nav class="site-nav ds-nav">
+      <div class="ds-nav__inner">
+        <a href="index.html" class="ds-nav__mark"><span class="ds-nav__dot"></span>Giorgio Messina</a>
+        <div class="ds-nav__links">
+          <a href="#about"><span data-lang="en">About</span><span data-lang="it" hidden>Chi sono</span></a>
+          <a href="#work"><span data-lang="en">Work</span><span data-lang="it" hidden>Lavori</span></a>
+          <a href="#contact"><span data-lang="en">Contact</span><span data-lang="it" hidden>Contatti</span></a>
+        </div>
+        <button class="btn-lang" id="lang-toggle" type="button" aria-label="Switch language">IT</button>
       </div>
-      <button class="lang-toggle" id="lang-toggle" aria-label="Switch language">IT</button>
-    </div>
-  </nav>
+    </nav>
+  </div>
 
   <main data-screen-label="Home">
 
     <!-- Hero -->
-    <div class="page-section page-section--first">
-      <section class="intro">
-        <div class="intro-top" data-reveal>
-          <span class="eyebrow"><span class="idx">01</span> ABOUT</span>
-        </div>
+    <section class="hero page" id="top">
+      <span class="ds-eyebrow hero__eyebrow" data-reveal>
+        <span class="ds-eyebrow__idx">01</span>
+        <span data-lang="en">About</span><span data-lang="it" hidden>Chi sono</span>
+      </span>
 
-        <h1 class="primalinea">
-          <span class="hello" data-reveal data-i18n="hello">Hello, I'm</span>
-          <span class="name" data-reveal data-delay="1">Giorgio<span class="period">.</span></span>
-        </h1>
+      <h1 class="hero__h1">
+        <span class="hero__hello" data-reveal><span data-lang="en">Hello, I'm</span><span data-lang="it" hidden>Ciao, sono</span></span>
+        <span class="hero__name" data-reveal data-delay="1">Giorgio<span class="period">.</span></span>
+      </h1>
 
-        <p class="intro-sub" data-reveal data-delay="2" data-i18n="intro.sub">
-          A curious, committed problem solver who designs clarity into complex,
-          data-intensive B2B products.<br>
-          When not in the office, you can find me on a mountain bike, climbing, or trail running.
-        </p>
+      <p class="hero__sub" data-reveal data-delay="2">
+        <span data-lang="en">A curious, committed problem solver who designs clarity into complex, data-intensive B2B products. Off the clock, you'll find me on a mountain bike, climbing, or trail running.</span>
+        <span data-lang="it" hidden>Un problem solver curioso e determinato, che porta chiarezza in prodotti B2B complessi e data-intensive. Fuori dall'ufficio mi trovi in mountain bike, in arrampicata o nel trail running.</span>
+      </p>
 
-        <div class="clients" data-reveal data-delay="3">
-          <span class="label" data-i18n="clients.with">Worked with</span>
-          <span class="who">
-            <span>Siemens</span>
-            <span>Compunet</span>
-            <span>Telereading</span>
-            <span>Lavazza</span>
-            <span>Bolton</span>
-            <span>Whirlpool</span>
-            <span>Sisalpay</span>
-            <span>Fastweb</span>
+      <div class="hero__clients" data-reveal data-delay="3">
+        <div class="ds-clients">
+          <span class="ds-clients__label"><span data-lang="en">Worked with</span><span data-lang="it" hidden>Ho lavorato con</span></span>
+          <span class="ds-clients__who">
+            <span>Siemens</span><span>Compunet</span><span>Lavazza</span>
+            <span>Bolton</span><span>Whirlpool</span><span>SisalPay</span><span>Fastweb</span>
           </span>
         </div>
-        <div class="clients" data-reveal data-delay="3">
-          <span class="label" data-i18n="clients.for">Worked for</span>
-          <span class="who">
-            <span>Manpower Experis</span>
-            <span>VMLYR</span>
-            <span>Connexia</span>
-            <span>Engineering</span>
+        <div class="ds-clients">
+          <span class="ds-clients__label"><span data-lang="en">Worked for</span><span data-lang="it" hidden>Ho lavorato per</span></span>
+          <span class="ds-clients__who">
+            <span>Manpower Experis</span><span>VMLYR</span><span>Connexia</span><span>Engineering</span>
           </span>
-        </div>
-      </section>
-    </div>
-
-    <!-- Selected work — full width -->
-    <section class="works" id="work">
-      <div class="page-section">
-        <div class="section-head" data-reveal>
-          <span class="eyebrow"><span class="idx">02</span> Projects</span>
-          <h2 class="section-title" data-i18n="works.title">Three case studies.</h2>
-          <p class="section-sub" data-i18n="works.sub">
-            A slice of recent work across consulting and enterprise products — each
-            opens into a full case study.
-          </p>
-        </div>
-
-        <div class="cards">
-          <a class="card" href="projects/civic.html" data-reveal>
-            <div class="card-thumb"><div class="placeholder"><div class="ph-art"></div><span>Civic — cover image</span></div></div>
-            <span class="card-num">01 / 2024–</span>
-            <h3 class="card-title">Civic</h3>
-            <div class="card-tags"><span>Product Design</span><span>Compunet</span></div>
-            <p class="card-desc" data-i18n="card1.desc">
-              End-to-end redesign of a 25-year-old platform for the full lifecycle of
-              fines — 700+ fields across 45 screens.
-            </p>
-            <span class="card-cta" data-i18n="card.cta">View case study <span class="arrow">→</span></span>
-          </a>
-
-          <a class="card" href="projects/energy-manager.html" data-reveal data-delay="1">
-            <div class="card-thumb"><div class="placeholder"><div class="ph-art"></div><span>Energy Manager — cover image</span></div></div>
-            <span class="card-num">02 / Siemens</span>
-            <h3 class="card-title">Energy Manager</h3>
-            <div class="card-tags"><span>UX Design</span><span>Building X</span></div>
-            <p class="card-desc" data-i18n="card2.desc">
-              Monitoring and optimizing energy across complex building portfolios, from
-              discovery to developer handoff.
-            </p>
-            <span class="card-cta" data-i18n="card.cta">View case study <span class="arrow">→</span></span>
-          </a>
-
-          <a class="card" href="projects/building-x.html" data-reveal data-delay="2">
-            <div class="card-thumb"><div class="placeholder"><div class="ph-art"></div><span>Building X — cover image</span></div></div>
-            <span class="card-num">03 / Siemens</span>
-            <h3 class="card-title">Building X</h3>
-            <div class="card-tags"><span>UX Research</span><span>Onboarding</span></div>
-            <p class="card-desc" data-i18n="card3.desc">
-              First end-to-end mapping of the building onboarding journey — 40+ users
-              across 3 continents.
-            </p>
-            <span class="card-cta" data-i18n="card.cta">View case study <span class="arrow">→</span></span>
-          </a>
-        </div>
-
-        <div class="works-footer">
-          <a href="work.html" class="view-all" data-i18n="works.all">See all work <span class="arrow">→</span></a>
         </div>
       </div>
     </section>
 
-    <!-- About + Contact -->
-    <div class="page-section page-section--last">
-
-      <!-- About -->
-      <section class="about" id="about">
-        <div class="section-head" data-reveal>
-          <span class="eyebrow"><span class="idx">03</span> About</span>
-        </div>
-        <div class="about-grid">
-          <p class="about-lead" data-reveal data-i18n="about.lead">
-            Nine years across startups, corporations and consulting — learning to design
-            for <span class="accent">complexity</span> and fast-changing contexts.
+    <!-- Selected work — full-bleed band -->
+    <section class="works" id="work">
+      <div class="works__inner page">
+        <div class="ds-section-head" data-reveal>
+          <span class="ds-eyebrow"><span class="ds-eyebrow__idx">02</span> <span data-lang="en">Projects</span><span data-lang="it" hidden>Progetti</span></span>
+          <h2 class="ds-section-title"><span data-lang="en">Selected work.</span><span data-lang="it" hidden>Lavori selezionati.</span></h2>
+          <p class="ds-section-sub">
+            <span data-lang="en">A few selected projects — each opens into a full case study. See the rest on the all-work page.</span>
+            <span data-lang="it" hidden>Alcuni progetti selezionati — ognuno apre un caso studio completo. Gli altri sono nella pagina con tutti i lavori.</span>
           </p>
-          <div class="about-body" data-reveal data-delay="1">
-            <p data-i18n="about.p1">
-              I started as an industrial product designer, which gave me a strong
-              foundation for understanding how digital products interface with physical
-              technologies and deliver real-world impact.
-            </p>
-            <p data-i18n="about.p2">
-              In recent years I've focused on data-intensive B2B platforms at Siemens and
-              Telereading — decoding complexity, balancing technical feasibility with
-              strict requirements, and keeping product and engineering tightly aligned.
-            </p>
-            <ol class="pillars-list">
-              <li data-i18n="pillar1">Lead end-to-end design across the full product lifecycle.</li>
-              <li data-i18n="pillar2">Turn complexity into clear, AI-ready information architecture.</li>
-              <li data-i18n="pillar3">Grow design culture — mentoring teams and documenting frameworks.</li>
-              <li data-i18n="pillar4">Act as product owner — bridging design and development, driving delivery end-to-end.</li>
-            </ol>
-          </div>
         </div>
-      </section>
 
-      <!-- Contact -->
-      <section class="contact" id="contact" data-reveal>
-        <span class="eyebrow"><span class="idx">04</span> Contact</span>
-        <h2 class="contact-headline" data-i18n="contact.headline">
-          Let's<br><a class="contact-mail" href="mailto:giomessina.work@gmail.com">talk.</a>
-        </h2>
-        <p class="contact-sub" data-i18n="contact.sub">
-          The best way to reach me is by
-          <a class="text-link" href="mailto:giomessina.work@gmail.com">email</a> or
-          <a class="text-link" href="tel:+393384569770">phone</a>. You can also grab my
-          <a class="text-link" href="assets/Giorgio_Messina-Onepage-ENG.pdf" download>resume</a>
-          or
-          <a class="text-link" href="assets/Giorgio_Messina-Portfolio-ENG.pdf" download>portfolio</a>.
+        <div class="ds-card-grid">
+
+          <a class="ds-card" href="projects/vmlyr.html" data-reveal>
+            <div class="ds-card__thumb"><div class="ds-ph"></div><span class="ds-ph__label">VMLYR — cover</span></div>
+            <span class="ds-card__num">01 / VMLYR</span>
+            <h3 class="ds-card__title">VMLYR</h3>
+            <div class="ds-card__tags"><span class="ds-tag">Product Design</span><span class="ds-tag">Service Design</span></div>
+            <p class="ds-card__desc">
+              <span data-lang="en">Product &amp; service design across the agency's digital division — e-commerce and digital products for Whirlpool, Lavazza and Bolton.</span>
+              <span data-lang="it" hidden>Product &amp; service design nella divisione digital dell'agenzia — e-commerce e prodotti digitali per Whirlpool, Lavazza e Bolton.</span>
+            </p>
+            <span class="ds-card__cta"><span data-lang="en">View case study</span><span data-lang="it" hidden>Vedi il caso studio</span> →</span>
+          </a>
+
+          <a class="ds-card" href="projects/building-x.html" data-reveal data-delay="1">
+            <div class="ds-card__thumb"><div class="ds-ph"></div><span class="ds-ph__label">Building X — cover</span></div>
+            <span class="ds-card__num">02 / Siemens</span>
+            <h3 class="ds-card__title">Building X</h3>
+            <div class="ds-card__tags"><span class="ds-tag">UX Research</span><span class="ds-tag">Onboarding</span></div>
+            <p class="ds-card__desc">
+              <span data-lang="en">First end-to-end mapping of the building onboarding journey — 40+ users across 3 continents.</span>
+              <span data-lang="it" hidden>Prima mappatura end-to-end del journey di onboarding degli edifici — oltre 40 utenti su 3 continenti.</span>
+            </p>
+            <span class="ds-card__cta"><span data-lang="en">View case study</span><span data-lang="it" hidden>Vedi il caso studio</span> →</span>
+          </a>
+
+        </div>
+
+        <div class="works__foot">
+          <a href="work.html" class="link-view-all"><span data-lang="en">See all work</span><span data-lang="it" hidden>Tutti i lavori</span> <span>→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="about page section" id="about">
+      <div class="ds-section-head" data-reveal>
+        <span class="ds-eyebrow"><span class="ds-eyebrow__idx">03</span> <span data-lang="en">About</span><span data-lang="it" hidden>Chi sono</span></span>
+      </div>
+      <div class="about__grid">
+        <p class="about__lead" data-reveal>
+          <span data-lang="en">Nine years across startups, corporations and consulting — learning to design for <span class="accent">complexity</span> and fast-changing contexts.</span>
+          <span data-lang="it" hidden>Nove anni tra startup, aziende e consulenza — imparando a progettare per la <span class="accent">complessità</span> e contesti in rapido cambiamento.</span>
         </p>
-      </section>
+        <div class="about__body" data-reveal data-delay="1">
+          <p>
+            <span data-lang="en">I started as an industrial product designer, which gave me a strong foundation for understanding how digital products interface with physical technologies and deliver real-world impact.</span>
+            <span data-lang="it" hidden>Ho iniziato come industrial product designer, il che mi ha dato solide basi per capire come i prodotti digitali si interfacciano con le tecnologie fisiche e generano impatto concreto.</span>
+          </p>
+          <p>
+            <span data-lang="en">In recent years I've focused on data-intensive B2B platforms at Siemens — decoding complexity, balancing technical feasibility with strict requirements, and keeping product and engineering tightly aligned.</span>
+            <span data-lang="it" hidden>Negli ultimi anni mi sono concentrato su piattaforme B2B data-intensive in Siemens — decodificando la complessità, bilanciando fattibilità tecnica e requisiti stringenti, e tenendo prodotto e sviluppo strettamente allineati.</span>
+          </p>
+          <ol class="ds-pillars">
+            <li><span data-lang="en">Lead end-to-end design across the full product lifecycle.</span><span data-lang="it" hidden>Guidare il design end-to-end lungo l'intero ciclo di vita del prodotto.</span></li>
+            <li><span data-lang="en">Turn complexity into clear, AI-ready information architecture.</span><span data-lang="it" hidden>Trasformare la complessità in un'architettura informativa chiara e pronta per l'AI.</span></li>
+            <li><span data-lang="en">Grow design culture — mentoring teams and documenting frameworks.</span><span data-lang="it" hidden>Sviluppare la cultura del design — mentoring dei team e documentazione dei framework.</span></li>
+            <li><span data-lang="en">Act as product owner — bridging design and development, driving delivery end-to-end.</span><span data-lang="it" hidden>Agire da product owner — collegare design e sviluppo, guidando la delivery dall'inizio alla fine.</span></li>
+          </ol>
+        </div>
+      </div>
+    </section>
 
-    </div>
+    <!-- Contact -->
+    <section class="contact page" id="contact">
+      <div class="ds-contact" data-reveal>
+        <span class="ds-eyebrow"><span class="ds-eyebrow__idx">04</span> <span data-lang="en">Contact</span><span data-lang="it" hidden>Contatti</span></span>
+        <h2 class="ds-contact__headline">
+          <span data-lang="en">Let's <a class="ds-contact__mail" href="mailto:giomessina.work@gmail.com">talk.</a></span>
+          <span data-lang="it" hidden>Parliamo. <a class="ds-contact__mail" href="mailto:giomessina.work@gmail.com">Scrivimi.</a></span>
+        </h2>
+        <p class="ds-contact__sub">
+          <span data-lang="en">The best way to reach me is by <a class="link-text" href="mailto:giomessina.work@gmail.com">email</a> or <a class="link-text" href="tel:+393384569770">phone</a>. You can also grab my <a class="link-text" href="assets/Giorgio_Messina-Onepage-ENG.pdf" download>resume</a> or <a class="link-text" href="assets/Giorgio_Messina-Portfolio-ENG.pdf" download>portfolio</a>.</span>
+          <span data-lang="it" hidden>Il modo migliore per contattarmi è via <a class="link-text" href="mailto:giomessina.work@gmail.com">email</a> o <a class="link-text" href="tel:+393384569770">telefono</a>. Puoi anche scaricare il mio <a class="link-text" href="assets/Giorgio Messina -Onepage-ITA.pdf" download>curriculum</a> o il <a class="link-text" href="assets/Giorgio_Messina-Portfolio-ITA.pdf" download>portfolio</a>.</span>
+        </p>
+      </div>
+    </section>
+
+    <!-- Colophon -->
+    <section class="page">
+      <div class="colophon" data-reveal>
+        <span class="colophon__tag"><span data-lang="en">Colophon</span><span data-lang="it" hidden>Colophon</span></span>
+        <p class="colophon__text">
+          <span data-lang="en">This site was designed and built by Giorgio Messina with the support of artificial intelligence. Every element comes from a small <span class="accent">living design system</span> — feel free to look under the hood.</span>
+          <span data-lang="it" hidden>Questo sito è realizzato da Giorgio Messina con il supporto dell'intelligenza artificiale. Ogni elemento nasce da un piccolo <span class="accent">design system vivo</span> — puoi verificare com'è costruito.</span>
+        </p>
+        <a href="Design System.html" class="link-view-all">
+          <span data-lang="en">Explore the design system</span><span data-lang="it" hidden>Esplora il design system</span> <span>→</span>
+        </a>
+      </div>
+    </section>
 
   </main>
 
-  <footer class="site-footer">
-    <span>© <span id="year">2026</span> Giorgio Messina — Milan, Italy</span>
-    <div class="links">
-      <a href="mailto:giomessina.work@gmail.com">Email</a>
-      <a href="tel:+393384569770">+39 338 456 9770</a>
-      <a href="https://www.linkedin.com/in/giomessina/" target="_blank" rel="noreferrer">LinkedIn</a>
-      <a href="https://www.instagram.com/giom.essina/" target="_blank" rel="noreferrer">Instagram</a>
+  <footer class="page">
+    <div class="ds-footer">
+      <span>© <span id="year">2026</span> Giorgio Messina — Milan, Italy</span>
+      <div class="ds-footer__links">
+        <a href="mailto:giomessina.work@gmail.com">Email</a>
+        <a href="tel:+393384569770">+39 338 456 9770</a>
+        <a href="https://www.linkedin.com/in/giomessina/" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a href="https://www.instagram.com/giom.essina/" target="_blank" rel="noreferrer">Instagram</a>
+        <a href="Design System.html"><span data-lang="en">Design system</span><span data-lang="it" hidden>Design system</span></a>
+      </div>
     </div>
   </footer>
 
   <script src="site.js"></script>
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Active nav link by section in view
-    var navLinks = Array.prototype.slice.call(document.querySelectorAll('.nav-links a[href^="#"]'));
-    var map = new Map(navLinks.map(function (a) { return [a.getAttribute('href').slice(1), a]; }));
-    if ('IntersectionObserver' in window) {
-      var secObs = new IntersectionObserver(function (entries) {
-        entries.forEach(function (e) {
-          var link = map.get(e.target.id);
-          if (link && e.isIntersecting) {
-            navLinks.forEach(function (a) { a.classList.remove('is-active'); });
-            link.classList.add('is-active');
-          }
-        });
-      }, { rootMargin: '-45% 0px -50% 0px' });
-      document.querySelectorAll('section[id]').forEach(function (s) { secObs.observe(s); });
-    }
-
-    // Language switching
-    var LANG = 'en';
-    var T = {
-      en: {
-        'nav.work':    'Work',
-        'nav.about':   'About',
-        'nav.more':    'More',
-        'nav.contact': 'Contact',
-        'hello':       "Hello, I'm",
-        'intro.sub':   "A curious, committed problem solver who designs clarity into complex, data-intensive B2B products.<br>When not in the office, you can find me on a mountain bike, climbing, or trail running.",
-        'clients.with': 'Worked with',
-        'clients.for':  'Worked for',
-        'works.title': 'Three case studies.',
-        'works.sub':   'A slice of recent work across consulting and enterprise products — each opens into a full case study.',
-        'works.all':   'See all work <span class="arrow">→</span>',
-        'card1.desc':  'End-to-end redesign of a 25-year-old platform for the full lifecycle of fines — 700+ fields across 45 screens.',
-        'card2.desc':  'Monitoring and optimizing energy across complex building portfolios, from discovery to developer handoff.',
-        'card3.desc':  'First end-to-end mapping of the building onboarding journey — 40+ users across 3 continents.',
-        'card.cta':    'View case study <span class="arrow">→</span>',
-        'about.lead':  'Nine years across startups, corporations and consulting — learning to design for <span class="accent">complexity</span> and fast-changing contexts.',
-        'about.p1':    'I started as an industrial product designer, which gave me a strong foundation for understanding how digital products interface with physical technologies and deliver real-world impact.',
-        'about.p2':    "In recent years I've focused on data-intensive B2B platforms at Siemens and Telereading — decoding complexity, balancing technical feasibility with strict requirements, and keeping product and engineering tightly aligned.",
-        'pillar1':     'Lead end-to-end design across the full product lifecycle.',
-        'pillar2':     'Turn complexity into clear, AI-ready information architecture.',
-        'pillar3':     'Grow design culture — mentoring teams and documenting frameworks.',
-        'pillar4':     'Act as product owner — bridging design and development, driving delivery end-to-end.',
-        'contact.headline': "Let’s<br><a class='contact-mail' href='mailto:giomessina.work@gmail.com'>talk.</a>",
-        'contact.sub': "The best way to reach me is by <a class='text-link' href='mailto:giomessina.work@gmail.com'>email</a> or <a class='text-link' href='tel:+393384569770'>phone</a>. You can also grab my <a class='text-link' href='assets/Giorgio_Messina-Onepage-ENG.pdf' download>resume</a> or <a class='text-link' href='assets/Giorgio_Messina-Portfolio-ENG.pdf' download>portfolio</a>."
-      },
-      it: {
-        'nav.work':    'Lavori',
-        'nav.about':   'Chi sono',
-        'nav.more':    'Altro',
-        'nav.contact': 'Contatti',
-        'hello':       'Ciao, sono',
-        'intro.sub':   "Un problem solver curioso e determinato, che porta chiarezza in prodotti B2B complessi e data-intensive.<br>Fuori dall’ufficio lo trovi in mountain bike, in arrampicata o nel trail running.",
-        'clients.with': 'Ha lavorato con',
-        'clients.for':  'Ha lavorato per',
-        'works.title': 'Tre casi studio.',
-        'works.sub':   'Una selezione di progetti recenti tra consulenza e prodotti enterprise — ognuno apre un caso studio completo.',
-        'works.all':   'Tutti i lavori <span class="arrow">→</span>',
-        'card1.desc':  'Redesign end-to-end di una piattaforma ventennale per la gestione delle sanzioni — 700+ campi su 45 schermate.',
-        'card2.desc':  "Monitoraggio e ottimizzazione energetica su portfolio edilizi complessi, dalla discovery all’handoff al team developer.",
-        'card3.desc':  'Prima mappatura end-to-end del journey di onboarding degli edifici — 40+ utenti su 3 continenti.',
-        'card.cta':    'Vedi il caso studio <span class="arrow">→</span>',
-        'about.lead':  'Nove anni tra startup, aziende e consulenza — imparando a progettare per la <span class="accent">complessità</span> e contesti in rapido cambiamento.',
-        'about.p1':    'Ho iniziato come industrial product designer, il che mi ha dato solide basi per capire come i prodotti digitali si interfacciano con le tecnologie fisiche e generano impatto concreto.',
-        'about.p2':    'Negli ultimi anni mi sono concentrato su piattaforme B2B data-intensive per Siemens e Telereading — decodificando la complessità, bilanciando fattibilità tecnica e requisiti stringenti, mantenendo prodotto e sviluppo strettamente allineati.',
-        'pillar1':     "Guidare il design end-to-end lungo l’intero ciclo di vita del prodotto.",
-        'pillar2':     "Trasformare la complessità in un’architettura informativa chiara e pronta per l’AI.",
-        'pillar3':     'Sviluppare la cultura del design — mentoring dei team e documentazione dei framework.',
-        'pillar4':     "Agire da product owner — collegare design e sviluppo, guidando la delivery dall’inizio alla fine.",
-        'contact.headline': "Parliamo.<br><a class='contact-mail' href='mailto:giomessina.work@gmail.com'>Scrivimi.</a>",
-        'contact.sub': "Il modo migliore per contattarmi è via <a class='text-link' href='mailto:giomessina.work@gmail.com'>email</a> o <a class='text-link' href='tel:+393384569770'>telefono</a>. Puoi anche scaricare il mio <a class='text-link' href='assets/Giorgio%20Messina%20-Onepage-ITA.pdf' download>curriculum</a> o il <a class='text-link' href='assets/Giorgio_Messina-Portfolio-ITA.pdf' download>portfolio</a>."
-      }
-    };
-
-    function applyLang(lang) {
-      document.documentElement.lang = lang;
-      document.querySelectorAll('[data-i18n]').forEach(function (el) {
-        var key = el.dataset.i18n;
-        if (T[lang] && T[lang][key] !== undefined) {
-          el.innerHTML = T[lang][key];
-        }
-      });
-      document.getElementById('lang-toggle').textContent = lang === 'it' ? 'EN' : 'IT';
-      LANG = lang;
-      try { localStorage.setItem('lang', lang); } catch (e) {}
-    }
-
-    document.getElementById('lang-toggle').addEventListener('click', function () {
-      applyLang(LANG === 'en' ? 'it' : 'en');
-    });
-
-    // Restore saved language
-    try {
-      var saved = localStorage.getItem('lang');
-      if (saved === 'it') applyLang('it');
-    } catch (e) {}
-  </script>
+  <script src="i18n.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>

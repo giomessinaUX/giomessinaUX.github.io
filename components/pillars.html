@@ -1,0 +1,132 @@
+<!-- @dsCard group="Components" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Pillars & Eyebrow</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Inter+Tight:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Inter', sans-serif; background: #fdfdfd; padding: 40px; color: #111; }
+  h1 { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #8a8a8a; font-family: ui-monospace, monospace; margin-bottom: 32px; }
+  .group { margin-bottom: 48px; }
+  .group-label { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #8a8a8a; font-family: ui-monospace, monospace; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #e4e4e4; }
+  .spec { font-family: ui-monospace, monospace; font-size: 11px; color: #8a8a8a; line-height: 1.8; margin-top: 16px; }
+  .spec span { color: #2b4ee6; }
+
+  /* Eyebrow */
+  .eyebrow {
+    font-family: ui-monospace, monospace;
+    font-size: 13px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #8a8a8a;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7em;
+  }
+  .eyebrow::before {
+    content: '';
+    width: 26px;
+    height: 1px;
+    background: currentColor;
+    opacity: 0.5;
+    display: block;
+  }
+  .idx { color: #2b4ee6; }
+
+  /* Pillars list */
+  .pillars-list { list-style: none; padding: 0; margin: 0; max-width: 480px; counter-reset: list-item; }
+  .pillars-list li {
+    counter-increment: list-item;
+    position: relative;
+    padding: 0.9rem 0 0.9rem 2.2rem;
+    border-top: 1px solid #e4e4e4;
+    font-size: 19px;
+    line-height: 1.4;
+    font-weight: 300;
+  }
+  .pillars-list li:last-child { border-bottom: 1px solid #e4e4e4; }
+  .pillars-list li::before {
+    content: counter(list-item, decimal-leading-zero);
+    position: absolute;
+    left: 0;
+    top: 0.95rem;
+    font-family: ui-monospace, monospace;
+    font-size: 13px;
+    color: #2b4ee6;
+  }
+
+  /* Stat */
+  .stats { display: flex; gap: 40px; }
+  .stat .num { font-family: 'Inter Tight', sans-serif; font-size: 56px; font-weight: 500; letter-spacing: -0.04em; line-height: 0.9; }
+  .stat .accent { color: #2b4ee6; }
+  .stat .cap { margin-top: 0.7rem; font-size: 15px; color: #8a8a8a; max-width: 22ch; line-height: 1.35; }
+
+  /* Clients row */
+  .clients { display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px 32px; padding-top: 28px; border-top: 1px solid #e4e4e4; }
+  .clients .label { font-family: ui-monospace, monospace; font-size: 12.5px; letter-spacing: 0.12em; text-transform: uppercase; color: #8a8a8a; }
+  .clients .who { display: flex; flex-wrap: wrap; gap: 8px 26px; }
+  .clients .who span { font-family: 'Inter Tight', sans-serif; font-size: 22px; font-weight: 500; letter-spacing: -0.02em; }
+</style>
+</head>
+<body>
+<h1>Pillars, Eyebrow &amp; Supporting Components</h1>
+
+<div class="group">
+  <div class="group-label">Eyebrow label</div>
+  <div style="display:flex;flex-direction:column;gap:16px;">
+    <span class="eyebrow"><span class="idx">01</span> About</span>
+    <span class="eyebrow"><span class="idx">02</span> Projects</span>
+    <span class="eyebrow"><span class="idx">03</span> About</span>
+    <span class="eyebrow"><span class="idx">04</span> Contact</span>
+  </div>
+  <div class="spec">
+    Font: <span>mono 13px · ls 0.14em · uppercase</span><br>
+    Color: <span>--ink-faint</span> · index color: <span>--accent</span><br>
+    ::before: line <span>26px × 1px</span> · opacity 0.5
+  </div>
+</div>
+
+<div class="group">
+  <div class="group-label">Pillars list (About section)</div>
+  <ol class="pillars-list">
+    <li>Lead end-to-end design across the full product lifecycle.</li>
+    <li>Turn complexity into clear, AI-ready information architecture.</li>
+    <li>Grow design culture — mentoring teams and documenting frameworks.</li>
+    <li>Act as product owner — bridging design and development, driving delivery end-to-end.</li>
+  </ol>
+  <div class="spec">
+    Font: <span>Inter 300 · clamp(18→21px)</span> · counter: <span>decimal-leading-zero</span><br>
+    Counter color: <span>--accent</span> · divider: <span>1px solid --line</span><br>
+    Padding: <span>0.9rem 0 0.9rem 2.2rem</span>
+  </div>
+</div>
+
+<div class="group">
+  <div class="group-label">Clients row</div>
+  <div style="display:flex;flex-direction:column;gap:28px;">
+    <div class="clients">
+      <span class="label">Worked with</span>
+      <span class="who">
+        <span>Siemens</span><span>Compunet</span><span>Telereading</span>
+        <span>Lavazza</span><span>Bolton</span><span>Whirlpool</span>
+      </span>
+    </div>
+    <div class="clients">
+      <span class="label">Worked for</span>
+      <span class="who">
+        <span>Manpower Experis</span><span>VMLYR</span><span>Connexia</span><span>Engineering</span>
+      </span>
+    </div>
+  </div>
+  <div class="spec">
+    Label: <span>mono 12.5px · ls 0.12em · uppercase · --ink-faint</span><br>
+    Names: <span>Inter Tight 500 · clamp(20→26px) · ls -0.02em</span><br>
+    Layout: <span>flex-wrap · border-top 1px --line</span>
+  </div>
+</div>
+
+</body>
+</html>

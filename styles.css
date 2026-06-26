@@ -1,62 +1,106 @@
 /* ============================================================
-   Giorgio Messina — personal site
-   Editorial elevation of the existing system
-   (Inter + mono labels, #111 on #fdfdfd, single blue accent,
-    periwinkle work band).
+   GIORGIO MESSINA — DESIGN SYSTEM
+   ------------------------------------------------------------
+   This is the ONLY file you need to edit to change the system.
+   Everything below is grouped into two parts:
+
+     1. TOKENS    — the variables (colors, type, spacing…).
+                    Change a value here and it updates everywhere.
+     2. COMPONENTS — the reusable classes (nav, cards, buttons…).
+                    They consume the tokens above; tweak here only
+                    when you want to change one component's shape.
+
+   The companion page "Design System.html" shows every element
+   live, so you can see your edits immediately on refresh.
    ============================================================ */
 
+/* Webfonts. Replace with self-hosted @font-face files if you
+   want the system to work fully offline. */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Inter+Tight:wght@400;500;600&display=swap');
 
+
+/* ============================================================
+   1 · TOKENS
+   ============================================================ */
 :root {
-  --ink: #111;
-  --ink-soft: #4a4a4a;
-  --ink-faint: #8a8a8a;
-  --bg: #fdfdfd;
-  --bg-warm: #f6f6f4;
-  --line: #e4e4e4;
-  --line-strong: #101010;
-  --accent: #2b4ee6;
-  --accent-ink: #16308f;
-  --works-bg: #dde9fc;
-  --card-bg: #ffffff;
-  --radius: 16px;
-  --measure: 880px;
-  --base: 22.5px;
-  --nav-h: 78px;
-  --gutter: clamp(20px, 5vw, 56px);
-  --maxw: 1140px;
-  --mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, monospace;
-  --display: 'Inter Tight', 'Inter', system-ui, sans-serif;
-  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* ---- COLOR · Ink (text) ------------------------------- */
+  --ink:          #111111;   /* primary text                 */
+  --ink-soft:     #4a4a4a;   /* secondary text, body copy    */
+  --ink-faint:    #8a8a8a;   /* labels, captions, eyebrows   */
+  --line-strong:  #101010;   /* strong dividers              */
+
+  /* ---- COLOR · Surfaces --------------------------------- */
+  --bg:           #fdfdfd;   /* page background              */
+  --bg-warm:      #f6f6f4;   /* warm alternate surface       */
+  --card-bg:      #ffffff;   /* card surface                 */
+  --works-bg:     #dde9fc;   /* tinted "work" band           */
+
+  /* ---- COLOR · Accent ----------------------------------- */
+  --accent:       #2b4ee6;   /* primary accent (blue)        */
+  --accent-ink:   #16308f;   /* darker accent — hover/active */
+  --ok:           #18b45a;   /* "available" status dot       */
+
+  /* ---- COLOR · Lines ------------------------------------ */
+  --line:         #e4e4e4;   /* subtle hairline dividers     */
+  --line-card:    #d9e0ee;   /* card border (on blue band)   */
+  --line-tag:     #d7dce8;   /* tag / chip border            */
+
+  /* ---- TYPE · Families ---------------------------------- */
+  --font-display: 'Inter Tight', sans-serif;        /* headings   */
+  --font-body:    'Inter', sans-serif;              /* body copy  */
+  --font-mono:    ui-monospace, 'SF Mono', Menlo, monospace; /* labels */
+
+  /* ---- TYPE · Size scale (fluid clamp: min → max) ------- */
+  --text-hero:    clamp(58px, 9vw,   168px); /* hero / H1        */
+  --text-display: clamp(40px, 7vw,   104px); /* contact headline */
+  --text-title:   clamp(34px, 4.5vw,  56px); /* section title    */
+  --text-lead:    clamp(26px, 3.2vw,  40px); /* about lead        */
+  --text-sub:     clamp(24px, 2.6vw,  38px); /* intro sub         */
+  --text-card:    clamp(24px, 2vw,    30px); /* card title        */
+  --text-body:    clamp(19px, 1.4vw,  22px); /* body copy         */
+  --text-mark:    20px;                      /* nav wordmark      */
+
+  /* ---- TYPE · Weights ----------------------------------- */
+  --w-light:      300;   /* @kind font */
+  --w-regular:    400;   /* @kind font */
+  --w-medium:     500;   /* @kind font */
+  --w-semibold:   600;   /* @kind font */
+
+  /* ---- LAYOUT ------------------------------------------- */
+  --maxw:         1140px;                    /* max page width   */
+  --measure:      880px;                     /* readable column  */
+  --nav-h:        78px;                       /* fixed nav height */
+  --gutter:       clamp(20px, 5vw, 56px);     /* @kind spacing */ /* page side pad */
+  --base:         22.5px;                      /* base font size   */
+
+  /* ---- RADIUS ------------------------------------------- */
+  --radius:       16px;    /* cards                            */
+  --radius-md:    14px;    /* large figures                    */
+  --radius-sm:    10px;    /* thumbs, figures                  */
+  --radius-xs:    6px;     /* placeholder labels               */
+  --radius-pill:  999px;   /* pills, tags, buttons             */
+
+  /* ---- MOTION ------------------------------------------- */
+  --ease:         cubic-bezier(0.22, 1, 0.36, 1); /* @kind other */ /* all transitions */
+  --dur-fast:     0.28s; /* @kind other */
+  --dur-slow:     0.4s;  /* @kind other */
 }
 
-*, *::before, *::after { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; scroll-padding-top: calc(var(--nav-h) + 24px); }
+/* ============================================================
+   2 · COMPONENTS
+   ------------------------------------------------------------
+   Each block is one reusable piece. Markup examples live in
+   "Design System.html".
+   ============================================================ */
 
-body {
-  margin: 0;
-  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
-               "Helvetica Neue", Arial, sans-serif;
-  font-size: var(--base);
-  font-weight: 300;
-  line-height: 1.5;
-  color: var(--ink);
-  background-color: var(--bg);
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-}
 
-p { margin: 0 0 1.4rem; }
-p:last-child { margin-bottom: 0; }
-strong { font-weight: 600; }
-em, i { font-style: italic; }
-a { color: inherit; }
-::selection { background: var(--accent); color: #fff; }
-
-/* ---------- Shared eyebrow / mono label ---------- */
-.eyebrow {
-  font-family: var(--mono);
+/* ---- Eyebrow label ---------------------------------------
+   Small mono label with a leading rule and an index number.
+   <span class="ds-eyebrow"><span class="ds-eyebrow__idx">02</span> Projects</span> */
+.ds-eyebrow {
+  font-family: var(--font-mono);
   font-size: 13px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -65,44 +109,42 @@ a { color: inherit; }
   align-items: center;
   gap: 0.7em;
 }
-.eyebrow .idx { color: var(--accent); }
-.eyebrow::before {
-  content: "";
+.ds-eyebrow::before {
+  content: '';
   width: 26px;
   height: 1px;
   background: currentColor;
   opacity: 0.5;
+  display: block;
 }
+.ds-eyebrow__idx { color: var(--accent); }
 
-/* ---------- Navigation ---------- */
-.site-nav {
-  position: fixed;
-  inset: 0 0 auto 0;
+
+/* ---- Navigation ------------------------------------------
+   Fixed bar, blurred translucent background. Gains a hairline
+   border once the page scrolls (add .is-scrolled). */
+.ds-nav {
   height: var(--nav-h);
   display: flex;
   align-items: center;
-  z-index: 1000;
-  background: color-mix(in srgb, var(--bg) 82%, transparent);
-  backdrop-filter: saturate(1.3) blur(14px);
-  -webkit-backdrop-filter: saturate(1.3) blur(14px);
-  border-bottom: 1px solid transparent;
-  transition: transform 0.4s var(--ease), border-color 0.3s ease, background 0.3s ease;
+  background: rgba(253, 253, 253, 0.9);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  border-radius: 12px;
+  overflow: hidden;
 }
-.site-nav.is-scrolled { border-bottom-color: var(--line); }
-.site-nav.is-hidden { transform: translateY(-100%); }
-.nav-inner {
+.ds-nav.is-scrolled { border-bottom: 1px solid var(--line); }
+.ds-nav__inner {
   width: 100%;
-  max-width: var(--maxw);
-  margin: 0 auto;
-  padding: 0 var(--gutter);
+  padding: 0 32px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.home-mark {
-  font-family: var(--display);
-  font-weight: 600;
-  font-size: 20px;
+.ds-nav__mark {
+  font-family: var(--font-display);
+  font-weight: var(--w-semibold);
+  font-size: var(--text-mark);
   letter-spacing: -0.02em;
   text-decoration: none;
   color: var(--ink);
@@ -110,89 +152,300 @@ a { color: inherit; }
   align-items: center;
   gap: 0.55em;
 }
-.home-mark .dot {
-  width: 9px; height: 9px;
+.ds-nav__dot {
+  width: 9px;
+  height: 9px;
   border-radius: 50%;
   background: var(--accent);
   display: inline-block;
+  flex-shrink: 0;
 }
-.nav-links { display: flex; gap: clamp(18px, 3vw, 38px); }
-.nav-links a {
-  position: relative;
+.ds-nav__links { display: flex; gap: 32px; }
+.ds-nav__links a {
   text-decoration: none;
   color: var(--ink);
-  font-weight: 400;
+  font-weight: var(--w-regular);
   font-size: 17px;
   padding: 3px 0;
+  position: relative;
 }
-.nav-links a::after {
-  content: "";
+.ds-nav__links a.is-active { color: var(--accent-ink); font-weight: var(--w-medium); }
+.ds-nav__links a.is-active::after {
+  content: '';
   position: absolute;
   left: 0; right: 0; bottom: -1px;
   height: 1.5px;
   background: var(--accent);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.28s var(--ease);
 }
-.nav-links a:hover::after,
-.nav-links a.is-active::after { transform: scaleX(1); }
-.nav-links a.is-active { color: var(--accent-ink); font-weight: 500; }
 
-/* Language toggle */
-.lang-toggle {
+
+/* ---- Buttons & controls ---------------------------------- */
+
+/* Language toggle — outline pill, accent border on hover */
+.btn-lang {
   background: none;
   border: 1.5px solid var(--line);
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   padding: 5px 13px;
-  font-family: var(--mono);
+  font-family: var(--font-mono);
   font-size: 12px;
   letter-spacing: 0.12em;
   cursor: pointer;
   color: var(--ink-soft);
-  margin-left: clamp(10px, 2vw, 22px);
-  transition: border-color 0.2s ease, color 0.2s ease;
+  transition: border-color var(--dur-fast) var(--ease), color var(--dur-fast) var(--ease);
+}
+.btn-lang:hover { border-color: var(--accent); color: var(--accent-ink); }
+
+/* Filter pill — flips to solid black when active (.is-on) */
+.btn-filter {
+  border-radius: var(--radius-pill);
+  padding: 11px 20px;
+  font-size: 16px;
+  font-family: var(--font-body);
+  border: 1.5px solid #d2d2d2;
+  background: var(--card-bg);
+  color: var(--ink);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background var(--dur-fast) var(--ease), border-color var(--dur-fast) var(--ease);
+}
+.btn-filter .btn-filter__sym { font-size: 1.2rem; line-height: 1; }
+.btn-filter.is-on {
+  background: var(--ink);
+  color: #fff;
+  border-color: var(--ink);
+  font-weight: var(--w-medium);
+}
+
+/* Inline text link — accent underline */
+.link-text {
+  color: inherit;
+  font-weight: var(--w-regular);
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-underline-offset: 0.22em;
+  text-decoration-thickness: 1.5px;
+  transition: color var(--dur-fast) var(--ease);
+}
+.link-text:hover { color: var(--accent-ink); }
+
+/* "See all work" CTA — mono, arrow slides on hover */
+.link-view-all {
+  font-family: var(--font-mono);
+  font-size: 13.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--accent-ink);
+  font-weight: var(--w-medium);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55em;
+  transition: gap var(--dur-fast) var(--ease);
+}
+.link-view-all span { transition: transform var(--dur-fast) var(--ease); }
+.link-view-all:hover { gap: 0.85em; }
+.link-view-all:hover span { transform: translateX(4px); }
+
+/* Contact headline link — display size, accent bottom border */
+.link-contact {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--ink);
+  border-bottom: 2px solid var(--accent);
+  font-family: var(--font-display);
+  font-weight: var(--w-medium);
+  font-size: var(--text-display);
+  letter-spacing: -0.035em;
   line-height: 1;
+  transition: color var(--dur-fast) var(--ease);
 }
-.lang-toggle:hover { border-color: var(--accent); color: var(--accent-ink); }
+.link-contact:hover { color: var(--accent); }
 
-/* ---------- Page shell ---------- */
-.page {
-  width: 100%;
-  max-width: var(--maxw);
-  margin: 0 auto;
-  padding: calc(var(--nav-h) + clamp(48px, 8vw, 92px)) var(--gutter) clamp(60px, 9vw, 100px);
+
+/* ---- Project card ----------------------------------------
+   Lives on the --works-bg band. Lifts and shadows on hover. */
+.ds-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(16px, 2vw, 22px);
+}
+@media (max-width: 880px) { .ds-card-grid { grid-template-columns: 1fr; } }
+
+.ds-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--card-bg);
+  border: 1px solid var(--line-card);
+  border-radius: var(--radius-sm);
+  padding: 20px;
+  text-decoration: none;
+  color: var(--ink);
+  transition: transform var(--dur-slow) var(--ease), box-shadow var(--dur-slow) var(--ease), border-color var(--dur-slow) var(--ease);
+}
+.ds-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 28px 60px -34px rgba(20, 32, 90, 0.5);
+  border-color: #b9c5e6;
+}
+.ds-card__thumb {
+  height: 160px;
+  background: #eef0f5;
+  border-radius: var(--radius-sm);
+  margin-bottom: 18px;
+  overflow: hidden;
+  position: relative;
+}
+.ds-card__num {
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+.ds-card__title {
+  font-family: var(--font-display);
+  font-size: var(--text-card);
+  font-weight: var(--w-semibold);
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+  margin-bottom: 10px;
+}
+.ds-card__tags { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 14px; }
+.ds-card__desc { font-size: 16px; line-height: 1.46; color: var(--ink-soft); margin-bottom: 20px; flex: 1; }
+.ds-card__cta {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-weight: var(--w-medium);
+  color: var(--accent-ink);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55em;
+  margin-top: auto;
 }
 
-/* Homepage split layout — allows .works to break full-width */
-.page-section {
-  width: 100%;
-  max-width: var(--maxw);
-  margin: 0 auto;
-  padding-left: var(--gutter);
-  padding-right: var(--gutter);
-}
-.page-section--first {
-  padding-top: calc(var(--nav-h) + clamp(48px, 8vw, 92px));
-}
-.page-section--last {
-  padding-bottom: clamp(60px, 9vw, 100px);
+/* Tag / chip — used in cards and inline */
+.ds-tag {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  letter-spacing: 0.04em;
+  color: var(--ink-soft);
+  border: 1px solid var(--line-tag);
+  border-radius: var(--radius-pill);
+  padding: 4px 10px;
 }
 
-/* ============================================================
-   Hero
-   ============================================================ */
-.intro { margin: 0 0 clamp(64px, 11vw, 132px); }
-.intro-top {
+
+/* ---- Image placeholder -----------------------------------
+   Diagonal-stripe stand-in with a mono caption of what goes
+   here. Replace with a real image when available. */
+.ds-ph {
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(-45deg, #e3e7f0 0 10px, #eef0f5 10px 20px);
+}
+.ds-ph__label {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: #5f636e;
+  background: rgba(253, 253, 253, 0.9);
+  padding: 4px 10px;
+  border-radius: var(--radius-xs);
+  white-space: nowrap;
+}
+
+
+/* ---- Pillars list ----------------------------------------
+   Numbered list with leading-zero counters and hairline rules. */
+.ds-pillars {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-width: 480px;
+  counter-reset: list-item;
+}
+.ds-pillars li {
+  counter-increment: list-item;
+  position: relative;
+  padding: 0.9rem 0 0.9rem 2.2rem;
+  border-top: 1px solid var(--line);
+  font-size: 19px;
+  line-height: 1.4;
+  font-weight: var(--w-light);
+}
+.ds-pillars li:last-child { border-bottom: 1px solid var(--line); }
+.ds-pillars li::before {
+  content: counter(list-item, decimal-leading-zero);
+  position: absolute;
+  left: 0;
+  top: 0.95rem;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--accent);
+}
+
+
+/* ---- Stat -------------------------------------------------
+   Big display number + small caption. */
+.ds-stats { display: flex; gap: 40px; flex-wrap: wrap; }
+.ds-stat__num {
+  font-family: var(--font-display);
+  font-size: 56px;
+  font-weight: var(--w-medium);
+  letter-spacing: -0.04em;
+  line-height: 0.9;
+}
+.ds-stat__num .accent { color: var(--accent); }
+.ds-stat__cap {
+  margin-top: 0.7rem;
+  font-size: 15px;
+  color: var(--ink-faint);
+  max-width: 22ch;
+  line-height: 1.35;
+}
+
+
+/* ---- Clients row -----------------------------------------
+   Mono label beside a wrapping list of display-type names. */
+.ds-clients {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px 24px;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: clamp(28px, 5vw, 52px);
+  align-items: baseline;
+  gap: 10px 32px;
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
 }
-.status {
-  font-family: var(--mono);
+.ds-clients__label {
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+.ds-clients__who { display: flex; flex-wrap: wrap; gap: 8px 26px; }
+.ds-clients__who span {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: var(--w-medium);
+  letter-spacing: -0.02em;
+}
+
+
+/* ---- Status indicator ------------------------------------
+   "Available for work" line with a pulsing green dot. Used in
+   the hero. To change the colour edit --ok; to change the
+   pulse speed edit the 2.4s in the .ds-status__dot animation.
+   <span class="ds-status"><span class="ds-status__dot"></span> Available — Jun 2026</span> */
+.ds-status {
+  font-family: var(--font-mono);
   font-size: 13px;
   letter-spacing: 0.06em;
   color: var(--ink-soft);
@@ -200,577 +453,274 @@ a { color: inherit; }
   align-items: center;
   gap: 0.6em;
 }
-.status .pulse {
-  width: 8px; height: 8px;
+.ds-status__dot {
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
-  background: #18b45a;
-  box-shadow: 0 0 0 0 rgba(24,180,90,0.5);
-  animation: pulse 2.4s var(--ease) infinite;
+  background: var(--ok);
+  box-shadow: 0 0 0 0 color-mix(in srgb, var(--ok) 50%, transparent);
+  animation: ds-pulse 2.4s var(--ease) infinite;
+  flex-shrink: 0;
 }
-@keyframes pulse {
-  0% { box-shadow: 0 0 0 0 rgba(24,180,90,0.5); }
-  70% { box-shadow: 0 0 0 9px rgba(24,180,90,0); }
-  100% { box-shadow: 0 0 0 0 rgba(24,180,90,0); }
+@keyframes ds-pulse {
+  0%   { box-shadow: 0 0 0 0   color-mix(in srgb, var(--ok) 50%, transparent); }
+  70%  { box-shadow: 0 0 0 9px color-mix(in srgb, var(--ok) 0%, transparent);  }
+  100% { box-shadow: 0 0 0 0   color-mix(in srgb, var(--ok) 0%, transparent);  }
 }
 
-.primalinea {
+
+/* ---- Section heading -------------------------------------
+   Eyebrow + big title + optional sub. Opens every major block.
+   <div class="ds-section-head">
+     <span class="ds-eyebrow"><span class="ds-eyebrow__idx">02</span> Selected work</span>
+     <h2 class="ds-section-title">Three case studies.</h2>
+     <p class="ds-section-sub">Optional one-line description.</p>
+   </div> */
+.ds-section-head { margin-bottom: clamp(28px, 4vw, 46px); }
+.ds-section-head .ds-eyebrow { margin-bottom: 1rem; }
+.ds-section-title {
   margin: 0;
-  font-family: var(--display);
-  font-weight: 500;
-  line-height: 0.92;
-  letter-spacing: -0.045em;
-  font-size: clamp(58px, 14vw, 168px);
-  display: flex;
-  flex-direction: column;
-}
-.primalinea .hello {
-  font-family: 'Inter', sans-serif;
-  font-size: clamp(18px, 2.2vw, 22px);
-  font-weight: 300;
-  letter-spacing: 0;
-  line-height: 1;
-  color: var(--ink-soft);
-  margin-bottom: 0.5em;
-}
-.primalinea .name { display: inline-block; }
-.primalinea .period { color: var(--accent); }
-
-.intro-sub {
-  margin: clamp(34px, 6vw, 60px) auto 0;
-  max-width: 24ch;
-  text-align: left;
-  font-family: var(--display);
-  font-size: clamp(24px, 3.2vw, 38px);
-  font-weight: 400;
-  line-height: 1.28;
-  letter-spacing: -0.02em;
-  color: var(--ink);
-}
-
-/* client / context row */
-.clients {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: 10px clamp(20px, 3vw, 40px);
-  margin-top: clamp(40px, 6vw, 72px);
-  padding-top: clamp(22px, 3vw, 34px);
-  border-top: 1px solid var(--line);
-}
-.clients .label { font-family: var(--mono); font-size: 12.5px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-faint); }
-.clients .who { display: flex; flex-wrap: wrap; gap: 8px 26px; }
-.clients .who span {
-  font-family: var(--display);
-  font-size: clamp(20px, 2.3vw, 26px);
-  font-weight: 500;
-  letter-spacing: -0.02em;
-}
-
-/* ============================================================
-   Section heading
-   ============================================================ */
-.section-head { margin: 0 0 clamp(28px, 4vw, 46px); }
-.section-head .eyebrow { margin-bottom: 1rem; }
-.section-title {
-  margin: 0;
-  font-family: var(--display);
-  font-weight: 500;
+  font-family: var(--font-display);
+  font-weight: var(--w-medium);
+  font-size: var(--text-title);      /* clamp(34→56px) */
   letter-spacing: -0.03em;
   line-height: 1.02;
-  font-size: clamp(34px, 5vw, 56px);
 }
-.section-sub {
+.ds-section-sub {
   margin: 0.8rem 0 0;
-  max-width: 52ch;
+  max-width: 52ch;                    /* keeps the line readable */
+  font-size: var(--text-body);
   color: var(--ink-soft);
-  font-size: clamp(19px, 2.1vw, 22px);
 }
 
-.text-link {
-  color: inherit;
-  font-weight: 400;
-  text-decoration: underline;
-  text-decoration-color: var(--accent);
-  text-underline-offset: 0.22em;
-  text-decoration-thickness: 1.5px;
-  transition: color 0.15s ease;
-}
-.text-link:hover { color: var(--accent-ink); }
 
-/* ============================================================
-   Selected work
-   ============================================================ */
-.works {
-  background: var(--works-bg);
-  padding: clamp(34px, 5vw, 64px) 0 clamp(40px, 5vw, 64px);
-  margin: 0 0 clamp(64px, 10vw, 128px);
-}
-
-/* "See all work" link below the cards */
-.works-footer {
-  margin-top: clamp(28px, 4vw, 44px);
-  display: flex;
-  justify-content: flex-end;
-}
-.view-all {
-  font-family: var(--mono);
-  font-size: 13.5px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: var(--accent-ink);
-  display: inline-flex;
-  align-items: center;
-  gap: 0.55em;
-  font-weight: 500;
-  transition: gap 0.28s var(--ease);
-}
-.view-all .arrow { transition: transform 0.28s var(--ease); }
-.view-all:hover .arrow { transform: translateX(4px); }
-.cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: clamp(16px, 1.6vw, 22px);
-}
-.card {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  background: var(--card-bg);
-  border: 1px solid #d9e0ee;
-  border-radius: var(--radius);
-  padding: clamp(18px, 1.7vw, 24px);
-  text-decoration: none;
-  color: var(--ink);
-  overflow: hidden;
-  transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease), border-color 0.3s ease;
-}
-.card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 28px 60px -34px rgba(20,32,90,0.5);
-  border-color: #b9c5e6;
-}
-.card-num {
-  font-family: var(--mono);
-  font-size: 12.5px;
-  letter-spacing: 0.1em;
-  color: var(--accent);
-  margin-bottom: 12px;
-}
-.card-thumb {
-  height: 188px;
-  margin: 0 0 1.2rem;
-  border-radius: 10px;
-  overflow: hidden;
-}
-.card-thumb .ph-art { transition: transform 0.6s var(--ease); }
-.card:hover .card-thumb .ph-art { transform: scale(1.05); }
-.card-title {
-  font-family: var(--display);
-  font-size: clamp(24px, 2.1vw, 30px);
-  font-weight: 600;
-  letter-spacing: -0.025em;
-  line-height: 1.1;
-  margin: 0 0 0.7rem;
-}
-.card-tags { display: flex; flex-wrap: wrap; gap: 7px; margin: 0 0 1.1rem; }
-.card-tags span {
-  font-family: var(--mono);
-  font-size: 11.5px;
-  letter-spacing: 0.04em;
-  color: var(--ink-soft);
-  border: 1px solid #d7dce8;
-  border-radius: 999px;
-  padding: 4px 10px;
-}
-.card-desc {
-  font-size: 17px;
-  line-height: 1.46;
-  color: var(--ink-soft);
-  margin: 0 0 1.5rem;
-}
-.card-cta {
-  margin-top: auto;
-  font-size: 15px;
-  font-family: var(--mono);
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  font-weight: 500;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.55em;
-  color: var(--accent-ink);
-}
-.card-cta .arrow { transition: transform 0.28s var(--ease); }
-.card:hover .card-cta .arrow { transform: translateX(5px); }
-
-/* ============================================================
-   About
-   ============================================================ */
-.about { margin: 0 0 clamp(64px, 10vw, 128px); }
-.about-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: clamp(28px, 5vw, 72px);
-  align-items: start;
-}
-.about-lead {
-  font-family: var(--display);
-  font-size: clamp(26px, 3.2vw, 40px);
-  font-weight: 500;
-  letter-spacing: -0.03em;
-  line-height: 1.12;
-  margin: 0;
-}
-.about-lead .accent { color: var(--accent); }
-.about-body p { color: var(--ink-soft); font-size: clamp(19px, 2.1vw, 22px); }
-.pillars-list { margin: 1.6rem 0 0; padding: 0; list-style: none; }
-.pillars-list li {
-  position: relative;
-  padding: 0.9rem 0 0.9rem 2.2rem;
-  border-top: 1px solid var(--line);
-  line-height: 1.4;
-  font-size: clamp(18px, 2vw, 21px);
-}
-.pillars-list li:last-child { border-bottom: 1px solid var(--line); }
-.pillars-list li::before {
-  content: counter(list-item, decimal-leading-zero);
-  counter-increment: list-item;
-  position: absolute;
-  left: 0;
-  top: 0.95rem;
-  font-family: var(--mono);
-  font-size: 13px;
-  color: var(--accent);
-}
-
-/* stats */
-.stats {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: clamp(16px, 2vw, 28px);
-  margin: clamp(48px, 7vw, 80px) 0 0;
-  padding-top: clamp(36px, 5vw, 52px);
-  border-top: 1px solid var(--line-strong);
-}
-.stat .num {
-  font-family: var(--display);
-  font-size: clamp(40px, 6vw, 76px);
-  font-weight: 500;
-  letter-spacing: -0.04em;
-  line-height: 0.9;
-}
-.stat .num .accent { color: var(--accent); }
-.stat .cap {
-  margin-top: 0.7rem;
-  font-size: 16px;
-  color: var(--ink-soft);
-  max-width: 22ch;
-  line-height: 1.35;
-}
-
-/* ============================================================
-   Contact / footer
-   ============================================================ */
-.contact {
+/* ---- Contact block ---------------------------------------
+   Closing call-to-action. Display headline with an email link
+   underlined in --accent.
+   <section class="ds-contact">
+     <span class="ds-eyebrow"><span class="ds-eyebrow__idx">04</span> Contact</span>
+     <h2 class="ds-contact__headline">Let's <a class="ds-contact__mail" href="mailto:#">talk.</a></h2>
+     <p class="ds-contact__sub">Best reached by email.</p>
+   </section> */
+.ds-contact {
   border-top: 1px solid var(--line-strong);
   padding-top: clamp(44px, 7vw, 80px);
 }
-.contact .eyebrow { margin-bottom: 1.2rem; }
-.contact-headline {
-  font-family: var(--display);
-  font-weight: 500;
+.ds-contact .ds-eyebrow { margin-bottom: 1.2rem; display: flex; }
+.ds-contact__headline {
+  margin: 0 0 1.4rem;
+  font-family: var(--font-display);
+  font-weight: var(--w-medium);
+  font-size: var(--text-display);     /* clamp(40→104px) */
   letter-spacing: -0.035em;
   line-height: 1;
-  font-size: clamp(40px, 8vw, 104px);
-  margin: 0 0 1.4rem;
 }
-.contact-mail {
+.ds-contact__mail {
   display: inline-block;
   text-decoration: none;
   color: var(--ink);
   border-bottom: 2px solid var(--accent);
-  transition: color 0.2s ease;
+  transition: color var(--dur-fast) var(--ease);
 }
-.contact-mail:hover { color: var(--accent); }
-.contact-sub { max-width: 46ch; color: var(--ink-soft); font-size: clamp(19px, 2.1vw, 22px); }
+.ds-contact__mail:hover { color: var(--accent); }
+.ds-contact__sub {
+  max-width: 46ch;
+  font-size: var(--text-body);
+  color: var(--ink-soft);
+}
 
-.site-footer {
-  max-width: var(--maxw);
-  margin: clamp(48px, 7vw, 84px) auto 0;
-  padding: clamp(28px, 4vw, 40px) var(--gutter) clamp(40px, 5vw, 56px);
+
+/* ---- Site footer -----------------------------------------
+   Mono meta row: copyright on the left, link list on the right.
+   <footer class="ds-footer">
+     <span>© 2026 Giorgio Messina</span>
+     <div class="ds-footer__links"><a href="#">LinkedIn</a><a href="#">Email</a></div>
+   </footer> */
+.ds-footer {
   display: flex;
   flex-wrap: wrap;
   gap: 18px 28px;
   justify-content: space-between;
   align-items: baseline;
+  padding: clamp(28px, 4vw, 40px) 0 clamp(40px, 5vw, 56px);
   border-top: 1px solid var(--line);
-  font-family: var(--mono);
+  font-family: var(--font-mono);
   font-size: 13px;
   letter-spacing: 0.04em;
   color: var(--ink-faint);
 }
-.site-footer .links { display: flex; flex-wrap: wrap; gap: 14px 22px; }
-.site-footer a { color: var(--ink-soft); text-decoration: none; transition: color 0.15s ease; }
-.site-footer a:hover { color: var(--accent-ink); }
-
-/* ============================================================
-   Image placeholders
-   ============================================================ */
-.placeholder {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  background: #eef0f5;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
+.ds-footer__links { display: flex; flex-wrap: wrap; gap: 14px 22px; }
+.ds-footer a {
+  color: var(--ink-soft);
+  text-decoration: none;
+  transition: color var(--dur-fast) var(--ease);
 }
-.placeholder .ph-art {
-  position: absolute;
-  inset: 0;
-  background-image: repeating-linear-gradient(-45deg, #e3e7f0 0 10px, #eef0f5 10px 20px);
-}
-.placeholder span {
-  position: relative;
-  font-family: var(--mono);
-  font-size: 12px;
-  letter-spacing: 0.02em;
-  color: #5f636e;
-  background: rgba(253,253,253,0.9);
-  padding: 5px 11px;
-  border-radius: 6px;
-  text-align: center;
-  max-width: 86%;
-}
+.ds-footer a:hover { color: var(--accent-ink); }
 
-/* ============================================================
-   Project pages
-   ============================================================ */
-.proj-page { max-width: 960px; }
 
-.crumb {
+/* ---- Breadcrumb ------------------------------------------
+   Back link on inner pages; arrow nudges left on hover.
+   <a class="ds-crumb" href="#"><span class="ds-crumb__arrow">←</span> All work</a> */
+.ds-crumb {
   display: inline-flex;
   align-items: center;
   gap: 0.45em;
   text-decoration: none;
   color: var(--ink-faint);
-  font-family: var(--mono);
+  font-family: var(--font-mono);
   font-size: 13px;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  margin-bottom: clamp(26px, 4vw, 44px);
-  transition: color 0.15s ease;
+  transition: color var(--dur-fast) var(--ease);
 }
-.crumb:hover { color: var(--accent-ink); }
-.crumb .arrow { transition: transform 0.28s var(--ease); }
-.crumb:hover .arrow { transform: translateX(-3px); }
+.ds-crumb:hover { color: var(--accent-ink); }
+.ds-crumb__arrow { transition: transform var(--dur-fast) var(--ease); }
+.ds-crumb:hover .ds-crumb__arrow { transform: translateX(-3px); }
 
-.proj-eyebrow { margin: 0 0 1.2rem; }
-.proj-title {
-  font-family: var(--display);
-  font-weight: 500;
-  letter-spacing: -0.045em;
-  line-height: 0.95;
-  font-size: clamp(48px, 9vw, 110px);
-  margin: 0 0 1.2rem;
-}
-.proj-title .period { color: var(--accent); }
-.proj-lead {
-  font-family: var(--display);
-  font-size: clamp(22px, 2.7vw, 30px);
-  font-weight: 400;
-  line-height: 1.32;
-  max-width: 40ch;
-  margin: 0 0 clamp(40px, 6vw, 64px);
-  color: var(--ink);
-}
-.proj-hero { height: clamp(280px, 44vw, 480px); margin: 0 0 clamp(44px, 7vw, 84px); border-radius: 16px; overflow: hidden; }
 
-.proj-meta {
+/* ---- Project meta list -----------------------------------
+   Definition list of facts (Role, Year, Team…). Auto-fits as
+   many columns as fit at 160px min.
+   <dl class="ds-meta">
+     <div><dt>Role</dt><dd>Lead Product Designer</dd></div>
+   </dl> */
+.ds-meta {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   gap: 26px 40px;
-  padding: 0 0 clamp(40px, 6vw, 60px);
-  margin: 0 0 clamp(40px, 6vw, 60px);
+  padding-bottom: clamp(40px, 6vw, 60px);
   border-bottom: 1px solid var(--line);
 }
-.proj-meta dt {
-  font-family: var(--mono);
+.ds-meta dt {
+  margin-bottom: 0.5rem;
+  font-family: var(--font-mono);
   font-size: 12px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--ink-faint);
-  margin: 0 0 0.5rem;
 }
-.proj-meta dd { margin: 0; font-size: 19px; line-height: 1.4; }
+.ds-meta dd { margin: 0; font-size: 19px; line-height: 1.4; }
 
-.proj-section {
+
+/* ---- Project content section -----------------------------
+   Two-column case-study block: sticky-ish heading on the left,
+   prose on the right. Collapses to one column under 880px.
+   <section class="ds-proj-section">
+     <h2><span class="s-idx">01</span> Challenge</h2>
+     <div class="ds-proj-body"><p>…</p></div>
+   </section> */
+.ds-proj-section {
   display: grid;
-  grid-template-columns: 250px 1fr;
+  grid-template-columns: 250px 1fr;   /* heading | body */
   gap: clamp(18px, 4vw, 56px);
   padding: clamp(38px, 5vw, 58px) 0;
   border-top: 1px solid var(--line);
 }
-.proj-section:first-of-type { border-top: none; padding-top: 0; }
-.proj-section h2 {
+.ds-proj-section > h2 {
   margin: 0;
-  font-family: var(--display);
+  font-family: var(--font-display);
+  font-weight: var(--w-medium);
   font-size: clamp(24px, 2.6vw, 32px);
-  font-weight: 500;
   letter-spacing: -0.02em;
   line-height: 1.08;
   display: flex;
   align-items: baseline;
   gap: 0.6em;
 }
-.proj-section h2 .s-idx {
-  font-family: var(--mono);
+.ds-proj-section > h2 .s-idx {
+  font-family: var(--font-mono);
   font-size: 13px;
   letter-spacing: 0.08em;
+  font-weight: var(--w-regular);
   color: var(--accent);
-  font-weight: 400;
 }
-.proj-section .body { max-width: 60ch; }
-.proj-section .body > *:first-child { margin-top: 0; }
-.proj-section .body p { color: var(--ink-soft); }
-.proj-section h3 { font-size: 19px; font-weight: 600; margin: 1.7rem 0 0.5rem; color: var(--ink); }
-.proj-section ul { margin: 0 0 1.2rem; padding-left: 1.25rem; }
-.proj-section li { margin-bottom: 0.55rem; line-height: 1.45; color: var(--ink-soft); }
-.proj-section li::marker { color: var(--accent); }
+.ds-proj-body { max-width: 60ch; }
+.ds-proj-body > :first-child { margin-top: 0; }
+.ds-proj-body p { color: var(--ink-soft); margin: 0 0 1.4rem; }
+.ds-proj-body p:last-child { margin-bottom: 0; }
 
-.proj-figure { margin: clamp(34px, 5vw, 60px) 0; }
-.proj-figure .ph-wrap { height: clamp(240px, 36vw, 400px); border-radius: 14px; overflow: hidden; }
-.proj-figure figcaption {
-  font-family: var(--mono);
-  font-size: 13px;
-  color: var(--ink-faint);
+
+/* ---- Figure ----------------------------------------------
+   Image (or placeholder) with a mono caption underneath.
+   <figure class="ds-figure">
+     <div class="ds-figure__media"><!-- img / .ds-ph --></div>
+     <figcaption>Caption text.</figcaption>
+   </figure> */
+.ds-figure { margin: clamp(34px, 5vw, 60px) 0; }
+.ds-figure__media {
+  position: relative;
+  height: clamp(240px, 36vw, 400px);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: #eef0f5;
+}
+.ds-figure figcaption {
   margin-top: 12px;
+  font-family: var(--font-mono);
+  font-size: 13px;
   line-height: 1.45;
+  color: var(--ink-faint);
 }
 
-.proj-next {
+
+/* ---- Next link -------------------------------------------
+   Big "next project" link at the foot of a case study.
+   <div class="ds-next">
+     <span class="ds-next__label">Next</span>
+     <a href="#">Energy Manager <span class="ds-next__arrow">→</span></a>
+   </div> */
+.ds-next {
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
   justify-content: space-between;
   align-items: baseline;
   border-top: 1px solid var(--line-strong);
-  margin-top: clamp(44px, 7vw, 72px);
   padding-top: clamp(28px, 4vw, 40px);
 }
-.proj-next .label { font-family: var(--mono); color: var(--ink-faint); font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; }
-.proj-next a {
+.ds-next__label {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+.ds-next a {
   text-decoration: none;
-  font-family: var(--display);
-  font-weight: 500;
+  font-family: var(--font-display);
+  font-weight: var(--w-medium);
   font-size: clamp(28px, 4vw, 48px);
   letter-spacing: -0.035em;
   display: inline-flex;
   align-items: center;
   gap: 0.4em;
 }
-.proj-next a .arrow { color: var(--accent); transition: transform 0.28s var(--ease); }
-.proj-next a:hover .arrow { transform: translateX(6px); }
+.ds-next__arrow { color: var(--accent); transition: transform var(--dur-fast) var(--ease); }
+.ds-next a:hover .ds-next__arrow { transform: translateX(6px); }
 
-/* ============================================================
-   Bullet-points / "More" page
-   ============================================================ */
-.bp-intro { margin: 0 0 clamp(36px, 5vw, 56px); max-width: 56ch; }
-.bp-intro .section-title { margin-bottom: 0.8rem; }
-.bp-intro p { font-size: clamp(20px, 2.2vw, 24px); color: var(--ink-soft); }
 
-.filters {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin: 0 0 clamp(36px, 5vw, 52px);
+/* ---- Bullet list -----------------------------------------
+   Dash-marked list with hairline rules between items. Used on
+   the "More" page. The em-dash marker colour = --accent.
+   <ul class="ds-bullets"><li>A single point.</li></ul> */
+.ds-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-width: var(--measure);
 }
-.filter-button {
-  border-radius: 999px;
-  padding: 11px 20px;
-  font-size: 16px;
-  font-family: 'Inter', sans-serif;
-  border: 1.5px solid #d2d2d2;
-  background: #fff;
-  color: var(--ink);
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  transition: background-color 0.18s var(--ease), color 0.18s ease, border-color 0.18s ease;
-}
-.filter-button.is-on {
-  background-color: var(--ink);
-  color: #fff;
-  border-color: var(--ink);
-  font-weight: 500;
-}
-.filter-button.is-off { background-color: #fff; color: var(--ink); border-color: #d2d2d2; font-weight: 400; }
-.filter-symbol { font-size: 1.25rem; line-height: 1; }
-
-.bullets { max-width: var(--measure); }
-.bullets ul { padding: 0; margin: 0; list-style: none; }
-.bullets li {
+.ds-bullets li {
   position: relative;
   padding: 0.85rem 0 0.85rem 1.6rem;
   border-top: 1px solid var(--line);
-  font-weight: 300;
-  font-size: clamp(19px, 2.1vw, 23px);
+  font-weight: var(--w-light);
+  font-size: 21px;
   line-height: 1.5;
 }
-.bullets li:last-child { border-bottom: 1px solid var(--line); }
-.bullets li::before {
+.ds-bullets li:last-child { border-bottom: 1px solid var(--line); }
+.ds-bullets li::before {
   content: "—";
   position: absolute;
   left: 0;
   color: var(--accent);
-}
-.bullets li.is-hidden { display: none; }
-
-/* ============================================================
-   Scroll reveal + entrance
-   Entrance animates TRANSFORM ONLY — opacity always stays 1.
-   A renderer that freezes the animation at frame 0 still paints
-   the content (just slightly offset), so it can never vanish.
-   ============================================================ */
-@keyframes revealIn {
-  from { transform: translateY(28px); }
-  to   { transform: none; }
-}
-@media (prefers-reduced-motion: no-preference) {
-  .js-reveal [data-reveal].is-in { animation: revealIn 0.7s var(--ease) both; }
-  .js-reveal [data-reveal][data-delay="1"].is-in { animation-delay: 0.08s; }
-  .js-reveal [data-reveal][data-delay="2"].is-in { animation-delay: 0.16s; }
-  .js-reveal [data-reveal][data-delay="3"].is-in { animation-delay: 0.24s; }
-}
-
-/* ============================================================
-   Responsive
-   ============================================================ */
-@media (max-width: 880px) {
-  .cards { grid-template-columns: 1fr; gap: 14px; }
-  .card-thumb { height: 210px; }
-  .about-grid { grid-template-columns: 1fr; gap: 22px; }
-  .intro-sub { max-width: 18ch; }
-  .proj-section { grid-template-columns: 1fr; gap: 14px; }
-  .stats { grid-template-columns: 1fr; gap: 28px; }
-  .stat { display: flex; align-items: baseline; gap: 18px; }
-  .stat .cap { margin-top: 0; }
-}
-@media (max-width: 560px) {
-  :root { --base: 19px; }
-  .nav-links { gap: 16px; }
-  .nav-links a { font-size: 15px; }
-  .home-mark { font-size: 17px; }
-  .lang-toggle { padding: 4px 10px; font-size: 11px; }
-}
-
-/* ============================================================
-   Reduced motion
-   ============================================================ */
-@media (prefers-reduced-motion: reduce) {
-  * { scroll-behavior: auto; transition: none !important; animation: none !important; }
-  .js-reveal [data-reveal] { opacity: 1; transform: none; }
 }

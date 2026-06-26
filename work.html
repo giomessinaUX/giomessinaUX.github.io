@@ -11,87 +11,122 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>All Work — Giorgio Messina</title>
-  <meta name="description" content="All projects by Giorgio Messina — Product Designer working on data-intensive B2B platforms.">
+  <meta name="description" content="All projects by Giorgio Messina — Product Designer working on data-intensive B2B products.">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="site.css">
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NXX9NC6J"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
-  <nav class="site-nav">
-    <div class="nav-inner">
-      <a href="index.html" class="home-mark"><span class="dot"></span>Giorgio Messina</a>
-      <div class="nav-links">
-        <a href="index.html#work" class="is-active">Work</a>
-        <a href="index.html#about">About</a>
-        <a href="bullet-points.html">More</a>
-        <a href="index.html#contact">Contact</a>
+
+  <div class="nav-shell">
+    <nav class="site-nav ds-nav">
+      <div class="ds-nav__inner">
+        <a href="index.html" class="ds-nav__mark"><span class="ds-nav__dot"></span>Giorgio Messina</a>
+        <div class="ds-nav__links">
+          <a href="index.html#about"><span data-lang="en">About</span><span data-lang="it" hidden>Chi sono</span></a>
+          <a href="index.html#work" class="is-active"><span data-lang="en">Work</span><span data-lang="it" hidden>Lavori</span></a>
+          <a href="index.html#contact"><span data-lang="en">Contact</span><span data-lang="it" hidden>Contatti</span></a>
+        </div>
+        <button class="btn-lang" id="lang-toggle" type="button" aria-label="Switch language">IT</button>
       </div>
+    </nav>
+  </div>
+
+  <main class="page section--tight" data-screen-label="Work">
+    <a href="index.html" class="ds-crumb"><span class="ds-crumb__arrow">←</span> <span data-lang="en">Home</span><span data-lang="it" hidden>Home</span></a>
+
+    <div class="ds-section-head" data-reveal style="margin-top: clamp(28px, 4vw, 44px);">
+      <span class="ds-eyebrow"><span class="ds-eyebrow__idx">02</span> <span data-lang="en">Projects</span><span data-lang="it" hidden>Progetti</span></span>
+      <h1 class="ds-section-title"><span data-lang="en">All work.</span><span data-lang="it" hidden>Tutti i lavori.</span></h1>
+      <p class="ds-section-sub">
+        <span data-lang="en">Selected case studies across consulting, enterprise products and agencies.</span>
+        <span data-lang="it" hidden>Casi studio selezionati tra consulenza, prodotti enterprise e agenzie.</span>
+      </p>
     </div>
-  </nav>
 
-  <main class="page" data-screen-label="Work">
-    <a href="index.html" class="crumb"><span class="arrow">←</span> Home</a>
+    <div class="ds-card-grid">
 
-    <div class="section-head" data-reveal>
-      <span class="eyebrow"><span class="idx">02</span> Projects</span>
-      <h1 class="section-title">All work.</h1>
-      <p class="section-sub">Selected case studies across consulting and enterprise products.</p>
-    </div>
-
-    <div class="cards">
-      <a class="card" href="projects/civic.html" data-reveal>
-        <div class="card-thumb"><div class="placeholder"><div class="ph-art"></div><span>Civic — cover image</span></div></div>
-        <span class="card-num">01 / 2024–</span>
-        <h3 class="card-title">Civic</h3>
-        <div class="card-tags"><span>Product Design</span><span>Compunet</span></div>
-        <p class="card-desc">
-          End-to-end redesign of a 25-year-old platform for the full lifecycle of
-          fines — 700+ fields across 45 screens.
+      <a class="ds-card" href="projects/civic.html" data-reveal>
+        <div class="ds-card__thumb"><div class="ds-ph"></div><span class="ds-ph__label">Civic — cover</span></div>
+        <span class="ds-card__num">01 / 2024–</span>
+        <h3 class="ds-card__title">Civic</h3>
+        <div class="ds-card__tags"><span class="ds-tag">Product Design</span><span class="ds-tag">Compunet</span></div>
+        <p class="ds-card__desc">
+          <span data-lang="en">End-to-end redesign of a 25-year-old platform for the full lifecycle of fines — 700+ fields across 45 screens.</span>
+          <span data-lang="it" hidden>Redesign end-to-end di una piattaforma ventennale per l'intero ciclo di vita delle sanzioni — oltre 700 campi su 45 schermate.</span>
         </p>
-        <span class="card-cta">View case study <span class="arrow">→</span></span>
+        <span class="ds-card__cta"><span data-lang="en">View case study</span><span data-lang="it" hidden>Vedi il caso studio</span> →</span>
       </a>
 
-      <a class="card" href="projects/energy-manager.html" data-reveal data-delay="1">
-        <div class="card-thumb"><div class="placeholder"><div class="ph-art"></div><span>Energy Manager — cover image</span></div></div>
-        <span class="card-num">02 / Siemens</span>
-        <h3 class="card-title">Energy Manager</h3>
-        <div class="card-tags"><span>UX Design</span><span>Building X</span></div>
-        <p class="card-desc">
-          Monitoring and optimizing energy across complex building portfolios, from
-          discovery to developer handoff.
+      <a class="ds-card" href="projects/energy-manager.html" data-reveal data-delay="1">
+        <div class="ds-card__thumb"><div class="ds-ph"></div><span class="ds-ph__label">Energy Manager — cover</span></div>
+        <span class="ds-card__num">02 / Siemens</span>
+        <h3 class="ds-card__title">Energy Manager</h3>
+        <div class="ds-card__tags"><span class="ds-tag">UX Design</span><span class="ds-tag">Building X</span></div>
+        <p class="ds-card__desc">
+          <span data-lang="en">Monitoring and optimizing energy across complex building portfolios, from discovery to developer handoff.</span>
+          <span data-lang="it" hidden>Monitoraggio e ottimizzazione energetica su portfolio edilizi complessi, dalla discovery all'handoff agli sviluppatori.</span>
         </p>
-        <span class="card-cta">View case study <span class="arrow">→</span></span>
+        <span class="ds-card__cta"><span data-lang="en">View case study</span><span data-lang="it" hidden>Vedi il caso studio</span> →</span>
       </a>
 
-      <a class="card" href="projects/building-x.html" data-reveal data-delay="2">
-        <div class="card-thumb"><div class="placeholder"><div class="ph-art"></div><span>Building X — cover image</span></div></div>
-        <span class="card-num">03 / Siemens</span>
-        <h3 class="card-title">Building X</h3>
-        <div class="card-tags"><span>UX Research</span><span>Onboarding</span></div>
-        <p class="card-desc">
-          First end-to-end mapping of the building onboarding journey — 40+ users
-          across 3 continents.
+      <a class="ds-card" href="projects/building-x.html" data-reveal data-delay="2">
+        <div class="ds-card__thumb"><div class="ds-ph"></div><span class="ds-ph__label">Building X — cover</span></div>
+        <span class="ds-card__num">03 / Siemens</span>
+        <h3 class="ds-card__title">Building X</h3>
+        <div class="ds-card__tags"><span class="ds-tag">UX Research</span><span class="ds-tag">Onboarding</span></div>
+        <p class="ds-card__desc">
+          <span data-lang="en">First end-to-end mapping of the building onboarding journey — 40+ users across 3 continents.</span>
+          <span data-lang="it" hidden>Prima mappatura end-to-end del journey di onboarding degli edifici — oltre 40 utenti su 3 continenti.</span>
         </p>
-        <span class="card-cta">View case study <span class="arrow">→</span></span>
+        <span class="ds-card__cta"><span data-lang="en">View case study</span><span data-lang="it" hidden>Vedi il caso studio</span> →</span>
       </a>
+
+      <a class="ds-card" href="projects/vmlyr.html" data-reveal>
+        <div class="ds-card__thumb"><div class="ds-ph"></div><span class="ds-ph__label">VMLYR — cover</span></div>
+        <span class="ds-card__num">04 / VMLYR</span>
+        <h3 class="ds-card__title">VMLYR</h3>
+        <div class="ds-card__tags"><span class="ds-tag">Product Design</span><span class="ds-tag">Service Design</span></div>
+        <p class="ds-card__desc">
+          <span data-lang="en">Product &amp; service design across the agency's digital division — e-commerce and digital products for Whirlpool, Lavazza and Bolton.</span>
+          <span data-lang="it" hidden>Product &amp; service design nella divisione digital dell'agenzia — e-commerce e prodotti digitali per Whirlpool, Lavazza e Bolton.</span>
+        </p>
+        <span class="ds-card__cta"><span data-lang="en">View case study</span><span data-lang="it" hidden>Vedi il caso studio</span> →</span>
+      </a>
+
+      <a class="ds-card" href="projects/connexia.html" data-reveal data-delay="1">
+        <div class="ds-card__thumb"><div class="ds-ph"></div><span class="ds-ph__label">Connexia — cover</span></div>
+        <span class="ds-card__num">05 / Connexia</span>
+        <h3 class="ds-card__title">Connexia</h3>
+        <div class="ds-card__tags"><span class="ds-tag">Product Design</span><span class="ds-tag">Innovation</span></div>
+        <p class="ds-card__desc">
+          <span data-lang="en">Product design and innovation consulting — emerging AR/VR tech and service blueprints for Fastweb, SisalPay and ActionAid.</span>
+          <span data-lang="it" hidden>Product design e consulenza d'innovazione — tecnologie emergenti AR/VR e blueprint di servizio per Fastweb, SisalPay e ActionAid.</span>
+        </p>
+        <span class="ds-card__cta"><span data-lang="en">View case study</span><span data-lang="it" hidden>Vedi il caso studio</span> →</span>
+      </a>
+
     </div>
   </main>
 
-  <footer class="site-footer">
-    <span>© <span id="year">2026</span> Giorgio Messina — Milan, Italy</span>
-    <div class="links">
-      <a href="mailto:giomessina.work@gmail.com">Email</a>
-      <a href="tel:+393384569770">+39 338 456 9770</a>
-      <a href="https://www.linkedin.com/in/giomessina/" target="_blank" rel="noreferrer">LinkedIn</a>
-      <a href="https://www.instagram.com/giom.essina/" target="_blank" rel="noreferrer">Instagram</a>
+  <footer class="page">
+    <div class="ds-footer">
+      <span>© <span id="year">2026</span> Giorgio Messina — Milan, Italy</span>
+      <div class="ds-footer__links">
+        <a href="mailto:giomessina.work@gmail.com">Email</a>
+        <a href="tel:+393384569770">+39 338 456 9770</a>
+        <a href="https://www.linkedin.com/in/giomessina/" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a href="https://www.instagram.com/giom.essina/" target="_blank" rel="noreferrer">Instagram</a>
+        <a href="Design System.html">Design system</a>
+      </div>
     </div>
   </footer>
 
   <script src="site.js"></script>
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <script src="i18n.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>

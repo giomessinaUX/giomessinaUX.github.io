@@ -1,0 +1,147 @@
+<!-- @dsCard group="Foundation" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Spacing & Tokens</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Inter', sans-serif; background: #fdfdfd; padding: 40px; color: #111; }
+  h1 { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #8a8a8a; font-family: ui-monospace, monospace; margin-bottom: 32px; }
+  .group { margin-bottom: 40px; }
+  .group-label { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #8a8a8a; font-family: ui-monospace, monospace; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 1px solid #e4e4e4; }
+  .token-row { display: flex; align-items: center; gap: 24px; padding: 12px 0; border-bottom: 1px solid #e4e4e4; }
+  .token-row:first-of-type { border-top: 1px solid #e4e4e4; }
+  .token-name { font-family: ui-monospace, monospace; font-size: 12px; color: #2b4ee6; min-width: 140px; }
+  .token-value { font-family: ui-monospace, monospace; font-size: 12px; color: #8a8a8a; min-width: 200px; }
+  .token-role { font-size: 13px; color: #4a4a4a; }
+  .bar-wrap { display: flex; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid #e4e4e4; }
+  .bar-wrap:first-of-type { border-top: 1px solid #e4e4e4; }
+  .bar { background: #dde9fc; border-radius: 4px; height: 20px; flex-shrink: 0; }
+  .bar-label { font-family: ui-monospace, monospace; font-size: 11px; color: #8a8a8a; }
+  .radius-row { display: flex; gap: 20px; margin-top: 16px; }
+  .radius-box { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+  .radius-sample { width: 72px; height: 72px; background: #dde9fc; border: 1px solid #b9c5e6; }
+  .radius-name { font-family: ui-monospace, monospace; font-size: 11px; color: #2b4ee6; }
+  .radius-val { font-family: ui-monospace, monospace; font-size: 11px; color: #8a8a8a; }
+  .ease-box { background: #f6f6f4; border-radius: 10px; padding: 16px 20px; display: inline-block; margin-top: 12px; }
+  .ease-name { font-family: ui-monospace, monospace; font-size: 12px; color: #2b4ee6; }
+  .ease-val { font-family: ui-monospace, monospace; font-size: 11px; color: #8a8a8a; margin-top: 4px; }
+</style>
+</head>
+<body>
+<h1>Spacing &amp; Tokens</h1>
+
+<div class="group">
+  <div class="group-label">Layout</div>
+  <div class="token-row">
+    <div class="token-name">--maxw</div>
+    <div class="token-value">1140px</div>
+    <div class="token-role">Max page width</div>
+  </div>
+  <div class="token-row">
+    <div class="token-name">--nav-h</div>
+    <div class="token-value">78px</div>
+    <div class="token-role">Fixed nav height</div>
+  </div>
+  <div class="token-row">
+    <div class="token-name">--gutter</div>
+    <div class="token-value">clamp(20px, 5vw, 56px)</div>
+    <div class="token-role">Horizontal page padding</div>
+  </div>
+  <div class="token-row">
+    <div class="token-name">--measure</div>
+    <div class="token-value">880px</div>
+    <div class="token-role">Readable text max-width</div>
+  </div>
+  <div class="token-row">
+    <div class="token-name">--base</div>
+    <div class="token-value">22.5px</div>
+    <div class="token-role">Base font size</div>
+  </div>
+</div>
+
+<div class="group">
+  <div class="group-label">Spacing scale — key values</div>
+  <div class="bar-wrap">
+    <div class="bar" style="width:12px;"></div>
+    <div class="bar-label">12px — small gap (nav)</div>
+  </div>
+  <div class="bar-wrap">
+    <div class="bar" style="width:16px;"></div>
+    <div class="bar-label">16px — card gap min</div>
+  </div>
+  <div class="bar-wrap">
+    <div class="bar" style="width:24px;"></div>
+    <div class="bar-label">24px — card padding</div>
+  </div>
+  <div class="bar-wrap">
+    <div class="bar" style="width:34px;"></div>
+    <div class="bar-label">34px — section inner padding min</div>
+  </div>
+  <div class="bar-wrap">
+    <div class="bar" style="width:48px;"></div>
+    <div class="bar-label">48px — contact padding min</div>
+  </div>
+  <div class="bar-wrap">
+    <div class="bar" style="width:56px;"></div>
+    <div class="bar-label">56px — gutter max</div>
+  </div>
+  <div class="bar-wrap">
+    <div class="bar" style="width:64px;"></div>
+    <div class="bar-label">64px — section gap min (clamp)</div>
+  </div>
+  <div class="bar-wrap">
+    <div class="bar" style="width:92px;"></div>
+    <div class="bar-label">92px — hero top padding max</div>
+  </div>
+  <div class="bar-wrap">
+    <div class="bar" style="width:128px;"></div>
+    <div class="bar-label">128px — section gap max (clamp)</div>
+  </div>
+</div>
+
+<div class="group">
+  <div class="group-label">Border radius</div>
+  <div class="radius-row">
+    <div class="radius-box">
+      <div class="radius-sample" style="border-radius:6px;"></div>
+      <div class="radius-name">6px</div>
+      <div class="radius-val">Placeholder label</div>
+    </div>
+    <div class="radius-box">
+      <div class="radius-sample" style="border-radius:10px;"></div>
+      <div class="radius-name">10px</div>
+      <div class="radius-val">Card thumb, figure</div>
+    </div>
+    <div class="radius-box">
+      <div class="radius-sample" style="border-radius:14px;"></div>
+      <div class="radius-name">14px</div>
+      <div class="radius-val">Proj figure</div>
+    </div>
+    <div class="radius-box">
+      <div class="radius-sample" style="border-radius:16px;"></div>
+      <div class="radius-name">--radius · 16px</div>
+      <div class="radius-val">Cards</div>
+    </div>
+    <div class="radius-box">
+      <div class="radius-sample" style="border-radius:999px;width:48px;"></div>
+      <div class="radius-name">999px</div>
+      <div class="radius-val">Pills, tags, buttons</div>
+    </div>
+  </div>
+</div>
+
+<div class="group">
+  <div class="group-label">Easing</div>
+  <div class="ease-box">
+    <div class="ease-name">--ease</div>
+    <div class="ease-val">cubic-bezier(0.22, 1, 0.36, 1)</div>
+  </div>
+  <p style="margin-top:12px;font-size:13px;color:#8a8a8a;">Used for all transitions: card hover, nav, reveal animations, CTA arrows. Standard duration: 0.28s–0.7s.</p>
+</div>
+
+</body>
+</html>

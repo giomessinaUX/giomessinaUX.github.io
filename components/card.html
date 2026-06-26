@@ -1,0 +1,107 @@
+<!-- @dsCard group="Components" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Project Card</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Inter+Tight:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Inter', sans-serif; background: #dde9fc; padding: 40px; color: #111; }
+  h1 { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #4a4a4a; font-family: ui-monospace, monospace; margin-bottom: 32px; }
+  .variant-label { font-family: ui-monospace, monospace; font-size: 11px; color: #4a4a4a; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 12px; }
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 40px; }
+  .card {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border: 1px solid #d9e0ee;
+    border-radius: 16px;
+    padding: 20px;
+    text-decoration: none;
+    color: #111;
+    transition: transform 0.4s cubic-bezier(0.22,1,0.36,1), box-shadow 0.4s cubic-bezier(0.22,1,0.36,1);
+  }
+  .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 28px 60px -34px rgba(20,32,90,0.5);
+    border-color: #b9c5e6;
+  }
+  .card-thumb {
+    height: 160px;
+    background: #eef0f5;
+    border-radius: 10px;
+    margin-bottom: 18px;
+    overflow: hidden;
+    position: relative;
+  }
+  .ph-art {
+    position: absolute;
+    inset: 0;
+    background-image: repeating-linear-gradient(-45deg, #e3e7f0 0 10px, #eef0f5 10px 20px);
+  }
+  .ph-label {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: ui-monospace, monospace;
+    font-size: 11px;
+    color: #5f636e;
+    background: rgba(253,253,253,0.9);
+    padding: 4px 10px;
+    border-radius: 6px;
+    white-space: nowrap;
+  }
+  .card-num { font-family: ui-monospace, monospace; font-size: 12.5px; letter-spacing: 0.1em; color: #2b4ee6; margin-bottom: 10px; }
+  .card-title { font-family: 'Inter Tight', sans-serif; font-size: 26px; font-weight: 600; letter-spacing: -0.025em; line-height: 1.1; margin-bottom: 10px; }
+  .card-tags { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 14px; }
+  .card-tags span { font-family: ui-monospace, monospace; font-size: 11.5px; letter-spacing: 0.04em; color: #4a4a4a; border: 1px solid #d7dce8; border-radius: 999px; padding: 4px 10px; }
+  .card-desc { font-size: 16px; line-height: 1.46; color: #4a4a4a; margin-bottom: 20px; flex: 1; }
+  .card-cta { font-family: ui-monospace, monospace; font-size: 14px; letter-spacing: 0.04em; text-transform: uppercase; font-weight: 500; color: #16308f; display: inline-flex; align-items: center; gap: 0.55em; margin-top: auto; }
+  .spec-table { margin-top: 16px; font-size: 12px; color: #4a4a4a; font-family: ui-monospace, monospace; line-height: 2; background: rgba(255,255,255,0.6); border-radius: 10px; padding: 16px 20px; }
+  .spec-table span { color: #2b4ee6; }
+</style>
+</head>
+<body>
+<h1>Project Card</h1>
+
+<div class="variant-label">3-column grid (desktop)</div>
+<div class="grid">
+  <a class="card" href="#">
+    <div class="card-thumb"><div class="ph-art"></div><div class="ph-label">Civic — cover</div></div>
+    <div class="card-num">01 / 2024–</div>
+    <h3 class="card-title">Civic</h3>
+    <div class="card-tags"><span>Product Design</span><span>Compunet</span></div>
+    <p class="card-desc">End-to-end redesign of a 25-year-old platform for the full lifecycle of fines — 700+ fields across 45 screens.</p>
+    <span class="card-cta">View case study →</span>
+  </a>
+
+  <a class="card" href="#" style="transform:translateY(-6px);box-shadow:0 28px 60px -34px rgba(20,32,90,0.5);border-color:#b9c5e6;">
+    <div class="card-thumb"><div class="ph-art"></div><div class="ph-label">Energy Manager — cover</div></div>
+    <div class="card-num">02 / Siemens</div>
+    <h3 class="card-title">Energy Manager</h3>
+    <div class="card-tags"><span>UX Design</span><span>Building X</span></div>
+    <p class="card-desc">Monitoring and optimizing energy across complex building portfolios, from discovery to developer handoff.</p>
+    <span class="card-cta">View case study →</span>
+  </a>
+
+  <a class="card" href="#">
+    <div class="card-thumb"><div class="ph-art"></div><div class="ph-label">Building X — cover</div></div>
+    <div class="card-num">03 / Siemens</div>
+    <h3 class="card-title">Building X</h3>
+    <div class="card-tags"><span>UX Research</span><span>Onboarding</span></div>
+    <p class="card-desc">First end-to-end mapping of the building onboarding journey — 40+ users across 3 continents.</p>
+    <span class="card-cta">View case study →</span>
+  </a>
+</div>
+
+<div class="spec-table">
+  Grid: <span>repeat(3, 1fr) · gap clamp(16px → 22px)</span> · @880px collapses to <span>1 column</span><br>
+  Card: <span>border-radius 16px (--radius)</span> · border <span>#d9e0ee</span><br>
+  Hover: <span>translateY(-6px)</span> · box-shadow <span>0 28px 60px -34px rgba(20,32,90,.5)</span><br>
+  Thumb height: <span>188px desktop / 210px mobile</span>
+</div>
+</body>
+</html>
