@@ -30,6 +30,22 @@ img { max-width: 100%; display: block; }
    !important so component display rules can't re-show it. */
 [hidden] { display: none !important; }
 
+/* ---- Real image overlay ---------------------------------
+   Sits on top of the .ds-ph diagonal-stripe placeholder inside any
+   .ds-card__thumb / .proj__hero / .ds-figure__media. When the named
+   file exists it covers the stripe; when it's missing, onerror hides
+   it and the stripe + code label show through. Drop files into
+   assets/imgs/ using the codes in assets/imgs/IMAGE-LIST.txt. */
+.ds-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  z-index: 1;
+}
+
 ::selection { background: color-mix(in srgb, var(--accent) 22%, transparent); }
 
 
@@ -88,7 +104,7 @@ img { max-width: 100%; display: block; }
   color: var(--ink-soft);
   text-wrap: pretty;
 }
-.hero__sub { max-width: 26ch; }
+.hero__sub { max-width: 38ch; }
 .hero__clients { margin-top: clamp(32px, 5vw, 58px); display: grid; gap: 16px; }
 /* Single divider above the clients block — no line between the two rows */
 .hero__clients .ds-clients + .ds-clients { border-top: none; padding-top: 0; }
@@ -151,8 +167,8 @@ img { max-width: 100%; display: block; }
 
 /* ---- Project page ---------------------------------------- */
 .proj { padding-top: clamp(26px, 5vw, 54px); }
-.proj__crumb   { display: inline-flex; margin-bottom: clamp(26px, 5vw, 46px); }
-.proj__eyebrow { display: inline-flex; margin-bottom: clamp(16px, 3vw, 26px); }
+.proj__crumb   { display: flex; width: fit-content; margin-bottom: clamp(26px, 5vw, 46px); }
+.proj__eyebrow { display: flex; width: fit-content; margin-bottom: clamp(16px, 3vw, 26px); }
 .proj__title {
   font-family: var(--font-display);
   font-weight: var(--w-medium);
@@ -177,6 +193,15 @@ img { max-width: 100%; display: block; }
   border-radius: var(--radius-md);
   overflow: hidden;
   background: #eef0f5;
+}
+/* Caption shown under a hero image — same mono treatment as figcaption */
+.proj__cap {
+  margin-top: 12px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--ink-faint);
+  text-wrap: pretty;
 }
 
 /* Rich content inside .ds-proj-body (the system only styles <p>) */
