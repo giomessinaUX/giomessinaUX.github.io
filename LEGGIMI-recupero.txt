@@ -1,0 +1,41 @@
+GIORGIO MESSINA — SITO COMPLETO (recuperato)
+============================================
+
+Questa cartella contiene il sito completo, ricostruito dopo che la copia
+manuale aveva sovrascritto e cancellato delle cartelle.
+
+COSA C'È DENTRO
+- index.html, work.html, Design System.html, bullet-points.html
+- projects/  → tutte e 5 le pagine progetto (building-x, civic, connexia,
+  energy-manager, vmlyr) — recuperate dall'ultimo commit buono
+- components/, foundation/  → pagine del design system
+- styles.css, site.css, site.js, i18n.js, filters.js  → codice del sito
+- assets/imgs/  → le DUE immagini sopravvissute: connexia2.png, energy2.png
+- CNAME  → www.giomessina.com
+
+IMMAGINI MANCANTI (da reinserire in assets/imgs/)
+Queste immagini esistevano SOLO nella tua cartella locale e non sono mai
+state caricate su GitHub: con la sovrascrittura sono andate perse e NON
+sono recuperabili da qui. Le pagine sono già cablate per mostrarle appena
+le rimetti, con questi nomi file esatti:
+
+  buildingx1.png   → Building X, hero
+  buildingx2.png   → Building X, figura (journey map)
+  vmlyr1.png       → VMLYR, hero/cover
+  civic1.png       → Civic, hero
+  civic2.png       → Civic, figura 1 (old version)
+  civic3.png       → Civic, figura 2 (diagrammi)
+  energy1.png      → Energy Manager, hero
+  connexia1.png    → Connexia, hero/cover
+
+Finché un file manca, al suo posto compare il placeholder con l'etichetta
+(comportamento già previsto dal sito). Nessuna pagina si rompe.
+
+NOTA: la pagina VMLYR aveva nella versione locale una seconda figura
+(flussi e-commerce Lavazza, vmlyr2.png) che non è recuperabile da git;
+non l'ho ricostruita per non inventare contenuto. Se hai l'immagine e vuoi
+rimetterla, fammelo sapere.
+
+COME USARLA
+Sostituisci il contenuto del repo con questa cartella (copia i singoli
+FILE, non trascinare le cartelle, per evitare di nuovo la cancellazione).
