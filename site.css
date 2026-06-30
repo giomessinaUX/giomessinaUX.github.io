@@ -133,7 +133,46 @@ img { max-width: 100%; display: block; }
    Full-bleed tinted band the .ds-card grid is designed to sit on. */
 .works { background: var(--works-bg); }
 .works__inner { padding-block: clamp(54px, 8vw, 104px); }
-.works__foot { margin-top: clamp(28px, 4vw, 46px); }
+.works__foot { margin-top: clamp(28px, 4vw, 46px); display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+
+/* ---- Works carousel (home): 3 cards in view, scrollable ---- */
+.ds-card-grid--carousel {
+  display: flex;
+  gap: clamp(16px, 2vw, 22px);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  padding: 10px 2px 20px;
+  margin: -10px -2px 0;
+  scrollbar-width: thin;
+  scrollbar-color: var(--line) transparent;
+}
+.ds-card-grid--carousel::-webkit-scrollbar { height: 8px; }
+.ds-card-grid--carousel::-webkit-scrollbar-thumb { background: var(--line); border-radius: 99px; }
+.ds-card-grid--carousel::-webkit-scrollbar-track { background: transparent; }
+.ds-card-grid--carousel .ds-card {
+  flex: 0 0 calc((100% - 2 * clamp(16px, 2vw, 22px)) / 3);
+  scroll-snap-align: start;
+}
+@media (max-width: 880px) {
+  .ds-card-grid--carousel .ds-card { flex-basis: 84%; }
+}
+.works__nav { display: flex; gap: 8px; }
+.works__arrow {
+  width: 42px; height: 42px;
+  display: inline-flex; align-items: center; justify-content: center;
+  border: 1px solid var(--line-card);
+  background: var(--card-bg);
+  border-radius: 999px;
+  color: var(--ink);
+  font-size: 17px;
+  line-height: 1;
+  cursor: pointer;
+  transition: border-color 0.2s var(--ease), transform 0.2s var(--ease), background 0.2s var(--ease);
+}
+.works__arrow:hover { border-color: #b9c5e6; transform: translateY(-2px); }
+.works__arrow:active { transform: translateY(0); }
 
 
 /* ---- Contact + colophon ---------------------------------- */
