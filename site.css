@@ -45,6 +45,8 @@ img { max-width: 100%; display: block; }
   display: block;
   z-index: 1;
 }
+/* Logos on transparent backgrounds: fit inside with padding on a clean ground */
+.ds-img--contain { object-fit: contain; background: #fff; padding: clamp(20px, 6%, 64px); }
 
 ::selection { background: color-mix(in srgb, var(--accent) 22%, transparent); }
 
