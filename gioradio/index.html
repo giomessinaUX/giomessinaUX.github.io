@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>GioRadio — appunti di radiotecnica</title>
+  <meta name="description" content="Pagine di studio sulla radiotecnica, create per ripassare: cheatsheet e piccoli strumenti interattivi.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232b4ee6'/%3E%3Cpath d='M6 17h5l2-5 3 9 3-9 2 5h5' fill='none' stroke='white' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="gioradio.css">
+  <style>
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font-body); -webkit-font-smoothing: antialiased; }
+    a { color: var(--accent-ink); }
+    a:hover { color: var(--accent); }
+
+    .page { max-width: var(--maxw); margin: 0 auto; padding: 0 var(--gutter); }
+
+    /* Sticky nav pill */
+    .nav-shell { position: sticky; top: 0; z-index: 60; padding: 12px var(--gutter) 0; }
+    .nav-shell .ds-nav { max-width: var(--maxw); margin: 0 auto; }
+    .nav-shell .ds-nav__links { gap: clamp(16px, 2.4vw, 30px); }
+    @media (max-width: 760px) { .nav-shell .ds-nav__links { display: none; } }
+
+    /* Hero */
+    .hero { padding: clamp(56px, 9vw, 120px) 0 clamp(36px, 5vw, 60px); }
+    .hero h1 {
+      margin: 1.2rem 0 0;
+      font-family: var(--font-display);
+      font-weight: var(--w-medium);
+      font-size: clamp(44px, 7vw, 104px);
+      letter-spacing: -0.04em;
+      line-height: 0.98;
+      text-wrap: balance;
+    }
+    .hero h1 .period { color: var(--accent); }
+    .hero__sub {
+      margin: 1.4rem 0 0;
+      max-width: 40ch;
+      font-size: var(--text-sub);
+      line-height: 1.3;
+      font-weight: var(--w-light);
+      color: var(--ink-soft);
+      letter-spacing: -0.01em;
+      text-wrap: pretty;
+    }
+
+    /* Study note */
+    .note {
+      display: grid;
+      grid-template-columns: minmax(0, 220px) minmax(0, 1fr);
+      gap: 12px clamp(24px, 4vw, 56px);
+      padding: clamp(22px, 3vw, 32px) 0;
+      border-top: 1px solid var(--line-strong);
+      border-bottom: 1px solid var(--line);
+      margin-bottom: clamp(48px, 7vw, 88px);
+    }
+    @media (max-width: 720px) { .note { grid-template-columns: 1fr; } }
+    .note__label {
+      font-family: var(--font-mono);
+      font-size: 12.5px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      padding-top: 4px;
+    }
+    .note__body p { margin: 0; font-size: 18px; line-height: 1.55; color: var(--ink-soft); max-width: 62ch; text-wrap: pretty; }
+    .note__body p + p { margin-top: 0.8em; }
+    .note__body strong { color: var(--ink); font-weight: var(--w-medium); }
+
+    /* Groups of cards on the tinted band */
+    .band { background: var(--works-bg); padding-block: clamp(48px, 7vw, 88px); }
+    .group + .group { margin-top: clamp(48px, 7vw, 80px); }
+    .group .ds-section-head { margin-bottom: clamp(22px, 3vw, 32px); }
+    .ds-card-grid--two { grid-template-columns: repeat(2, 1fr); }
+    @media (max-width: 720px) { .ds-card-grid--two { grid-template-columns: 1fr; } }
+
+    /* Card thumbs: --sheet = ruled reference paper, --tool = solid accent */
+    .kind-thumb { height: 140px; display: flex; align-items: center; justify-content: center; }
+    .kind-thumb--sheet {
+      background-color: #fdfdfd;
+      background-image:
+        linear-gradient(90deg, transparent 27px, color-mix(in srgb, var(--accent) 35%, transparent) 27px 28px, transparent 28px),
+        repeating-linear-gradient(transparent 0 17px, var(--line-tag) 17px 18px);
+      border: 1px dashed var(--line-tag);
+      color: var(--ink);
+    }
+    .kind-thumb--tool { background: var(--accent); color: #fff; }
+    .kind-thumb__icon { width: 40%; max-width: 140px; height: auto; }
+    .kind {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 4px 9px;
+      border-radius: var(--radius-pill);
+    }
+    .kind-thumb--sheet .kind { left: 38px; background: var(--ink); color: #fff; }
+    .kind-thumb--tool .kind { background: #fff; color: var(--accent-ink); }
+
+    footer.page { padding-block: clamp(32px, 5vw, 48px); }
+  </style>
+</head>
+<body>
+
+  <div class="nav-shell">
+    <nav class="ds-nav">
+      <div class="ds-nav__inner">
+        <a href="./" class="ds-nav__mark"><span class="ds-nav__dot"></span>GioRadio</a>
+        <div class="ds-nav__links">
+          <a href="Componenti.html">Componenti</a>
+          <a href="Schemi.html">Schemi</a>
+          <a href="propagazione-ionosferica.html">Propagazione</a>
+          <a href="palinsesti-radio-milano.html">Palinsesti</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <main>
+    <div class="page">
+      <header class="hero">
+        <span class="ds-eyebrow"><span class="ds-eyebrow__idx">00</span> Appunti di studio</span>
+        <h1>Radiotecnica, per ripassare<span class="period">.</span></h1>
+        <p class="hero__sub">Cheatsheet e piccoli strumenti interattivi su componenti, apparati e propagazione delle onde radio.</p>
+      </header>
+
+      <section class="note" aria-labelledby="note-title">
+        <span class="note__label" id="note-title">Perché esistono</span>
+        <div class="note__body">
+          <p>Sono pagine che ho creato <strong>per motivi di studio</strong>, mentre studio radiotecnica per la patente di radioamatore (HAREC). Mi servono <strong>per ripassare</strong>: raccolgono in forma rapida da consultare concetti, formule e schemi che altrimenti dovrei ricercare ogni volta nei libri.</p>
+          <p>Non sono materiale ufficiale e possono contenere semplificazioni o errori. Per l'esame fa sempre fede il programma ministeriale aggiornato.</p>
+        </div>
+      </section>
+    </div>
+
+    <div class="band">
+      <div class="page">
+
+        <section class="group">
+          <div class="ds-section-head">
+            <span class="ds-eyebrow"><span class="ds-eyebrow__idx">01</span> Cheatsheet</span>
+            <h2 class="ds-section-title">Da consultare.</h2>
+            <p class="ds-section-sub">Schede di riferimento: cosa sapere, in poco spazio.</p>
+          </div>
+          <div class="ds-card-grid ds-card-grid--two">
+
+            <a class="ds-card" href="Componenti.html">
+              <div class="ds-card__thumb kind-thumb kind-thumb--sheet">
+                <span class="kind">Cheatsheet</span>
+                <svg class="kind-thumb__icon" viewBox="0 0 64 32" aria-hidden="true"><path d="M2 16h12l3-7 6 14 6-14 6 14 6-14 3 7h18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/></svg>
+              </div>
+              <span class="ds-card__num">01 / Componenti</span>
+              <h3 class="ds-card__title">Componenti di radiotecnica</h3>
+              <div class="ds-card__tags"><span class="ds-tag">Passivi</span><span class="ds-tag">Diodi</span><span class="ds-tag">Transistor</span></div>
+              <p class="ds-card__desc">Dalla resistenza al MOSFET: simbolo, unità di misura, formule e parametri da conoscere per ogni componente.</p>
+              <span class="ds-card__cta">Apri il cheatsheet →</span>
+            </a>
+
+            <a class="ds-card" href="Schemi.html">
+              <div class="ds-card__thumb kind-thumb kind-thumb--sheet">
+                <span class="kind">Cheatsheet</span>
+                <svg class="kind-thumb__icon" viewBox="0 0 64 32" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.2"><rect x="2" y="9" width="14" height="14" rx="2"/><rect x="25" y="9" width="14" height="14" rx="2"/><rect x="48" y="9" width="14" height="14" rx="2"/><path d="M16 16h9M39 16h9"/></g></svg>
+              </div>
+              <span class="ds-card__num">02 / HAREC</span>
+              <h3 class="ds-card__title">Schemi a blocchi</h3>
+              <div class="ds-card__tags"><span class="ds-tag">AM · FM · SSB</span><span class="ds-tag">CW · RTTY</span></div>
+              <p class="ds-card__desc">Trasmettitori e ricevitori per modo di emissione: clicca un blocco per vedere come si costruisce e le formule da sapere.</p>
+              <span class="ds-card__cta">Apri il cheatsheet →</span>
+            </a>
+
+          </div>
+        </section>
+
+        <section class="group">
+          <div class="ds-section-head">
+            <span class="ds-eyebrow"><span class="ds-eyebrow__idx">02</span> Strumenti</span>
+            <h2 class="ds-section-title">Da provare.</h2>
+            <p class="ds-section-sub">Piccoli strumenti interattivi per vedere i concetti in azione.</p>
+          </div>
+          <div class="ds-card-grid ds-card-grid--two">
+
+            <a class="ds-card" href="propagazione-ionosferica.html">
+              <div class="ds-card__thumb kind-thumb kind-thumb--tool">
+                <span class="kind">Strumento</span>
+                <svg class="kind-thumb__icon" viewBox="0 0 64 32" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M2 30h60"/><path d="M8 30Q20 2 32 30T56 30" stroke-dasharray="0.1 5"/><path d="M8 30Q20 2 32 30"/></g></svg>
+              </div>
+              <span class="ds-card__num">03 / RF</span>
+              <h3 class="ds-card__title">Propagazione ionosferica</h3>
+              <div class="ds-card__tags"><span class="ds-tag">Strati D · E · F</span><span class="ds-tag">Bande</span></div>
+              <p class="ds-card__desc">Scegli bande, potenza e attività solare e guarda come le onde vengono riflesse, assorbite o sfuggono nello spazio.</p>
+              <span class="ds-card__cta">Apri lo strumento →</span>
+            </a>
+
+            <a class="ds-card" href="palinsesti-radio-milano.html">
+              <div class="ds-card__thumb kind-thumb kind-thumb--tool">
+                <span class="kind">Strumento</span>
+                <svg class="kind-thumb__icon" viewBox="0 0 64 32" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M2 8h22M30 8h32M2 16h12M20 16h28M54 16h8M2 24h34M42 24h20"/><path d="M40 3v26" stroke-width="1.6"/></g></svg>
+              </div>
+              <span class="ds-card__num">04 / FM Milano</span>
+              <h3 class="ds-card__title">Palinsesti radio Milano</h3>
+              <div class="ds-card__tags"><span class="ds-tag">FM</span><span class="ds-tag">Lunedì–Venerdì</span></div>
+              <p class="ds-card__desc">Chi va in onda, e quando: i palinsesti feriali delle principali radio FM di Milano, ora per ora.</p>
+              <span class="ds-card__cta">Apri lo strumento →</span>
+            </a>
+
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="page">
+    <div class="ds-footer">
+      <span>GioRadio — appunti di studio per il ripasso</span>
+      <div class="ds-footer__links"><a href="#">Torna su ↑</a></div>
+    </div>
+  </footer>
+
+</body>
+</html>
