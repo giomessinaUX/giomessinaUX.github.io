@@ -276,6 +276,47 @@ img { max-width: 100%; display: block; }
 .is-hidden { display: none !important; }
 
 
+/* ---- Radio cards : cheatsheet / tool ---------------------
+   Same .ds-card shell, typographic thumb instead of an image.
+   --sheet = ruled reference paper, --tool = solid accent. */
+.ds-card-grid--quad { grid-template-columns: repeat(4, 1fr); }
+@media (max-width: 1100px) { .ds-card-grid--quad { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 620px)  { .ds-card-grid--quad { grid-template-columns: 1fr; } }
+
+.ds-kind-thumb {
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ds-kind-thumb--sheet {
+  background-color: #fdfdfd;
+  background-image:
+    linear-gradient(90deg, transparent 27px, color-mix(in srgb, var(--accent) 35%, transparent) 27px 28px, transparent 28px),
+    repeating-linear-gradient(transparent 0 17px, var(--line-tag) 17px 18px);
+  border: 1px dashed var(--line-tag);
+  color: var(--ink);
+}
+.ds-kind-thumb--tool {
+  background: var(--accent);
+  color: #fff;
+}
+.ds-kind-thumb__icon { width: 46%; max-width: 120px; height: auto; }
+.ds-kind {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 4px 9px;
+  border-radius: var(--radius-pill);
+}
+.ds-kind-thumb--sheet .ds-kind { left: 38px; background: var(--ink); color: #fff; }
+.ds-kind-thumb--tool .ds-kind  { background: #fff; color: var(--accent-ink); }
+
+
 /* ---- Scroll reveal --------------------------------------- */
 .js-reveal [data-reveal] {
   opacity: 0;

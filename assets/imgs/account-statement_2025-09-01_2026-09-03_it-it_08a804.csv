@@ -1,0 +1,547 @@
+Tipo,Prodotto,Data di inizio,Data di completamento,Descrizione,Importo,Costo,Valuta,State,Saldo
+Ricarica,Attuale,2025-09-10 21:21:24,2025-09-10 21:21:25,Pagamento da ARRESTI PRISCILLA  ARRESTI ROBERTO,500.00,0.00,EUR,COMPLETATO,501.29
+Pagamento con carta,Attuale,2025-09-12 20:58:15,2025-09-13 13:01:04,Esselunga,-4.19,0.00,EUR,COMPLETATO,497.10
+Pagamento con carta,Attuale,2025-09-15 11:05:34,2025-09-16 13:46:43,EasyJet,-75.17,0.00,EUR,COMPLETATO,421.93
+Pagamento con carta,Attuale,2025-09-16 14:20:02,2025-09-17 12:12:43,Premudatredici,-12.80,0.00,EUR,COMPLETATO,409.13
+Pagamento con carta,Attuale,2025-09-17 14:19:51,2025-09-18 09:46:02,Hamerica's,-19.10,0.00,EUR,COMPLETATO,390.03
+Pagamento con carta,Attuale,2025-09-17 13:26:57,2025-09-18 09:57:09,ATM - Azienda Trasporti Milanesi,-2.20,0.00,EUR,COMPLETATO,387.83
+Pagamento con carta,Attuale,2025-09-18 22:41:41,2025-09-19 09:42:03,Egna Ora,-7.90,0.00,EUR,COMPLETATO,379.93
+Pagamento con carta,Attuale,2025-09-19 18:11:30,2025-09-20 10:00:03,Coop,-51.41,0.00,EUR,COMPLETATO,328.52
+Pagamento con carta,Attuale,2025-09-19 04:11:22,2025-09-20 14:03:22,Mooneygo,-21.00,0.00,EUR,COMPLETATO,307.52
+Pagamento con carta,Attuale,2025-09-17 16:23:14,2025-09-20 14:13:20,Dangelomani,-39.54,0.00,EUR,COMPLETATO,267.98
+Pagamento con carta,Attuale,2025-09-21 22:15:23,2025-09-22 16:25:23,Autostrada Del Brennero,-7.90,0.00,EUR,COMPLETATO,260.08
+Pagamento con carta,Attuale,2025-09-21 11:41:55,2025-09-22 16:49:39,Supermercato Supermerc,-15.22,0.00,EUR,COMPLETATO,244.86
+Pagamento con carta,Attuale,2025-09-26 18:55:02,2025-09-27 17:15:26,Esselunga,-5.47,0.00,EUR,COMPLETATO,239.39
+Pagamento con carta,Attuale,2025-09-26 10:13:03,2025-09-27 17:43:13,Mooneygo,-10.70,0.00,EUR,COMPLETATO,228.69
+Pagamento con carta,Attuale,2025-09-27 13:56:53,2025-09-28 16:06:01,Vinted,-15.29,0.00,EUR,COMPLETATO,213.40
+Pagamento con carta,Attuale,2025-09-27 13:39:54,2025-09-28 16:24:32,Tab Fuel,-43.89,0.00,EUR,COMPLETATO,169.51
+Pagamento con carta,Attuale,2025-09-29 14:19:01,2025-09-30 10:18:23,McDonald's,-4.95,0.00,EUR,COMPLETATO,164.56
+Commissione,Attuale,2025-09-30 12:25:59,2025-09-30 12:25:59,Commissione per la consegna della carta,-6.99,0.00,EUR,COMPLETATO,157.57
+Pagamento con carta,Attuale,2025-09-29 13:18:38,2025-09-30 14:25:41,Poste Italiane,-16.90,0.00,EUR,COMPLETATO,140.67
+Pagamento con carta,Attuale,2025-09-30 20:32:19,2025-10-01 12:08:14,Esselunga,-5.77,0.00,EUR,COMPLETATO,134.90
+Ricarica,Attuale,2025-10-01 20:50:38,2025-10-01 20:50:39,Pagamento da SATISPAY EUROPE S.A.,0.13,0.00,EUR,COMPLETATO,135.03
+Ricarica,Attuale,2025-10-01 20:50:38,2025-10-01 20:50:39,Pagamento da SATISPAY EUROPE S.A.,0.29,0.00,EUR,COMPLETATO,135.32
+Rimborso su carta,Attuale,2025-10-01 10:36:24,2025-10-02 09:55:26,Dangelomani,30.63,0.00,EUR,COMPLETATO,165.95
+Pagamento con carta,Attuale,2025-10-01 10:31:00,2025-10-02 14:23:54,Vinted,-26.39,0.00,EUR,COMPLETATO,139.56
+Pagamento con carta,Attuale,2025-10-03 13:32:50,2025-10-04 12:33:24,ATM - Azienda Trasporti Milanesi,-2.20,0.00,EUR,COMPLETATO,137.36
+Pagamento con carta,Attuale,2025-10-05 22:57:42,2025-10-07 10:33:41,Ale-Hop,-20.00,0.00,EUR,COMPLETATO,117.36
+Pagamento con carta,Attuale,2025-10-05 21:22:48,2025-10-07 12:17:04,Noori Entregas,-6.75,0.00,EUR,COMPLETATO,110.61
+Pagamento con carta,Attuale,2025-10-06 05:03:42,2025-10-07 12:17:07,areas,-6.70,0.00,EUR,COMPLETATO,103.91
+Pagamento con carta,Attuale,2025-10-08 20:47:56,2025-10-09 03:25:28,Now,-8.99,0.00,EUR,COMPLETATO,94.92
+Pagamento con carta,Attuale,2025-10-09 12:51:35,2025-10-10 10:33:48,ATM - Azienda Trasporti Milanesi,-4.40,0.00,EUR,COMPLETATO,90.52
+Pagamento con carta,Attuale,2025-10-10 01:54:11,2025-10-11 14:18:19,Mooneygo,-30.00,0.00,EUR,COMPLETATO,60.52
+Pagamento con carta,Attuale,2025-10-11 18:15:30,2025-10-12 10:17:04,Alimentari Barola,-22.55,0.00,EUR,COMPLETATO,37.97
+Pagamento con carta,Attuale,2025-10-12 12:06:37,2025-10-13 09:11:01,ATM - Azienda Trasporti Milanesi,-4.40,0.00,EUR,COMPLETATO,33.57
+Ricarica,Attuale,2025-10-15 11:05:26,2025-10-15 11:05:26,Pagamento da GIORGIO MESSINA,4999.99,0.00,EUR,COMPLETATO,5033.56
+Cambia valuta,Attuale,2025-10-15 11:18:22,2025-10-15 11:18:22,Transfer to Revolut Digital Assets Europe Ltd,-1000.00,0.00,EUR,COMPLETATO,4033.56
+Pagamento,Attuale,2025-10-15 18:47:41,2025-10-15 18:47:41,Pagamento a favore di FILIPPO BOSELLI,-581.91,0.00,EUR,COMPLETATO,3451.65
+Pagamento,Attuale,2025-10-15 19:00:25,2025-10-15 19:00:25,Pagamento da parte di ANDREA CRESPI,3.57,0.00,EUR,COMPLETATO,3455.22
+Pagamento con carta,Attuale,2025-10-17 07:15:44,2025-10-18 12:40:42,Mooneygo,-2.60,0.00,EUR,COMPLETATO,3452.62
+Pagamento con carta,Attuale,2025-10-24 10:36:43,2025-10-25 03:20:24,Vinted,-29.94,0.00,EUR,COMPLETATO,3422.68
+Pagamento con carta,Attuale,2025-10-24 00:51:17,2025-10-25 12:42:16,Mooneygo,-2.60,0.00,EUR,COMPLETATO,3420.08
+Pagamento con carta,Attuale,2025-10-25 13:09:21,2025-10-27 02:14:07,Supermercati Sigma,-6.16,0.00,EUR,COMPLETATO,3413.92
+Pagamento con carta,Attuale,2025-10-25 20:47:18,2025-10-27 02:14:12,Media World,-42.89,0.00,EUR,COMPLETATO,3371.03
+Pagamento con carta,Attuale,2025-10-26 12:34:33,2025-10-27 10:14:22,ATM - Azienda Trasporti Milanesi,-4.40,0.00,EUR,COMPLETATO,3366.63
+Pagamento con carta,Attuale,2025-10-26 19:10:09,2025-10-27 14:48:16,DAI - Vending Machines,-0.70,0.00,EUR,COMPLETATO,3365.93
+Pagamento con carta,Attuale,2025-10-25 13:06:29,2025-10-27 15:05:42,ATM - Azienda Trasporti Milanesi,-2.20,0.00,EUR,COMPLETATO,3363.73
+Pagamento con carta,Attuale,2025-10-26 18:11:50,2025-10-27 15:11:07,Associazione Cascina B,-1.50,0.00,EUR,COMPLETATO,3362.23
+Pagamento con carta,Attuale,2025-10-27 19:34:12,2025-10-28 08:32:31,Esselunga,-20.88,0.00,EUR,COMPLETATO,3341.35
+Pagamento con carta,Attuale,2025-10-28 13:24:12,2025-10-29 05:03:42,Carrefour,-8.85,0.00,EUR,COMPLETATO,3332.50
+Pagamento con carta,Attuale,2025-10-28 19:00:18,2025-10-29 12:39:50,Milanoarrampicata Asso,-16.00,0.00,EUR,COMPLETATO,3316.50
+Pagamento con carta,Attuale,2025-10-29 19:23:02,2025-10-30 08:57:07,Esselunga,-21.33,0.00,EUR,COMPLETATO,3295.17
+Pagamento con carta,Attuale,2025-10-29 19:43:24,2025-10-30 13:29:24,Farma Acquisition,-22.10,0.00,EUR,COMPLETATO,3273.07
+Pagamento con carta,Attuale,2025-10-30 09:09:28,2025-11-03 12:09:34,ATM - Azienda Trasporti Milanesi,-4.40,0.00,EUR,COMPLETATO,3268.67
+Pagamento con carta,Attuale,2025-11-02 23:32:00,2025-11-03 12:51:17,Ads Secchia Est,-4.74,0.00,EUR,COMPLETATO,3263.93
+Pagamento con carta,Attuale,2025-11-02 21:38:18,2025-11-03 13:22:46,Tamoil,-33.48,0.00,EUR,COMPLETATO,3230.45
+Pagamento con carta,Attuale,2025-11-03 22:07:29,2025-11-04 12:10:26,Mevlana 2,-13.00,0.00,EUR,COMPLETATO,3217.45
+Pagamento con carta,Attuale,2025-11-04 13:32:01,2025-11-05 13:16:49,Esselunga,-28.31,0.00,EUR,COMPLETATO,3189.14
+Pagamento con carta,Attuale,2025-11-04 19:34:53,2025-11-05 13:49:56,Milanoarrampicata Asso,-16.00,0.00,EUR,COMPLETATO,3173.14
+Pagamento con carta,Attuale,2025-11-04 21:12:54,2025-11-05 13:49:56,Milanoarrampicata Asso,-3.00,0.00,EUR,COMPLETATO,3170.14
+Pagamento con carta,Attuale,2025-11-05 19:41:21,2025-11-06 12:35:18,Esselunga,-3.27,0.00,EUR,COMPLETATO,3166.87
+Pagamento con carta,Attuale,2025-11-05 19:50:36,2025-11-06 12:53:55,The Smoke Di Cella Aless,-5.50,0.00,EUR,COMPLETATO,3161.37
+Pagamento con carta,Attuale,2025-11-06 14:22:51,2025-11-07 11:09:37,Stil S.r.l.,-14.00,0.00,EUR,COMPLETATO,3147.37
+Pagamento con carta,Attuale,2025-11-07 07:26:22,2025-11-08 13:27:20,Mooneygo,-24.30,0.00,EUR,COMPLETATO,3123.07
+Pagamento con carta,Attuale,2025-11-07 14:04:36,2025-11-08 13:55:02,Premudatredici,-18.50,0.00,EUR,COMPLETATO,3104.57
+Pagamento con carta,Attuale,2025-11-08 20:01:42,2025-11-09 03:07:41,Now,-8.99,0.00,EUR,COMPLETATO,3095.58
+Pagamento con carta,Attuale,2025-11-08 12:33:18,2025-11-09 11:14:20,Happy Bar,-8.30,0.00,EUR,COMPLETATO,3087.28
+Pagamento con carta,Attuale,2025-11-09 16:08:22,2025-11-10 03:43:07,Vinted,-13.98,0.00,EUR,COMPLETATO,3073.30
+Pagamento con carta,Attuale,2025-11-09 17:26:51,2025-11-10 03:43:09,Vinted,-24.69,0.00,EUR,COMPLETATO,3048.61
+Pagamento con carta,Attuale,2025-11-09 17:41:30,2025-11-10 11:40:14,Geltrade,-1.99,0.00,EUR,COMPLETATO,3046.62
+Pagamento con carta,Attuale,2025-11-11 19:40:49,2025-11-12 12:10:56,Coop,-16.00,0.00,EUR,COMPLETATO,3030.62
+Pagamento con carta,Attuale,2025-11-12 19:49:03,2025-11-13 09:39:17,Esselunga,-37.59,0.00,EUR,COMPLETATO,2993.03
+Pagamento con carta,Attuale,2025-11-12 19:25:15,2025-11-13 13:10:50,Nirvana,-20.00,0.00,EUR,COMPLETATO,2973.03
+Pagamento con carta,Attuale,2025-11-13 13:44:05,2025-11-14 03:06:15,Vinted,-8.94,0.00,EUR,COMPLETATO,2964.09
+Pagamento con carta,Attuale,2025-11-14 11:43:27,2025-11-15 11:32:30,Esselunga,-13.43,0.00,EUR,COMPLETATO,2950.66
+Pagamento con carta,Attuale,2025-11-14 00:52:45,2025-11-15 11:47:52,Mooneygo,-24.10,0.00,EUR,COMPLETATO,2926.56
+Pagamento con carta,Attuale,2025-11-14 17:18:49,2025-11-15 13:26:17,Tab Fuel,-46.69,0.00,EUR,COMPLETATO,2879.87
+Pagamento con carta,Attuale,2025-11-15 10:00:28,2025-11-16 15:56:50,Piazza Italia,-30.00,0.00,EUR,COMPLETATO,2849.87
+Pagamento con carta,Attuale,2025-11-16 19:58:54,2025-11-17 09:54:54,Esselunga,-23.64,0.00,EUR,COMPLETATO,2826.23
+Pagamento con carta,Attuale,2025-11-17 23:11:41,2025-11-18 13:11:21,Milanoarrampicata Asso,-1.80,0.00,EUR,COMPLETATO,2824.43
+Pagamento con carta,Attuale,2025-11-17 20:11:42,2025-11-18 13:11:21,Milanoarrampicata Asso,-16.00,0.00,EUR,COMPLETATO,2808.43
+Pagamento con carta,Attuale,2025-11-17 21:22:18,2025-11-18 13:11:21,Milanoarrampicata Asso,-3.00,0.00,EUR,COMPLETATO,2805.43
+Pagamento con carta,Attuale,2025-11-18 20:00:54,2025-11-19 09:57:24,Esselunga,-21.59,0.00,EUR,COMPLETATO,2783.84
+Pagamento con carta,Attuale,2025-11-19 23:06:42,2025-11-20 15:25:00,Ba Hot Pot (hu Zihe),-23.00,0.00,EUR,COMPLETATO,2760.84
+Pagamento con carta,Attuale,2025-11-21 07:04:39,2025-11-22 12:53:31,Mooneygo,-9.10,0.00,EUR,COMPLETATO,2751.74
+Pagamento con carta,Attuale,2025-11-23 16:26:06,2025-11-24 11:28:14,OBI,-12.85,0.00,EUR,COMPLETATO,2738.89
+Pagamento con carta,Attuale,2025-11-25 19:10:55,2025-11-27 10:13:53,ATM - Azienda Trasporti Milanesi,-2.20,0.00,EUR,COMPLETATO,2736.69
+Pagamento con carta,Attuale,2025-11-26 11:44:21,2025-11-27 14:18:25,ATM - Azienda Trasporti Milanesi,-2.20,0.00,EUR,COMPLETATO,2734.49
+Pagamento con carta,Attuale,2025-11-26 18:43:21,2025-11-28 12:39:48,ATM - Azienda Trasporti Milanesi,-2.20,0.00,EUR,COMPLETATO,2732.29
+Pagamento con carta,Attuale,2025-11-27 11:26:23,2025-11-28 12:40:28,Autogrill,-1.50,0.00,EUR,COMPLETATO,2730.79
+Pagamento con carta,Attuale,2025-11-27 20:40:07,2025-11-29 14:13:24,Verkehrsbetriebe Zürich (VBZ),-4.95,0.00,EUR,COMPLETATO,2725.84
+Pagamento con carta,Attuale,2025-11-28 09:13:14,2025-11-29 14:13:25,Coop,-2.10,0.00,EUR,COMPLETATO,2723.74
+Pagamento con carta,Attuale,2025-11-28 15:47:02,2025-11-29 14:13:25,Coop,-18.47,0.00,EUR,COMPLETATO,2705.27
+Pagamento con carta,Attuale,2025-11-28 11:40:52,2025-11-29 14:13:33,SV Restaurant,-17.23,0.00,EUR,COMPLETATO,2688.04
+Pagamento con carta,Attuale,2025-11-28 22:50:56,2025-11-29 14:13:35,Hotel GREGORY,-11.32,0.00,EUR,COMPLETATO,2676.72
+Pagamento con carta,Attuale,2025-11-28 08:18:55,2025-11-30 05:57:52,SBB CFF FFS,-22.07,0.00,EUR,COMPLETATO,2654.65
+Pagamento con carta,Attuale,2025-11-29 18:12:57,2025-11-30 05:57:55,Coop,-9.70,0.10,EUR,COMPLETATO,2644.85
+Pagamento con carta,Attuale,2025-11-29 17:19:04,2025-11-30 05:58:02,Vito,-9.48,0.09,EUR,COMPLETATO,2635.28
+Pagamento con carta,Attuale,2025-11-29 03:10:20,2025-11-30 09:48:38,Gonzo,-5.39,0.05,EUR,COMPLETATO,2629.84
+Pagamento con carta,Attuale,2025-11-27 10:09:42,2025-12-01 12:04:07,ATM - Azienda Trasporti Milanesi,-2.20,0.00,EUR,COMPLETATO,2627.64
+Pagamento con carta,Attuale,2025-11-30 10:48:32,2025-12-01 12:30:52,ATM - Azienda Trasporti Milanesi,-1.30,0.00,EUR,COMPLETATO,2626.34
+Pagamento con carta,Attuale,2025-11-30 02:34:32,2025-12-02 11:43:33,ATM - Azienda Trasporti Milanesi,-2.20,0.00,EUR,COMPLETATO,2624.14
+Pagamento con carta,Attuale,2025-12-01 09:32:32,2025-12-02 18:34:07,Comunale 3 Term 1,-9.50,0.00,EUR,COMPLETATO,2614.64
+Pagamento con carta,Attuale,2025-12-02 20:30:19,2025-12-03 10:31:54,Esselunga,-25.50,0.00,EUR,COMPLETATO,2589.14
+Pagamento con carta,Attuale,2025-12-03 17:50:30,2025-12-04 14:49:46,Autofficina Vitacar,-462.10,0.00,EUR,COMPLETATO,2127.04
+Ricarica,Attuale,2025-12-04 21:23:30,2025-12-04 21:23:31,Pagamento da GIORGIO MESSINA,4999.99,0.00,EUR,COMPLETATO,7127.03
+Pagamento con carta,Attuale,2025-12-04 12:55:02,2025-12-05 11:00:00,Sportler Carugate,-49.00,0.00,EUR,COMPLETATO,7078.03
+Pagamento con carta,Attuale,2025-12-04 22:25:18,2025-12-05 13:10:29,Tab Fuel,-43.68,0.00,EUR,COMPLETATO,7034.35
+Pagamento con carta,Attuale,2025-12-05 09:35:28,2025-12-06 16:18:44,Mooneygo,-1.50,0.00,EUR,COMPLETATO,7032.85
+Pagamento,Attuale,2025-12-07 17:45:12,2025-12-07 17:45:12,Pagamento a favore di FRANCESCO GARRISI,-45.00,0.00,EUR,COMPLETATO,6987.85
+Pagamento con carta,Attuale,2025-12-07 19:14:44,2025-12-08 06:03:51,FLOW,-39.00,0.00,EUR,COMPLETATO,6948.85
+Pagamento con carta,Attuale,2025-12-07 16:22:34,2025-12-08 06:23:20,TASCHEN,-30.00,0.00,EUR,COMPLETATO,6918.85
+Pagamento con carta,Attuale,2025-12-07 17:12:53,2025-12-08 12:09:07,Wait and See,-3.00,0.00,EUR,COMPLETATO,6915.85
+Pagamento con carta,Attuale,2025-12-08 14:51:14,2025-12-09 03:58:40,Vinted,-31.09,0.00,EUR,COMPLETATO,6884.76
+Pagamento con carta,Attuale,2025-12-07 14:32:56,2025-12-09 12:19:56,ATM - Azienda Trasporti Milanesi,-4.40,0.00,EUR,COMPLETATO,6880.36
+Pagamento con carta,Attuale,2025-12-08 19:51:01,2025-12-09 12:20:45,Eni,-34.68,0.00,EUR,COMPLETATO,6845.68
+Pagamento con carta,Attuale,2025-12-09 19:30:36,2025-12-10 12:42:23,McDonald's,-3.90,0.00,EUR,COMPLETATO,6841.78
+Pagamento con carta,Attuale,2025-12-09 22:53:58,2025-12-10 13:07:59,Milanoarrampicata Asso,-3.00,0.00,EUR,COMPLETATO,6838.78
+Pagamento con carta,Attuale,2025-12-09 19:54:36,2025-12-10 13:07:59,Milanoarrampicata Asso,-16.00,0.00,EUR,COMPLETATO,6822.78
+Pagamento con carta,Attuale,2025-12-10 23:46:34,2025-12-11 06:23:58,Impronta Birraia,-3.50,0.00,EUR,COMPLETATO,6819.28
+Pagamento con carta,Attuale,2025-12-10 20:11:43,2025-12-11 10:50:42,Esselunga,-10.82,0.00,EUR,COMPLETATO,6808.46
+Pagamento con carta,Attuale,2025-12-11 19:45:43,2025-12-12 11:48:24,Esselunga,-7.02,0.00,EUR,COMPLETATO,6801.44
+Pagamento con carta,Attuale,2025-12-11 07:49:49,2025-12-13 14:14:01,Ryanair,-15.99,0.00,EUR,COMPLETATO,6785.45
+Pagamento con carta,Attuale,2025-12-11 08:19:03,2025-12-13 15:30:52,ATM - Azienda Trasporti Milanesi,-2.20,0.00,EUR,COMPLETATO,6783.25
+Pagamento con carta,Attuale,2025-12-12 20:03:51,2025-12-13 15:31:16,Esselunga,-19.96,0.00,EUR,COMPLETATO,6763.29
+Pagamento,Attuale,2025-12-14 11:20:52,2025-12-14 11:20:53,To Tommaso Ingallina,-100.00,0.00,EUR,COMPLETATO,6663.29
+Pagamento con carta,Attuale,2025-12-13 21:13:32,2025-12-15 11:34:30,Bar Tabacchi Jolly Rog,-2.20,0.00,EUR,COMPLETATO,6661.09
+Pagamento con carta,Attuale,2025-12-14 12:16:53,2025-12-15 11:43:22,Fior Di Loto,-40.00,0.00,EUR,COMPLETATO,6621.09
+Pagamento con carta,Attuale,2025-12-17 06:24:34,2025-12-18 12:16:53,Trenitalia,-5.50,0.00,EUR,COMPLETATO,6615.59
+Pagamento con carta,Attuale,2025-12-17 09:53:02,2025-12-18 12:17:27,Edicola Cagliani M.,-1.50,0.00,EUR,COMPLETATO,6614.09
+Pagamento con carta,Attuale,2025-12-17 10:23:47,2025-12-18 12:17:27,Edicola Cagliani M.,-1.00,0.00,EUR,COMPLETATO,6613.09
+Pagamento con carta,Attuale,2025-12-17 08:43:41,2025-12-19 12:10:25,ATM - Azienda Trasporti Milanesi,-4.40,0.00,EUR,COMPLETATO,6608.69
+Pagamento con carta,Attuale,2025-12-17 09:09:22,2025-12-19 12:14:19,Poste Italiane,-44.20,0.00,EUR,COMPLETATO,6564.49
+Pagamento con carta,Attuale,2025-12-19 20:48:47,2025-12-20 10:23:16,Esselunga,-9.60,0.00,EUR,COMPLETATO,6554.89
+Pagamento con carta,Attuale,2025-12-19 02:12:42,2025-12-20 17:52:14,Mooneygo,-59.60,0.00,EUR,COMPLETATO,6495.29
+Pagamento con carta,Attuale,2025-12-21 17:58:00,2025-12-22 06:34:08,Carrefour,-15.77,0.00,EUR,COMPLETATO,6479.52
+Pagamento con carta,Attuale,2025-12-18 12:05:07,2025-12-22 09:50:44,ATM - Azienda Trasporti Milanesi,-4.40,0.00,EUR,COMPLETATO,6475.12
+Pagamento con carta,Attuale,2025-12-22 15:31:21,2025-12-23 12:19:32,Coop,-21.68,0.00,EUR,COMPLETATO,6453.44
+Pagamento con carta,Attuale,2025-12-22 14:50:52,2025-12-23 15:34:52,Giunti al Punto Librerie,-33.10,0.00,EUR,COMPLETATO,6420.34
+Pagamento con carta,Attuale,2025-12-23 13:10:01,2025-12-24 18:46:58,Acquarela,-3.00,0.00,EUR,COMPLETATO,6417.34
+Pagamento con carta,Attuale,2025-12-24 13:32:25,2025-12-25 05:50:13,Oliunid Shop Milano,-6.00,0.00,EUR,COMPLETATO,6411.34
+Pagamento con carta,Attuale,2025-12-24 13:52:41,2025-12-25 05:52:02,dm drogerie,-2.99,0.00,EUR,COMPLETATO,6408.35
+Pagamento con carta,Attuale,2025-12-24 14:04:51,2025-12-25 11:09:06,Aumai,-6.69,0.00,EUR,COMPLETATO,6401.66
+Pagamento con carta,Attuale,2025-12-24 15:05:22,2025-12-25 11:09:13,Panarello,-19.30,0.00,EUR,COMPLETATO,6382.36
+Pagamento con carta,Attuale,2025-12-24 15:40:10,2025-12-26 08:31:18,Librerie Feltrinelli,-25.00,0.00,EUR,COMPLETATO,6357.36
+Pagamento con carta,Attuale,2025-12-26 10:24:10,2025-12-27 03:36:41,Tab Fuel,-39.25,0.00,EUR,COMPLETATO,6318.11
+Pagamento con carta,Attuale,2025-12-26 19:02:47,2025-12-27 05:52:08,Coop,-19.60,0.00,EUR,COMPLETATO,6298.51
+Pagamento con carta,Attuale,2025-12-26 00:16:52,2025-12-27 06:16:18,McDonald's,-4.90,0.00,EUR,COMPLETATO,6293.61
+Pagamento con carta,Attuale,2025-12-28 12:01:11,2025-12-29 05:58:17,Supermercato Fam.coop.,-8.15,0.00,EUR,COMPLETATO,6285.46
+Pagamento con carta,Attuale,2025-12-28 18:11:01,2025-12-29 09:29:02,Supermercato Poli,-21.74,0.00,EUR,COMPLETATO,6263.72
+Pagamento con carta,Attuale,2025-12-29 19:02:00,2025-12-30 13:16:23,Supermercato Poli,-21.49,0.00,EUR,COMPLETATO,6242.23
+Pagamento con carta,Attuale,2025-12-29 22:30:06,2025-12-30 13:16:54,Tamoil,-43.64,0.00,EUR,COMPLETATO,6198.59
+Pagamento con carta,Attuale,2025-12-29 20:30:26,2025-12-30 13:37:29,Conad,-3.23,0.00,EUR,COMPLETATO,6195.36
+Pagamento con carta,Attuale,2025-12-29 22:52:55,2025-12-30 14:22:17,Chicken N Chicken,-7.90,0.00,EUR,COMPLETATO,6187.46
+Pagamento,Attuale,2025-12-31 13:57:11,2025-12-31 13:57:11,To ADER,-1501.52,0.00,EUR,COMPLETATO,4685.94
+Pagamento con carta,Attuale,2025-12-31 13:18:16,2026-01-01 11:21:38,Supermercato Poli,-5.98,0.00,EUR,COMPLETATO,4679.96
+Pagamento con carta,Attuale,2025-12-31 13:13:08,2026-01-01 11:21:38,Supermercato Poli,-28.80,0.00,EUR,COMPLETATO,4651.16
+Pagamento con carta,Attuale,2026-01-01 10:36:50,2026-01-02 05:48:32,Farmacia Pasi,-16.90,0.00,EUR,COMPLETATO,4634.26
+Pagamento con carta,Attuale,2026-01-01 14:58:25,2026-01-02 08:59:05,Quacuz Snc,-63.50,0.00,EUR,COMPLETATO,4570.76
+Pagamento con carta,Attuale,2026-01-02 12:08:34,2026-01-03 05:41:58,Farmacia Pasi,-34.70,0.00,EUR,COMPLETATO,4536.06
+Pagamento con carta,Attuale,2026-01-02 03:46:54,2026-01-03 11:43:50,Mooneygo,-26.20,0.00,EUR,COMPLETATO,4509.86
+Pagamento con carta,Attuale,2026-01-03 18:05:15,2026-01-05 09:18:03,Supermercato Poli,-11.37,0.00,EUR,COMPLETATO,4498.49
+Pagamento con carta,Attuale,2026-01-06 21:12:23,2026-01-07 06:00:11,Terrazza Lagorai Pizze,-37.30,0.00,EUR,COMPLETATO,4461.19
+Pagamento con carta,Attuale,2026-01-06 21:55:15,2026-01-07 06:02:01,Esso,-32.56,0.00,EUR,COMPLETATO,4428.63
+Pagamento con carta,Attuale,2026-01-05 18:26:46,2026-01-07 09:04:53,Supermercato Poli,-24.98,0.00,EUR,COMPLETATO,4403.65
+Pagamento con carta,Attuale,2026-01-07 20:06:33,2026-01-08 12:19:36,Esselunga,-9.14,0.00,EUR,COMPLETATO,4394.51
+Pagamento con carta,Attuale,2026-01-09 19:59:49,2026-01-10 09:40:25,Esselunga,-33.08,0.00,EUR,COMPLETATO,4361.43
+Pagamento con carta,Attuale,2026-01-09 03:47:14,2026-01-10 10:10:39,Mooneygo,-2.80,0.00,EUR,COMPLETATO,4358.63
+Pagamento con carta,Attuale,2026-01-11 11:48:24,2026-01-12 09:25:31,Ikea,-43.85,0.00,EUR,COMPLETATO,4314.78
+Pagamento con carta,Attuale,2026-01-13 20:13:14,2026-01-14 10:45:10,Esselunga,-19.29,0.00,EUR,COMPLETATO,4295.49
+Pagamento con carta,Attuale,2026-01-13 19:53:34,2026-01-14 15:09:27,OBI,-15.37,0.00,EUR,COMPLETATO,4280.12
+Pagamento con carta,Attuale,2026-01-14 19:40:26,2026-01-15 11:58:54,Esselunga,-6.41,0.00,EUR,COMPLETATO,4273.71
+Pagamento con carta,Attuale,2026-01-15 18:38:24,2026-01-16 11:03:50,Lidl,-4.07,0.00,EUR,COMPLETATO,4269.64
+Pagamento con carta,Attuale,2026-01-15 23:10:08,2026-01-16 14:18:00,Milanoarrampicata Asso,-3.00,0.00,EUR,COMPLETATO,4266.64
+Pagamento con carta,Attuale,2026-01-15 19:39:33,2026-01-16 14:19:02,Farma Acquisition,-17.70,0.00,EUR,COMPLETATO,4248.94
+Pagamento con carta,Attuale,2026-01-16 05:23:48,2026-01-17 11:44:10,Mooneygo,-18.80,0.00,EUR,COMPLETATO,4230.14
+Pagamento con carta,Attuale,2026-01-16 23:21:55,2026-01-17 12:21:13,Mom Cafè,-4.00,0.00,EUR,COMPLETATO,4226.14
+Pagamento con carta,Attuale,2026-01-17 16:54:57,2026-01-18 11:41:26,Vinted,-47.02,0.00,EUR,COMPLETATO,4179.12
+Pagamento con carta,Attuale,2026-01-17 16:27:15,2026-01-19 03:24:57,Supermercati Sigma,-8.44,0.00,EUR,COMPLETATO,4170.68
+Pagamento con carta,Attuale,2026-01-17 09:40:26,2026-01-19 09:49:01,Q8,-42.92,0.00,EUR,COMPLETATO,4127.76
+Pagamento con carta,Attuale,2026-01-19 12:53:40,2026-01-20 03:19:05,Ai Powered Leader,-11.20,0.00,EUR,COMPLETATO,4116.56
+Pagamento con carta,Attuale,2026-01-21 14:17:53,2026-01-22 10:24:21,Baita Stella Alpina,-7.00,0.00,EUR,COMPLETATO,4109.56
+Pagamento con carta,Attuale,2026-01-21 21:24:41,2026-01-22 14:09:07,Churen,-73.00,0.00,EUR,COMPLETATO,4036.56
+Pagamento con carta,Attuale,2026-01-21 09:29:48,2026-01-22 14:09:17,La Via Delle Terme,-133.00,0.00,EUR,COMPLETATO,3903.56
+Pagamento con carta,Attuale,2026-01-21 18:19:12,2026-01-22 14:11:56,Jcd Di Favre C,-3.00,0.00,EUR,COMPLETATO,3900.56
+Pagamento con carta,Attuale,2026-01-21 23:28:09,2026-01-22 14:11:56,Jcd Di Favre C,-3.00,0.00,EUR,COMPLETATO,3897.56
+Pagamento con carta,Attuale,2026-01-22 11:48:33,2026-01-23 10:07:15,CRAI,-12.33,0.00,EUR,COMPLETATO,3885.23
+Pagamento con carta,Attuale,2026-01-22 12:52:28,2026-01-23 14:10:59,Monterosa S P A,-23.50,0.00,EUR,COMPLETATO,3861.73
+Pagamento con carta,Attuale,2026-01-23 17:28:35,2026-01-24 03:19:27,Vinted,-22.30,0.00,EUR,COMPLETATO,3839.43
+Pagamento con carta,Attuale,2026-01-24 00:10:01,2026-01-24 06:34:03,Vinted,-3.74,0.00,EUR,COMPLETATO,3835.69
+Pagamento con carta,Attuale,2026-01-24 00:07:22,2026-01-24 06:34:03,Vinted,-5.84,0.00,EUR,COMPLETATO,3829.85
+Pagamento con carta,Attuale,2026-01-23 13:17:27,2026-01-24 06:52:06,mauro.mandagar,-41.93,0.00,EUR,COMPLETATO,3787.92
+Pagamento con carta,Attuale,2026-01-25 11:52:34,2026-01-25 16:06:00,Vinted,-67.45,0.00,EUR,COMPLETATO,3720.47
+Pagamento con carta,Attuale,2026-01-24 18:10:33,2026-01-26 06:18:08,Carrefour,-4.66,0.00,EUR,COMPLETATO,3715.81
+Pagamento con carta,Attuale,2026-01-23 11:35:42,2026-01-26 09:09:03,ATM - Azienda Trasporti Milanesi,-4.40,0.00,EUR,COMPLETATO,3711.41
+Pagamento con carta,Attuale,2026-01-25 14:14:23,2026-01-26 09:09:29,Esselunga,-33.55,0.00,EUR,COMPLETATO,3677.86
+Ricarica,Attuale,2026-01-26 19:57:06,2026-01-26 19:57:07,Pagamento da FAZZINI MARCO,88.75,0.00,EUR,COMPLETATO,3766.61
+Pagamento con carta,Attuale,2026-01-27 16:19:22,,eBay,-0.84,0.00,EUR,OPERAZIONE ANNULLATA,
+Pagamento con carta,Attuale,2026-01-27 16:19:28,2026-01-28 03:07:37,eBay,-20.83,0.00,EUR,COMPLETATO,3745.78
+Pagamento con carta,Attuale,2026-01-27 16:06:37,2026-01-28 03:11:36,Vinted,-11.85,0.00,EUR,COMPLETATO,3733.93
+Pagamento con carta,Attuale,2026-01-27 19:53:08,2026-01-28 10:33:40,Esselunga,-17.10,0.00,EUR,COMPLETATO,3716.83
+Pagamento con carta,Attuale,2026-01-28 18:23:01,2026-01-29 03:15:18,Elio Ingenito,-45.00,0.00,EUR,COMPLETATO,3671.83
+Pagamento con carta,Attuale,2026-01-28 19:58:13,2026-01-29 14:34:42,Milanoarrampicata Asso,-3.00,0.00,EUR,COMPLETATO,3668.83
+Pagamento con carta,Attuale,2026-01-28 20:43:05,2026-01-29 14:34:42,Milanoarrampicata Asso,-2.50,0.00,EUR,COMPLETATO,3666.33
+Pagamento con carta,Attuale,2026-01-29 19:41:02,2026-01-30 13:05:26,Esselunga,-15.09,0.00,EUR,COMPLETATO,3651.24
+Pagamento con carta,Attuale,2026-01-29 19:12:56,2026-01-30 13:42:16,OBI,-7.99,0.00,EUR,COMPLETATO,3643.25
+Pagamento con carta,Attuale,2026-01-30 20:16:18,2026-01-31 10:44:00,Esselunga,-15.90,0.00,EUR,COMPLETATO,3627.35
+Pagamento con carta,Attuale,2026-01-30 20:27:14,2026-01-31 10:48:56,Carrefour,-1.49,0.00,EUR,COMPLETATO,3625.86
+Pagamento con carta,Attuale,2026-01-30 06:05:20,2026-01-31 16:06:26,Mooneygo,-5.60,0.00,EUR,COMPLETATO,3620.26
+Pagamento con carta,Attuale,2026-02-01 16:42:23,2026-02-02 09:16:17,Ikea,-19.95,0.00,EUR,COMPLETATO,3600.31
+Pagamento con carta,Attuale,2026-02-01 14:14:18,2026-02-02 09:16:42,Love Flamingo Srl,-5.88,0.00,EUR,COMPLETATO,3594.43
+Pagamento con carta,Attuale,2026-02-01 14:29:50,2026-02-02 09:17:38,Zheng Luyi,-5.50,0.00,EUR,COMPLETATO,3588.93
+Pagamento con carta,Attuale,2026-02-02 19:34:55,2026-02-03 11:07:00,Esselunga,-7.20,0.00,EUR,COMPLETATO,3581.73
+Pagamento con carta,Attuale,2026-02-03 13:58:25,2026-02-04 07:15:55,Turkish 46,-6.50,0.00,EUR,COMPLETATO,3575.23
+Pagamento con carta,Attuale,2026-02-04 03:50:31,2026-02-05 10:06:44,Aruba.it,-15.32,0.00,EUR,COMPLETATO,3559.91
+Pagamento con carta,Attuale,2026-02-04 20:20:04,2026-02-05 13:00:35,Esselunga,-26.74,0.00,EUR,COMPLETATO,3533.17
+Pagamento con carta,Attuale,2026-02-05 19:29:57,2026-02-06 11:51:50,Esselunga,-7.55,0.00,EUR,COMPLETATO,3525.62
+Pagamento con carta,Attuale,2026-02-05 18:36:17,2026-02-06 11:58:49,Speranza Market,-3.90,0.00,EUR,COMPLETATO,3521.72
+Pagamento con carta,Attuale,2026-02-06 15:28:45,2026-02-07 06:23:16,Santagostino,-30.00,0.00,EUR,COMPLETATO,3491.72
+Pagamento con carta,Attuale,2026-02-06 07:10:42,2026-02-07 10:07:16,Mooneygo,-1.40,0.00,EUR,COMPLETATO,3490.32
+Pagamento con carta,Attuale,2026-02-06 19:41:10,2026-02-07 10:41:30,Esselunga,-15.00,0.00,EUR,COMPLETATO,3475.32
+Pagamento con carta,Attuale,2026-02-06 14:58:35,2026-02-09 09:21:28,ATM - Azienda Trasporti Milanesi,-2.20,0.00,EUR,COMPLETATO,3473.12
+Pagamento con carta,Attuale,2026-02-07 19:42:25,2026-02-09 09:21:55,Esselunga,-15.43,0.00,EUR,COMPLETATO,3457.69
+Pagamento con carta,Attuale,2026-02-08 17:48:52,2026-02-09 09:31:51,Tab Fuel,-43.69,0.00,EUR,COMPLETATO,3414.00
+Pagamento Revolut,Attuale,2026-02-09 11:27:56,2026-02-09 11:27:58,VIVATICKET SPA*Bologna,-29.30,0.00,EUR,COMPLETATO,3384.70
+Pagamento con carta,Attuale,2026-02-09 20:03:00,2026-02-10 09:54:31,The Smoke Di Cella Ale,-5.50,0.00,EUR,COMPLETATO,3379.20
+Pagamento con carta,Attuale,2026-02-12 17:41:07,2026-02-13 13:07:59,Supermercati Sigma,-12.33,0.00,EUR,COMPLETATO,3366.87
+Pagamento con carta,Attuale,2026-02-12 18:42:53,2026-02-13 13:21:24,Autogrill,-1.50,0.00,EUR,COMPLETATO,3365.37
+Pagamento con carta,Attuale,2026-02-12 00:33:03,2026-02-13 13:21:29,Mevlana 2,-6.50,0.00,EUR,COMPLETATO,3358.87
+Pagamento,Attuale,2026-02-13 14:49:31,2026-02-13 14:49:33,To APSA SRL,-959.00,0.00,EUR,COMPLETATO,2399.87
+Pagamento con carta,Attuale,2026-02-13 18:36:54,2026-02-14 10:09:51,Supermercato Poli,-29.51,0.00,EUR,COMPLETATO,2370.36
+Pagamento con carta,Attuale,2026-02-14 18:50:46,2026-02-15 13:32:53,Cristoforetti,-41.87,0.00,EUR,COMPLETATO,2328.49
+Pagamento con carta,Attuale,2026-02-14 19:05:28,2026-02-16 03:18:11,Farmacia Pasi,-7.80,0.00,EUR,COMPLETATO,2320.69
+Pagamento con carta,Attuale,2026-02-14 18:29:54,2026-02-16 10:05:31,Supermercato Poli,-27.71,0.00,EUR,COMPLETATO,2292.98
+Pagamento con carta,Attuale,2026-02-15 22:48:03,2026-02-16 10:15:10,Ristorante Bar Miola,-51.50,0.00,EUR,COMPLETATO,2241.48
+Pagamento con carta,Attuale,2026-02-16 18:54:23,2026-02-17 06:04:48,Coop,-11.73,0.00,EUR,COMPLETATO,2229.75
+Pagamento con carta,Attuale,2026-02-16 19:05:58,2026-02-17 06:04:58,Farmacia Pasi,-33.00,0.00,EUR,COMPLETATO,2196.75
+Pagamento con carta,Attuale,2026-02-16 23:41:12,2026-02-17 09:35:05,Poldo Pub,-31.00,0.00,EUR,COMPLETATO,2165.75
+Pagamento con carta,Attuale,2026-02-17 12:38:35,2026-02-18 03:27:50,TicketOne,-41.36,0.00,EUR,COMPLETATO,2124.39
+Pagamento con carta,Attuale,2026-02-17 18:39:53,2026-02-18 06:09:02,Coop,-19.47,0.00,EUR,COMPLETATO,2104.92
+Pagamento con carta,Attuale,2026-02-20 20:17:53,2026-02-21 12:22:12,Lezzet Istanbul,-7.50,0.00,EUR,COMPLETATO,2097.42
+Pagamento con carta,Attuale,2026-02-20 19:54:09,2026-02-21 12:31:46,Autostrade per l'Italia,-1.40,0.00,EUR,COMPLETATO,2096.02
+Pagamento con carta,Attuale,2026-02-20 01:54:48,2026-02-21 16:33:32,Mooneygo,-27.40,0.00,EUR,COMPLETATO,2068.62
+Rimborso su carta,Attuale,2026-02-21 18:43:16,2026-02-22 12:57:25,Vinted,43.53,0.00,EUR,COMPLETATO,2112.15
+Pagamento con carta,Attuale,2026-02-22 00:02:57,2026-02-23 03:21:02,Pomodori Ripieni,-98.00,0.00,EUR,COMPLETATO,2014.15
+Pagamento con carta,Attuale,2026-02-21 13:23:37,2026-02-23 09:04:42,Esselunga,-2.64,0.00,EUR,COMPLETATO,2011.51
+Pagamento con carta,Attuale,2026-02-23 17:00:01,2026-02-24 03:32:29,CertiDeal,-311.88,0.00,EUR,COMPLETATO,1699.63
+Pagamento con carta,Attuale,2026-02-23 18:58:27,2026-02-24 06:04:19,Supermercati Sigma,-5.27,0.00,EUR,COMPLETATO,1694.36
+Pagamento con carta,Attuale,2026-02-23 15:48:38,2026-02-24 10:35:31,D'auria Antonio,-3.20,0.00,EUR,COMPLETATO,1691.16
+Pagamento,Attuale,2026-02-24 17:53:41,2026-02-24 17:53:42,Pagamento a favore di Davide Togna,-38.00,0.00,EUR,COMPLETATO,1653.16
+Pagamento con carta,Attuale,2026-02-25 12:58:37,2026-02-26 05:46:57,Ristorante Tes,-24.50,0.00,EUR,COMPLETATO,1628.66
+Pagamento con carta,Attuale,2026-02-25 19:22:17,2026-02-26 05:48:25,Carrefour,-3.67,0.00,EUR,COMPLETATO,1624.99
+Pagamento con carta,Attuale,2026-02-25 08:41:44,2026-02-26 09:50:02,D'auria Antonio,-2.40,0.00,EUR,COMPLETATO,1622.59
+Pagamento con carta,Attuale,2026-02-26 19:48:30,2026-02-27 12:25:30,Esselunga,-5.99,0.00,EUR,COMPLETATO,1616.60
+Pagamento con carta,Attuale,2026-02-26 23:48:05,2026-02-27 12:33:16,Turkish 46,-6.50,0.00,EUR,COMPLETATO,1610.10
+Pagamento con carta,Attuale,2026-02-27 19:30:01,2026-02-28 09:57:08,Esselunga,-1.49,0.00,EUR,COMPLETATO,1608.61
+Pagamento con carta,Attuale,2026-02-27 19:11:21,2026-02-28 10:07:30,Carrefour,-4.36,0.00,EUR,COMPLETATO,1604.25
+Pagamento con carta,Attuale,2026-02-27 19:12:36,2026-02-28 10:07:30,Carrefour,-1.49,0.00,EUR,COMPLETATO,1602.76
+Pagamento con carta,Attuale,2026-02-27 04:32:26,2026-02-28 14:58:33,Mooneygo,-20.20,0.00,EUR,COMPLETATO,1582.56
+Pagamento con carta,Attuale,2026-02-28 12:42:08,2026-03-01 09:08:26,Esselunga,-30.44,0.00,EUR,COMPLETATO,1552.12
+Pagamento con carta,Attuale,2026-02-28 19:18:51,2026-03-01 09:08:30,Coop,-24.78,0.00,EUR,COMPLETATO,1527.34
+Pagamento con carta,Attuale,2026-02-28 01:48:24,2026-03-01 09:20:44,McDonald's,-11.30,0.00,EUR,COMPLETATO,1516.04
+Pagamento con carta,Attuale,2026-02-27 17:11:37,2026-03-01 17:01:41,Vinted,-26.62,0.00,EUR,COMPLETATO,1489.42
+Pagamento con carta,Attuale,2026-03-01 10:26:59,2026-03-02 05:28:41,Gal Sport,-6.00,0.00,EUR,COMPLETATO,1483.42
+Pagamento con carta,Attuale,2026-03-01 18:35:12,2026-03-02 08:57:25,NUOVA SIDAP,-5.80,0.00,EUR,COMPLETATO,1477.62
+Pagamento con carta,Attuale,2026-03-01 09:18:39,2026-03-02 08:57:26,Maglione Antonio,-3.00,0.00,EUR,COMPLETATO,1474.62
+Pagamento con carta,Attuale,2026-03-01 10:20:29,2026-03-02 11:49:22,Pila Spa,-61.50,0.00,EUR,COMPLETATO,1413.12
+Pagamento con carta,Attuale,2026-03-02 08:16:18,2026-03-02 14:09:15,Vinted,-7.89,0.00,EUR,COMPLETATO,1405.23
+Pagamento con carta,Attuale,2026-03-02 19:48:40,2026-03-03 09:20:13,Esselunga,-7.08,0.00,EUR,COMPLETATO,1398.15
+Pagamento con carta,Attuale,2026-03-02 20:12:18,2026-03-03 09:20:51,La Madonnina,-6.50,0.00,EUR,COMPLETATO,1391.65
+Pagamento con carta,Attuale,2026-03-03 11:19:09,2026-03-04 05:54:10,Tab Fuel,-12.18,0.00,EUR,COMPLETATO,1379.47
+Pagamento con carta,Attuale,2026-03-03 18:25:52,2026-03-04 09:16:09,Lidl,-7.20,0.00,EUR,COMPLETATO,1372.27
+Pagamento con carta,Attuale,2026-03-03 07:10:27,2026-03-04 09:17:03,Gb Group,-4.60,0.00,EUR,COMPLETATO,1367.67
+Pagamento con carta,Attuale,2026-03-05 19:55:55,2026-03-06 05:57:26,Supermercati Sigma,-3.32,0.00,EUR,COMPLETATO,1364.35
+Pagamento con carta,Attuale,2026-03-06 09:06:38,2026-03-07 10:10:05,Gb Group,-5.70,0.00,EUR,COMPLETATO,1358.65
+Pagamento con carta,Attuale,2026-03-06 10:38:14,2026-03-07 11:13:03,Mooneygo,-1.50,0.00,EUR,COMPLETATO,1357.15
+Pagamento con carta,Attuale,2026-03-06 17:40:07,2026-03-07 11:50:03,Emporio Del Pane Di L.,-6.50,0.00,EUR,COMPLETATO,1350.65
+Pagamento con carta,Attuale,2026-03-06 17:37:56,2026-03-07 11:50:27,Nirvana,-20.00,0.00,EUR,COMPLETATO,1330.65
+Pagamento con carta,Attuale,2026-03-07 15:39:32,2026-03-08 06:04:54,Belma Clean Snc Di Bel,-15.40,0.00,EUR,COMPLETATO,1315.25
+Pagamento con carta,Attuale,2026-03-07 08:21:56,2026-03-09 08:09:54,Esselunga,-13.66,0.00,EUR,COMPLETATO,1301.59
+Pagamento con carta,Attuale,2026-03-07 17:24:33,2026-03-09 08:09:54,Esselunga,-25.80,0.00,EUR,COMPLETATO,1275.79
+Pagamento con carta,Attuale,2026-03-07 15:58:53,2026-03-09 08:11:37,Love Flamingo Srl,-7.49,0.00,EUR,COMPLETATO,1268.30
+Pagamento con carta,Attuale,2026-03-09 15:34:49,2026-03-10 01:46:23,Vinted,-27.42,0.00,EUR,COMPLETATO,1240.88
+Pagamento con carta,Attuale,2026-03-09 19:31:03,2026-03-10 08:43:57,Coop,-1.50,0.00,EUR,COMPLETATO,1239.38
+Pagamento,Attuale,2026-03-10 20:48:12,2026-03-10 20:48:13,Pagamento a favore di Stefano Cristofori,-25.00,0.00,EUR,COMPLETATO,1214.38
+Pagamento con carta,Attuale,2026-03-10 19:16:41,2026-03-11 08:32:11,Esselunga,-12.25,0.00,EUR,COMPLETATO,1202.13
+Pagamento con carta,Attuale,2026-03-10 18:19:32,2026-03-11 11:49:20,My Cicero,-2.17,0.00,EUR,COMPLETATO,1199.96
+Pagamento con carta,Attuale,2026-03-10 19:08:58,2026-03-11 11:49:20,My Cicero,-1.10,0.00,EUR,COMPLETATO,1198.86
+Pagamento con carta,Attuale,2026-03-11 21:31:50,2026-03-12 08:22:18,Turkish 46,-9.50,0.00,EUR,COMPLETATO,1189.36
+Pagamento con carta,Attuale,2026-03-12 20:00:11,2026-03-13 04:20:53,Coop,-2.15,0.00,EUR,COMPLETATO,1187.21
+Pagamento con carta,Attuale,2026-03-13 19:37:12,2026-03-14 08:21:53,Esselunga,-6.32,0.00,EUR,COMPLETATO,1180.89
+Pagamento con carta,Attuale,2026-03-13 14:10:14,2026-03-14 08:21:53,Esselunga,-12.33,0.00,EUR,COMPLETATO,1168.56
+Pagamento con carta,Attuale,2026-03-13 18:52:22,2026-03-14 08:22:37,Centro Giardinaggio San Giuliano,-3.70,0.00,EUR,COMPLETATO,1164.86
+Pagamento con carta,Attuale,2026-03-13 19:11:21,2026-03-14 08:24:32,Ottimax San Giuliano,-8.48,0.00,EUR,COMPLETATO,1156.38
+Pagamento con carta,Attuale,2026-03-14 22:01:13,2026-03-16 01:35:28,iTunes,-1.05,0.01,EUR,COMPLETATO,1155.32
+Pagamento con carta,Attuale,2026-03-15 23:17:30,2026-03-16 04:36:01,Vinted,-10.84,0.00,EUR,COMPLETATO,1144.48
+Pagamento con carta,Attuale,2026-03-15 14:22:09,2026-03-16 08:13:43,Esselunga,-12.56,0.00,EUR,COMPLETATO,1131.92
+Pagamento con carta,Attuale,2026-03-14 19:34:42,2026-03-16 08:13:45,Esselunga,-49.53,0.00,EUR,COMPLETATO,1082.39
+Pagamento con carta,Attuale,2026-03-14 15:58:32,2026-03-16 08:13:45,Esselunga,-3.44,0.00,EUR,COMPLETATO,1078.95
+Pagamento con carta,Attuale,2026-03-16 19:56:35,2026-03-17 04:22:53,Coop,-3.32,0.00,EUR,COMPLETATO,1075.63
+Pagamento con carta,Attuale,2026-03-16 22:12:09,2026-03-17 13:24:41,Turkish 46,-6.50,0.00,EUR,COMPLETATO,1069.13
+Pagamento con carta,Attuale,2026-03-17 19:25:46,2026-03-18 04:54:49,Carrefour,-5.53,0.00,EUR,COMPLETATO,1063.60
+Pagamento con carta,Attuale,2026-03-17 09:45:23,2026-03-18 04:57:14,Mohona Enterprise,-10.00,0.00,EUR,COMPLETATO,1053.60
+Pagamento con carta,Attuale,2026-03-17 13:39:25,2026-03-18 08:16:36,Unes,-5.48,0.00,EUR,COMPLETATO,1048.12
+Pagamento con carta,Attuale,2026-03-13 02:25:47,2026-03-18 11:30:57,Mooneygo,-10.60,0.00,EUR,COMPLETATO,1037.52
+Pagamento con carta,Attuale,2026-03-18 14:51:06,2026-03-19 04:41:19,Carrefour,-6.15,0.00,EUR,COMPLETATO,1031.37
+Pagamento con carta,Attuale,2026-03-17 17:45:46,2026-03-19 07:57:51,ATM - Azienda Trasporti Milanesi,-2.20,0.00,EUR,COMPLETATO,1029.17
+Pagamento con carta,Attuale,2026-03-17 09:23:56,2026-03-19 07:57:53,ATM - Azienda Trasporti Milanesi,-2.20,0.00,EUR,COMPLETATO,1026.97
+Pagamento con carta,Attuale,2026-03-18 15:06:54,2026-03-19 14:09:32,Medimilano,-22.00,0.00,EUR,COMPLETATO,1004.97
+Pagamento con carta,Attuale,2026-03-18 15:38:25,2026-03-20 08:48:36,ATM - Azienda Trasporti Milanesi,-2.20,0.00,EUR,COMPLETATO,1002.77
+Pagamento con carta,Attuale,2026-03-18 08:42:18,2026-03-20 08:48:36,ATM - Azienda Trasporti Milanesi,-4.40,0.00,EUR,COMPLETATO,998.37
+Pagamento con carta,Attuale,2026-03-19 19:40:04,2026-03-20 08:48:49,Esselunga,-7.62,0.00,EUR,COMPLETATO,990.75
+Pagamento con carta,Attuale,2026-03-19 22:31:44,2026-03-20 12:02:28,Turkish 46,-6.50,0.00,EUR,COMPLETATO,984.25
+Pagamento con carta,Attuale,2026-03-20 20:12:56,2026-03-21 08:22:14,Eni,-27.01,0.00,EUR,COMPLETATO,957.24
+Pagamento con carta,Attuale,2026-03-20 11:33:42,2026-03-21 13:19:55,Mooneygo,-1.40,0.00,EUR,COMPLETATO,955.84
+Pagamento con carta,Attuale,2026-03-20 13:16:39,2026-03-21 13:56:18,Rosticceria Tolentino,-7.15,0.00,EUR,COMPLETATO,948.69
+Pagamento con carta,Attuale,2026-03-21 14:06:26,2026-03-22 07:51:14,Baita Carla,-50.00,0.00,EUR,COMPLETATO,898.69
+Pagamento con carta,Attuale,2026-03-22 20:34:06,2026-03-23 08:05:18,Oste Allegro,-17.00,0.00,EUR,COMPLETATO,881.69
+Pagamento con carta,Attuale,2026-03-22 09:37:38,2026-03-23 12:15:17,Coop,-18.15,0.00,EUR,COMPLETATO,863.54
+Pagamento con carta,Attuale,2026-03-23 19:48:33,2026-03-24 08:44:20,Esselunga,-4.64,0.00,EUR,COMPLETATO,858.90
+Pagamento con carta,Attuale,2026-03-24 09:22:58,2026-03-25 02:13:11,Vinted,-24.83,0.00,EUR,COMPLETATO,834.07
+Pagamento con carta,Attuale,2026-03-24 18:49:34,2026-03-25 08:29:28,Lidl,-3.97,0.00,EUR,COMPLETATO,830.10
+Pagamento con carta,Attuale,2026-03-25 20:33:42,2026-03-26 08:40:13,Esselunga,-24.31,0.00,EUR,COMPLETATO,805.79
+Pagamento con carta,Attuale,2026-03-25 13:17:51,2026-03-26 08:40:16,Unes,-5.38,0.00,EUR,COMPLETATO,800.41
+Pagamento con carta,Attuale,2026-03-25 09:19:30,2026-03-26 08:40:17,Unes,-3.09,0.00,EUR,COMPLETATO,797.32
+Pagamento con carta,Attuale,2026-03-26 19:52:11,2026-03-27 04:30:26,Coop,-8.22,0.00,EUR,COMPLETATO,789.10
+Pagamento con carta,Attuale,2026-03-26 22:09:17,2026-03-27 08:50:49,Tab Fuel,-20.09,0.00,EUR,COMPLETATO,769.01
+Pagamento con carta,Attuale,2026-03-27 05:55:48,2026-03-28 14:20:02,Mooneygo,-9.00,0.00,EUR,COMPLETATO,760.01
+Pagamento con carta,Attuale,2026-03-25 08:47:56,2026-03-28 15:19:15,ATM - Azienda Trasporti Milanesi,-4.40,0.00,EUR,COMPLETATO,755.61
+Pagamento con carta,Attuale,2026-03-27 11:45:49,2026-03-28 16:16:17,Flip & Eat,-3.30,0.00,EUR,COMPLETATO,752.31
+Pagamento con carta,Attuale,2026-03-28 13:48:14,2026-03-29 05:55:24,Turkish 46,-11.50,0.00,EUR,COMPLETATO,740.81
+Pagamento con carta,Attuale,2026-03-29 23:25:53,2026-03-30 08:42:33,Rapsody,-10.00,0.00,EUR,COMPLETATO,730.81
+Pagamento con carta,Attuale,2026-03-27 08:22:47,2026-03-30 12:15:29,ATM - Azienda Trasporti Milanesi,-2.20,0.00,EUR,COMPLETATO,728.61
+Pagamento con carta,Attuale,2026-03-28 18:46:58,2026-03-30 12:16:15,Iperal,-31.12,0.00,EUR,COMPLETATO,697.49
+Pagamento con carta,Attuale,2026-03-30 20:35:58,2026-03-31 09:55:49,Esselunga,-23.29,0.00,EUR,COMPLETATO,674.20
+Pagamento con carta,Attuale,2026-03-31 20:44:43,2026-04-01 09:49:31,Nizza 2,-18.00,0.00,EUR,COMPLETATO,656.20
+Pagamento con carta,Attuale,2026-03-31 13:54:32,2026-04-01 15:54:39,Negozio Leggero,-12.44,0.00,EUR,COMPLETATO,643.76
+Pagamento con carta,Attuale,2026-04-01 10:11:48,2026-04-02 06:05:20,Tab Fuel,-21.45,0.00,EUR,COMPLETATO,622.31
+Pagamento con carta,Attuale,2026-04-01 11:28:50,2026-04-02 13:10:11,Autogrill,-5.40,0.00,EUR,COMPLETATO,616.91
+Pagamento con carta,Attuale,2026-04-01 14:43:25,2026-04-02 13:48:54,PENNY,-54.48,0.00,EUR,COMPLETATO,562.43
+Pagamento con carta,Attuale,2026-04-02 19:51:53,2026-04-03 13:48:45,Galati Giuseppe,-43.50,0.00,EUR,COMPLETATO,518.93
+Pagamento con carta,Attuale,2026-04-03 12:42:56,2026-04-04 13:40:30,Mooneygo,-10.40,0.00,EUR,COMPLETATO,508.53
+Pagamento con carta,Attuale,2026-04-06 22:55:59,2026-04-07 08:49:45,Autogrill,-3.10,0.00,EUR,COMPLETATO,505.43
+Pagamento con carta,Attuale,2026-04-06 23:10:19,2026-04-07 08:49:45,Autogrill,-13.00,0.00,EUR,COMPLETATO,492.43
+Pagamento con carta,Attuale,2026-04-06 22:06:57,2026-04-07 08:55:53,Autostrade per l'Italia,-1.50,0.00,EUR,COMPLETATO,490.93
+Pagamento con carta,Attuale,2026-04-06 22:18:38,2026-04-07 08:55:54,Autostrade per l'Italia,-1.50,0.00,EUR,COMPLETATO,489.43
+Pagamento con carta,Attuale,2026-04-06 23:51:36,2026-04-07 08:55:55,SATAP,-19.50,0.00,EUR,COMPLETATO,469.93
+Pagamento con carta,Attuale,2026-04-06 21:34:02,2026-04-07 15:00:28,Galati Giuseppe,-24.00,0.00,EUR,COMPLETATO,445.93
+Pagamento con carta,Attuale,2026-04-07 22:10:18,,Q8,-103.29,0.00,EUR,OPERAZIONE ANNULLATA,
+Pagamento con carta,Attuale,2026-04-07 22:12:58,2026-04-08 10:12:32,Tab Fuel,-13.82,0.00,EUR,COMPLETATO,432.11
+Pagamento con carta,Attuale,2026-04-08 17:13:18,2026-04-09 03:46:07,COS,-84.00,0.00,EUR,COMPLETATO,348.11
+Pagamento con carta,Attuale,2026-04-08 14:33:10,2026-04-09 10:19:31,Sciue' Premuda,-14.30,0.00,EUR,COMPLETATO,333.81
+Pagamento con carta,Attuale,2026-04-09 13:27:42,2026-04-10 10:39:37,Unes,-7.03,0.00,EUR,COMPLETATO,326.78
+Pagamento con carta,Attuale,2026-04-09 20:08:29,2026-04-10 10:40:07,Pizzeria Da Omar,-1.00,0.00,EUR,COMPLETATO,325.78
+Pagamento con carta,Attuale,2026-04-10 14:09:04,2026-04-11 05:59:23,Turkish 46,-8.50,0.00,EUR,COMPLETATO,317.28
+Pagamento con carta,Attuale,2026-04-09 09:23:19,2026-04-11 10:32:23,ATM - Azienda Trasporti Milanesi,-4.40,0.00,EUR,COMPLETATO,312.88
+Pagamento con carta,Attuale,2026-04-10 13:50:03,2026-04-11 10:33:11,Decathlon,-19.99,0.00,EUR,COMPLETATO,292.89
+Pagamento con carta,Attuale,2026-04-12 11:36:22,2026-04-13 05:33:59,Centro Giardin. San Gi,-20.30,0.00,EUR,COMPLETATO,272.59
+Pagamento con carta,Attuale,2026-04-11 20:52:39,2026-04-13 08:43:28,Esselunga,-12.68,0.00,EUR,COMPLETATO,259.91
+Pagamento con carta,Attuale,2026-04-12 12:10:40,2026-04-13 08:43:28,Esselunga,-12.17,0.00,EUR,COMPLETATO,247.74
+Pagamento con carta,Attuale,2026-04-12 11:08:13,2026-04-13 08:45:10,Bottega del Caffè,-1.30,0.00,EUR,COMPLETATO,246.44
+Pagamento con carta,Attuale,2026-04-11 08:59:24,2026-04-13 08:45:54,Gb Group,-6.10,0.00,EUR,COMPLETATO,240.34
+Pagamento con carta,Attuale,2026-04-12 20:15:09,2026-04-13 13:02:05,Boots,-17.70,0.00,EUR,COMPLETATO,222.64
+Pagamento con carta,Attuale,2026-04-13 20:00:16,2026-04-14 05:37:16,Coop,-6.26,0.00,EUR,COMPLETATO,216.38
+Pagamento con carta,Attuale,2026-04-14 14:17:49,2026-04-15 05:55:05,Turkish 46,-6.50,0.00,EUR,COMPLETATO,209.88
+Pagamento con carta,Attuale,2026-04-14 14:08:44,2026-04-15 12:41:30,Esselunga,-13.77,0.00,EUR,COMPLETATO,196.11
+Pagamento con carta,Attuale,2026-04-14 18:40:38,2026-04-15 12:41:38,Lidl,-0.98,0.00,EUR,COMPLETATO,195.13
+Pagamento con carta,Attuale,2026-04-14 18:28:25,2026-04-15 13:08:53,Nirvana,-20.00,0.00,EUR,COMPLETATO,175.13
+Pagamento con carta,Attuale,2026-04-15 05:05:11,2026-04-15 16:58:41,iTunes,-10.48,0.00,EUR,COMPLETATO,164.65
+Pagamento con carta,Attuale,2026-04-15 20:07:12,2026-04-16 10:47:39,Esselunga,-5.07,0.00,EUR,COMPLETATO,159.58
+Pagamento con carta,Attuale,2026-04-15 14:18:22,2026-04-16 10:48:27,Panino Giusto,-19.70,0.00,EUR,COMPLETATO,139.88
+Pagamento con carta,Attuale,2026-04-16 14:03:57,2026-04-17 07:05:34,Flip & Eat,-2.80,0.00,EUR,COMPLETATO,137.08
+Pagamento con carta,Attuale,2026-04-16 20:48:00,2026-04-17 11:41:41,Esselunga,-14.11,0.00,EUR,COMPLETATO,122.97
+Pagamento con carta,Attuale,2026-04-16 13:17:47,2026-04-17 11:41:54,Unes,-5.54,0.00,EUR,COMPLETATO,117.43
+Pagamento con carta,Attuale,2026-04-17 07:39:02,2026-04-18 12:59:43,Mooneygo,-1.40,0.00,EUR,COMPLETATO,116.03
+Pagamento con carta,Attuale,2026-04-18 17:47:46,2026-04-20 08:27:34,Decathlon,-5.38,0.00,EUR,COMPLETATO,110.65
+Pagamento con carta,Attuale,2026-04-18 11:44:15,2026-04-20 12:03:48,Autofficina Vitacar,-79.00,0.00,EUR,COMPLETATO,31.65
+Pagamento con carta,Attuale,2026-04-25 08:13:02,,EasyPark,-0.86,0.01,EUR,OPERAZIONE ANNULLATA,
+Pagamento con carta,Attuale,2026-04-25 08:15:04,2026-04-27 03:34:12,EasyPark,-0.68,0.01,EUR,COMPLETATO,30.96
+Pagamento con carta,Attuale,2026-04-27 08:42:27,2026-04-29 13:42:18,Chef Express,-1.80,0.00,EUR,COMPLETATO,29.16
+Pagamento con carta,Attuale,2026-05-01 07:24:13,2026-05-01 17:16:23,iTunes,-10.47,0.00,EUR,COMPLETATO,18.69
+Ricarica,Attuale,2026-05-01 22:21:48,2026-05-01 22:21:49,Pagamento da GIORGIO MESSINA,500.00,0.00,EUR,COMPLETATO,518.69
+Pagamento con carta,Attuale,2026-05-01 06:35:07,2026-05-02 13:01:08,Mooneygo,-1.40,0.00,EUR,COMPLETATO,517.29
+Pagamento con carta,Attuale,2026-05-02 09:41:25,2026-05-02 13:48:43,Vinted,-16.49,0.00,EUR,COMPLETATO,500.80
+Pagamento con carta,Attuale,2026-05-02 02:37:36,2026-05-03 02:43:25,Jaime 24h Retiro,-6.00,0.00,EUR,COMPLETATO,494.80
+Pagamento con carta,Attuale,2026-05-02 06:30:55,2026-05-03 02:43:28,Tutti Frutti,-2.00,0.00,EUR,COMPLETATO,492.80
+Pagamento con carta,Attuale,2026-05-02 05:19:13,2026-05-03 02:55:18,Parking Aeropuerto Adolfo Suárez Madrid-Barajas,-3.30,0.00,EUR,COMPLETATO,489.50
+Pagamento con carta,Attuale,2026-05-02 12:24:16,2026-05-03 16:03:33,Autostradale,-10.00,0.00,EUR,COMPLETATO,479.50
+Pagamento con carta,Attuale,2026-05-03 16:39:33,2026-05-04 02:56:28,Sportler Carugate,-127.50,0.00,EUR,COMPLETATO,352.00
+Pagamento con carta,Attuale,2026-05-02 13:41:30,2026-05-04 10:50:24,ATM - Azienda Trasporti Milanesi,-2.20,0.00,EUR,COMPLETATO,349.80
+Pagamento con carta,Attuale,2026-05-04 17:24:35,2026-05-05 09:19:05,Edicola M1 Palestro,-19.50,0.00,EUR,COMPLETATO,330.30
+Pagamento con carta,Attuale,2026-05-04 13:36:46,2026-05-05 09:19:36,Unes,-7.47,0.00,EUR,COMPLETATO,322.83
+Pagamento con carta,Attuale,2026-05-06 19:30:29,2026-05-07 05:33:21,Supermercati Sigma,-3.78,0.00,EUR,COMPLETATO,319.05
+Pagamento con carta,Attuale,2026-05-06 23:56:41,2026-05-07 12:36:14,Milanoarrampicata Asso,-2.00,0.00,EUR,COMPLETATO,317.05
+Pagamento con carta,Attuale,2026-05-07 13:12:00,2026-05-08 12:14:27,Unes,-10.22,0.00,EUR,COMPLETATO,306.83
+Pagamento con carta,Attuale,2026-05-10 12:46:01,2026-05-11 08:57:52,Fior Di Loto,-15.00,0.00,EUR,COMPLETATO,291.83
+Pagamento con carta,Attuale,2026-05-08 01:07:22,2026-05-11 14:18:00,Mooneygo,-7.70,0.00,EUR,COMPLETATO,284.13
+Pagamento con carta,Attuale,2026-05-11 19:49:19,2026-05-12 09:51:09,Esselunga,-20.81,0.00,EUR,COMPLETATO,263.32
+Pagamento con carta,Attuale,2026-05-11 13:26:28,2026-05-12 09:52:23,Clo Cafe,-2.60,0.00,EUR,COMPLETATO,260.72
+Pagamento con carta,Attuale,2026-05-12 17:41:52,2026-05-13 13:18:22,Edicola M1 Palestro,-19.50,0.00,EUR,COMPLETATO,241.22
+Pagamento con carta,Attuale,2026-05-12 19:17:32,2026-05-13 13:18:41,Esselunga,-20.31,0.00,EUR,COMPLETATO,220.91
+Pagamento con carta,Attuale,2026-05-12 19:20:08,2026-05-13 13:29:39,Tabaccheria N 22,-5.80,0.00,EUR,COMPLETATO,215.11
+Pagamento con carta,Attuale,2026-05-12 19:10:13,2026-05-13 13:50:30,Ottimax San Giuliano,-69.90,0.00,EUR,COMPLETATO,145.21
+Pagamento con carta,Attuale,2026-05-14 09:37:33,2026-05-15 05:27:08,Rivendita 252,-5.80,0.00,EUR,COMPLETATO,139.41
+Pagamento con carta,Attuale,2026-05-14 12:55:44,2026-05-15 05:41:13,Flip & Eat,-1.40,0.00,EUR,COMPLETATO,138.01
+Pagamento con carta,Attuale,2026-05-14 17:01:21,2026-05-15 15:10:38,Coop,-5.04,0.00,EUR,COMPLETATO,132.97
+Pagamento con carta,Attuale,2026-05-14 16:33:32,2026-05-15 15:20:30,Emystore,-2.99,0.00,EUR,COMPLETATO,129.98
+Pagamento,Attuale,2026-05-15 15:43:58,2026-05-15 15:44:00,To Marco Blanc,-16.00,0.00,EUR,COMPLETATO,113.98
+Pagamento con carta,Attuale,2026-05-15 02:14:43,2026-05-16 12:19:39,Mooneygo,-1.50,0.00,EUR,COMPLETATO,112.48
+Pagamento con carta,Attuale,2026-05-15 20:26:10,2026-05-16 13:35:27,Esselunga,-18.40,0.00,EUR,COMPLETATO,94.08
+Pagamento con carta,Attuale,2026-05-17 18:45:41,2026-05-18 05:44:09,Carrefour,-2.25,0.00,EUR,COMPLETATO,91.83
+Pagamento con carta,Attuale,2026-05-15 09:43:35,2026-05-18 08:44:00,ATM - Azienda Trasporti Milanesi,-4.40,0.00,EUR,COMPLETATO,87.43
+Pagamento con carta,Attuale,2026-05-18 18:20:43,2026-05-19 09:34:57,Esselunga,-38.71,0.00,EUR,COMPLETATO,48.72
+Pagamento con carta,Attuale,2026-05-18 13:16:26,2026-05-19 09:35:17,Unes,-7.84,0.00,EUR,COMPLETATO,40.88
+Pagamento con carta,Attuale,2026-05-19 09:28:08,2026-05-20 05:27:47,Rivendita 252,-5.80,0.00,EUR,COMPLETATO,35.08
+Pagamento con carta,Attuale,2026-05-19 13:45:53,2026-05-20 12:47:51,Caff? Vivaio 20,-2.60,0.00,EUR,COMPLETATO,32.48
+Pagamento con carta,Attuale,2026-05-20 12:39:19,2026-05-21 02:49:59,Work-Aut,-12.00,0.00,EUR,COMPLETATO,20.48
+Pagamento con carta,Attuale,2026-05-20 13:19:15,2026-05-21 17:05:11,CoffeecApp,-4.00,0.00,EUR,COMPLETATO,16.48
+Pagamento con carta,Attuale,2026-05-20 20:27:04,2026-05-21 17:05:30,Milanoarrampicata Asso,-3.00,0.00,EUR,COMPLETATO,13.48
+Ricompensa,Attuale,2026-05-23 02:58:46,2026-05-23 02:58:46,Ricompensa per la campagna di inviti,62.50,12.50,EUR,COMPLETATO,63.48
+Pagamento con carta,Attuale,2026-05-22 04:11:34,2026-05-23 11:24:01,Mooneygo,-1.40,0.00,EUR,COMPLETATO,62.08
+Pagamento con carta,Attuale,2026-05-23 16:19:16,2026-05-25 02:40:43,EasyPark,-3.23,0.03,EUR,COMPLETATO,58.82
+Pagamento con carta,Attuale,2026-05-24 11:30:24,2026-05-25 02:40:43,EasyPark,-10.86,0.11,EUR,COMPLETATO,47.85
+Pagamento con carta,Attuale,2026-05-29 01:02:24,2026-05-30 20:33:59,Mooneygo,-8.20,0.00,EUR,COMPLETATO,39.65
+Pagamento con carta,Attuale,2026-06-01 07:22:44,2026-06-01 19:07:02,iTunes,-10.49,0.00,EUR,COMPLETATO,29.16
+Rimborso su carta,Attuale,2026-06-01 15:05:02,2026-06-02 11:06:21,Vinted,15.29,0.00,EUR,COMPLETATO,44.45
+Pagamento,Attuale,2026-06-02 11:22:08,2026-06-03 13:06:36,Octopus Energy Italia Srl,-38.23,0.00,EUR,COMPLETATO,6.22
+Pagamento con carta,Attuale,2026-06-05 03:34:51,2026-06-06 11:40:30,Mooneygo,-4.20,0.00,EUR,COMPLETATO,2.02
+Pagamento con carta,Attuale,2026-06-08 23:03:25,2026-06-09 15:58:25,Autolinee Toscane,-1.70,0.00,EUR,COMPLETATO,0.32
+Rimborso su carta,Attuale,2026-06-17 12:06:57,2026-06-19 02:50:16,Vinted,24.69,0.00,EUR,COMPLETATO,25.01
+Pagamento con carta,Attuale,2026-06-19 05:12:42,2026-06-19 16:08:28,Autolinee Toscane,-3.40,0.00,EUR,COMPLETATO,21.61
+Pagamento con carta,Attuale,2026-06-19 10:02:22,2026-06-20 13:16:51,Mooneygo,-19.40,0.00,EUR,COMPLETATO,2.21
+Ricarica,Attuale,2026-06-29 01:36:05,2026-06-29 01:36:05,Pagamento da ARRESTI PRISCILLA  ARRESTI ROBERTO,400.00,0.00,EUR,COMPLETATO,402.21
+Ricarica,Attuale,2026-06-29 09:10:47,2026-06-29 09:10:47,Pagamento da HELVETIA ITALIA ASSICURAZIONI SPA-HELVETIA ITALIA ASSICURAZIONI S.,280.00,0.00,EUR,COMPLETATO,682.21
+Pagamento con carta,Attuale,2026-06-29 08:16:59,2026-06-30 03:44:36,Aruba.it,-19.21,0.00,EUR,COMPLETATO,663.00
+Pagamento con carta,Attuale,2026-06-29 19:30:02,2026-06-30 10:27:22,Lidl,-6.88,0.00,EUR,COMPLETATO,656.12
+Pagamento con carta,Attuale,2026-06-30 03:15:15,2026-07-01 12:19:06,Mooneygo,-39.10,0.00,EUR,COMPLETATO,617.02
+Pagamento con carta,Attuale,2026-06-30 19:31:08,2026-07-01 13:32:36,Esselunga,-10.68,0.00,EUR,COMPLETATO,606.34
+Pagamento con carta,Attuale,2026-07-01 13:00:32,2026-07-02 13:25:08,mauro.mandagar,-84.01,0.00,EUR,COMPLETATO,522.33
+Pagamento con carta,Attuale,2026-07-02 18:52:30,2026-07-03 03:16:11,Vinted,-11.89,0.00,EUR,COMPLETATO,510.44
+Pagamento con carta,Attuale,2026-07-02 12:33:40,2026-07-03 09:22:09,Unes,-6.38,0.00,EUR,COMPLETATO,504.06
+Pagamento con carta,Attuale,2026-07-03 11:17:16,2026-07-04 11:58:44,Mooneygo,-1.50,0.00,EUR,COMPLETATO,502.56
+Pagamento con carta,Attuale,2026-07-05 11:14:13,2026-07-06 12:13:27,Rifugio Baita Adame',-8.00,0.00,EUR,COMPLETATO,494.56
+Pagamento con carta,Attuale,2026-07-05 12:49:37,2026-07-06 12:13:27,Rifugio Baita Adame',-10.00,0.00,EUR,COMPLETATO,484.56
+Pagamento con carta,Attuale,2026-07-05 23:29:35,2026-07-06 12:29:00,Vannia Ristorante Pizz,-4.50,0.00,EUR,COMPLETATO,480.06
+Pagamento con carta,Attuale,2026-07-06 13:14:40,2026-07-07 03:11:42,Eco Store,-14.90,0.00,EUR,COMPLETATO,465.16
+Pagamento con carta,Attuale,2026-07-06 09:40:39,2026-07-07 06:07:57,Rivendita 252,-5.80,0.00,EUR,COMPLETATO,459.36
+Pagamento con carta,Attuale,2026-07-06 20:04:35,2026-07-07 09:35:31,Esselunga,-5.90,0.00,EUR,COMPLETATO,453.46
+Pagamento con carta,Attuale,2026-07-06 13:08:10,2026-07-07 09:37:31,Unes,-9.52,0.00,EUR,COMPLETATO,443.94
+Pagamento,Attuale,2026-07-07 02:00:00,2026-07-07 13:08:11,Octopus Energy Italia Srl,-39.34,0.00,EUR,COMPLETATO,404.60
+Pagamento con carta,Attuale,2026-07-08 22:04:28,2026-07-09 09:18:03,The Smoke Di Cella Ale,-5.80,0.00,EUR,COMPLETATO,398.80
+Pagamento con carta,Attuale,2026-07-08 22:14:34,2026-07-09 09:32:13,Rapsody,-12.00,0.00,EUR,COMPLETATO,386.80
+Pagamento con carta,Attuale,2026-07-09 09:51:35,2026-07-10 05:42:21,Rivendita 252,-5.80,0.00,EUR,COMPLETATO,381.00
+Pagamento con carta,Attuale,2026-07-09 13:18:56,2026-07-10 10:41:51,Unes,-3.24,0.00,EUR,COMPLETATO,377.76
+Pagamento con carta,Attuale,2026-07-09 13:14:58,2026-07-10 13:27:46,Alice Pizza,-9.93,0.00,EUR,COMPLETATO,367.83
+Pagamento con carta,Attuale,2026-07-09 22:40:35,2026-07-10 13:28:47,Milanoarrampicata Asso,-3.00,0.00,EUR,COMPLETATO,364.83
+Pagamento con carta,Attuale,2026-07-09 20:06:24,2026-07-10 13:28:47,Milanoarrampicata Asso,-16.00,0.00,EUR,COMPLETATO,348.83
+Pagamento,Attuale,2026-07-10 19:19:25,2026-07-10 19:19:25,Al conto di investimento,-100.00,0.00,EUR,COMPLETATO,248.83
+Pagamento,Attuale,2026-07-10 20:11:02,2026-07-10 20:11:02,To Robo portfolio,-100.00,0.00,EUR,COMPLETATO,148.83
+Rimborso su carta,Attuale,2026-07-10 16:52:20,2026-07-12 03:20:09,Vinted,11.89,0.00,EUR,COMPLETATO,160.72
+Pagamento con carta,Attuale,2026-07-11 20:44:52,2026-07-13 09:51:14,Esselunga,-7.82,0.00,EUR,COMPLETATO,152.90
+Pagamento con carta,Attuale,2026-07-12 16:07:38,2026-07-13 10:02:45,Eni,-51.48,0.00,EUR,COMPLETATO,101.42
+Pagamento con carta,Attuale,2026-07-12 20:24:19,2026-07-13 10:15:14,The Smoke Di Cella Ale,-5.80,0.00,EUR,COMPLETATO,95.62
+Pagamento con carta,Attuale,2026-07-14 00:02:52,2026-07-14 05:48:59,Vinted,-0.10,0.00,EUR,COMPLETATO,95.52
+Pagamento con carta,Attuale,2026-07-13 20:11:57,2026-07-14 10:12:02,Esselunga,-5.58,0.00,EUR,COMPLETATO,89.94
+Pagamento con carta,Attuale,2026-07-13 12:59:48,2026-07-14 10:14:53,Unes,-5.82,0.00,EUR,COMPLETATO,84.12
+Pagamento con carta,Attuale,2026-07-14 16:02:10,2026-07-15 03:03:33,Vinted,-24.23,0.00,EUR,COMPLETATO,59.89
+Pagamento con carta,Attuale,2026-07-14 16:03:51,2026-07-15 03:03:33,Vinted,-15.83,0.00,EUR,COMPLETATO,44.06
+Rimborso su carta,Attuale,2026-07-14 16:03:10,2026-07-16 03:11:12,Vinted,24.23,0.00,EUR,COMPLETATO,68.29
+Pagamento con carta,Attuale,2026-07-15 20:24:37,2026-07-16 12:10:12,Esselunga,-11.63,0.00,EUR,COMPLETATO,56.66
+Pagamento con carta,Attuale,2026-07-16 19:07:59,2026-07-17 09:43:18,Ferrante Cristina,-5.80,0.00,EUR,COMPLETATO,50.86
+Pagamento con carta,Attuale,2026-07-17 01:16:11,2026-07-18 11:20:44,Mooneygo,-10.60,0.00,EUR,COMPLETATO,40.26
+Pagamento con carta,Attuale,2026-07-18 01:56:01,2026-07-20 02:46:09,EasyPark,-12.06,0.12,EUR,COMPLETATO,28.08
+Pagamento con carta,Attuale,2026-07-19 10:06:03,2026-07-20 10:02:01,Albergo Miramonti,-20.20,0.00,EUR,COMPLETATO,7.88
+Ricarica,Attuale,2026-07-24 18:22:52,2026-07-24 18:22:52,Pagamento da GIORGIO MESSINA,500.00,0.00,EUR,COMPLETATO,507.88
+Pagamento con carta,Attuale,2026-07-24 18:23:09,2026-07-25 10:46:17,Bar tabacchi riviera,-5.80,0.00,EUR,COMPLETATO,502.08
+Pagamento con carta,Attuale,2026-07-24 06:48:50,2026-07-25 13:20:04,Mooneygo,-4.10,0.00,EUR,COMPLETATO,497.98
+Pagamento con carta,Attuale,2026-07-24 21:03:55,2026-07-25 13:46:48,Arrowhead Industries .,-12.50,0.00,EUR,COMPLETATO,485.48
+Pagamento con carta,Attuale,2026-07-25 10:30:22,2026-07-27 03:03:39,Taglio Elite,-6.60,0.00,EUR,COMPLETATO,478.88
+Pagamento con carta,Attuale,2026-07-26 22:55:12,2026-07-27 05:50:58,Social Green Way Impre,-6.00,0.00,EUR,COMPLETATO,472.88
+Pagamento con carta,Attuale,2026-07-25 20:04:26,2026-07-27 09:19:27,Esselunga,-2.01,0.00,EUR,COMPLETATO,470.87
+Pagamento con carta,Attuale,2026-07-26 21:29:15,2026-07-27 09:47:15,Tab Fuel,-30.38,0.00,EUR,COMPLETATO,440.49
+Pagamento,Attuale,2026-07-27 02:00:00,2026-07-27 13:10:07,Octopus Energy Italia Srl,-42.22,0.00,EUR,COMPLETATO,398.27
+Pagamento con carta,Attuale,2026-07-28 20:15:02,2026-07-29 13:12:37,Milanoarrampicata Asso,-6.00,0.00,EUR,COMPLETATO,392.27
+Pagamento con carta,Attuale,2026-07-29 17:45:27,2026-07-30 05:51:27,Oliunid Shop Milano,-35.90,0.00,EUR,COMPLETATO,356.37
+Pagamento con carta,Attuale,2026-07-29 17:29:41,2026-07-30 05:53:42,dm drogerie,-18.89,0.00,EUR,COMPLETATO,337.48
+Pagamento con carta,Attuale,2026-07-29 12:57:52,2026-07-30 09:54:56,Esselunga,-5.64,0.00,EUR,COMPLETATO,331.84
+Pagamento con carta,Attuale,2026-07-29 18:38:35,2026-07-30 10:27:06,Pogue Mahone's Irish Pub,-1.00,0.00,EUR,COMPLETATO,330.84
+Pagamento con carta,Attuale,2026-07-29 20:21:52,2026-07-30 10:27:06,Pogue Mahone's Irish Pub,-6.00,0.00,EUR,COMPLETATO,324.84
+Pagamento con carta,Attuale,2026-07-29 21:28:12,2026-07-30 10:27:06,Pogue Mahone's Irish Pub,-5.00,0.00,EUR,COMPLETATO,319.84
+Pagamento con carta,Attuale,2026-07-30 12:59:51,2026-07-31 10:03:55,Esselunga,-7.78,0.00,EUR,COMPLETATO,312.06
+Pagamento con carta,Attuale,2026-07-30 20:37:42,2026-07-31 10:10:50,Autogrill,-1.50,0.00,EUR,COMPLETATO,310.56
+Pagamento con carta,Attuale,2026-07-31 17:42:57,2026-08-01 03:06:49,Grazie Da Obi,-1.29,0.00,EUR,COMPLETATO,309.27
+Pagamento con carta,Attuale,2026-07-31 01:49:14,2026-08-01 11:30:26,Mooneygo,-9.50,0.00,EUR,COMPLETATO,299.77
+Pagamento con carta,Attuale,2026-07-31 18:13:07,2026-08-01 12:22:41,Coop,-3.56,0.00,EUR,COMPLETATO,296.21
+Pagamento con carta,Attuale,2026-08-01 16:40:02,2026-08-02 09:16:25,Coop,-45.91,0.00,EUR,COMPLETATO,250.30
+Pagamento con carta,Attuale,2026-08-02 19:34:35,2026-08-03 09:36:08,Ads Secchia Est,-5.80,0.00,EUR,COMPLETATO,244.50
+Pagamento con carta,Attuale,2026-08-02 17:21:52,2026-08-03 09:56:10,ENGO,-35.37,0.00,EUR,COMPLETATO,209.13
+Pagamento con carta,Attuale,2026-08-02 18:17:17,2026-08-03 13:25:37,IperTosano,-9.33,0.00,EUR,COMPLETATO,199.80
+Pagamento con carta,Attuale,2026-08-03 21:26:20,2026-08-04 02:55:39,TAP Srl,-4.50,0.00,EUR,COMPLETATO,195.30
+Pagamento con carta,Attuale,2026-08-03 20:17:14,2026-08-04 02:55:39,TAP Srl,-8.50,0.00,EUR,COMPLETATO,186.80
+Pagamento con carta,Attuale,2026-08-03 17:08:34,2026-08-04 06:02:00,Libreria Della Natura,-10.00,0.00,EUR,COMPLETATO,176.80
+Pagamento con carta,Attuale,2026-08-03 23:14:53,2026-08-04 06:08:53,Carrefour,-5.44,0.00,EUR,COMPLETATO,171.36
+Pagamento con carta,Attuale,2026-08-03 12:57:30,2026-08-04 09:50:13,Esselunga,-7.20,0.00,EUR,COMPLETATO,164.16
+Pagamento con carta,Attuale,2026-08-04 21:16:10,2026-08-05 03:15:25,Impronta Birraia,-3.50,0.00,EUR,COMPLETATO,160.66
+Pagamento con carta,Attuale,2026-08-04 13:00:18,2026-08-05 10:17:35,Esselunga,-8.01,0.00,EUR,COMPLETATO,152.65
+Pagamento con carta,Attuale,2026-08-05 17:16:56,2026-08-06 03:17:28,Vinted,-24.10,0.00,EUR,COMPLETATO,128.55
+Pagamento con carta,Attuale,2026-08-05 14:23:15,2026-08-06 13:16:47,Esselunga,-15.10,0.00,EUR,COMPLETATO,113.45
+Pagamento con carta,Attuale,2026-08-06 20:28:25,2026-08-07 10:25:27,Unes,-11.08,0.00,EUR,COMPLETATO,102.37
+Pagamento con carta,Attuale,2026-08-07 19:03:57,2026-08-08 10:19:19,Tab Fuel,-41.77,0.00,EUR,COMPLETATO,60.60
+Pagamento con carta,Attuale,2026-08-07 05:56:07,2026-08-08 12:43:49,Mooneygo,-50.90,0.00,EUR,COMPLETATO,9.70
+Ricarica,Attuale,2026-08-09 16:55:16,2026-08-09 16:55:17,Pagamento da GIORGIO MESSINA,200.00,0.00,EUR,COMPLETATO,209.70
+Pagamento con carta,Attuale,2026-08-09 16:58:46,2026-08-10 03:28:18,La Sportiva Factory Store,-112.00,0.00,EUR,COMPLETATO,97.70
+Pagamento con carta,Attuale,2026-08-09 14:13:06,2026-08-10 10:20:05,Poli,-4.37,0.00,EUR,COMPLETATO,93.33
+Pagamento con carta,Attuale,2026-08-11 18:42:41,2026-08-12 05:53:18,Coop,-8.62,0.00,EUR,COMPLETATO,84.71
+Pagamento con carta,Attuale,2026-08-11 10:43:47,2026-08-12 05:53:18,Coop,-3.97,0.00,EUR,COMPLETATO,80.74
+Pagamento con carta,Attuale,2026-08-12 11:34:40,2026-08-13 09:54:27,Poli,-7.51,0.00,EUR,COMPLETATO,73.23
+Pagamento con carta,Attuale,2026-08-13 19:19:06,2026-08-14 13:02:35,Poli,-4.54,0.00,EUR,COMPLETATO,68.69
+Pagamento con carta,Attuale,2026-08-14 20:58:52,2026-08-15 09:01:36,Terrazza Lagorai Pizze,-12.00,0.00,EUR,COMPLETATO,56.69
+Pagamento con carta,Attuale,2026-08-14 00:54:59,2026-08-15 11:05:26,Mooneygo,-20.30,0.00,EUR,COMPLETATO,36.39
+Pagamento con carta,Attuale,2026-08-15 09:20:42,2026-08-17 03:19:33,Coop,-27.37,0.00,EUR,COMPLETATO,9.02
+Pagamento con carta,Attuale,2026-08-18 12:05:08,2026-08-19 09:40:19,Coop,-7.13,0.00,EUR,COMPLETATO,1.89
+Ricarica,Attuale,2026-08-19 20:55:16,2026-08-19 20:55:17,"Pagamento da MESSINA ROBERTO,PRESOTTO ROSSANA",1100.00,0.00,EUR,COMPLETATO,1101.89
+Pagamento con carta,Attuale,2026-08-19 23:03:32,2026-08-20 09:37:55,Terrazza Lagorai Pizze,-38.00,0.00,EUR,COMPLETATO,1063.89
+Pagamento con carta,Attuale,2026-08-20 12:23:01,2026-08-21 03:13:45,Google,-2.08,0.00,EUR,COMPLETATO,1061.81
+Pagamento con carta,Attuale,2026-08-20 21:53:45,2026-08-21 13:29:49,Agri Grill,-52.00,0.00,EUR,COMPLETATO,1009.81
+Pagamento con carta,Attuale,2026-08-20 23:57:45,2026-08-21 13:32:43,Albergo Antico,-6.00,0.00,EUR,COMPLETATO,1003.81
+Pagamento con carta,Attuale,2026-08-21 08:15:29,2026-08-22 13:31:50,Mooneygo,-5.30,0.00,EUR,COMPLETATO,998.51
+Pagamento con carta,Attuale,2026-08-22 18:13:28,2026-08-24 02:52:43,Coop,-7.18,0.00,EUR,COMPLETATO,991.33
+Pagamento con carta,Attuale,2026-08-23 11:38:33,2026-08-24 09:16:37,Strada Provinciale 29,-5.95,0.00,EUR,COMPLETATO,985.38
+Pagamento con carta,Attuale,2026-08-23 11:32:45,2026-08-24 09:16:37,Strada Provinciale 29,-1.40,0.00,EUR,COMPLETATO,983.98
+Pagamento con carta,Attuale,2026-08-24 14:52:02,2026-08-25 03:28:17,Anthropic,-21.96,0.00,EUR,COMPLETATO,962.02
+Pagamento con carta,Attuale,2026-08-25 18:59:17,2026-08-26 12:52:40,Il Gigante,-12.69,0.00,EUR,COMPLETATO,949.33
+Pagamento,Attuale,2026-08-28 02:00:00,2026-08-28 13:06:14,Octopus Energy Italia Srl,-46.21,0.00,EUR,COMPLETATO,903.12
+Pagamento con carta,Attuale,2026-08-28 12:40:19,2026-08-29 06:02:54,Tab Fuel,-54.39,0.00,EUR,COMPLETATO,848.73
+Pagamento con carta,Attuale,2026-08-28 11:34:40,2026-08-29 06:03:42,Belma Clean Snc Di Bel,-14.40,0.00,EUR,COMPLETATO,834.33
+Pagamento con carta,Attuale,2026-08-28 10:05:38,2026-08-29 11:13:15,Mooneygo,-18.80,0.00,EUR,COMPLETATO,815.53
+Pagamento con carta,Attuale,2026-08-28 12:24:30,2026-08-29 12:34:20,Media World,-69.99,0.00,EUR,COMPLETATO,745.54
+Pagamento con carta,Attuale,2026-08-28 17:44:03,2026-08-29 12:42:44,Sir Canapa Di Russo Gi,-39.50,0.00,EUR,COMPLETATO,706.04
+Pagamento con carta,Attuale,2026-08-28 12:01:23,2026-08-29 12:44:27,Lloa,-2.90,0.00,EUR,COMPLETATO,703.14
+Pagamento con carta,Attuale,2026-08-29 15:54:01,2026-08-30 05:52:06,Tabaccheria Galleria B,-5.80,0.00,EUR,COMPLETATO,697.34
+Pagamento con carta,Attuale,2026-08-29 15:51:20,2026-08-30 11:13:14,Dan John,-40.79,0.00,EUR,COMPLETATO,656.55
+Pagamento con carta,Attuale,2026-08-31 12:10:44,2026-09-01 05:50:07,Rivendita 252,-5.80,0.00,EUR,COMPLETATO,650.75
+Pagamento con carta,Attuale,2026-08-31 13:08:31,2026-09-01 12:31:09,Esselunga,-3.80,0.00,EUR,COMPLETATO,646.95
+Pagamento con carta,Attuale,2026-09-01 13:25:35,2026-09-02 13:17:08,Esselunga,-8.48,0.00,EUR,COMPLETATO,638.47
+Pagamento con carta,Attuale,2026-09-02 19:00:09,,Tabacchi Frisella Denn,-5.80,0.00,EUR,In sospeso,
+Pagamento con carta,Attuale,2026-09-02 19:12:40,,Milanoarrampicata Asso,-16.00,0.00,EUR,In sospeso,
+Pagamento con carta,Attuale,2026-09-02 22:46:52,,Milanoarrampicata Asso,-5.00,0.00,EUR,In sospeso,
