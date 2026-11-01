@@ -20,7 +20,7 @@
     .nav-shell { position: sticky; top: 0; z-index: 60; padding: 12px var(--gutter) 0; }
     .nav-shell .ds-nav { max-width: var(--maxw); margin: 0 auto; }
     .nav-shell .ds-nav__links { gap: clamp(16px, 2.4vw, 30px); }
-    @media (max-width: 760px) { .nav-shell .ds-nav__links { display: none; } }
+    @media (max-width: 900px) { .nav-shell .ds-nav__links { display: none; } }
 
     /* Hero */
     .hero { padding: clamp(56px, 9vw, 120px) 0 clamp(36px, 5vw, 60px); }
@@ -73,7 +73,17 @@
     .group + .group { margin-top: clamp(48px, 7vw, 80px); }
     .group .ds-section-head { margin-bottom: clamp(22px, 3vw, 32px); }
     .ds-card-grid--two { grid-template-columns: repeat(2, 1fr); }
-    @media (max-width: 720px) { .ds-card-grid--two { grid-template-columns: 1fr; } }
+    .ds-card-grid--three { grid-template-columns: repeat(3, 1fr); }
+    @media (max-width: 980px) { .ds-card-grid--three { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 720px) { .ds-card-grid--two, .ds-card-grid--three { grid-template-columns: 1fr; } }
+
+    /* Course summary: one wide card, thumb beside the text */
+    .ds-card--wide { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: 0 clamp(20px, 3vw, 40px); align-items: center; }
+    .ds-card--wide .ds-card__thumb { grid-row: 1 / span 6; height: 100%; min-height: 220px; margin-bottom: 0; }
+    @media (max-width: 720px) {
+      .ds-card--wide { display: block; }
+      .ds-card--wide .ds-card__thumb { height: 140px; min-height: 0; margin-bottom: 20px; }
+    }
 
     /* Card thumbs: --sheet = ruled reference paper, --tool = solid accent */
     .kind-thumb { height: 140px; display: flex; align-items: center; justify-content: center; }
@@ -86,6 +96,7 @@
       color: var(--ink);
     }
     .kind-thumb--tool { background: var(--accent); color: #fff; }
+    .kind-thumb--course { background: var(--ink); color: #fff; }
     .kind-thumb__icon { width: 40%; max-width: 140px; height: auto; }
     .kind {
       position: absolute;
@@ -100,6 +111,7 @@
     }
     .kind-thumb--sheet .kind { left: 38px; background: var(--ink); color: #fff; }
     .kind-thumb--tool .kind { background: #fff; color: var(--accent-ink); }
+    .kind-thumb--course .kind { background: var(--accent); color: #fff; }
 
     footer.page { padding-block: clamp(32px, 5vw, 48px); }
   </style>
@@ -111,8 +123,10 @@
       <div class="ds-nav__inner">
         <a href="./" class="ds-nav__mark"><span class="ds-nav__dot"></span>GioRadio</a>
         <div class="ds-nav__links">
+          <a href="Riassunto%20Corso%20Radioamatori.html">Riassunto</a>
           <a href="Componenti.html">Componenti</a>
           <a href="Schemi.html">Schemi</a>
+          <a href="Codice%20Q.html">Codice Q</a>
           <a href="propagazione-ionosferica.html">Propagazione</a>
           <a href="palinsesti-radio-milano.html">Palinsesti</a>
         </div>
@@ -125,7 +139,7 @@
       <header class="hero">
         <span class="ds-eyebrow"><span class="ds-eyebrow__idx">00</span> Appunti di studio</span>
         <h1>Radiotecnica, per ripassare<span class="period">.</span></h1>
-        <p class="hero__sub">Cheatsheet e piccoli strumenti interattivi su componenti, apparati e propagazione delle onde radio.</p>
+        <p class="hero__sub">Il riassunto del corso, cheatsheet e piccoli strumenti interattivi su componenti, apparati, codice Q e propagazione delle onde radio.</p>
       </header>
 
       <section class="note" aria-labelledby="note-title">
@@ -142,18 +156,37 @@
 
         <section class="group">
           <div class="ds-section-head">
-            <span class="ds-eyebrow"><span class="ds-eyebrow__idx">01</span> Cheatsheet</span>
+            <span class="ds-eyebrow"><span class="ds-eyebrow__idx">01</span> Corso</span>
+            <h2 class="ds-section-title">Da ripassare.</h2>
+            <p class="ds-section-sub">Il corso completo, lezione per lezione.</p>
+          </div>
+          <a class="ds-card ds-card--wide" href="Riassunto%20Corso%20Radioamatori.html">
+            <div class="ds-card__thumb kind-thumb kind-thumb--course">
+              <span class="kind">Riassunto</span>
+              <svg class="kind-thumb__icon" viewBox="0 0 64 32" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M32 7C25 3 14 3 6 5v23c8-2 19-2 26 2 7-4 18-4 26-2V5c-8-2-19-2-26 2z"/><path d="M32 7v23"/></g></svg>
+            </div>
+            <span class="ds-card__num">01 / ARI Cernusco</span>
+            <h3 class="ds-card__title">Riassunto Corso Radioamatori 2025</h3>
+            <div class="ds-card__tags"><span class="ds-tag">19 lezioni</span><span class="ds-tag">Glossario A–Z</span><span class="ds-tag">Ricerca</span></div>
+            <p class="ds-card__desc">Le 19 lezioni del corso nell'ordine delle slide, divise in paragrafi: formule, punti chiave e un glossario dei termini, con la ricerca per argomento.</p>
+            <span class="ds-card__cta">Apri il riassunto →</span>
+          </a>
+        </section>
+
+        <section class="group">
+          <div class="ds-section-head">
+            <span class="ds-eyebrow"><span class="ds-eyebrow__idx">02</span> Cheatsheet</span>
             <h2 class="ds-section-title">Da consultare.</h2>
             <p class="ds-section-sub">Schede di riferimento: cosa sapere, in poco spazio.</p>
           </div>
-          <div class="ds-card-grid ds-card-grid--two">
+          <div class="ds-card-grid ds-card-grid--three">
 
             <a class="ds-card" href="Componenti.html">
               <div class="ds-card__thumb kind-thumb kind-thumb--sheet">
                 <span class="kind">Cheatsheet</span>
                 <svg class="kind-thumb__icon" viewBox="0 0 64 32" aria-hidden="true"><path d="M2 16h12l3-7 6 14 6-14 6 14 6-14 3 7h18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/></svg>
               </div>
-              <span class="ds-card__num">01 / Componenti</span>
+              <span class="ds-card__num">02 / Componenti</span>
               <h3 class="ds-card__title">Componenti di radiotecnica</h3>
               <div class="ds-card__tags"><span class="ds-tag">Passivi</span><span class="ds-tag">Diodi</span><span class="ds-tag">Transistor</span></div>
               <p class="ds-card__desc">Dalla resistenza al MOSFET: simbolo, unità di misura, formule e parametri da conoscere per ogni componente.</p>
@@ -165,10 +198,22 @@
                 <span class="kind">Cheatsheet</span>
                 <svg class="kind-thumb__icon" viewBox="0 0 64 32" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.2"><rect x="2" y="9" width="14" height="14" rx="2"/><rect x="25" y="9" width="14" height="14" rx="2"/><rect x="48" y="9" width="14" height="14" rx="2"/><path d="M16 16h9M39 16h9"/></g></svg>
               </div>
-              <span class="ds-card__num">02 / HAREC</span>
+              <span class="ds-card__num">03 / HAREC</span>
               <h3 class="ds-card__title">Schemi a blocchi</h3>
               <div class="ds-card__tags"><span class="ds-tag">AM · FM · SSB</span><span class="ds-tag">CW · RTTY</span></div>
               <p class="ds-card__desc">Trasmettitori e ricevitori per modo di emissione: clicca un blocco per vedere come si costruisce e le formule da sapere.</p>
+              <span class="ds-card__cta">Apri il cheatsheet →</span>
+            </a>
+
+            <a class="ds-card" href="Codice%20Q.html">
+              <div class="ds-card__thumb kind-thumb kind-thumb--sheet">
+                <span class="kind">Cheatsheet</span>
+                <svg class="kind-thumb__icon" viewBox="0 0 64 32" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M2 12h4M10 12h10M2 20h10M16 20h4"/><text x="25" y="22" font-family="ui-monospace, monospace" font-size="14" fill="currentColor" stroke="none">QR?</text></g></svg>
+              </div>
+              <span class="ds-card__num">04 / ITU</span>
+              <h3 class="ds-card__title">Codice Q</h3>
+              <div class="ds-card__tags"><span class="ds-tag">QRA–QUZ</span><span class="ds-tag">Quiz</span></div>
+              <p class="ds-card__desc">La tabella delle serie QR, QS, QT e QU con i significati, poi due quiz per mettersi alla prova: dalla sigla al significato e viceversa.</p>
               <span class="ds-card__cta">Apri il cheatsheet →</span>
             </a>
 
@@ -177,7 +222,7 @@
 
         <section class="group">
           <div class="ds-section-head">
-            <span class="ds-eyebrow"><span class="ds-eyebrow__idx">02</span> Strumenti</span>
+            <span class="ds-eyebrow"><span class="ds-eyebrow__idx">03</span> Strumenti</span>
             <h2 class="ds-section-title">Da provare.</h2>
             <p class="ds-section-sub">Piccoli strumenti interattivi per vedere i concetti in azione.</p>
           </div>
@@ -188,7 +233,7 @@
                 <span class="kind">Strumento</span>
                 <svg class="kind-thumb__icon" viewBox="0 0 64 32" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M2 30h60"/><path d="M8 30Q20 2 32 30T56 30" stroke-dasharray="0.1 5"/><path d="M8 30Q20 2 32 30"/></g></svg>
               </div>
-              <span class="ds-card__num">03 / RF</span>
+              <span class="ds-card__num">05 / RF</span>
               <h3 class="ds-card__title">Propagazione ionosferica</h3>
               <div class="ds-card__tags"><span class="ds-tag">Strati D · E · F</span><span class="ds-tag">Bande</span></div>
               <p class="ds-card__desc">Scegli bande, potenza e attività solare e guarda come le onde vengono riflesse, assorbite o sfuggono nello spazio.</p>
@@ -200,10 +245,10 @@
                 <span class="kind">Strumento</span>
                 <svg class="kind-thumb__icon" viewBox="0 0 64 32" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M2 8h22M30 8h32M2 16h12M20 16h28M54 16h8M2 24h34M42 24h20"/><path d="M40 3v26" stroke-width="1.6"/></g></svg>
               </div>
-              <span class="ds-card__num">04 / FM Milano</span>
+              <span class="ds-card__num">06 / FM Milano</span>
               <h3 class="ds-card__title">Palinsesti radio Milano</h3>
-              <div class="ds-card__tags"><span class="ds-tag">FM</span><span class="ds-tag">Lunedì–Venerdì</span></div>
-              <p class="ds-card__desc">Chi va in onda, e quando: i palinsesti feriali delle principali radio FM di Milano, ora per ora.</p>
+              <div class="ds-card__tags"><span class="ds-tag">FM</span><span class="ds-tag">Oggi + 2 giorni</span></div>
+              <p class="ds-card__desc">Chi va in onda, e quando: i palinsesti delle principali radio FM di Milano per oggi e i due giorni successivi, aggiornati dai siti delle radio.</p>
               <span class="ds-card__cta">Apri lo strumento →</span>
             </a>
 
