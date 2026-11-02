@@ -1,8 +1,8 @@
 {
- "updated": "2026-11-01T19:10:04+00:00",
+ "updated": "2026-11-02T11:36:06+00:00",
  "note": "Generato dal palinsesto feriale inserito a mano; aggiornato da _tools/gioradio/palinsesti.py",
  "stations": [
-  {"name": "Radio Deejay", "group": "GEDI", "freq": "99.7", "source": "https://www.deejay.it", "updated": "2026-11-01T19:10:04+00:00",
+  {"name": "Radio Deejay", "group": "GEDI", "freq": "99.7", "source": "https://www.deejay.it", "updated": "2026-11-02T11:36:06+00:00",
    "programs": [
     [5.0, 6.0, "Deejay Chiama Italia", ["Linus", "Nicola Savino"]],
     [6.0, 7.5, "Deejay 6 Tu", ["Andrea Marchesi", "Michele Mainardi"]],
@@ -37,7 +37,7 @@
      [24.0, 25, "Podcast", []]
     ],
     "mar": [
-     [5.0, 6.0, "Deejay Chiama Italia", ["Linus", "Nicola Savino"]],
+     [5.0, 6.0, "Pecchia e Damiani", ["Davide Damiani", "Federico Pecchia"]],
      [6.0, 7.5, "Deejay 6 Tu", ["Andrea Marchesi", "Michele Mainardi"]],
      [7.5, 9.0, "Chiamate Roma Triuno Triuno", ["Trio Medusa"]],
      [9.0, 10.0, "Il Volo Del Mattino", ["Fabio Volo"]],
@@ -129,12 +129,12 @@
      [16.0, 18.0, "Pecchia e Damiani", ["Davide Damiani", "Federico Pecchia"]],
      [18.0, 20.0, "Umberto e Damiano", ["Umberto e Damiano"]],
      [20.0, 22.0, "GiBi Show", ["Guido Bagatta"]],
-     [22.0, 24.0, "Deejay Training Center", ["Linus"]],
+     [22.0, 24.0, "Deejay On The Road", ["Frank"]],
      [24.0, 25, "La Bomba", ["Luciana Littizzetto", "Vic"]]
     ]
    }
   },
-  {"name": "Radio 105", "group": "RadioMediaset", "freq": "99.1 · 98.9", "source": "https://www.105.net/palinsesto/", "updated": "2026-11-01T19:10:04+00:00",
+  {"name": "Radio 105", "group": "RadioMediaset", "freq": "99.1 · 98.9", "source": "https://www.105.net/palinsesto/", "updated": "2026-11-02T11:36:06+00:00",
    "programs": [
     [5, 6.0, "105 Music & Cars", ["Dario Spada", "Lodovica Comello"]],
     [6.0, 7.0, "Avanti avanti c’è posto!", []],
@@ -221,7 +221,7 @@
      [14.0, 16.0, "Lo Zoo di 105", ["Marco Mazzoli", "Noise", "Alisei", "Co."]],
      [16.0, 18.0, "105 Music & Cars", ["Dario Spada", "Lodovica Comello"]],
      [18.0, 20.0, "La Carovana di 105", ["Paolino", "Martin", "Linda Pani"]],
-     [20.0, 21.0, "105 Mi Casa", ["Max Brigante"]],
+     [20.0, 21.0, "Mi Casa Live", ["Max Brigante"]],
      [21.0, 23.0, "105 Night Express", ["Alessandro Sansone", "Lucilla Agosti"]],
      [23.0, 24.0, "105 Swipe Up RMX", []],
      [24.0, 25, "105 InDaKlubb", ["Andrea Belli"]]
@@ -257,7 +257,7 @@
     ]
    }
   },
-  {"name": "RTL 102.5", "group": "RTL", "freq": "101.5 · 92.2", "source": "https://www.rtl.it", "updated": "2026-11-01T19:10:04+00:00",
+  {"name": "RTL 102.5", "group": "RTL", "freq": "101.5 · 92.2", "source": "https://www.rtl.it", "updated": "2026-11-02T11:36:06+00:00",
    "programs": [
     [5, 6.0, "Ma la notte no", []],
     [6.0, 9.0, "Non Stop News (Lun-Gio)", []],
@@ -316,8 +316,8 @@
      [11.0, 13.0, "W l'Italia", []],
      [13.0, 15.0, "Miseria e nobiltà", []],
      [15.0, 17.0, "The Flight", []],
-     [17.0, 19.0, "Password", []],
-     [19.0, 21.0, "Protagonisti", []],
+     [17.0, 18.75, "Password", []],
+     [18.75, 21.0, "Noi dire Conference League", []],
      [21.0, 24.0, "X Factor alla radio", []],
      [24.0, 25, "I Nottambuli", []]
     ],
@@ -363,7 +363,7 @@
     ]
    }
   },
-  {"name": "Radio Italia", "group": "Radio Italia", "freq": "98.4 · 106.5", "source": "https://www.radioitalia.it/palinsesto", "updated": "2026-11-01T19:10:04+00:00",
+  {"name": "Radio Italia", "group": "Radio Italia", "freq": "98.4 · 106.5", "source": "https://www.radioitalia.it/palinsesto", "updated": "2026-11-02T11:36:06+00:00",
    "programs": [
     [5, 7.0, "On Air", []],
     [7.0, 9.0, "Buone Nuove", []],
@@ -462,7 +462,7 @@
     ]
    }
   },
-  {"name": "Radio Monte Carlo", "group": "RadioMediaset", "freq": "105.3", "source": "https://www.radiomontecarlo.net/palinsesto/", "updated": "2026-11-01T19:10:04+00:00",
+  {"name": "Radio Monte Carlo", "group": "RadioMediaset", "freq": "105.3", "source": "https://www.radiomontecarlo.net/palinsesto/", "updated": "2026-11-02T11:36:06+00:00",
    "programs": [
     [5.0, 7.0, "Breaking News", []],
     [7.0, 10.0, "Bonjour Bonjour", []],
@@ -558,7 +558,7 @@
     ]
    }
   },
-  {"name": "R101", "group": "RadioMediaset", "freq": "100.7", "source": "https://www.r101.it/palinsesto/", "updated": "2026-11-01T19:10:04+00:00",
+  {"name": "R101", "group": "RadioMediaset", "freq": "100.7", "source": "https://www.r101.it/palinsesto/", "updated": "2026-11-02T11:36:06+00:00",
    "programs": [
     [5.0, 7.0, "Buongiornissimo", ["Riccardo Russo"]],
     [7.0, 9.0, "La Banda di R101", ["Chiara Tortorella", "Riccardo Russo", "Cristiano Militello", "Paolo Dini", "Leonardo Fiaschi"]],
@@ -623,8 +623,7 @@
      [14.0, 16.0, "Good Times", ["Melita Toniolo", "Marco Santini"]],
      [16.0, 18.0, "Cari Amici di R101", ["Emanuela Maisano"]],
      [18.0, 20.0, "I Trafficanti di R101", ["Dani", "Ka", "Pedro"]],
-     [20.0, 21.0, "R101 Made in Italy", []],
-     [21.0, 24.0, "Enjoy The Weekend", ["Leonardo Regazzoni"]],
+     [20.0, 24.0, "Enjoy The Weekend", ["Leonardo Regazzoni"]],
      [24.0, 25, "R101 Dance Party", ["Regina"]]
     ],
     "sab": [
@@ -634,7 +633,7 @@
      [10.0, 13.0, "Quelli del Weekend", ["Fil Grondona"]],
      [13.0, 16.0, "Belli Felici", ["Rebecca Staffelli"]],
      [16.0, 20.0, "Enjoy The Weekend", ["Aldo Paolini"]],
-     [20.0, 24.0, "R101 Halloween Party", ["Jolanda Renga", "Leonardo Regazzoni"]],
+     [20.0, 24.0, "Nel Chill", ["Leonardo Regazzoni", "Jolanda Renga"]],
      [24.0, 25, "R101 Dance Party", ["Regina"]]
     ],
     "dom": [
@@ -649,7 +648,7 @@
     ]
    }
   },
-  {"name": "Radio Capital", "group": "GEDI", "freq": "90.1 · 90.3", "source": "https://www.capital.it", "updated": "2026-11-01T19:10:04+00:00",
+  {"name": "Radio Capital", "group": "GEDI", "freq": "90.1 · 90.3", "source": "https://www.capital.it", "updated": "2026-11-02T11:36:06+00:00",
    "programs": [
     [5, 6.0, "CAPITAL BY NIGHT", []],
     [6.0, 7.0, "Buongiorno Capital", ["Camilla Fraschini", "Francesco Martinelli"]],
@@ -756,11 +755,11 @@
     ]
    }
   },
-  {"name": "m2o", "group": "GEDI", "freq": "91.7 · 93.1", "source": "https://www.m2o.it/palinsesto/", "updated": "2026-11-01T19:10:04+00:00",
+  {"name": "m2o", "group": "GEDI", "freq": "91.7 · 93.1", "source": "https://www.m2o.it/palinsesto/", "updated": "2026-11-02T11:36:06+00:00",
    "programs": [
     [6.0, 9.0, "Il morning show di m2o con Walter Pizzulli", []],
     [9.0, 12.0, "Davide Rizzi", []],
-    [12.0, 14.0, "Patrizia Prinzivalli", []],
+    [12.0, 14.0, "Isabella", []],
     [14.0, 17.0, "Ilario", []],
     [17.0, 19.0, "Albertino Everyday", []],
     [19.0, 21.0, "Andrea Mattei", []],
@@ -770,7 +769,7 @@
     "lun": [
      [6.0, 9.0, "Il morning show di m2o con Walter Pizzulli", []],
      [9.0, 12.0, "Davide Rizzi", []],
-     [12.0, 14.0, "Patrizia Prinzivalli", []],
+     [12.0, 14.0, "Isabella", []],
      [14.0, 17.0, "Ilario", []],
      [17.0, 19.0, "Albertino Everyday", []],
      [19.0, 21.0, "Andrea Mattei", []],
@@ -778,8 +777,8 @@
     ],
     "mar": [
      [6.0, 9.0, "Il morning show di m2o con Walter Pizzulli", []],
-     [9.0, 12.0, "Giorgio Dazzi", []],
-     [12.0, 14.0, "Patrizia Prinzivalli", []],
+     [9.0, 12.0, "Davide Rizzi", []],
+     [12.0, 14.0, "Isabella", []],
      [14.0, 17.0, "Ilario", []],
      [17.0, 19.0, "Albertino Everyday", []],
      [19.0, 21.0, "Andrea Mattei", []],
@@ -788,7 +787,7 @@
     "mer": [
      [6.0, 9.0, "Il morning show di m2o con Walter Pizzulli", []],
      [9.0, 12.0, "Davide Rizzi", []],
-     [12.0, 14.0, "Patrizia Prinzivalli", []],
+     [12.0, 14.0, "Isabella", []],
      [14.0, 17.0, "Ilario", []],
      [17.0, 19.0, "Albertino Everyday", []],
      [19.0, 21.0, "Andrea Mattei", []],
@@ -797,7 +796,7 @@
     "gio": [
      [6.0, 9.0, "Il morning show di m2o con Walter Pizzulli", []],
      [9.0, 12.0, "Davide Rizzi", []],
-     [12.0, 14.0, "Patrizia Prinzivalli", []],
+     [12.0, 14.0, "Isabella", []],
      [14.0, 17.0, "Ilario", []],
      [17.0, 19.0, "Albertino Everyday", []],
      [19.0, 21.0, "Andrea Mattei", []],
@@ -806,8 +805,7 @@
     "ven": [
      [6.0, 9.0, "Il morning show di m2o con Walter Pizzulli", []],
      [9.0, 12.0, "Davide Rizzi", []],
-     [12.0, 12.5, "Isabella", []],
-     [12.5, 14.0, "Patrizia Prinzivalli", []],
+     [12.0, 14.0, "Isabella", []],
      [14.0, 17.0, "Ilario", []],
      [17.0, 19.0, "Albertino Everyday", []],
      [19.0, 21.0, "Andrea Mattei", []],
@@ -815,7 +813,7 @@
     ],
     "sab": [
      [6.0, 9.0, "Saturday Morning Show con Walter Pizzulli", []],
-     [9.0, 12.0, "Isabella", []],
+     [9.0, 12.0, "Patrizia Prinzivalli", []],
      [12.0, 14.0, "Vittoria Hyde", []],
      [14.0, 15.0, "Deejay Time", []],
      [15.0, 19.0, "Giorgio Dazzi", []],
@@ -824,16 +822,15 @@
      [22.0, 25, "La Mezcla", []]
     ],
     "dom": [
-     [6.0, 10.0, "Isabella", []],
-     [10.0, 14.0, "Vittoria Hyde", []],
+     [6.0, 10.0, "Vittoria Hyde", []],
+     [10.0, 14.0, "Patrizia Prinzivalli", []],
      [14.0, 18.0, "Giorgio Dazzi", []],
      [18.0, 19.0, "Deejay Time", []],
-     [19.0, 21.0, "One Two One Two con Wad", []],
-     [21.0, 25, "Andrea Mattei", []]
+     [19.0, 25, "One Two One Two con Wad", []]
     ]
    }
   },
-  {"name": "Virgin Radio", "group": "RadioMediaset", "freq": "98.7", "source": "https://www.virginradio.it/palinsesto/", "updated": "2026-11-01T19:10:04+00:00",
+  {"name": "Virgin Radio", "group": "RadioMediaset", "freq": "98.7", "source": "https://www.virginradio.it/palinsesto/", "updated": "2026-11-02T11:36:06+00:00",
    "programs": [
     [5, 6.0, "All Nite Rock", []],
     [6.0, 6.5, "Free Rock", []],
@@ -895,7 +892,7 @@
      [5, 6.0, "All Nite Rock", []],
      [6.0, 6.5, "Free Rock", []],
      [6.5, 9.0, "Rock & Talk", []],
-     [9.0, 11.0, "Morning Glory - Con Viola", []],
+     [9.0, 11.0, "Morning Glory", []],
      [11.0, 14.0, "Personal Giulia", []],
      [14.0, 16.0, "Revolver", []],
      [16.0, 18.0, "Free Rock", []],
@@ -908,8 +905,9 @@
     "ven": [
      [5, 6.0, "All Nite Rock", []],
      [6.0, 6.5, "Free Rock", []],
-     [6.5, 10.0, "Rock & Talk", []],
-     [10.0, 14.0, "Personal Giulia", []],
+     [6.5, 9.0, "Rock & Talk", []],
+     [9.0, 11.0, "Morning Glory", []],
+     [11.0, 14.0, "Personal Giulia", []],
      [14.0, 16.0, "Revolver", []],
      [16.0, 18.0, "Free Rock", []],
      [18.0, 20.0, "Virgin Radio Generation", []],
