@@ -2,7 +2,7 @@
 // Content comes in pairs of elements carrying data-lang="en" / data-lang="it";
 // the inactive one gets [hidden]. The toggle is any [data-lang-toggle] button
 // and shows the language it switches to. The choice persists in localStorage
-// so the language carries across pages (GioRadio included).
+// so the language carries across pages.
 (function () {
   var KEY = 'lang';
 

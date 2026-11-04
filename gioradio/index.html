@@ -1,272 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="noindex, nofollow">
-  <title>GioRadio — radio study notes</title>
-  <meta name="description" content="Radio study pages made for revision: course notes, cheatsheets and small interactive tools.">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232b4ee6'/%3E%3Cpath d='M6 17h5l2-5 3 9 3-9 2 5h5' fill='none' stroke='white' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
-  <link rel="stylesheet" href="gioradio.css">
-  <link rel="stylesheet" href="skin-v2.css">
-  <style>
-    html { scroll-behavior: smooth; }
-    body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font-body); -webkit-font-smoothing: antialiased; }
-    a { color: var(--accent-ink); }
-    a:hover { color: var(--accent); }
-
-    .page { max-width: var(--maxw); margin: 0 auto; padding: 0 var(--gutter); }
-
-    /* Sticky nav pill */
-    .nav-shell { position: sticky; top: 0; z-index: 60; padding: 0 var(--gutter); background: rgba(255, 255, 255, .92); }
-    .nav-shell .ds-nav { max-width: var(--maxw); margin: 0 auto; }
-    @media (max-width: 1180px) { .nav-shell .btn-lang { margin-left: auto; } }
-
-    /* Hero */
-    .hero { padding: clamp(56px, 9vw, 120px) 0 clamp(36px, 5vw, 60px); }
-    .hero h1 {
-      margin: 1.2rem 0 0;
-      font-family: var(--font-display);
-      font-weight: 800;
-      font-size: clamp(44px, 7vw, 104px);
-      letter-spacing: -0.045em;
-      line-height: 0.92;
-      text-wrap: balance;
-    }
-    .hero h1 .period { color: var(--accent); }
-    .hero__sub {
-      margin: 1.4rem 0 0;
-      max-width: 40ch;
-      font-size: var(--text-sub);
-      line-height: 1.3;
-      font-weight: var(--w-light);
-      color: var(--ink-soft);
-      letter-spacing: -0.01em;
-      text-wrap: pretty;
-    }
-
-    /* Study note */
-    .note {
-      display: grid;
-      grid-template-columns: minmax(0, 220px) minmax(0, 1fr);
-      gap: 12px clamp(24px, 4vw, 56px);
-      padding: clamp(22px, 3vw, 32px) 0;
-      border-top: 1px solid var(--line-strong);
-      border-bottom: 1px solid var(--line);
-      margin-bottom: clamp(48px, 7vw, 88px);
-    }
-    @media (max-width: 720px) { .note { grid-template-columns: 1fr; } }
-    .note__label {
-      font-family: var(--font-mono);
-      font-size: 12.5px;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--ink-faint);
-      padding-top: 4px;
-    }
-    .note__body p { margin: 0; font-size: 18px; line-height: 1.55; color: var(--ink-soft); max-width: 62ch; text-wrap: pretty; }
-    .note__body p + p { margin-top: 0.8em; }
-    .note__body strong { color: var(--ink); font-weight: var(--w-medium); }
-
-    /* Groups of cards on the tinted band */
-    .band { background: var(--works-bg); padding-block: clamp(48px, 7vw, 88px); }
-    .group + .group { margin-top: clamp(48px, 7vw, 80px); }
-    .group .ds-section-head { margin-bottom: clamp(22px, 3vw, 32px); }
-    .ds-card-grid--two { grid-template-columns: repeat(2, 1fr); }
-    .ds-card-grid--three { grid-template-columns: repeat(3, 1fr); }
-    @media (max-width: 980px) { .ds-card-grid--three { grid-template-columns: repeat(2, 1fr); } }
-    @media (max-width: 720px) { .ds-card-grid--two, .ds-card-grid--three { grid-template-columns: 1fr; } }
-
-    /* Course summary: one wide card, thumb beside the text */
-    .ds-card--wide { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: 0 clamp(20px, 3vw, 40px); align-items: center; }
-    .ds-card--wide .ds-card__thumb { grid-row: 1 / span 6; height: 100%; min-height: 220px; margin-bottom: 0; }
-    @media (max-width: 720px) {
-      .ds-card--wide { display: block; }
-      .ds-card--wide .ds-card__thumb { height: 140px; min-height: 0; margin-bottom: 20px; }
-    }
-
-    /* Card thumbs: --sheet = ruled reference paper, --tool = solid accent */
-    .kind-thumb { height: 140px; display: flex; align-items: center; justify-content: center; }
-    .kind-thumb--sheet {
-      background-color: #fdfdfd;
-      background-image:
-        linear-gradient(90deg, transparent 27px, color-mix(in srgb, var(--accent) 35%, transparent) 27px 28px, transparent 28px),
-        repeating-linear-gradient(transparent 0 17px, var(--line-tag) 17px 18px);
-      border: 1px dashed var(--line-tag);
-      color: var(--ink);
-    }
-    .kind-thumb--tool { background: var(--accent); color: #fff; }
-    .kind-thumb--course { background: var(--ink); color: #fff; }
-    .kind-thumb__icon { width: 40%; max-width: 140px; height: auto; }
-    .kind {
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      font-family: var(--font-mono);
-      font-size: 11px;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      padding: 4px 9px;
-      border-radius: var(--radius-pill);
-    }
-    .kind-thumb--sheet .kind { left: 38px; background: var(--ink); color: #fff; }
-    .kind-thumb--tool .kind { background: #fff; color: var(--accent-ink); }
-    .kind-thumb--course .kind { background: var(--accent); color: #fff; }
-
-    footer.page { padding-block: clamp(32px, 5vw, 48px); }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Password</title>
+<style>
+  html, body { height: 100%; margin: 0; }
+  body { display: grid; place-items: center; background: #fff; color: #111114; font: 16px/1.4 system-ui, -apple-system, sans-serif; }
+  form { width: min(320px, calc(100% - 32px)); }
+  label { display: block; margin-bottom: 10px; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: #6b6860; }
+  .row { display: flex; gap: 8px; }
+  input { flex: 1; min-width: 0; padding: 14px 18px; border: 1.5px solid #e4e2dc; border-radius: 999px; font: inherit; outline: none; }
+  input:focus { border-color: #2b4ee6; }
+  button { padding: 0 22px; border: 0; border-radius: 999px; background: #2b4ee6; color: #fff; font: 700 18px system-ui, sans-serif; cursor: pointer; }
+  button:disabled { opacity: .5; cursor: wait; }
+  #e { min-height: 1.4em; margin: 10px 0 0 18px; font-size: 14px; color: #c0352b; }
+</style>
 </head>
 <body>
+<noscript>Serve JavaScript.</noscript>
+<form id="f" hidden>
+  <label for="p">Password</label>
+  <div class="row"><input id="p" type="password" autocomplete="current-password" required><button id="b" aria-label="Apri">→</button></div>
+  <p id="e" role="alert"></p>
+</form>
+<script>
+(function () {
+  var D = {"section":"gioradio","salt":"saJFO+nnZAbOrL0TobDTIA==","iter":600000,"iv":"Zlvxj7qAGXpcjTYD","data":"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"};
+  var KEY = 'lock:' + D.section;
+  var subtle = window.crypto && crypto.subtle;
+  function bytes(s) { return Uint8Array.from(atob(s), function (c) { return c.charCodeAt(0); }); }
+  function b64(u8) { var s = ''; for (var i = 0; i < u8.length; i++) s += String.fromCharCode(u8[i]); return btoa(s); }
 
-  <div class="nav-shell">
-    <nav class="ds-nav">
-      <div class="ds-nav__inner">
-        <a href="./" class="ds-nav__mark"><span class="ds-nav__dot"></span>GioRadio</a>
-        <div class="ds-nav__links">
-          <a href="Riassunto%20Corso%20Radioamatori.html"><span data-lang="en">Course notes</span><span data-lang="it" hidden>Riassunto</span></a>
-          <a href="Componenti.html"><span data-lang="en">Components</span><span data-lang="it" hidden>Componenti</span></a>
-          <a href="Schemi.html"><span data-lang="en">Diagrams</span><span data-lang="it" hidden>Schemi</span></a>
-          <a href="Codice%20Q.html"><span data-lang="en">Q code</span><span data-lang="it" hidden>Codice Q</span></a>
-          <a href="propagazione-ionosferica.html"><span data-lang="en">Propagation</span><span data-lang="it" hidden>Propagazione</span></a>
-          <a href="palinsesti-radio-milano.html"><span data-lang="en">Schedules</span><span data-lang="it" hidden>Palinsesti</span></a>
-        </div>
-        <button class="btn-lang" data-lang-toggle type="button">it</button>
-      </div>
-    </nav>
-  </div>
+  async function derive(pw) {
+    var base = await subtle.importKey('raw', new TextEncoder().encode(pw), 'PBKDF2', false, ['deriveBits']);
+    return new Uint8Array(await subtle.deriveBits({ name: 'PBKDF2', salt: bytes(D.salt), iterations: D.iter, hash: 'SHA-256' }, base, 256));
+  }
+  async function unlock(raw) {
+    var key = await subtle.importKey('raw', raw, 'AES-GCM', false, ['decrypt']);
+    var gz = await subtle.decrypt({ name: 'AES-GCM', iv: bytes(D.iv) }, key, bytes(D.data));
+    var html = await new Response(new Blob([gz]).stream().pipeThrough(new DecompressionStream('gzip'))).text();
+    document.open(); document.write(html); document.close();
+  }
 
-  <main>
-    <div class="page">
-      <header class="hero">
-        <span class="ds-eyebrow"><span class="ds-eyebrow__idx">00</span> <span data-lang="en">Study notes</span><span data-lang="it" hidden>Appunti di studio</span></span>
-        <h1><span data-lang="en">Radio, for revision</span><span data-lang="it" hidden>Radiotecnica, per ripassare</span><span class="period">.</span></h1>
-        <p class="hero__sub"><span data-lang="en">Course notes, cheatsheets and small interactive tools on components, equipment, the Q code and radio wave propagation.</span><span data-lang="it" hidden>Il riassunto del corso, cheatsheet e piccoli strumenti interattivi su componenti, apparati, codice Q e propagazione delle onde radio.</span></p>
-      </header>
+  var f = document.getElementById('f'), p = document.getElementById('p'),
+      b = document.getElementById('b'), e = document.getElementById('e');
+  function ask() { f.hidden = false; p.focus(); }
 
-      <section class="note" aria-labelledby="note-title">
-        <span class="note__label" id="note-title"><span data-lang="en">Why they exist</span><span data-lang="it" hidden>Perché esistono</span></span>
-        <div class="note__body">
-          <p><span data-lang="en">I made these pages <strong>for study</strong>, while preparing for the amateur radio licence (HAREC). I use them <strong>for revision</strong>: they gather, in a form that’s quick to look up, concepts, formulas and diagrams I would otherwise have to dig out of the books every time.</span><span data-lang="it" hidden>Sono pagine che ho creato <strong>per motivi di studio</strong>, mentre studio radiotecnica per la patente di radioamatore (HAREC). Mi servono <strong>per ripassare</strong>: raccolgono in forma rapida da consultare concetti, formule e schemi che altrimenti dovrei ricercare ogni volta nei libri.</span></p>
-          <p><span data-lang="en">They are not official material and may contain simplifications or mistakes. For the exam, the current official syllabus always applies.</span><span data-lang="it" hidden>Non sono materiale ufficiale e possono contenere semplificazioni o errori. Per l'esame fa sempre fede il programma ministeriale aggiornato.</span></p>
-        </div>
-      </section>
-    </div>
+  if (!subtle || !window.DecompressionStream) { f.hidden = false; e.textContent = 'Browser non supportato.'; b.disabled = true; return; }
 
-    <div class="band">
-      <div class="page">
+  // saved key: "salt|key", valid only for the salt it was derived with
+  var saved = null;
+  try { saved = (localStorage.getItem(KEY) || '').split('|'); } catch (err) {}
+  if (saved && saved[0] === D.salt && saved[1]) unlock(bytes(saved[1])).catch(ask);
+  else ask();
 
-        <section class="group">
-          <div class="ds-section-head">
-            <span class="ds-eyebrow"><span class="ds-eyebrow__idx">01</span> <span data-lang="en">Course</span><span data-lang="it" hidden>Corso</span></span>
-            <h2 class="ds-section-title"><span data-lang="en">To revise.</span><span data-lang="it" hidden>Da ripassare.</span></h2>
-            <p class="ds-section-sub"><span data-lang="en">The whole course, lesson by lesson.</span><span data-lang="it" hidden>Il corso completo, lezione per lezione.</span></p>
-          </div>
-          <a class="ds-card ds-card--wide" href="Riassunto%20Corso%20Radioamatori.html">
-            <div class="ds-card__thumb kind-thumb kind-thumb--course">
-              <span class="kind"><span data-lang="en">Course notes</span><span data-lang="it" hidden>Riassunto</span></span>
-              <svg class="kind-thumb__icon" viewBox="0 0 64 32" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M32 7C25 3 14 3 6 5v23c8-2 19-2 26 2 7-4 18-4 26-2V5c-8-2-19-2-26 2z"/><path d="M32 7v23"/></g></svg>
-            </div>
-            <span class="ds-card__num">01 / ARI Cernusco</span>
-            <h3 class="ds-card__title"><span data-lang="en">Amateur Radio Course 2025 notes</span><span data-lang="it" hidden>Riassunto Corso Radioamatori 2025</span></h3>
-            <div class="ds-card__tags"><span class="ds-tag"><span data-lang="en">19 lessons</span><span data-lang="it" hidden>19 lezioni</span></span><span class="ds-tag"><span data-lang="en">A–Z glossary</span><span data-lang="it" hidden>Glossario A–Z</span></span><span class="ds-tag"><span data-lang="en">Search</span><span data-lang="it" hidden>Ricerca</span></span></div>
-            <p class="ds-card__desc"><span data-lang="en">The course’s 19 lessons in slide order, split into sections: formulas, key points and a glossary of terms, with search by topic.</span><span data-lang="it" hidden>Le 19 lezioni del corso nell'ordine delle slide, divise in paragrafi: formule, punti chiave e un glossario dei termini, con la ricerca per argomento.</span></p>
-            <span class="ds-card__cta"><span data-lang="en">Open the notes →</span><span data-lang="it" hidden>Apri il riassunto →</span></span>
-          </a>
-        </section>
-
-        <section class="group">
-          <div class="ds-section-head">
-            <span class="ds-eyebrow"><span class="ds-eyebrow__idx">02</span> Cheatsheet</span>
-            <h2 class="ds-section-title"><span data-lang="en">To look up.</span><span data-lang="it" hidden>Da consultare.</span></h2>
-            <p class="ds-section-sub"><span data-lang="en">Reference sheets: what to know, in little space.</span><span data-lang="it" hidden>Schede di riferimento: cosa sapere, in poco spazio.</span></p>
-          </div>
-          <div class="ds-card-grid ds-card-grid--three">
-
-            <a class="ds-card" href="Componenti.html">
-              <div class="ds-card__thumb kind-thumb kind-thumb--sheet">
-                <span class="kind">Cheatsheet</span>
-                <svg class="kind-thumb__icon" viewBox="0 0 64 32" aria-hidden="true"><path d="M2 16h12l3-7 6 14 6-14 6 14 6-14 3 7h18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/></svg>
-              </div>
-              <span class="ds-card__num">02 / <span data-lang="en">Components</span><span data-lang="it" hidden>Componenti</span></span>
-              <h3 class="ds-card__title"><span data-lang="en">Radio components</span><span data-lang="it" hidden>Componenti di radiotecnica</span></h3>
-              <div class="ds-card__tags"><span class="ds-tag"><span data-lang="en">Passive</span><span data-lang="it" hidden>Passivi</span></span><span class="ds-tag"><span data-lang="en">Diodes</span><span data-lang="it" hidden>Diodi</span></span><span class="ds-tag">Transistor</span></div>
-              <p class="ds-card__desc"><span data-lang="en">From the resistor to the MOSFET: symbol, unit, formulas and the parameters to know for each component.</span><span data-lang="it" hidden>Dalla resistenza al MOSFET: simbolo, unità di misura, formule e parametri da conoscere per ogni componente.</span></p>
-              <span class="ds-card__cta"><span data-lang="en">Open the cheatsheet →</span><span data-lang="it" hidden>Apri il cheatsheet →</span></span>
-            </a>
-
-            <a class="ds-card" href="Schemi.html">
-              <div class="ds-card__thumb kind-thumb kind-thumb--sheet">
-                <span class="kind">Cheatsheet</span>
-                <svg class="kind-thumb__icon" viewBox="0 0 64 32" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.2"><rect x="2" y="9" width="14" height="14" rx="2"/><rect x="25" y="9" width="14" height="14" rx="2"/><rect x="48" y="9" width="14" height="14" rx="2"/><path d="M16 16h9M39 16h9"/></g></svg>
-              </div>
-              <span class="ds-card__num">03 / HAREC</span>
-              <h3 class="ds-card__title"><span data-lang="en">Block diagrams</span><span data-lang="it" hidden>Schemi a blocchi</span></h3>
-              <div class="ds-card__tags"><span class="ds-tag">AM · FM · SSB</span><span class="ds-tag">CW · RTTY</span></div>
-              <p class="ds-card__desc"><span data-lang="en">Transmitters and receivers by emission mode: click a block to see how it is built and the formulas to know.</span><span data-lang="it" hidden>Trasmettitori e ricevitori per modo di emissione: clicca un blocco per vedere come si costruisce e le formule da sapere.</span></p>
-              <span class="ds-card__cta"><span data-lang="en">Open the cheatsheet →</span><span data-lang="it" hidden>Apri il cheatsheet →</span></span>
-            </a>
-
-            <a class="ds-card" href="Codice%20Q.html">
-              <div class="ds-card__thumb kind-thumb kind-thumb--sheet">
-                <span class="kind">Cheatsheet</span>
-                <svg class="kind-thumb__icon" viewBox="0 0 64 32" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M2 12h4M10 12h10M2 20h10M16 20h4"/><text x="25" y="22" font-family="ui-monospace, monospace" font-size="14" fill="currentColor" stroke="none">QR?</text></g></svg>
-              </div>
-              <span class="ds-card__num">04 / ITU</span>
-              <h3 class="ds-card__title"><span data-lang="en">Q code</span><span data-lang="it" hidden>Codice Q</span></h3>
-              <div class="ds-card__tags"><span class="ds-tag">QRA–QUZ</span><span class="ds-tag">Quiz</span></div>
-              <p class="ds-card__desc"><span data-lang="en">The table of the QR, QS, QT and QU series with their meanings, then two quizzes to test yourself: from code to meaning and back.</span><span data-lang="it" hidden>La tabella delle serie QR, QS, QT e QU con i significati, poi due quiz per mettersi alla prova: dalla sigla al significato e viceversa.</span></p>
-              <span class="ds-card__cta"><span data-lang="en">Open the cheatsheet →</span><span data-lang="it" hidden>Apri il cheatsheet →</span></span>
-            </a>
-
-          </div>
-        </section>
-
-        <section class="group">
-          <div class="ds-section-head">
-            <span class="ds-eyebrow"><span class="ds-eyebrow__idx">03</span> <span data-lang="en">Tools</span><span data-lang="it" hidden>Strumenti</span></span>
-            <h2 class="ds-section-title"><span data-lang="en">To try out.</span><span data-lang="it" hidden>Da provare.</span></h2>
-            <p class="ds-section-sub"><span data-lang="en">Small interactive tools to see the concepts in action.</span><span data-lang="it" hidden>Piccoli strumenti interattivi per vedere i concetti in azione.</span></p>
-          </div>
-          <div class="ds-card-grid ds-card-grid--two">
-
-            <a class="ds-card" href="propagazione-ionosferica.html">
-              <div class="ds-card__thumb kind-thumb kind-thumb--tool">
-                <span class="kind"><span data-lang="en">Tool</span><span data-lang="it" hidden>Strumento</span></span>
-                <svg class="kind-thumb__icon" viewBox="0 0 64 32" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M2 30h60"/><path d="M8 30Q20 2 32 30T56 30" stroke-dasharray="0.1 5"/><path d="M8 30Q20 2 32 30"/></g></svg>
-              </div>
-              <span class="ds-card__num">05 / RF</span>
-              <h3 class="ds-card__title"><span data-lang="en">Ionospheric propagation</span><span data-lang="it" hidden>Propagazione ionosferica</span></h3>
-              <div class="ds-card__tags"><span class="ds-tag"><span data-lang="en">D · E · F layers</span><span data-lang="it" hidden>Strati D · E · F</span></span><span class="ds-tag"><span data-lang="en">Bands</span><span data-lang="it" hidden>Bande</span></span></div>
-              <p class="ds-card__desc"><span data-lang="en">Pick bands, power and solar activity and watch how waves are reflected, absorbed or escape into space.</span><span data-lang="it" hidden>Scegli bande, potenza e attività solare e guarda come le onde vengono riflesse, assorbite o sfuggono nello spazio.</span></p>
-              <span class="ds-card__cta"><span data-lang="en">Open the tool →</span><span data-lang="it" hidden>Apri lo strumento →</span></span>
-            </a>
-
-            <a class="ds-card" href="palinsesti-radio-milano.html">
-              <div class="ds-card__thumb kind-thumb kind-thumb--tool">
-                <span class="kind"><span data-lang="en">Tool</span><span data-lang="it" hidden>Strumento</span></span>
-                <svg class="kind-thumb__icon" viewBox="0 0 64 32" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M2 8h22M30 8h32M2 16h12M20 16h28M54 16h8M2 24h34M42 24h20"/><path d="M40 3v26" stroke-width="1.6"/></g></svg>
-              </div>
-              <span class="ds-card__num">06 / FM Milano</span>
-              <h3 class="ds-card__title"><span data-lang="en">Milan radio schedules</span><span data-lang="it" hidden>Palinsesti radio Milano</span></h3>
-              <div class="ds-card__tags"><span class="ds-tag">FM</span><span class="ds-tag"><span data-lang="en">Today + 2 days</span><span data-lang="it" hidden>Oggi + 2 giorni</span></span></div>
-              <p class="ds-card__desc"><span data-lang="en">Who’s on air, and when: the schedules of Milan’s main FM stations for today and the next two days, updated from the stations’ sites.</span><span data-lang="it" hidden>Chi va in onda, e quando: i palinsesti delle principali radio FM di Milano per oggi e i due giorni successivi, aggiornati dai siti delle radio.</span></p>
-              <span class="ds-card__cta"><span data-lang="en">Open the tool →</span><span data-lang="it" hidden>Apri lo strumento →</span></span>
-            </a>
-
-          </div>
-        </section>
-
-      </div>
-    </div>
-  </main>
-
-  <footer class="page">
-    <div class="ds-footer">
-      <span>GioRadio — <span data-lang="en">study notes for revision</span><span data-lang="it" hidden>appunti di studio per il ripasso</span></span>
-      <div class="ds-footer__links"><a href="#"><span data-lang="en">Back to top ↑</span><span data-lang="it" hidden>Torna su ↑</span></a></div>
-    </div>
-  </footer>
-
-  <script src="i18n.js"></script>
+  f.addEventListener('submit', async function (ev) {
+    ev.preventDefault();
+    b.disabled = true; e.textContent = '';
+    try {
+      var raw = await derive(p.value);
+      await unlock(raw);
+      try { localStorage.setItem(KEY, D.salt + '|' + b64(raw)); } catch (err) {}
+    } catch (err) {
+      e.textContent = 'Password errata.';
+      b.disabled = false; p.select();
+    }
+  });
+})();
+</script>
 </body>
 </html>
