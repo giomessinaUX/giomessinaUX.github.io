@@ -133,8 +133,7 @@ a:hover { color: inherit; }
 .clients { padding-bottom: 64px; }
 .clients .mono { margin-right: 8px; font-size: 12px; }
 .work { padding-bottom: 80px; }
-.about { display: grid; grid-template-columns: 420px minmax(0,1fr); gap: 56px; padding-bottom: 96px; }
-.about__photo { height: 440px; border-radius: 24px; transform: rotate(-2deg); }
+.about { padding-bottom: 96px; }
 .about__body { display: flex; flex-direction: column; gap: 28px; }
 .about__body h2 { font-weight: 800; font-size: clamp(34px, 4vw, 52px); line-height: 1; letter-spacing: -.04em; }
 .tiles { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 12px; }
@@ -209,8 +208,7 @@ a:hover { color: inherit; }
 @media (max-width: 980px) {
   .row { grid-template-columns: 48px minmax(0,1fr) 32px; }
   .row__line { display: none; }
-  .about, .cs-sec { grid-template-columns: 1fr; gap: 28px; }
-  .about__photo { height: 320px; }
+  .cs-sec { grid-template-columns: 1fr; gap: 28px; }
   .meta, .numbers { grid-template-columns: repeat(2, minmax(0,1fr)); }
 }
 @media (max-width: 720px) {
