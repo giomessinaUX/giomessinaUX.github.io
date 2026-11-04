@@ -1,11 +1,22 @@
-"""Inject the GioRadio site chrome (nav, breadcrumb, next link, footer) into
-the bundled radio pages. Reads the originals from SRC, writes to DST.
+"""Inject the GioRadio site chrome (nav, breadcrumb, next link, footer) and the
+IT/EN language switch into the bundled radio pages. Reads the originals from
+SRC, writes to DST.
 
     python3 _tools/gioradio/build.py            # src -> gioradio/
 
 Edit page content in _tools/gioradio/src/*.html (the JSON-encoded template
 inside <script type="__bundler/template">), then rebuild. Never edit the
-files in gioradio/ directly: the next build overwrites them."""
+files in gioradio/ directly: the next build overwrites them.
+
+Language: the pages carry both languages. Static text is written as
+<span data-lang="it">…</span><span data-lang="en">…</span>; the page logic
+picks strings by document.documentElement.lang and re-renders on the
+'gioradio:lang' event. The runtime below sets the language from
+localStorage 'lang' (shared with giomessina.com, default 'en') and handles
+every [data-lang-toggle] button.
+
+Look: gioradio/skin-v2.css (linked last in every page) maps the pages'
+design tokens onto the giomessina.com v2 system (styles-v2.css)."""
 import json, re, sys, os
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -13,24 +24,30 @@ SRC = sys.argv[1] if len(sys.argv) > 1 else os.path.join(HERE, "src")
 DST = sys.argv[2] if len(sys.argv) > 2 else os.path.join(HERE, "..", "..", "gioradio")
 SITE = "GioRadio"
 
-# order = nav order and "next" cycle
+# Order = nav order. Pages with chrome=False keep their own layout: they only
+# get the language runtime, and the "next" cycle skips them.
 PAGES = [
-    dict(file="Componenti.html", nav="Componenti", title="Componenti di radiotecnica", kind="Cheatsheet", width="var(--maxw)", box="content-box"),
-    dict(file="Schemi.html", nav="Schemi", title="Schemi a blocchi", kind="Cheatsheet", width="1360px", box="content-box"),
-    dict(file="propagazione-ionosferica.html", nav="Propagazione", title="Propagazione ionosferica", kind="Strumento", width="1560px", box="border-box"),
-    dict(file="palinsesti-radio-milano.html", nav="Palinsesti", title="Palinsesti radio Milano", kind="Strumento", width="var(--maxw)", box="border-box"),
+    dict(file="Riassunto Corso Radioamatori.html", nav=("Riassunto", "Course notes"),
+         title=("Riassunto Corso Radioamatori", "Amateur Radio Course notes"), chrome=False),
+    dict(file="Componenti.html", nav=("Componenti", "Components"),
+         title=("Componenti di radiotecnica", "Radio components"), kind=("Cheatsheet", "Cheatsheet"),
+         width="var(--maxw)", box="content-box"),
+    dict(file="Schemi.html", nav=("Schemi", "Diagrams"),
+         title=("Schemi a blocchi", "Block diagrams"), kind=("Cheatsheet", "Cheatsheet"),
+         width="1360px", box="content-box"),
+    dict(file="Codice Q.html", nav=("Codice Q", "Q code"),
+         title=("Codice Q", "Q code"), chrome=False),
+    dict(file="propagazione-ionosferica.html", nav=("Propagazione", "Propagation"),
+         title=("Propagazione ionosferica", "Ionospheric propagation"), kind=("Strumento", "Tool"),
+         width="1560px", box="border-box"),
+    dict(file="palinsesti-radio-milano.html", nav=("Palinsesti", "Schedules"),
+         title=("Palinsesti radio Milano", "Milan radio schedules"), kind=("Strumento", "Tool"),
+         width="var(--maxw)", box="border-box"),
 ]
+CHROME = [p for p in PAGES if p.get("chrome", True)]
 
-# Nav order. Riassunto and Codice Q have their own layout and are linked
-# here only: the build doesn't touch them.
-NAV = [
-    ("Riassunto%20Corso%20Radioamatori.html", "Riassunto"),
-    ("Componenti.html", "Componenti"),
-    ("Schemi.html", "Schemi"),
-    ("Codice%20Q.html", "Codice Q"),
-    ("propagazione-ionosferica.html", "Propagazione"),
-    ("palinsesti-radio-milano.html", "Palinsesti"),
-]
+href = lambda p: p["file"].replace(" ", "%20")
+bi = lambda pair: f'<span data-lang="it">{pair[0]}</span><span data-lang="en">{pair[1]}</span>'
 
 FAVICON = ("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E"
            "%3Crect width='32' height='32' rx='8' fill='%232b4ee6'/%3E"
@@ -38,10 +55,9 @@ FAVICON = ("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox
            "stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")
 
 STYLE = """<style id="rd-chrome-style">
-.rd-shell{position:sticky;top:0;z-index:60;padding:12px var(--gutter) 0}
+.rd-shell{position:sticky;top:0;z-index:60;padding:0 var(--gutter);background:rgba(255,255,255,.92)}
 .rd-shell .ds-nav{max-width:var(--maxw);margin:0 auto}
-.rd-shell .ds-nav__links{gap:clamp(16px,2.4vw,30px)}
-@media (max-width:760px){.rd-shell .ds-nav__links{display:none}}
+@media (max-width:1180px){.rd-shell .btn-lang{margin-left:auto}}
 .rd-wrap{max-width:var(--rd-w);margin:0 auto;padding:0 var(--gutter)}
 .rd-way{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 20px;padding-top:clamp(26px,4vw,40px)}
 .rd-way__trail{font-family:var(--font-mono);font-size:12.5px;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-faint)}
@@ -51,11 +67,41 @@ STYLE = """<style id="rd-chrome-style">
 .rd-end .ds-footer{margin-top:clamp(28px,4vw,44px)}
 </style>"""
 
+TOGGLE = ('<button class="btn-lang" type="button" data-lang-toggle aria-label="Switch language / Cambia lingua">'
+          '<span data-lang="en">it</span><span data-lang="it">en</span></button>')
+
+def runtime(p):
+    titles = json.dumps({"it": f"{p['title'][0]} — {SITE}", "en": f"{p['title'][1]} — {SITE}"}, ensure_ascii=False)
+    return """<style id="gr-i18n-style">
+html[lang="en"] [data-lang="it"], html:not([lang="en"]) [data-lang="en"] { display: none !important; }
+</style>
+<script id="gr-i18n">
+(function () {
+  var KEY = 'lang', TITLES = %s;
+  function get() { try { return localStorage.getItem(KEY) || 'en'; } catch (e) { return 'en'; } }
+  function apply(l) {
+    document.documentElement.lang = l;
+    document.title = TITLES[l];
+    window.dispatchEvent(new Event('gioradio:lang'));
+  }
+  apply(get());
+  document.addEventListener('click', function (e) {
+    var b = e.target.closest && e.target.closest('[data-lang-toggle]');
+    if (!b) return;
+    e.preventDefault();
+    var l = get() === 'it' ? 'en' : 'it';
+    try { localStorage.setItem(KEY, l); } catch (err) {}
+    apply(l);
+  });
+})();
+</script>
+""" % titles
+
 def head_block(p):
     active = ' class="is-active" aria-current="page"'
     links = "\n".join(
-        f'        <a href="{href}"{active if href == p["file"] else ""}>{label}</a>'
-        for href, label in NAV)
+        f'        <a href="{href(q)}"{active if q is p else ""}>{bi(q["nav"])}</a>'
+        for q in PAGES)
     return f"""<!-- rd-chrome:start -->
 {STYLE}
 <div class="rd-shell">
@@ -65,13 +111,14 @@ def head_block(p):
       <div class="ds-nav__links">
 {links}
       </div>
+      {TOGGLE}
     </div>
   </nav>
 </div>
 <div class="rd-wrap" style="--rd-w:{p['width']};box-sizing:{p['box']}">
   <div class="rd-way">
-    <a class="ds-crumb" href="./"><span class="ds-crumb__arrow">←</span> Indice</a>
-    <span class="rd-way__trail">{SITE} / <b>{p['kind']}</b></span>
+    <a class="ds-crumb" href="./"><span class="ds-crumb__arrow">←</span> {bi(("Indice", "Index"))}</a>
+    <span class="rd-way__trail">{SITE} / <b>{bi(p['kind'])}</b></span>
   </div>
 </div>
 <!-- rd-chrome:end -->"""
@@ -80,13 +127,13 @@ def foot_block(p, nxt):
     return f"""<!-- rd-chrome:start -->
 <div class="rd-wrap rd-end" style="--rd-w:{p['width']};box-sizing:{p['box']}">
   <nav class="ds-next">
-    <span class="ds-next__label">Prossima pagina · {nxt['kind']}</span>
-    <a href="{nxt['file']}">{nxt['title']} <span class="ds-next__arrow">→</span></a>
+    <span class="ds-next__label">{bi(("Prossima pagina", "Next page"))} · {bi(nxt['kind'])}</span>
+    <a href="{href(nxt)}">{bi(nxt['title'])} <span class="ds-next__arrow">→</span></a>
   </nav>
   <div class="ds-footer">
-    <span>{SITE} — appunti di studio per il ripasso</span>
+    <span>{SITE} — {bi(("appunti di studio per il ripasso", "study notes for revision"))}</span>
     <div class="ds-footer__links">
-      <a href="./">Indice</a>
+      <a href="./">{bi(("Indice", "Index"))}</a>
     </div>
   </div>
 </div>
@@ -102,16 +149,17 @@ def must_sub(pattern, repl, t, label):
 
 HEAD_EXTRA = (f'<meta name="robots" content="noindex, nofollow">\n'
               f'<link rel="icon" type="image/svg+xml" href="{FAVICON}">\n')
+# giomessina.com v2 look; goes last in <head> so it overrides the page's own tokens
+SKIN = '<link rel="stylesheet" href="skin-v2.css">\n'
 
-for i, p in enumerate(PAGES):
+for p in PAGES:
     s = open(os.path.join(SRC, p["file"]), encoding="utf-8").read()
     m = TPL_RE.search(s)
     t = json.loads(m.group(2))
-    nxt = PAGES[(i + 1) % len(PAGES)]
-    page_title = f"{p['title']} — {SITE}"
+    page_title = f"{p['title'][1]} — {SITE}"
 
     t = re.sub(r"<title>.*?</title>\n?", "", t, count=1)
-    t = t.replace("</head>", f"<title>{page_title}</title>\n{HEAD_EXTRA}</head>", 1)
+    t = t.replace("</head>", f"<title>{page_title}</title>\n{HEAD_EXTRA}{runtime(p)}{SKIN}</head>", 1)
 
     # page-specific cleanup of the old, per-page chrome
     if p["file"] == "Componenti.html":
@@ -124,8 +172,10 @@ for i, p in enumerate(PAGES):
         t = must_sub(r'\n  <div style="max-width:var\(--maxw\);margin:0 auto;padding:48px var\(--gutter\) 0;">\s*<footer class="ds-footer">.*?</footer>\s*</div>\n', "\n", t, "palinsesti footer")
         t = t.replace("padding:clamp(48px,8vw,96px) var(--gutter) clamp(28px,4vw,44px);", "padding:clamp(32px,5vw,64px) var(--gutter) clamp(28px,4vw,44px);", 1)
 
-    t = must_sub(r"</helmet>\n", lambda _: "</helmet>\n" + head_block(p) + "\n", t, "helmet end")
-    t = must_sub(r"\n</x-dc>", lambda _: "\n" + foot_block(p, nxt) + "\n</x-dc>", t, "x-dc end")
+    if p in CHROME:
+        nxt = CHROME[(CHROME.index(p) + 1) % len(CHROME)]
+        t = must_sub(r"</helmet>\n", lambda _: "</helmet>\n" + head_block(p) + "\n", t, "helmet end")
+        t = must_sub(r"\n</x-dc>", lambda _: "\n" + foot_block(p, nxt) + "\n</x-dc>", t, "x-dc end")
 
     enc = json.dumps(t, ensure_ascii=True).replace("</", "<\\u002F")
     s = s[:m.start(2)] + enc + s[m.end(2):]
@@ -135,4 +185,4 @@ for i, p in enumerate(PAGES):
     s = s.replace('<meta charset="utf-8">', '<meta charset="utf-8">\n  ' + HEAD_EXTRA.replace("\n", "\n  ").rstrip(), 1)
     s = s.replace("  <a href=\"indiceradio.html\">Torna all'indice</a>\n", "")
     open(os.path.join(DST, p["file"]), "w", encoding="utf-8").write(s)
-    print("patched", p["file"])
+    print("built", p["file"])

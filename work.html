@@ -1,145 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-NXX9NC6J');</script>
-  <!-- End Google Tag Manager -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>All Work — Giorgio Messina</title>
-  <meta name="description" content="All projects by Giorgio Messina — Product Designer working on data-intensive B2B products.">
-  <link rel="icon" type="image/png" href="assets/imgs/favicon.png">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="site.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>All Work — Giorgio Messina</title>
+<meta name="description" content="All projects by Giorgio Messina — Product Designer working on data-intensive B2B products.">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-NXX9NC6J');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="styles-v2.css">
 </head>
 <body>
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NXX9NC6J"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NXX9NC6J" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-  <div class="nav-shell">
-    <nav class="site-nav ds-nav">
-      <div class="ds-nav__inner">
-        <a href="index.html" class="ds-nav__mark"><span class="ds-nav__dot"></span>Giorgio Messina</a>
-        <div class="ds-nav__links">
-          <a href="index.html#about"><span data-lang="en">About</span><span data-lang="it" hidden>Chi sono</span></a>
-          <a href="index.html#work" class="is-active"><span data-lang="en">Work</span><span data-lang="it" hidden>Lavori</span></a>
-          <a href="index.html#contact"><span data-lang="en">Contact</span><span data-lang="it" hidden>Contatti</span></a>
-        </div>
-        <button class="btn-lang" id="lang-toggle" type="button" aria-label="Switch language">IT</button>
-      </div>
-    </nav>
+<div class="wrap">
+  <nav class="nav">
+    <a class="nav__mark" href="index.html">giorgio messina</a>
+    <div class="nav__links">
+      <a class="pill is-active" href="work.html"><span data-lang="en">work</span><span data-lang="it" hidden>lavori</span></a>
+      <a class="pill" href="index.html#about"><span data-lang="en">about</span><span data-lang="it" hidden>chi sono</span></a>
+      <a class="pill" href="index.html#contact"><span data-lang="en">contact</span><span data-lang="it" hidden>contatti</span></a>
+      <button class="lang" data-lang-toggle>it</button>
+    </div>
+  </nav>
+
+  <header class="page-head">
+    <div>
+      <a class="back" href="index.html">← home</a>
+      <h1><span data-lang="en">all work</span><span data-lang="it" hidden>tutti i lavori</span><span class="accent">.</span></h1>
+    </div>
+    <p><span data-lang="en">Six case studies from consulting, enterprise products and agencies. Each one opens in full.</span><span data-lang="it" hidden>Sei casi studio tra consulenza, prodotti enterprise e agenzie. Ognuno si apre per intero.</span></p>
+  </header>
+
+  <div class="filters chips" role="group" aria-label="Filter projects">
+    <button class="filter is-on" data-filter="all"><span data-lang="en">all · 6</span><span data-lang="it" hidden>tutti · 6</span></button>
+    <button class="filter" data-filter="design">product design</button>
+    <button class="filter" data-filter="research"><span data-lang="en">research</span><span data-lang="it" hidden>ricerca</span></button>
+    <button class="filter" data-filter="strategy"><span data-lang="en">strategy</span><span data-lang="it" hidden>strategia</span></button>
+    <button class="filter" data-filter="ownership">ownership</button>
   </div>
 
-  <main class="page section--tight" data-screen-label="Work">
-    <a href="index.html" class="ds-crumb"><span class="ds-crumb__arrow">←</span> <span data-lang="en">Home</span><span data-lang="it" hidden>Home</span></a>
+  <div class="wgrid">
+    <a class="wcard" href="projects/civic.html" data-tags="design strategy">
+      <div class="wcard__media"><img src="assets/imgs/gm-civic-1.png" alt="Civic — redesigned platform"><span class="chip chip--num">01</span></div>
+      <div class="wcard__head"><h3>Civic</h3><span class="mono">Compunet</span></div>
+      <p><span data-lang="en">Rebuilt a 25-year-old platform that runs the full lifecycle of fines.</span><span data-lang="it" hidden>Ho rifatto una piattaforma di 25 anni che gestisce l'intero ciclo di vita delle multe.</span></p>
+      <div class="chips"><span class="chip">Product design</span><span class="chip"><span data-lang="en">Strategy</span><span data-lang="it" hidden>Strategia</span></span></div>
+    </a>
+    <a class="wcard" href="projects/energy-manager.html" data-tags="design">
+      <div class="wcard__media"><img src="assets/imgs/gm-energy-1.png" alt="Energy Manager — consumption dashboard"><span class="chip chip--num">02</span></div>
+      <div class="wcard__head"><h3>Energy Manager</h3><span class="mono">Siemens</span></div>
+      <p><span data-lang="en">Energy monitoring across building portfolios, discovery to handoff.</span><span data-lang="it" hidden>Monitoraggio energetico su portfolio di edifici, dalla discovery all'handoff.</span></p>
+      <div class="chips"><span class="chip">UX design</span><span class="chip">Building X</span></div>
+    </a>
+    <a class="wcard" href="projects/building-x.html" data-tags="research">
+      <div class="wcard__media"><img src="assets/imgs/gm-buildingx.png" alt="Siemens Building X"><span class="chip chip--num">03</span></div>
+      <div class="wcard__head"><h3>Building X</h3><span class="mono">Siemens</span></div>
+      <p><span data-lang="en">Mapped the whole building-onboarding journey for the first time — 40+ users, 3 continents.</span><span data-lang="it" hidden>Ho mappato per la prima volta l'intero onboarding degli edifici — oltre 40 utenti, 3 continenti.</span></p>
+      <div class="chips"><span class="chip">UX research</span><span class="chip">Onboarding</span></div>
+    </a>
+    <a class="wcard" href="projects/vmlyr.html" data-tags="design">
+      <div class="wcard__media"><img src="assets/imgs/gm-vmlyr.png" alt="VMLY&amp;R — digital products"><span class="chip chip--num">04</span></div>
+      <div class="wcard__head"><h3>VMLY&amp;R</h3><span class="mono">VMLY&amp;R</span></div>
+      <p><span data-lang="en">E-commerce and digital products for Whirlpool, Lavazza and Bolton.</span><span data-lang="it" hidden>E-commerce e prodotti digitali per Whirlpool, Lavazza e Bolton.</span></p>
+      <div class="chips"><span class="chip">Product design</span><span class="chip">Service design</span></div>
+    </a>
+    <a class="wcard" href="projects/connexia.html" data-tags="design strategy">
+      <div class="wcard__media"><img src="assets/imgs/gm-fastweb.png" alt="Connexia — omni-channel experience map"><span class="chip chip--num">05</span></div>
+      <div class="wcard__head"><h3>Connexia</h3><span class="mono">Connexia</span></div>
+      <p><span data-lang="en">AR/VR concepts and service blueprints for Fastweb, SisalPay, ActionAid.</span><span data-lang="it" hidden>Concept AR/VR e service blueprint per Fastweb, SisalPay, ActionAid.</span></p>
+      <div class="chips"><span class="chip">Product design</span><span class="chip">Innovation</span></div>
+    </a>
+    <a class="wcard" href="projects/experis.html" data-tags="design ownership">
+      <div class="wcard__media"><img src="assets/imgs/experis-logo.png" alt="Experis"><span class="chip chip--num">06</span></div>
+      <div class="wcard__head"><h3>Experis</h3><span class="mono">Manpower Experis</span></div>
+      <p><span data-lang="en">Designed and owned two internal tools: Frankie and CV Scanner.</span><span data-lang="it" hidden>Ho progettato e gestito due tool interni: Frankie e CV Scanner.</span></p>
+      <div class="chips"><span class="chip">Product design</span><span class="chip">Ownership</span></div>
+    </a>
+  </div>
 
-    <div class="ds-section-head" data-reveal style="margin-top: clamp(28px, 4vw, 44px);">
-      <span class="ds-eyebrow"><span class="ds-eyebrow__idx">02</span> <span data-lang="en">Projects</span><span data-lang="it" hidden>Progetti</span></span>
-      <h1 class="ds-section-title"><span data-lang="en">All work.</span><span data-lang="it" hidden>Tutti i lavori.</span></h1>
-      <p class="ds-section-sub">
-        <span data-lang="en">Selected case studies across consulting, enterprise products and agencies.</span>
-        <span data-lang="it" hidden>Casi studio selezionati tra consulenza, prodotti enterprise e agenzie.</span>
-      </p>
-    </div>
-
-    <div class="ds-card-grid">
-
-      <a class="ds-card" href="projects/civic.html" data-reveal>
-        <div class="ds-card__thumb"><div class="ds-ph"></div><img class="ds-img" src="assets/imgs/gm-civic-1.png" alt="Civic — platform" loading="lazy" onerror="this.style.display='none'"><span class="ds-ph__label">Civic</span></div>
-        <span class="ds-card__num">01 / Compunet</span>
-        <h3 class="ds-card__title">Civic</h3>
-        <div class="ds-card__tags"><span class="ds-tag">Product Design</span><span class="ds-tag">Compunet</span></div>
-        <p class="ds-card__desc">
-          <span data-lang="en">End-to-end redesign of a 25-year-old platform for the full lifecycle of fines — 700+ fields across 45 screens.</span>
-          <span data-lang="it" hidden>Redesign end-to-end di una piattaforma ventennale per l'intero ciclo di vita delle sanzioni — oltre 700 campi su 45 schermate.</span>
-        </p>
-        <span class="ds-card__cta"><span data-lang="en">View case study</span><span data-lang="it" hidden>Vedi il caso studio</span> →</span>
-      </a>
-
-      <a class="ds-card" href="projects/energy-manager.html" data-reveal data-delay="1">
-        <div class="ds-card__thumb"><div class="ds-ph"></div><img class="ds-img" src="assets/imgs/gm-energy-1.png" alt="Energy Manager — dashboard" loading="lazy" onerror="this.style.display='none'"><span class="ds-ph__label">Energy Manager</span></div>
-        <span class="ds-card__num">02 / Siemens</span>
-        <h3 class="ds-card__title">Energy Manager</h3>
-        <div class="ds-card__tags"><span class="ds-tag">UX Design</span><span class="ds-tag">Building X</span></div>
-        <p class="ds-card__desc">
-          <span data-lang="en">Monitoring and optimizing energy across complex building portfolios, from discovery to developer handoff.</span>
-          <span data-lang="it" hidden>Monitoraggio e ottimizzazione energetica su portfolio edilizi complessi, dalla discovery all'handoff agli sviluppatori.</span>
-        </p>
-        <span class="ds-card__cta"><span data-lang="en">View case study</span><span data-lang="it" hidden>Vedi il caso studio</span> →</span>
-      </a>
-
-      <a class="ds-card" href="projects/building-x.html" data-reveal data-delay="2">
-        <div class="ds-card__thumb"><div class="ds-ph"></div><img class="ds-img" src="assets/imgs/gm-buildingx.png" alt="Siemens Building X" loading="lazy" onerror="this.style.display='none'"><span class="ds-ph__label">Siemens Building X</span></div>
-        <span class="ds-card__num">03 / Siemens</span>
-        <h3 class="ds-card__title">Building X</h3>
-        <div class="ds-card__tags"><span class="ds-tag">UX Research</span><span class="ds-tag">Onboarding</span></div>
-        <p class="ds-card__desc">
-          <span data-lang="en">First end-to-end mapping of the building onboarding journey — 40+ users across 3 continents.</span>
-          <span data-lang="it" hidden>Prima mappatura end-to-end del journey di onboarding degli edifici — oltre 40 utenti su 3 continenti.</span>
-        </p>
-        <span class="ds-card__cta"><span data-lang="en">View case study</span><span data-lang="it" hidden>Vedi il caso studio</span> →</span>
-      </a>
-
-      <a class="ds-card" href="projects/vmlyr.html" data-reveal>
-        <div class="ds-card__thumb"><div class="ds-ph"></div><img class="ds-img" src="assets/imgs/gm-vmlyr.png" alt="VMLY&R" loading="lazy" onerror="this.style.display='none'"><span class="ds-ph__label">VMLY&amp;R</span></div>
-        <span class="ds-card__num">04 / VMLYR</span>
-        <h3 class="ds-card__title">VMLYR</h3>
-        <div class="ds-card__tags"><span class="ds-tag">Product Design</span><span class="ds-tag">Service Design</span></div>
-        <p class="ds-card__desc">
-          <span data-lang="en">Product &amp; service design across the agency's digital division — e-commerce and digital products for Whirlpool, Lavazza and Bolton.</span>
-          <span data-lang="it" hidden>Product &amp; service design nella divisione digital dell'agenzia — e-commerce e prodotti digitali per Whirlpool, Lavazza e Bolton.</span>
-        </p>
-        <span class="ds-card__cta"><span data-lang="en">View case study</span><span data-lang="it" hidden>Vedi il caso studio</span> →</span>
-      </a>
-
-      <a class="ds-card" href="projects/connexia.html" data-reveal data-delay="1">
-        <div class="ds-card__thumb"><div class="ds-ph"></div><img class="ds-img" src="assets/imgs/gm-fastweb.png" alt="Connexia — Fastweb omni-channel experience map" loading="lazy" onerror="this.style.display='none'"><span class="ds-ph__label">Connexia</span></div>
-        <span class="ds-card__num">05 / Connexia</span>
-        <h3 class="ds-card__title">Connexia</h3>
-        <div class="ds-card__tags"><span class="ds-tag">Product Design</span><span class="ds-tag">Innovation</span></div>
-        <p class="ds-card__desc">
-          <span data-lang="en">Product design and innovation consulting — emerging AR/VR tech and service blueprints for Fastweb, SisalPay and ActionAid.</span>
-          <span data-lang="it" hidden>Product design e consulenza d'innovazione — tecnologie emergenti AR/VR e blueprint di servizio per Fastweb, SisalPay e ActionAid.</span>
-        </p>
-        <span class="ds-card__cta"><span data-lang="en">View case study</span><span data-lang="it" hidden>Vedi il caso studio</span> →</span>
-      </a>
-
-      <a class="ds-card" href="projects/experis.html" data-reveal data-delay="2">
-        <div class="ds-card__thumb"><div class="ds-ph"></div><img class="ds-img ds-img--contain" src="assets/imgs/experis-logo.png" alt="Experis — ManpowerGroup" loading="lazy" onerror="this.style.display='none'"><span class="ds-ph__label">Experis</span></div>
-        <span class="ds-card__num">06 / Manpower Experis</span>
-        <h3 class="ds-card__title">Experis</h3>
-        <div class="ds-card__tags"><span class="ds-tag">Product Design</span><span class="ds-tag">Product Ownership</span></div>
-        <p class="ds-card__desc">
-          <span data-lang="en">Product design and ownership on internal products — Frankie, a manager-performance tracker, and CV Scanner, a recruitment-orchestration tool.</span>
-          <span data-lang="it" hidden>Product design e ownership su prodotti interni — Frankie, tracker delle performance dei manager, e CV Scanner, strumento di orchestrazione del recruiting.</span>
-        </p>
-        <span class="ds-card__cta"><span data-lang="en">View case study</span><span data-lang="it" hidden>Vedi il caso studio</span> →</span>
-      </a>
-
-    </div>
-  </main>
-
-  <footer class="page">
-    <div class="ds-footer">
-      <span>© <span id="year">2026</span> Giorgio Messina — Milan, Italy</span>
-      <div class="ds-footer__links">
-        <a href="mailto:giomessina.work@gmail.com">Email</a>
-        <a href="tel:+393384569770">+39 338 456 9770</a>
-        <a href="https://www.linkedin.com/in/giomessina/" target="_blank" rel="noreferrer">LinkedIn</a>
-        <a href="https://www.instagram.com/giom.essina/" target="_blank" rel="noreferrer">Instagram</a>
-        <a href="Design System.html">Design system</a>
-      </div>
+  <footer class="footer footer--rule">
+    <span>© 2026 Giorgio Messina — Milano</span>
+    <a data-lang="en" class="btn btn--primary btn--sm" href="assets/Giorgio_Messina-Onepage-ENG.pdf" download>Download CV ↓</a><a data-lang="it" hidden class="btn btn--primary btn--sm" href="assets/Giorgio_Messina-Onepage-ITA.pdf" download>Scarica il CV ↓</a>
+    <div class="footer__links">
+      <a href="mailto:giomessina.work@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/giomessina/">LinkedIn</a>
+      <a href="https://www.instagram.com/giom.essina/">Instagram</a>
     </div>
   </footer>
+</div>
 
-  <script src="site.js"></script>
-  <script src="i18n.js"></script>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script>
+document.querySelectorAll('.filter').forEach(function (b) {
+  b.addEventListener('click', function () {
+    var f = b.dataset.filter;
+    document.querySelectorAll('.filter').forEach(function (x) { x.classList.toggle('is-on', x === b); });
+    document.querySelectorAll('.wcard').forEach(function (c) {
+      c.hidden = f !== 'all' && c.dataset.tags.split(' ').indexOf(f) < 0;
+    });
+  });
+});
+</script>
+<script src="i18n.js"></script>
 </body>
 </html>

@@ -1,0 +1,79 @@
+/* ============================================================
+   GIORADIO — v2 SKIN
+   Puts GioRadio on the giomessina.com look (styles-v2.css: one
+   blue, white, round shapes, heavy type). Loaded LAST, after
+   gioradio.css on the index and after each bundled page's own
+   styles, so it only overrides: the tokens below re-theme every
+   page, the rules after them reshape the shared components.
+   Selectors start with `html` to win over the pages' own copies.
+   ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Figtree:wght@400..800&family=JetBrains+Mono:wght@400;600&display=swap');
+
+html:root {
+  --ink:          #111114;
+  --ink-soft:     #45433e;
+  --ink-faint:    #6b6860;
+  --line-strong:  #111114;
+  --line:         #e4e2dc;
+  --line-card:    #e4e2dc;
+  --line-tag:     #e4e2dc;
+
+  --bg:           #ffffff;
+  --bg-warm:      #f3f2ee;
+  --card-bg:      #ffffff;
+  --works-bg:     #f3f2ee;
+
+  --accent:       #2b4ee6;
+  --accent-ink:   #1f3bc0;
+
+  --font-display: 'Bricolage Grotesque', sans-serif;
+  --font-body:    'Figtree', sans-serif;
+  --font-mono:    'JetBrains Mono', ui-monospace, monospace;
+
+  --maxw:         1280px;
+  --gutter:       clamp(20px, 4.4vw, 56px);
+
+  --radius:       22px;
+  --radius-md:    28px;
+  --radius-sm:    18px;
+
+  --dur-fast:     .2s;
+  --dur-slow:     .35s;
+}
+
+/* Nav — mark + pill links, like the portfolio */
+html .ds-nav { height: auto; padding: 16px 0; border-radius: 0; background: rgba(255, 255, 255, .92); }
+html .ds-nav__inner { padding: 0; gap: 16px; }
+html .ds-nav__mark { font-family: var(--font-display); font-weight: 800; font-size: 22px; letter-spacing: -.02em; }
+html .ds-nav__dot { display: none; }
+html .ds-nav__links { gap: 8px; align-items: center; margin-left: auto; }
+html .ds-nav__links a { padding: 10px 18px; border-radius: 999px; border: 1.5px solid var(--line); font-family: var(--font-display); font-size: 16px; font-weight: 500; transition: border-color var(--dur-fast), color var(--dur-fast), background var(--dur-fast); }
+html .ds-nav__links a:hover { border-color: var(--accent); color: var(--accent); }
+html .ds-nav__links a.is-active { background: var(--accent); border-color: var(--accent); color: #fff; font-weight: 500; }
+html .ds-nav__links a.is-active::after { display: none; }
+@media (max-width: 1180px) { html .ds-nav__links { display: none; } }
+
+/* Language toggle — plain muted text, like .lang */
+html .btn-lang { border: 0; padding: 10px 14px; font: 500 16px var(--font-display); letter-spacing: 0; text-transform: lowercase; color: var(--ink-faint); }
+html .btn-lang:hover { color: var(--accent); }
+
+/* Type — heavier, tighter headings */
+html .ds-section-title { font-weight: 800; letter-spacing: -.04em; line-height: 1; }
+html .ds-card__title { font-weight: 700; letter-spacing: -.03em; }
+
+/* Cards — outlined, round, border turns blue on hover */
+html .ds-card { border: 1.5px solid var(--line); border-radius: var(--radius); }
+html .ds-card:hover { box-shadow: none; border-color: var(--accent); }
+html .ds-card__thumb { border-radius: var(--radius-sm); }
+html .ds-tag { border: 0; background: var(--bg-warm); padding: 6px 12px; font: 600 13px var(--font-display); letter-spacing: 0; color: var(--ink); }
+
+/* Next page — blue block, slides on hover */
+html .ds-next { background: var(--accent); color: #fff; border: 0; border-radius: var(--radius-md); padding: 36px 44px; align-items: center; transition: padding var(--dur-slow) var(--ease), background var(--dur-fast); }
+html .ds-next:hover { padding-left: 60px; background: var(--accent-ink); }
+html .ds-next__label { color: #fff; }
+html .ds-next a { color: #fff; font-weight: 800; letter-spacing: -.045em; }
+html .ds-next__arrow { color: #fff; }
+
+/* Footer */
+html .ds-footer { border-top-width: 1.5px; font-family: var(--font-display); font-size: 15px; letter-spacing: 0; color: var(--ink-faint); }
+html .ds-footer a:hover { color: var(--accent); }

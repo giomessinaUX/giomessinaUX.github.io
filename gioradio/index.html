@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
-  <title>GioRadio — appunti di radiotecnica</title>
-  <meta name="description" content="Pagine di studio sulla radiotecnica, create per ripassare: cheatsheet e piccoli strumenti interattivi.">
+  <title>GioRadio — radio study notes</title>
+  <meta name="description" content="Radio study pages made for revision: course notes, cheatsheets and small interactive tools.">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232b4ee6'/%3E%3Cpath d='M6 17h5l2-5 3 9 3-9 2 5h5' fill='none' stroke='white' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="gioradio.css">
+  <link rel="stylesheet" href="skin-v2.css">
   <style>
     html { scroll-behavior: smooth; }
     body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font-body); -webkit-font-smoothing: antialiased; }
@@ -17,20 +18,19 @@
     .page { max-width: var(--maxw); margin: 0 auto; padding: 0 var(--gutter); }
 
     /* Sticky nav pill */
-    .nav-shell { position: sticky; top: 0; z-index: 60; padding: 12px var(--gutter) 0; }
+    .nav-shell { position: sticky; top: 0; z-index: 60; padding: 0 var(--gutter); background: rgba(255, 255, 255, .92); }
     .nav-shell .ds-nav { max-width: var(--maxw); margin: 0 auto; }
-    .nav-shell .ds-nav__links { gap: clamp(16px, 2.4vw, 30px); }
-    @media (max-width: 900px) { .nav-shell .ds-nav__links { display: none; } }
+    @media (max-width: 1180px) { .nav-shell .btn-lang { margin-left: auto; } }
 
     /* Hero */
     .hero { padding: clamp(56px, 9vw, 120px) 0 clamp(36px, 5vw, 60px); }
     .hero h1 {
       margin: 1.2rem 0 0;
       font-family: var(--font-display);
-      font-weight: var(--w-medium);
+      font-weight: 800;
       font-size: clamp(44px, 7vw, 104px);
-      letter-spacing: -0.04em;
-      line-height: 0.98;
+      letter-spacing: -0.045em;
+      line-height: 0.92;
       text-wrap: balance;
     }
     .hero h1 .period { color: var(--accent); }
@@ -123,13 +123,14 @@
       <div class="ds-nav__inner">
         <a href="./" class="ds-nav__mark"><span class="ds-nav__dot"></span>GioRadio</a>
         <div class="ds-nav__links">
-          <a href="Riassunto%20Corso%20Radioamatori.html">Riassunto</a>
-          <a href="Componenti.html">Componenti</a>
-          <a href="Schemi.html">Schemi</a>
-          <a href="Codice%20Q.html">Codice Q</a>
-          <a href="propagazione-ionosferica.html">Propagazione</a>
-          <a href="palinsesti-radio-milano.html">Palinsesti</a>
+          <a href="Riassunto%20Corso%20Radioamatori.html"><span data-lang="en">Course notes</span><span data-lang="it" hidden>Riassunto</span></a>
+          <a href="Componenti.html"><span data-lang="en">Components</span><span data-lang="it" hidden>Componenti</span></a>
+          <a href="Schemi.html"><span data-lang="en">Diagrams</span><span data-lang="it" hidden>Schemi</span></a>
+          <a href="Codice%20Q.html"><span data-lang="en">Q code</span><span data-lang="it" hidden>Codice Q</span></a>
+          <a href="propagazione-ionosferica.html"><span data-lang="en">Propagation</span><span data-lang="it" hidden>Propagazione</span></a>
+          <a href="palinsesti-radio-milano.html"><span data-lang="en">Schedules</span><span data-lang="it" hidden>Palinsesti</span></a>
         </div>
+        <button class="btn-lang" data-lang-toggle type="button">it</button>
       </div>
     </nav>
   </div>
@@ -137,16 +138,16 @@
   <main>
     <div class="page">
       <header class="hero">
-        <span class="ds-eyebrow"><span class="ds-eyebrow__idx">00</span> Appunti di studio</span>
-        <h1>Radiotecnica, per ripassare<span class="period">.</span></h1>
-        <p class="hero__sub">Il riassunto del corso, cheatsheet e piccoli strumenti interattivi su componenti, apparati, codice Q e propagazione delle onde radio.</p>
+        <span class="ds-eyebrow"><span class="ds-eyebrow__idx">00</span> <span data-lang="en">Study notes</span><span data-lang="it" hidden>Appunti di studio</span></span>
+        <h1><span data-lang="en">Radio, for revision</span><span data-lang="it" hidden>Radiotecnica, per ripassare</span><span class="period">.</span></h1>
+        <p class="hero__sub"><span data-lang="en">Course notes, cheatsheets and small interactive tools on components, equipment, the Q code and radio wave propagation.</span><span data-lang="it" hidden>Il riassunto del corso, cheatsheet e piccoli strumenti interattivi su componenti, apparati, codice Q e propagazione delle onde radio.</span></p>
       </header>
 
       <section class="note" aria-labelledby="note-title">
-        <span class="note__label" id="note-title">Perché esistono</span>
+        <span class="note__label" id="note-title"><span data-lang="en">Why they exist</span><span data-lang="it" hidden>Perché esistono</span></span>
         <div class="note__body">
-          <p>Sono pagine che ho creato <strong>per motivi di studio</strong>, mentre studio radiotecnica per la patente di radioamatore (HAREC). Mi servono <strong>per ripassare</strong>: raccolgono in forma rapida da consultare concetti, formule e schemi che altrimenti dovrei ricercare ogni volta nei libri.</p>
-          <p>Non sono materiale ufficiale e possono contenere semplificazioni o errori. Per l'esame fa sempre fede il programma ministeriale aggiornato.</p>
+          <p><span data-lang="en">I made these pages <strong>for study</strong>, while preparing for the amateur radio licence (HAREC). I use them <strong>for revision</strong>: they gather, in a form that’s quick to look up, concepts, formulas and diagrams I would otherwise have to dig out of the books every time.</span><span data-lang="it" hidden>Sono pagine che ho creato <strong>per motivi di studio</strong>, mentre studio radiotecnica per la patente di radioamatore (HAREC). Mi servono <strong>per ripassare</strong>: raccolgono in forma rapida da consultare concetti, formule e schemi che altrimenti dovrei ricercare ogni volta nei libri.</span></p>
+          <p><span data-lang="en">They are not official material and may contain simplifications or mistakes. For the exam, the current official syllabus always applies.</span><span data-lang="it" hidden>Non sono materiale ufficiale e possono contenere semplificazioni o errori. Per l'esame fa sempre fede il programma ministeriale aggiornato.</span></p>
         </div>
       </section>
     </div>
@@ -156,28 +157,28 @@
 
         <section class="group">
           <div class="ds-section-head">
-            <span class="ds-eyebrow"><span class="ds-eyebrow__idx">01</span> Corso</span>
-            <h2 class="ds-section-title">Da ripassare.</h2>
-            <p class="ds-section-sub">Il corso completo, lezione per lezione.</p>
+            <span class="ds-eyebrow"><span class="ds-eyebrow__idx">01</span> <span data-lang="en">Course</span><span data-lang="it" hidden>Corso</span></span>
+            <h2 class="ds-section-title"><span data-lang="en">To revise.</span><span data-lang="it" hidden>Da ripassare.</span></h2>
+            <p class="ds-section-sub"><span data-lang="en">The whole course, lesson by lesson.</span><span data-lang="it" hidden>Il corso completo, lezione per lezione.</span></p>
           </div>
           <a class="ds-card ds-card--wide" href="Riassunto%20Corso%20Radioamatori.html">
             <div class="ds-card__thumb kind-thumb kind-thumb--course">
-              <span class="kind">Riassunto</span>
+              <span class="kind"><span data-lang="en">Course notes</span><span data-lang="it" hidden>Riassunto</span></span>
               <svg class="kind-thumb__icon" viewBox="0 0 64 32" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M32 7C25 3 14 3 6 5v23c8-2 19-2 26 2 7-4 18-4 26-2V5c-8-2-19-2-26 2z"/><path d="M32 7v23"/></g></svg>
             </div>
             <span class="ds-card__num">01 / ARI Cernusco</span>
-            <h3 class="ds-card__title">Riassunto Corso Radioamatori 2025</h3>
-            <div class="ds-card__tags"><span class="ds-tag">19 lezioni</span><span class="ds-tag">Glossario A–Z</span><span class="ds-tag">Ricerca</span></div>
-            <p class="ds-card__desc">Le 19 lezioni del corso nell'ordine delle slide, divise in paragrafi: formule, punti chiave e un glossario dei termini, con la ricerca per argomento.</p>
-            <span class="ds-card__cta">Apri il riassunto →</span>
+            <h3 class="ds-card__title"><span data-lang="en">Amateur Radio Course 2025 notes</span><span data-lang="it" hidden>Riassunto Corso Radioamatori 2025</span></h3>
+            <div class="ds-card__tags"><span class="ds-tag"><span data-lang="en">19 lessons</span><span data-lang="it" hidden>19 lezioni</span></span><span class="ds-tag"><span data-lang="en">A–Z glossary</span><span data-lang="it" hidden>Glossario A–Z</span></span><span class="ds-tag"><span data-lang="en">Search</span><span data-lang="it" hidden>Ricerca</span></span></div>
+            <p class="ds-card__desc"><span data-lang="en">The course’s 19 lessons in slide order, split into sections: formulas, key points and a glossary of terms, with search by topic.</span><span data-lang="it" hidden>Le 19 lezioni del corso nell'ordine delle slide, divise in paragrafi: formule, punti chiave e un glossario dei termini, con la ricerca per argomento.</span></p>
+            <span class="ds-card__cta"><span data-lang="en">Open the notes →</span><span data-lang="it" hidden>Apri il riassunto →</span></span>
           </a>
         </section>
 
         <section class="group">
           <div class="ds-section-head">
             <span class="ds-eyebrow"><span class="ds-eyebrow__idx">02</span> Cheatsheet</span>
-            <h2 class="ds-section-title">Da consultare.</h2>
-            <p class="ds-section-sub">Schede di riferimento: cosa sapere, in poco spazio.</p>
+            <h2 class="ds-section-title"><span data-lang="en">To look up.</span><span data-lang="it" hidden>Da consultare.</span></h2>
+            <p class="ds-section-sub"><span data-lang="en">Reference sheets: what to know, in little space.</span><span data-lang="it" hidden>Schede di riferimento: cosa sapere, in poco spazio.</span></p>
           </div>
           <div class="ds-card-grid ds-card-grid--three">
 
@@ -186,11 +187,11 @@
                 <span class="kind">Cheatsheet</span>
                 <svg class="kind-thumb__icon" viewBox="0 0 64 32" aria-hidden="true"><path d="M2 16h12l3-7 6 14 6-14 6 14 6-14 3 7h18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/></svg>
               </div>
-              <span class="ds-card__num">02 / Componenti</span>
-              <h3 class="ds-card__title">Componenti di radiotecnica</h3>
-              <div class="ds-card__tags"><span class="ds-tag">Passivi</span><span class="ds-tag">Diodi</span><span class="ds-tag">Transistor</span></div>
-              <p class="ds-card__desc">Dalla resistenza al MOSFET: simbolo, unità di misura, formule e parametri da conoscere per ogni componente.</p>
-              <span class="ds-card__cta">Apri il cheatsheet →</span>
+              <span class="ds-card__num">02 / <span data-lang="en">Components</span><span data-lang="it" hidden>Componenti</span></span>
+              <h3 class="ds-card__title"><span data-lang="en">Radio components</span><span data-lang="it" hidden>Componenti di radiotecnica</span></h3>
+              <div class="ds-card__tags"><span class="ds-tag"><span data-lang="en">Passive</span><span data-lang="it" hidden>Passivi</span></span><span class="ds-tag"><span data-lang="en">Diodes</span><span data-lang="it" hidden>Diodi</span></span><span class="ds-tag">Transistor</span></div>
+              <p class="ds-card__desc"><span data-lang="en">From the resistor to the MOSFET: symbol, unit, formulas and the parameters to know for each component.</span><span data-lang="it" hidden>Dalla resistenza al MOSFET: simbolo, unità di misura, formule e parametri da conoscere per ogni componente.</span></p>
+              <span class="ds-card__cta"><span data-lang="en">Open the cheatsheet →</span><span data-lang="it" hidden>Apri il cheatsheet →</span></span>
             </a>
 
             <a class="ds-card" href="Schemi.html">
@@ -199,10 +200,10 @@
                 <svg class="kind-thumb__icon" viewBox="0 0 64 32" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.2"><rect x="2" y="9" width="14" height="14" rx="2"/><rect x="25" y="9" width="14" height="14" rx="2"/><rect x="48" y="9" width="14" height="14" rx="2"/><path d="M16 16h9M39 16h9"/></g></svg>
               </div>
               <span class="ds-card__num">03 / HAREC</span>
-              <h3 class="ds-card__title">Schemi a blocchi</h3>
+              <h3 class="ds-card__title"><span data-lang="en">Block diagrams</span><span data-lang="it" hidden>Schemi a blocchi</span></h3>
               <div class="ds-card__tags"><span class="ds-tag">AM · FM · SSB</span><span class="ds-tag">CW · RTTY</span></div>
-              <p class="ds-card__desc">Trasmettitori e ricevitori per modo di emissione: clicca un blocco per vedere come si costruisce e le formule da sapere.</p>
-              <span class="ds-card__cta">Apri il cheatsheet →</span>
+              <p class="ds-card__desc"><span data-lang="en">Transmitters and receivers by emission mode: click a block to see how it is built and the formulas to know.</span><span data-lang="it" hidden>Trasmettitori e ricevitori per modo di emissione: clicca un blocco per vedere come si costruisce e le formule da sapere.</span></p>
+              <span class="ds-card__cta"><span data-lang="en">Open the cheatsheet →</span><span data-lang="it" hidden>Apri il cheatsheet →</span></span>
             </a>
 
             <a class="ds-card" href="Codice%20Q.html">
@@ -211,10 +212,10 @@
                 <svg class="kind-thumb__icon" viewBox="0 0 64 32" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M2 12h4M10 12h10M2 20h10M16 20h4"/><text x="25" y="22" font-family="ui-monospace, monospace" font-size="14" fill="currentColor" stroke="none">QR?</text></g></svg>
               </div>
               <span class="ds-card__num">04 / ITU</span>
-              <h3 class="ds-card__title">Codice Q</h3>
+              <h3 class="ds-card__title"><span data-lang="en">Q code</span><span data-lang="it" hidden>Codice Q</span></h3>
               <div class="ds-card__tags"><span class="ds-tag">QRA–QUZ</span><span class="ds-tag">Quiz</span></div>
-              <p class="ds-card__desc">La tabella delle serie QR, QS, QT e QU con i significati, poi due quiz per mettersi alla prova: dalla sigla al significato e viceversa.</p>
-              <span class="ds-card__cta">Apri il cheatsheet →</span>
+              <p class="ds-card__desc"><span data-lang="en">The table of the QR, QS, QT and QU series with their meanings, then two quizzes to test yourself: from code to meaning and back.</span><span data-lang="it" hidden>La tabella delle serie QR, QS, QT e QU con i significati, poi due quiz per mettersi alla prova: dalla sigla al significato e viceversa.</span></p>
+              <span class="ds-card__cta"><span data-lang="en">Open the cheatsheet →</span><span data-lang="it" hidden>Apri il cheatsheet →</span></span>
             </a>
 
           </div>
@@ -222,34 +223,34 @@
 
         <section class="group">
           <div class="ds-section-head">
-            <span class="ds-eyebrow"><span class="ds-eyebrow__idx">03</span> Strumenti</span>
-            <h2 class="ds-section-title">Da provare.</h2>
-            <p class="ds-section-sub">Piccoli strumenti interattivi per vedere i concetti in azione.</p>
+            <span class="ds-eyebrow"><span class="ds-eyebrow__idx">03</span> <span data-lang="en">Tools</span><span data-lang="it" hidden>Strumenti</span></span>
+            <h2 class="ds-section-title"><span data-lang="en">To try out.</span><span data-lang="it" hidden>Da provare.</span></h2>
+            <p class="ds-section-sub"><span data-lang="en">Small interactive tools to see the concepts in action.</span><span data-lang="it" hidden>Piccoli strumenti interattivi per vedere i concetti in azione.</span></p>
           </div>
           <div class="ds-card-grid ds-card-grid--two">
 
             <a class="ds-card" href="propagazione-ionosferica.html">
               <div class="ds-card__thumb kind-thumb kind-thumb--tool">
-                <span class="kind">Strumento</span>
+                <span class="kind"><span data-lang="en">Tool</span><span data-lang="it" hidden>Strumento</span></span>
                 <svg class="kind-thumb__icon" viewBox="0 0 64 32" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M2 30h60"/><path d="M8 30Q20 2 32 30T56 30" stroke-dasharray="0.1 5"/><path d="M8 30Q20 2 32 30"/></g></svg>
               </div>
               <span class="ds-card__num">05 / RF</span>
-              <h3 class="ds-card__title">Propagazione ionosferica</h3>
-              <div class="ds-card__tags"><span class="ds-tag">Strati D · E · F</span><span class="ds-tag">Bande</span></div>
-              <p class="ds-card__desc">Scegli bande, potenza e attività solare e guarda come le onde vengono riflesse, assorbite o sfuggono nello spazio.</p>
-              <span class="ds-card__cta">Apri lo strumento →</span>
+              <h3 class="ds-card__title"><span data-lang="en">Ionospheric propagation</span><span data-lang="it" hidden>Propagazione ionosferica</span></h3>
+              <div class="ds-card__tags"><span class="ds-tag"><span data-lang="en">D · E · F layers</span><span data-lang="it" hidden>Strati D · E · F</span></span><span class="ds-tag"><span data-lang="en">Bands</span><span data-lang="it" hidden>Bande</span></span></div>
+              <p class="ds-card__desc"><span data-lang="en">Pick bands, power and solar activity and watch how waves are reflected, absorbed or escape into space.</span><span data-lang="it" hidden>Scegli bande, potenza e attività solare e guarda come le onde vengono riflesse, assorbite o sfuggono nello spazio.</span></p>
+              <span class="ds-card__cta"><span data-lang="en">Open the tool →</span><span data-lang="it" hidden>Apri lo strumento →</span></span>
             </a>
 
             <a class="ds-card" href="palinsesti-radio-milano.html">
               <div class="ds-card__thumb kind-thumb kind-thumb--tool">
-                <span class="kind">Strumento</span>
+                <span class="kind"><span data-lang="en">Tool</span><span data-lang="it" hidden>Strumento</span></span>
                 <svg class="kind-thumb__icon" viewBox="0 0 64 32" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M2 8h22M30 8h32M2 16h12M20 16h28M54 16h8M2 24h34M42 24h20"/><path d="M40 3v26" stroke-width="1.6"/></g></svg>
               </div>
               <span class="ds-card__num">06 / FM Milano</span>
-              <h3 class="ds-card__title">Palinsesti radio Milano</h3>
-              <div class="ds-card__tags"><span class="ds-tag">FM</span><span class="ds-tag">Oggi + 2 giorni</span></div>
-              <p class="ds-card__desc">Chi va in onda, e quando: i palinsesti delle principali radio FM di Milano per oggi e i due giorni successivi, aggiornati dai siti delle radio.</p>
-              <span class="ds-card__cta">Apri lo strumento →</span>
+              <h3 class="ds-card__title"><span data-lang="en">Milan radio schedules</span><span data-lang="it" hidden>Palinsesti radio Milano</span></h3>
+              <div class="ds-card__tags"><span class="ds-tag">FM</span><span class="ds-tag"><span data-lang="en">Today + 2 days</span><span data-lang="it" hidden>Oggi + 2 giorni</span></span></div>
+              <p class="ds-card__desc"><span data-lang="en">Who’s on air, and when: the schedules of Milan’s main FM stations for today and the next two days, updated from the stations’ sites.</span><span data-lang="it" hidden>Chi va in onda, e quando: i palinsesti delle principali radio FM di Milano per oggi e i due giorni successivi, aggiornati dai siti delle radio.</span></p>
+              <span class="ds-card__cta"><span data-lang="en">Open the tool →</span><span data-lang="it" hidden>Apri lo strumento →</span></span>
             </a>
 
           </div>
@@ -261,10 +262,11 @@
 
   <footer class="page">
     <div class="ds-footer">
-      <span>GioRadio — appunti di studio per il ripasso</span>
-      <div class="ds-footer__links"><a href="#">Torna su ↑</a></div>
+      <span>GioRadio — <span data-lang="en">study notes for revision</span><span data-lang="it" hidden>appunti di studio per il ripasso</span></span>
+      <div class="ds-footer__links"><a href="#"><span data-lang="en">Back to top ↑</span><span data-lang="it" hidden>Torna su ↑</span></a></div>
     </div>
   </footer>
 
+  <script src="i18n.js"></script>
 </body>
 </html>

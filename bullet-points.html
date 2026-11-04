@@ -1,76 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-NXX9NC6J');</script>
-  <!-- End Google Tag Manager -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>More — Giorgio Messina</title>
-  <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>More — Giorgio Messina</title>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-NXX9NC6J');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="styles-v2.css">
 </head>
 <body>
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NXX9NC6J"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
-  <nav class="site-nav">
-    <div class="nav-inner">
-      <a href="index.html" class="home-mark"><span class="dot"></span>Giorgio Messina</a>
-      <div class="nav-links">
-        <a href="index.html#work">Work</a>
-        <a href="index.html#about">About</a>
-        <a href="bullet-points.html" class="is-active">More</a>
-        <a href="index.html#contact">Contact</a>
-      </div>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NXX9NC6J" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<div class="wrap">
+  <nav class="nav">
+    <a class="nav__mark" href="index.html">giorgio messina</a>
+    <div class="nav__links">
+      <a class="pill" href="work.html"><span data-lang="en">work</span><span data-lang="it" hidden>lavori</span></a>
+      <a class="pill" href="index.html#about"><span data-lang="en">about</span><span data-lang="it" hidden>chi sono</span></a>
+      <a class="pill" href="index.html#contact"><span data-lang="en">contact</span><span data-lang="it" hidden>contatti</span></a>
+      <button class="lang" data-lang-toggle>it</button>
     </div>
   </nav>
 
-  <main class="page" data-screen-label="More">
-    <section class="bp-intro">
-      <h1 class="section-title">A few things about me</h1>
-      <p>An unfiltered bullet list. Toggle the tags below to filter it.</p>
-    </section>
+  <header class="page-head">
+    <div>
+      <a class="back" href="index.html">← home</a>
+      <h1><span data-lang="en">a few things</span><span data-lang="it" hidden>qualche cosa</span><span class="accent">.</span></h1>
+    </div>
+    <p><span data-lang="en">An unfiltered list about me. Switch the tags off to filter it.</span><span data-lang="it" hidden>Una lista senza filtri su di me. Spegni i tag per filtrarla.</span></p>
+  </header>
 
-    <section class="filters" aria-label="Filters">
-      <button class="filter-button is-on" type="button" data-tag="technology" aria-pressed="true">
-        <span class="filter-symbol">×</span>Technology
-      </button>
-      <button class="filter-button is-on" type="button" data-tag="outdoor" aria-pressed="true">
-        <span class="filter-symbol">×</span>Outdoor
-      </button>
-      <button class="filter-button is-on" type="button" data-tag="work" aria-pressed="true">
-        <span class="filter-symbol">×</span>Work
-      </button>
-      <button class="filter-button is-on" type="button" data-tag="mottos" aria-pressed="true">
-        <span class="filter-symbol">×</span>Mottos
-      </button>
-    </section>
+  <div class="filters chips" role="group" aria-label="Filter">
+    <button class="filter is-on" data-tag="technology" aria-pressed="true"><span data-lang="en">technology</span><span data-lang="it" hidden>tecnologia</span></button>
+    <button class="filter is-on" data-tag="outdoor" aria-pressed="true">outdoor</button>
+    <button class="filter is-on" data-tag="work" aria-pressed="true"><span data-lang="en">work</span><span data-lang="it" hidden>lavoro</span></button>
+    <button class="filter is-on" data-tag="mottos" aria-pressed="true"><span data-lang="en">mottos</span><span data-lang="it" hidden>motti</span></button>
+  </div>
 
-    <section class="bullets">
-      <ul>
-        <li data-tags="mottos">Di necessità virtù.</li>
-        <li data-tags="work">In 2025, I spent 3 months with a sms/calls only telephone.</li>
-        <li data-tags="work technology">In 2025, I spent 2 months only paying cash.</li>
-        <li data-tags="outdoor mottos">Climbing long routes, it's crucial to only focus on controllable variables.</li>
-        <li data-tags="mottos work">I believe necessity is not the innovation driver anymore.</li>
-        <li data-tags="outdoor mottos">When hiking, you only start with the first step.</li>
-        <li data-tags="work mottos">My grandpa asked me if I only learned the school lesson or if I understood it.</li>
-        <li data-tags="technology work">In 2008, I created the class forum to gather multiple sources of information.</li>
-        <li data-tags="technology work">My phone, from 9:00pm to 8:00am, is black and white only.</li>
-        <li data-tags="technology work">I can't access social media except for 8:00pm to 8:30pm from my phone.</li>
-        <li data-tags="work">I don't have any subscription, prime included.</li>
-        <li data-tags="work mottos">In the evening, sometimes, I watch the TV and comment it with my partner.</li>
-        <li data-tags="work">I am working mostly remotely since covid happened. Yet, I don't love it.</li>
-      </ul>
-    </section>
-  </main>
+  <ul class="bullets">
+    <li data-tags="mottos">Di necessità virtù.</li>
+    <li data-tags="work"><span data-lang="en">In 2025, I spent 3 months with an SMS-and-calls-only phone.</span><span data-lang="it" hidden>Nel 2025 ho passato 3 mesi con un telefono che fa solo SMS e chiamate.</span></li>
+    <li data-tags="work technology"><span data-lang="en">In 2025, I spent 2 months paying cash only.</span><span data-lang="it" hidden>Nel 2025 ho passato 2 mesi pagando solo in contanti.</span></li>
+    <li data-tags="outdoor mottos"><span data-lang="en">Climbing long routes, it's crucial to focus only on the variables you can control.</span><span data-lang="it" hidden>Sulle vie lunghe è fondamentale concentrarsi solo sulle variabili che puoi controllare.</span></li>
+    <li data-tags="mottos work"><span data-lang="en">I believe necessity is not the driver of innovation anymore.</span><span data-lang="it" hidden>Credo che la necessità non sia più il motore dell'innovazione.</span></li>
+    <li data-tags="outdoor mottos"><span data-lang="en">When hiking, you only start with the first step.</span><span data-lang="it" hidden>In montagna si parte sempre dal primo passo.</span></li>
+    <li data-tags="work mottos"><span data-lang="en">My grandpa asked me if I had just learned the school lesson or understood it.</span><span data-lang="it" hidden>Mio nonno mi chiedeva se la lezione l'avevo solo imparata o se l'avevo capita.</span></li>
+    <li data-tags="technology work"><span data-lang="en">In 2008, I created the class forum to gather information from many sources.</span><span data-lang="it" hidden>Nel 2008 ho creato il forum della classe per raccogliere informazioni da più fonti.</span></li>
+    <li data-tags="technology work"><span data-lang="en">From 9pm to 8am, my phone is black and white only.</span><span data-lang="it" hidden>Dalle 21 alle 8 il mio telefono è solo in bianco e nero.</span></li>
+    <li data-tags="technology work"><span data-lang="en">I can only open social media from 8pm to 8:30pm, from my phone.</span><span data-lang="it" hidden>Posso aprire i social solo dalle 20 alle 20:30, dal telefono.</span></li>
+    <li data-tags="work"><span data-lang="en">I don't have any subscriptions, Prime included.</span><span data-lang="it" hidden>Non ho abbonamenti, Prime compreso.</span></li>
+    <li data-tags="work mottos"><span data-lang="en">Some evenings I watch TV and comment on it with my partner.</span><span data-lang="it" hidden>Certe sere guardiamo la TV e la commentiamo in due.</span></li>
+    <li data-tags="work"><span data-lang="en">I've worked mostly remotely since Covid. Yet, I don't love it.</span><span data-lang="it" hidden>Lavoro quasi sempre da remoto dal Covid. Eppure non mi piace.</span></li>
+  </ul>
 
-  <script src="site.js"></script>
-  <script src="filters.js"></script>
+  <footer class="footer footer--rule">
+    <span>© 2026 Giorgio Messina — Milano</span>
+    <div class="footer__links">
+      <a href="mailto:giomessina.work@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/giomessina/">LinkedIn</a>
+      <a href="https://www.instagram.com/giom.essina/">Instagram</a>
+    </div>
+  </footer>
+</div>
+
+<script>
+// A line stays visible while at least one of its tags is on.
+var on = {};
+document.querySelectorAll('.filter').forEach(function (b) {
+  on[b.dataset.tag] = true;
+  b.addEventListener('click', function () {
+    on[b.dataset.tag] = !on[b.dataset.tag];
+    b.classList.toggle('is-on', on[b.dataset.tag]);
+    b.setAttribute('aria-pressed', on[b.dataset.tag]);
+    document.querySelectorAll('.bullets li').forEach(function (li) {
+      li.hidden = !li.dataset.tags.split(' ').some(function (t) { return on[t]; });
+    });
+  });
+});
+</script>
+<script src="i18n.js"></script>
 </body>
 </html>

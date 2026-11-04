@@ -1,7 +1,8 @@
 // Shared bilingual toggle (EN / IT).
 // Content comes in pairs of elements carrying data-lang="en" / data-lang="it";
-// the inactive one gets [hidden]. The choice persists in localStorage so the
-// language carries across pages.
+// the inactive one gets [hidden]. The toggle is any [data-lang-toggle] button
+// and shows the language it switches to. The choice persists in localStorage
+// so the language carries across pages (GioRadio included).
 (function () {
   var KEY = 'lang';
 
@@ -17,23 +18,21 @@
     for (var i = 0; i < nodes.length; i++) {
       nodes[i].hidden = nodes[i].getAttribute('data-lang') !== l;
     }
-    var btn = document.getElementById('lang-toggle');
-    if (btn) {
-      btn.textContent = (l === 'it') ? 'EN' : 'IT';
-      btn.setAttribute('aria-label', l === 'it' ? 'Switch to English' : 'Passa all\u2019italiano');
+    var btns = document.querySelectorAll('[data-lang-toggle]');
+    for (var j = 0; j < btns.length; j++) {
+      btns[j].textContent = l === 'it' ? 'en' : 'it';
+      btns[j].setAttribute('aria-label', l === 'it' ? 'Switch to English' : 'Passa all’italiano');
     }
   }
 
   function init() {
     apply(get());
-    var btn = document.getElementById('lang-toggle');
-    if (btn) {
-      btn.addEventListener('click', function () {
-        var next = (get() === 'it') ? 'en' : 'it';
-        save(next);
-        apply(next);
-      });
-    }
+    document.addEventListener('click', function (e) {
+      if (!e.target.closest('[data-lang-toggle]')) return;
+      var next = get() === 'it' ? 'en' : 'it';
+      save(next);
+      apply(next);
+    });
   }
 
   if (document.readyState === 'loading') {
