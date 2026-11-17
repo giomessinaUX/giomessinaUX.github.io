@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>GioRadio — radio study notes</title>
+  <meta name="description" content="Radio study pages made for revision: course notes, cheatsheets and small interactive tools.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232b4ee6'/%3E%3Cpath d='M6 17h5l2-5 3 9 3-9 2 5h5' fill='none' stroke='white' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="gioradio.css">
+  <link rel="stylesheet" href="skin-v2.css">
+  <style>
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font-body); -webkit-font-smoothing: antialiased; }
+    a { color: var(--accent-ink); }
+    a:hover { color: var(--accent); }
+
+    .page { max-width: var(--maxw); margin: 0 auto; padding: 0 var(--gutter); }
+
+    /* Sticky nav pill */
+    .nav-shell { position: sticky; top: 0; z-index: 60; padding: 0 var(--gutter); background: rgba(255, 255, 255, .92); }
+    .nav-shell .ds-nav { max-width: var(--maxw); margin: 0 auto; }
+    @media (max-width: 1180px) { .nav-shell .btn-lang { margin-left: auto; } }
+
+    /* Hero */
+    .hero { padding: clamp(56px, 9vw, 120px) 0 clamp(36px, 5vw, 60px); }
+    .hero h1 {
+      margin: 1.2rem 0 0;
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: clamp(44px, 7vw, 104px);
+      letter-spacing: -0.045em;
+      line-height: 0.92;
+      text-wrap: balance;
+    }
+    .hero h1 .period { color: var(--accent); }
+    .hero__sub {
+      margin: 1.4rem 0 0;
+      max-width: 40ch;
+      font-size: var(--text-sub);
+      line-height: 1.3;
+      font-weight: var(--w-light);
+      color: var(--ink-soft);
+      letter-spacing: -0.01em;
+      text-wrap: pretty;
+    }
+
+    /* Study note */
+    .note {
+      display: grid;
+      grid-template-columns: minmax(0, 220px) minmax(0, 1fr);
+      gap: 12px clamp(24px, 4vw, 56px);
+      padding: clamp(22px, 3vw, 32px) 0;
+      border-top: 1px solid var(--line-strong);
+      border-bottom: 1px solid var(--line);
+      margin-bottom: clamp(48px, 7vw, 88px);
+    }
+    @media (max-width: 720px) { .note { grid-template-columns: 1fr; } }
+    .note__label {
+      font-family: var(--font-mono);
+      font-size: 12.5px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      padding-top: 4px;
+    }
+    .note__body p { margin: 0; font-size: 18px; line-height: 1.55; color: var(--ink-soft); max-width: 62ch; text-wrap: pretty; }
+    .note__body p + p { margin-top: 0.8em; }
+    .note__body strong { color: var(--ink); font-weight: var(--w-medium); }
+
+    /* Groups of cards on the tinted band */
+    .band { background: var(--works-bg); padding-block: clamp(48px, 7vw, 88px); }
+    .group + .group { margin-top: clamp(48px, 7vw, 80px); }
+    .group .ds-section-head { margin-bottom: clamp(22px, 3vw, 32px); }
+    .ds-card-grid--two { grid-template-columns: repeat(2, 1fr); }
+    .ds-card-grid--three { grid-template-columns: repeat(3, 1fr); }
+    @media (max-width: 980px) { .ds-card-grid--three { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 720px) { .ds-card-grid--two, .ds-card-grid--three { grid-template-columns: 1fr; } }
+
+    /* Course summary: one wide card, thumb beside the text */
+    .ds-card--wide { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: 0 clamp(20px, 3vw, 40px); align-items: center; }
+    .ds-card--wide .ds-card__thumb { grid-row: 1 / span 6; height: 100%; min-height: 220px; margin-bottom: 0; }
+    @media (max-width: 720px) {
+      .ds-card--wide { display: block; }
+      .ds-card--wide .ds-card__thumb { height: 140px; min-height: 0; margin-bottom: 20px; }
+    }
+
+    /* Card thumbs: --sheet = ruled reference paper, --tool = solid accent */
+    .kind-thumb { height: 140px; display: flex; align-items: center; justify-content: center; }
+    .kind-thumb--sheet {
+      background-color: #fdfdfd;
+      background-image:
+        linear-gradient(90deg, transparent 27px, color-mix(in srgb, var(--accent) 35%, transparent) 27px 28px, transparent 28px),
+        repeating-linear-gradient(transparent 0 17px, var(--line-tag) 17px 18px);
+      border: 1px dashed var(--line-tag);
+      color: var(--ink);
+    }
+    .kind-thumb--tool { background: var(--accent); color: #fff; }
+    .kind-thumb--course { background: var(--ink); color: #fff; }
+    .kind-thumb__icon { width: 40%; max-width: 140px; height: auto; }
+    .kind {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 4px 9px;
+      border-radius: var(--radius-pill);
+    }
+    .kind-thumb--sheet .kind { left: 38px; background: var(--ink); color: #fff; }
+    .kind-thumb--tool .kind { background: #fff; color: var(--accent-ink); }
+    .kind-thumb--course .kind { background: var(--accent); color: #fff; }
+
+    footer.page { padding-block: clamp(32px, 5vw, 48px); }
+  </style>
+</head>
+<body>
+
+  <div class="nav-shell">
+    <nav class="ds-nav">
+      <div class="ds-nav__inner">
+        <a href="./" class="ds-nav__mark"><span class="ds-nav__dot"></span>GioRadio</a>
+        <div class="ds-nav__links">
+          <a href="Componenti.html"><span data-lang="en">Components</span><span data-lang="it" hidden>Componenti</span></a>
+          <a href="Schemi.html"><span data-lang="en">Diagrams</span><span data-lang="it" hidden>Schemi</span></a>
+          <a href="Codice%20Q.html"><span data-lang="en">Q code</span><span data-lang="it" hidden>Codice Q</span></a>
+          <a href="propagazione-ionosferica.html"><span data-lang="en">Propagation</span><span data-lang="it" hidden>Propagazione</span></a>
+        </div>
+        <button class="btn-lang" data-lang-toggle type="button">it</button>
+      </div>
+    </nav>
+  </div>
+
+  <main>
+    <div class="page">
+      <header class="hero">
+        <span class="ds-eyebrow"><span class="ds-eyebrow__idx">00</span> <span data-lang="en">Study notes</span><span data-lang="it" hidden>Appunti di studio</span></span>
+        <h1><span data-lang="en">Radio, for revision</span><span data-lang="it" hidden>Radiotecnica, per ripassare</span><span class="period">.</span></h1>
+        <p class="hero__sub"><span data-lang="en">Cheatsheets and a small interactive tool on components, equipment, the Q code and radio wave propagation.</span><span data-lang="it" hidden>Cheatsheet e un piccolo strumento interattivo su componenti, apparati, codice Q e propagazione delle onde radio.</span></p>
+      </header>
+
+      <section class="note" aria-labelledby="note-title">
+        <span class="note__label" id="note-title"><span data-lang="en">Why they exist</span><span data-lang="it" hidden>Perché esistono</span></span>
+        <div class="note__body">
+          <p><span data-lang="en">I made these pages <strong>for study</strong>, while preparing for the amateur radio licence (HAREC). I use them <strong>for revision</strong>: they gather, in a form that’s quick to look up, concepts, formulas and diagrams I would otherwise have to dig out of the books every time.</span><span data-lang="it" hidden>Sono pagine che ho creato <strong>per motivi di studio</strong>, mentre studio radiotecnica per la patente di radioamatore (HAREC). Mi servono <strong>per ripassare</strong>: raccolgono in forma rapida da consultare concetti, formule e schemi che altrimenti dovrei ricercare ogni volta nei libri.</span></p>
+          <p><span data-lang="en">They are not official material and may contain simplifications or mistakes. For the exam, the current official syllabus always applies.</span><span data-lang="it" hidden>Non sono materiale ufficiale e possono contenere semplificazioni o errori. Per l'esame fa sempre fede il programma ministeriale aggiornato.</span></p>
+        </div>
+      </section>
+    </div>
+
+    <div class="band">
+      <div class="page">
+
+        <section class="group">
+          <div class="ds-section-head">
+            <span class="ds-eyebrow"><span class="ds-eyebrow__idx">01</span> Cheatsheet</span>
+            <h2 class="ds-section-title"><span data-lang="en">To look up.</span><span data-lang="it" hidden>Da consultare.</span></h2>
+            <p class="ds-section-sub"><span data-lang="en">Reference sheets: what to know, in little space.</span><span data-lang="it" hidden>Schede di riferimento: cosa sapere, in poco spazio.</span></p>
+          </div>
+          <div class="ds-card-grid ds-card-grid--three">
+
+            <a class="ds-card" href="Componenti.html">
+              <div class="ds-card__thumb kind-thumb kind-thumb--sheet">
+                <span class="kind">Cheatsheet</span>
+                <svg class="kind-thumb__icon" viewBox="0 0 64 32" aria-hidden="true"><path d="M2 16h12l3-7 6 14 6-14 6 14 6-14 3 7h18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/></svg>
+              </div>
+              <span class="ds-card__num">01 / <span data-lang="en">Components</span><span data-lang="it" hidden>Componenti</span></span>
+              <h3 class="ds-card__title"><span data-lang="en">Radio components</span><span data-lang="it" hidden>Componenti di radiotecnica</span></h3>
+              <div class="ds-card__tags"><span class="ds-tag"><span data-lang="en">Passive</span><span data-lang="it" hidden>Passivi</span></span><span class="ds-tag"><span data-lang="en">Diodes</span><span data-lang="it" hidden>Diodi</span></span><span class="ds-tag">Transistor</span></div>
+              <p class="ds-card__desc"><span data-lang="en">From the resistor to the MOSFET: symbol, unit, formulas and the parameters to know for each component.</span><span data-lang="it" hidden>Dalla resistenza al MOSFET: simbolo, unità di misura, formule e parametri da conoscere per ogni componente.</span></p>
+              <span class="ds-card__cta"><span data-lang="en">Open the cheatsheet →</span><span data-lang="it" hidden>Apri il cheatsheet →</span></span>
+            </a>
+
+            <a class="ds-card" href="Schemi.html">
+              <div class="ds-card__thumb kind-thumb kind-thumb--sheet">
+                <span class="kind">Cheatsheet</span>
+                <svg class="kind-thumb__icon" viewBox="0 0 64 32" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.2"><rect x="2" y="9" width="14" height="14" rx="2"/><rect x="25" y="9" width="14" height="14" rx="2"/><rect x="48" y="9" width="14" height="14" rx="2"/><path d="M16 16h9M39 16h9"/></g></svg>
+              </div>
+              <span class="ds-card__num">02 / HAREC</span>
+              <h3 class="ds-card__title"><span data-lang="en">Block diagrams</span><span data-lang="it" hidden>Schemi a blocchi</span></h3>
+              <div class="ds-card__tags"><span class="ds-tag">AM · FM · SSB</span><span class="ds-tag">CW · RTTY</span></div>
+              <p class="ds-card__desc"><span data-lang="en">Transmitters and receivers by emission mode: click a block to see how it is built and the formulas to know.</span><span data-lang="it" hidden>Trasmettitori e ricevitori per modo di emissione: clicca un blocco per vedere come si costruisce e le formule da sapere.</span></p>
+              <span class="ds-card__cta"><span data-lang="en">Open the cheatsheet →</span><span data-lang="it" hidden>Apri il cheatsheet →</span></span>
+            </a>
+
+            <a class="ds-card" href="Codice%20Q.html">
+              <div class="ds-card__thumb kind-thumb kind-thumb--sheet">
+                <span class="kind">Cheatsheet</span>
+                <svg class="kind-thumb__icon" viewBox="0 0 64 32" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M2 12h4M10 12h10M2 20h10M16 20h4"/><text x="25" y="22" font-family="ui-monospace, monospace" font-size="14" fill="currentColor" stroke="none">QR?</text></g></svg>
+              </div>
+              <span class="ds-card__num">03 / ITU</span>
+              <h3 class="ds-card__title"><span data-lang="en">Q code</span><span data-lang="it" hidden>Codice Q</span></h3>
+              <div class="ds-card__tags"><span class="ds-tag">QRA–QUZ</span><span class="ds-tag">Quiz</span></div>
+              <p class="ds-card__desc"><span data-lang="en">The table of the QR, QS, QT and QU series with their meanings, then two quizzes to test yourself: from code to meaning and back.</span><span data-lang="it" hidden>La tabella delle serie QR, QS, QT e QU con i significati, poi due quiz per mettersi alla prova: dalla sigla al significato e viceversa.</span></p>
+              <span class="ds-card__cta"><span data-lang="en">Open the cheatsheet →</span><span data-lang="it" hidden>Apri il cheatsheet →</span></span>
+            </a>
+
+          </div>
+        </section>
+
+        <section class="group">
+          <div class="ds-section-head">
+            <span class="ds-eyebrow"><span class="ds-eyebrow__idx">02</span> <span data-lang="en">Tools</span><span data-lang="it" hidden>Strumenti</span></span>
+            <h2 class="ds-section-title"><span data-lang="en">To try out.</span><span data-lang="it" hidden>Da provare.</span></h2>
+            <p class="ds-section-sub"><span data-lang="en">A small interactive tool to see the concepts in action.</span><span data-lang="it" hidden>Un piccolo strumento interattivo per vedere i concetti in azione.</span></p>
+          </div>
+          <a class="ds-card ds-card--wide" href="propagazione-ionosferica.html">
+            <div class="ds-card__thumb kind-thumb kind-thumb--tool">
+              <span class="kind"><span data-lang="en">Tool</span><span data-lang="it" hidden>Strumento</span></span>
+              <svg class="kind-thumb__icon" viewBox="0 0 64 32" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M2 30h60"/><path d="M8 30Q20 2 32 30T56 30" stroke-dasharray="0.1 5"/><path d="M8 30Q20 2 32 30"/></g></svg>
+            </div>
+            <span class="ds-card__num">04 / RF</span>
+            <h3 class="ds-card__title"><span data-lang="en">Ionospheric propagation</span><span data-lang="it" hidden>Propagazione ionosferica</span></h3>
+            <div class="ds-card__tags"><span class="ds-tag"><span data-lang="en">D · E · F layers</span><span data-lang="it" hidden>Strati D · E · F</span></span><span class="ds-tag"><span data-lang="en">Bands</span><span data-lang="it" hidden>Bande</span></span></div>
+            <p class="ds-card__desc"><span data-lang="en">Pick bands, power and solar activity and watch how waves are reflected, absorbed or escape into space.</span><span data-lang="it" hidden>Scegli bande, potenza e attività solare e guarda come le onde vengono riflesse, assorbite o sfuggono nello spazio.</span></p>
+            <span class="ds-card__cta"><span data-lang="en">Open the tool →</span><span data-lang="it" hidden>Apri lo strumento →</span></span>
+          </a>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="page">
+    <div class="ds-footer">
+      <span>GioRadio — <span data-lang="en">study notes for revision</span><span data-lang="it" hidden>appunti di studio per il ripasso</span></span>
+      <div class="ds-footer__links"><a href="#"><span data-lang="en">Back to top ↑</span><span data-lang="it" hidden>Torna su ↑</span></a></div>
+    </div>
+  </footer>
+
+  <script src="i18n.js"></script>
+</body>
+</html>

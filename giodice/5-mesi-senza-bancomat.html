@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Password</title>
+<style>
+  html, body { height: 100%; margin: 0; }
+  body { display: grid; place-items: center; background: #fff; color: #111114; font: 16px/1.4 system-ui, -apple-system, sans-serif; }
+  form { width: min(320px, calc(100% - 32px)); }
+  label { display: block; margin-bottom: 10px; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: #6b6860; }
+  .row { display: flex; gap: 8px; }
+  input { flex: 1; min-width: 0; padding: 14px 18px; border: 1.5px solid #e4e2dc; border-radius: 999px; font: inherit; outline: none; }
+  input:focus { border-color: #2b4ee6; }
+  button { padding: 0 22px; border: 0; border-radius: 999px; background: #2b4ee6; color: #fff; font: 700 18px system-ui, sans-serif; cursor: pointer; }
+  button:disabled { opacity: .5; cursor: wait; }
+  #e { min-height: 1.4em; margin: 10px 0 0 18px; font-size: 14px; color: #c0352b; }
+</style>
+</head>
+<body>
+<noscript>Serve JavaScript.</noscript>
+<form id="f" hidden>
+  <label for="p">Password</label>
+  <div class="row"><input id="p" type="password" autocomplete="current-password" required><button id="b" aria-label="Apri">→</button></div>
+  <p id="e" role="alert"></p>
+</form>
+<script>
+(function () {
+  var D = {"section":"giodice","salt":"v+etfJsOBZ4llikLPjq8Nw==","iter":600000,"iv":"J9qb1m3HGG/4z7l6","data":"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"};
+  var KEY = 'lock:' + D.section;
+  var subtle = window.crypto && crypto.subtle;
+  function bytes(s) { return Uint8Array.from(atob(s), function (c) { return c.charCodeAt(0); }); }
+  function b64(u8) { var s = ''; for (var i = 0; i < u8.length; i++) s += String.fromCharCode(u8[i]); return btoa(s); }
+
+  async function derive(pw) {
+    var base = await subtle.importKey('raw', new TextEncoder().encode(pw), 'PBKDF2', false, ['deriveBits']);
+    return new Uint8Array(await subtle.deriveBits({ name: 'PBKDF2', salt: bytes(D.salt), iterations: D.iter, hash: 'SHA-256' }, base, 256));
+  }
+  async function unlock(raw) {
+    var key = await subtle.importKey('raw', raw, 'AES-GCM', false, ['decrypt']);
+    var gz = await subtle.decrypt({ name: 'AES-GCM', iv: bytes(D.iv) }, key, bytes(D.data));
+    var html = await new Response(new Blob([gz]).stream().pipeThrough(new DecompressionStream('gzip'))).text();
+    document.open(); document.write(html); document.close();
+  }
+
+  var f = document.getElementById('f'), p = document.getElementById('p'),
+      b = document.getElementById('b'), e = document.getElementById('e');
+  function ask() { f.hidden = false; p.focus(); }
+
+  if (!subtle || !window.DecompressionStream) { f.hidden = false; e.textContent = 'Browser non supportato.'; b.disabled = true; return; }
+
+  // saved key: "salt|key", valid only for the salt it was derived with
+  var saved = null;
+  try { saved = (localStorage.getItem(KEY) || '').split('|'); } catch (err) {}
+  if (saved && saved[0] === D.salt && saved[1]) unlock(bytes(saved[1])).catch(ask);
+  else ask();
+
+  f.addEventListener('submit', async function (ev) {
+    ev.preventDefault();
+    b.disabled = true; e.textContent = '';
+    try {
+      var raw = await derive(p.value);
+      await unlock(raw);
+      try { localStorage.setItem(KEY, D.salt + '|' + b64(raw)); } catch (err) {}
+    } catch (err) {
+      e.textContent = 'Password errata.';
+      b.disabled = false; p.select();
+    }
+  });
+})();
+</script>
+</body>
+</html>

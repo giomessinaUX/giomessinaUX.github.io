@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Password</title>
+<style>
+  html, body { height: 100%; margin: 0; }
+  body { display: grid; place-items: center; background: #fff; color: #111114; font: 16px/1.4 system-ui, -apple-system, sans-serif; }
+  form { width: min(320px, calc(100% - 32px)); }
+  label { display: block; margin-bottom: 10px; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: #6b6860; }
+  .row { display: flex; gap: 8px; }
+  input { flex: 1; min-width: 0; padding: 14px 18px; border: 1.5px solid #e4e2dc; border-radius: 999px; font: inherit; outline: none; }
+  input:focus { border-color: #2b4ee6; }
+  button { padding: 0 22px; border: 0; border-radius: 999px; background: #2b4ee6; color: #fff; font: 700 18px system-ui, sans-serif; cursor: pointer; }
+  button:disabled { opacity: .5; cursor: wait; }
+  #e { min-height: 1.4em; margin: 10px 0 0 18px; font-size: 14px; color: #c0352b; }
+</style>
+</head>
+<body>
+<noscript>Serve JavaScript.</noscript>
+<form id="f" hidden>
+  <label for="p">Password</label>
+  <div class="row"><input id="p" type="password" autocomplete="current-password" required><button id="b" aria-label="Apri">→</button></div>
+  <p id="e" role="alert"></p>
+</form>
+<script>
+(function () {
+  var D = {"section":"giodice","salt":"v+etfJsOBZ4llikLPjq8Nw==","iter":600000,"iv":"zPkC7uJ5WYNLrwe6","data":"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"};
+  var KEY = 'lock:' + D.section;
+  var subtle = window.crypto && crypto.subtle;
+  function bytes(s) { return Uint8Array.from(atob(s), function (c) { return c.charCodeAt(0); }); }
+  function b64(u8) { var s = ''; for (var i = 0; i < u8.length; i++) s += String.fromCharCode(u8[i]); return btoa(s); }
+
+  async function derive(pw) {
+    var base = await subtle.importKey('raw', new TextEncoder().encode(pw), 'PBKDF2', false, ['deriveBits']);
+    return new Uint8Array(await subtle.deriveBits({ name: 'PBKDF2', salt: bytes(D.salt), iterations: D.iter, hash: 'SHA-256' }, base, 256));
+  }
+  async function unlock(raw) {
+    var key = await subtle.importKey('raw', raw, 'AES-GCM', false, ['decrypt']);
+    var gz = await subtle.decrypt({ name: 'AES-GCM', iv: bytes(D.iv) }, key, bytes(D.data));
+    var html = await new Response(new Blob([gz]).stream().pipeThrough(new DecompressionStream('gzip'))).text();
+    document.open(); document.write(html); document.close();
+  }
+
+  var f = document.getElementById('f'), p = document.getElementById('p'),
+      b = document.getElementById('b'), e = document.getElementById('e');
+  function ask() { f.hidden = false; p.focus(); }
+
+  if (!subtle || !window.DecompressionStream) { f.hidden = false; e.textContent = 'Browser non supportato.'; b.disabled = true; return; }
+
+  // saved key: "salt|key", valid only for the salt it was derived with
+  var saved = null;
+  try { saved = (localStorage.getItem(KEY) || '').split('|'); } catch (err) {}
+  if (saved && saved[0] === D.salt && saved[1]) unlock(bytes(saved[1])).catch(ask);
+  else ask();
+
+  f.addEventListener('submit', async function (ev) {
+    ev.preventDefault();
+    b.disabled = true; e.textContent = '';
+    try {
+      var raw = await derive(p.value);
+      await unlock(raw);
+      try { localStorage.setItem(KEY, D.salt + '|' + b64(raw)); } catch (err) {}
+    } catch (err) {
+      e.textContent = 'Password errata.';
+      b.disabled = false; p.select();
+    }
+  });
+})();
+</script>
+</body>
+</html>

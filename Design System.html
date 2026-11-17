@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Design System — Giorgio Messina</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="styles-v2.css">
+<style>
+  /* documentation layout only — not part of the system */
+  .dsrow { display: grid; grid-template-columns: 200px minmax(0,1fr); gap: 32px; padding: 40px 0; border-bottom: 1.5px solid var(--line); }
+  .sw { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; }
+  .sw div > i { display: block; height: 96px; border-radius: var(--r-tile); border: 1.5px solid var(--line); }
+  .sw b { display: block; margin-top: 8px; font-size: 16px; }
+  .sw code, .spec code { font-family: var(--f-mono); font-size: 12px; color: var(--muted); }
+  .spec { display: grid; grid-template-columns: 220px minmax(0,1fr); gap: 24px; align-items: baseline; padding: 14px 0; }
+  .shapes { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; }
+  .shapes div { background: var(--chip); padding: 20px; text-align: center; font-weight: 600; }
+  @media (max-width: 720px) { .dsrow, .spec { grid-template-columns: 1fr; gap: 16px; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav class="nav">
+    <a class="nav__mark" href="index.html">giorgio messina</a>
+    <div class="nav__links"><a class="pill" href="index.html">← back to site</a></div>
+  </nav>
+
+  <header class="page-head" style="border-bottom:1.5px solid var(--line)">
+    <h1 style="margin:0">design<br>system<span class="accent">.</span></h1>
+    <div style="display:flex;flex-direction:column;gap:10px;align-items:flex-start">
+      <span class="chip chip--num">v2 · 2026</span>
+      <p>One blue, lots of white, round shapes, heavy type. Everything else is black. All tokens live in <code>styles-v2.css</code>.</p>
+    </div>
+  </header>
+
+  <section class="dsrow">
+    <span class="mono">Colors</span>
+    <div class="sw">
+      <div><i style="background:var(--blue)"></i><b>Blue</b><code>--blue #2b4ee6 · accent</code></div>
+      <div><i style="background:var(--blue-ink)"></i><b>Blue ink</b><code>--blue-ink #1f3bc0 · hover</code></div>
+      <div><i style="background:var(--ink)"></i><b>Ink</b><code>--ink #111114 · text</code></div>
+      <div><i style="background:var(--body)"></i><b>Body</b><code>--body #45433e · prose</code></div>
+      <div><i style="background:var(--muted)"></i><b>Muted</b><code>--muted #6b6860 · labels</code></div>
+      <div><i style="background:var(--line)"></i><b>Line</b><code>--line #e4e2dc</code></div>
+      <div><i style="background:var(--chip)"></i><b>Chip</b><code>--chip #f3f2ee · surface</code></div>
+      <div><i style="background:#fff"></i><b>White</b><code>--bg #ffffff · page</code></div>
+    </div>
+  </section>
+
+  <section class="dsrow">
+    <span class="mono">Type</span>
+    <div>
+      <div class="spec"><code>--t-hero · Bricolage 800<br>52→132px · −0.05em</code><span style="font-weight:800;font-size:clamp(52px,8vw,96px);line-height:.9;letter-spacing:-.05em">all work<span class="accent">.</span></span></div>
+      <div class="spec"><code>--t-h3 · Bricolage 700<br>28→48px · −0.035em</code><span style="font-weight:700;font-size:var(--t-h3);letter-spacing:-.035em;line-height:1">Energy Manager</span></div>
+      <div class="spec"><code>--t-lead · Figtree 400<br>19→22px · lh 1.55</code><span class="prose"><span>I untangle data-heavy platforms and get them shipped.</span></span></div>
+      <div class="spec"><code>.mono · JetBrains Mono<br>12–13px · uppercase</code><span class="mono" style="color:var(--ink)">01 · Compunet · next project</span></div>
+    </div>
+  </section>
+
+  <section class="dsrow">
+    <span class="mono">Buttons &amp; chips</span>
+    <div class="chips" style="gap:12px">
+      <a class="btn btn--primary" href="#">Download CV ↓</a>
+      <a class="btn btn--ghost" href="#">Email me</a>
+      <a class="btn btn--primary btn--sm" href="#">Small</a>
+      <span class="pill">.pill</span>
+      <span class="pill is-active">.pill.is-active</span>
+      <span class="chip">.chip</span>
+      <span class="chip chip--blue">.chip--blue</span>
+      <span class="chip chip--num">01</span>
+      <button class="filter is-on">.filter.is-on</button>
+      <button class="filter">.filter</button>
+    </div>
+  </section>
+
+  <section class="dsrow">
+    <span class="mono">Sticker</span>
+    <div class="chips" style="gap:32px"><div class="sticker"><b>10+</b><span>years in</span></div><p class="prose" style="max-width:40ch"><span>One per page, max. Rotated 10°, untwists on hover. Holds one number that matters.</span></p></div>
+  </section>
+
+  <section class="dsrow">
+    <span class="mono">Project row</span>
+    <div>
+      <a class="row" href="#" style="border-top:1.5px solid var(--line)"><span class="row__n">03</span><span class="row__title"><b>Civic</b><span>Compunet</span></span><span class="row__line">Hover me — fills blue and slides right.</span><span class="row__arrow">↗</span></a>
+    </div>
+  </section>
+
+  <section class="dsrow">
+    <span class="mono">Tiles &amp; cards</span>
+    <div class="tiles">
+      <div class="tile"><b>01</b><span>.tile — tilts on hover.</span></div>
+      <div class="ccard"><h3>.ccard</h3><p>Outlined card, border turns blue on hover.</p></div>
+    </div>
+  </section>
+
+  <section class="dsrow" style="border-bottom:0">
+    <span class="mono">Shape &amp; motion</span>
+    <div class="shapes">
+      <div style="border-radius:var(--r-pill)">--r-pill · 999</div>
+      <div style="border-radius:var(--r-block)">--r-block · 28</div>
+      <div style="border-radius:var(--r-card)">--r-card · 22</div>
+      <div style="border-radius:var(--r-tile)">--r-tile · 18</div>
+      <div class="tile" style="text-align:center">--ease · .2s / .35s</div>
+    </div>
+  </section>
+
+  <footer class="footer footer--rule"><span>© 2026 Giorgio Messina — Milano</span><a href="index.html">giomessina.com</a></footer>
+</div>
+</body>
+</html>
